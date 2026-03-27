@@ -1,0 +1,114 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import { Search, User } from 'lucide-react';
+import { skills, skillCategories, skillSources } from '@/data/skills';
+
+export default function SkillsPage() {
+  const [category, setCategory] = useState('全部');
+  const [source, setSource] = useState('all');
+  const [search, setSearch] = useState('');
+
+  const filtered = skills.filter(item => {
+    if (category !== '全部' && item.category !== category) return false;
+    if (source === 'self' && item.source !== '自研') return false;
+    if (source === 'community' && item.source !== '社区') return false;
+    if (search && !item.name.includes(search) && !item.description.includes(search)) return false;
+    return true;
+  });
+
+  return (
+    <div>
+      {/* 搜索和筛选 */}
+      <div className="mb-4 space-y-3">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="搜索 AI Skills..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="search-input pl-9"
+          />
+        </div>
+        
+        <div className="flex flex-wrap gap-2 items-center">
+          {/* 分类筛选 */}
+          <div className="flex gap-1 flex-wrap">
+            {skillCategories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setCategory(cat)}
+                className={`px-3 py-1 text-xs rounded ${
+                  category === cat 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+          
+          {/* 来源筛选 */}
+          <select
+            value={source}
+            onChange={(e) => setSource(e.target.value)}
+            className="ml-auto text-xs border rounded px-2 py-1"
+          >
+            {skillSources.map(s => (
+              <option key={s.value} value={s.value}>{s.label}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* 结果统计 */}
+      <div className="text-sm text-gray-500 mb-3">
+        共 {filtered.length} 个 AI Skills
+      </div>
+
+      {/* 列表 */}
+      <div className="space-y-3">
+        {filtered.map(item => (
+          <div key={item.id} className="card">
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <Link href={`/skills/${item.slug}`} className="font-medium text-gray-800 hover:text-blue-600">
+                    {item.name}
+                  </Link>
+                  <span className="tag tag-primary text-xs">{item.category}</span>
+                  <span className={`tag text-xs ${item.source === '自研' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+                    {item.source}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 mb-2">{item.description}</p>
+                <div className="flex items-center gap-4 text-xs text-gray-500">
+                  <span className="flex items-center gap-1">
+                    <User className="w-3 h-3" /> {item.usage} 次使用
+                  </span>
+                  {item.installCmd && (
+                    <button className="text-blue-600 hover:underline" onClick={() => navigator.clipboard.writeText(item.installCmd || '')}>
+                      复制安装命令
+                    </button>
+                  )}
+                </div>
+              </div>
+              <button className="text-gray-400 hover:text-blue-600 text-sm ml-2">
+                ☆ 收藏
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {filtered.length === 0 && (
+        <div className="text-center py-12 text-gray-500">
+          没有找到相关 AI Skills
+        </div>
+      )}
+    </div>
+  );
+}
