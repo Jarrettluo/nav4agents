@@ -14,6 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+      </head>
       <body>
         <Header />
         <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:hidden z-50">
@@ -29,6 +34,9 @@ export default function RootLayout({
             </a>
             <a href="/subscriptions" className="flex flex-col items-center justify-center flex-1 py-1">
               <span className="text-xs">订阅</span>
+            </a>
+            <a href="/codingplan" className="flex flex-col items-center justify-center flex-1 py-1">
+              <span className="text-xs">对比</span>
             </a>
           </div>
         </nav>
