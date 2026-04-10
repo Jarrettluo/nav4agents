@@ -5,6 +5,9 @@ import Header from "./Header";
 export const metadata: Metadata = {
   title: "Nav4Agent - Agent 导航",
   description: "发现、收藏优质 AI Agent 工具、MCP 服务器和订阅服务",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -40,7 +43,7 @@ export default function RootLayout({
             </a>
           </div>
         </nav>
-        <main className="container py-4 pb-20 md:pb-4">
+        <main className="container pt-6 pb-20 md:pt-6 md:pb-4">
           {children}
         </main>
         <footer className="bg-white border-t border-gray-200 py-4 mt-8">
