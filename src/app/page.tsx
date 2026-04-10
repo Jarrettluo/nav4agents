@@ -9,14 +9,14 @@ export default function Home() {
   const freeSubscriptions = subscriptions.filter(s => s.price === 0).slice(0, 3);
 
   return (
-    <div>
-      {/* Hero Banner - 全宽设计，与页面融合 */}
-      <section className="relative overflow-hidden mb-8" style={{ marginTop: '-1px' }}>
+    <>
+      {/* Hero Banner - 全宽独立布局，贴近 header */}
+      <section className="relative overflow-hidden" style={{ marginTop: '-1px' }}>
         {/* 顶部装饰线 - 品牌渐变 */}
         <div className="h-1 w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500" />
 
-        <div className="bg-white px-4 py-10 md:px-12 md:py-20">
-          <div className="max-w-6xl mx-auto">
+        <div className="bg-white py-10 md:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-12">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12">
               {/* 左侧文案 */}
               <div className="flex-1 max-w-3xl">
@@ -76,114 +76,117 @@ export default function Home() {
         <div className="h-px bg-gray-100" />
       </section>
 
-      {/* 分类导航 */}
-      <div className="mb-6" id="features">
-        <div className="flex flex-wrap gap-2">
-          {['开发工具', '效率工具', 'AI 增强', '内容处理', '数据处理', '垂直行业'].map((cat) => (
-            <Link
-              key={cat}
-              href={`/mcp?category=${cat}`}
-              className="tag hover:bg-blue-50 hover:text-blue-600 transition-colors"
-            >
-              {cat}
-            </Link>
-          ))}
+      {/* Banner 以下内容 - 最大 1200px 居中 */}
+      <div className="max-w-[1200px] mx-auto">
+        {/* 分类导航 */}
+        <div className="mb-6" id="features">
+          <div className="flex flex-wrap gap-2">
+            {['开发工具', '效率工具', 'AI 增强', '内容处理', '数据处理', '垂直行业'].map((cat) => (
+              <Link
+                key={cat}
+                href={`/mcp?category=${cat}`}
+                className="tag hover:bg-blue-50 hover:text-blue-600 transition-colors"
+              >
+                {cat}
+              </Link>
+            ))}
+          </div>
         </div>
+
+        {/* 精选 MCP */}
+        <section className="mb-8">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-lg font-semibold text-gray-800 font-outfit">精选 MCP 服务器</h2>
+            <Link href="/mcp" className="text-sm text-blue-600 hover:underline">
+              查看全部 →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+            {featuredMcp.map((item) => (
+              <Link key={item.id} href={`/mcp/${item.slug}`} className="card block">
+                <div className="flex items-start justify-between mb-2">
+                  <span className="tag tag-primary text-xs">{item.category}</span>
+                  <span className="text-xs text-gray-400">⭐ {item.stars}</span>
+                </div>
+                <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
+                <p className="text-xs text-gray-500 line-clamp-2">{item.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* 精选 Skills */}
+        <section className="mb-8">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-lg font-semibold text-gray-800 font-outfit">热门 AI Skills</h2>
+            <Link href="/skills" className="text-sm text-blue-600 hover:underline">
+              查看全部 →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+            {featuredSkill.map((item) => (
+              <Link key={item.id} href={`/skills/${item.slug}`} className="card block">
+                <div className="flex items-start justify-between mb-2">
+                  <span className="tag tag-primary text-xs">{item.category}</span>
+                  <span className="text-xs text-gray-400">👤 {item.usage}</span>
+                </div>
+                <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
+                <p className="text-xs text-gray-500 line-clamp-2">{item.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* 订阅方案 */}
+        <section className="mb-8">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-lg font-semibold text-gray-800 font-outfit">智能体工具对比</h2>
+            <Link href="/subscriptions" className="text-sm text-blue-600 hover:underline">
+              查看全部 →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {freeSubscriptions.map((sub, i) => (
+              <Link key={i} href="/subscriptions" className="card flex items-center gap-3">
+                <span className="text-2xl">{sub.logo}</span>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
+                  <p className="text-xs text-green-600">免费</p>
+                </div>
+              </Link>
+            ))}
+            {subscriptions.filter(s => s.price > 0 && s.price <= 20).slice(0, 3 - freeSubscriptions.length).map((sub, i) => (
+              <Link key={i + 10} href="/subscriptions" className="card flex items-center gap-3">
+                <span className="text-2xl">{sub.logo}</span>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
+                  <p className="text-xs text-gray-500">${sub.price}/月</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* 最近收录 */}
+        <section>
+          <h2 className="text-lg font-semibold text-gray-800 mb-3 font-outfit">最近收录</h2>
+          <div className="space-y-2">
+            {[
+              { type: 'MCP', name: 'Sequential Thinking', time: '2小时前' },
+              { type: 'Skill', name: 'Git Workflow Helper', time: '5小时前' },
+              { type: 'MCP', name: 'Postgres MCP', time: '1天前' },
+            ].map((item, i) => (
+              <div key={i} className="ai-card flex items-center justify-between py-3 px-4">
+                <div className="flex items-center gap-3">
+                  <span className="tag text-xs">{item.type}</span>
+                  <span className="text-sm text-gray-700">{item.name}</span>
+                </div>
+                <span className="text-xs text-gray-400">{item.time}</span>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
-
-      {/* 精选 MCP */}
-      <section className="mb-8">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-semibold text-gray-800 font-outfit">精选 MCP 服务器</h2>
-          <Link href="/mcp" className="text-sm text-blue-600 hover:underline">
-            查看全部 →
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {featuredMcp.map((item) => (
-            <Link key={item.id} href={`/mcp/${item.slug}`} className="card block">
-              <div className="flex items-start justify-between mb-2">
-                <span className="tag tag-primary text-xs">{item.category}</span>
-                <span className="text-xs text-gray-400">⭐ {item.stars}</span>
-              </div>
-              <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
-              <p className="text-xs text-gray-500 line-clamp-2">{item.description}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* 精选 Skills */}
-      <section className="mb-8">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-semibold text-gray-800 font-outfit">热门 AI Skills</h2>
-          <Link href="/skills" className="text-sm text-blue-600 hover:underline">
-            查看全部 →
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {featuredSkill.map((item) => (
-            <Link key={item.id} href={`/skills/${item.slug}`} className="card block">
-              <div className="flex items-start justify-between mb-2">
-                <span className="tag tag-primary text-xs">{item.category}</span>
-                <span className="text-xs text-gray-400">👤 {item.usage}</span>
-              </div>
-              <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
-              <p className="text-xs text-gray-500 line-clamp-2">{item.description}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* 订阅方案 */}
-      <section className="mb-8">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-semibold text-gray-800 font-outfit">智能体工具对比</h2>
-          <Link href="/subscriptions" className="text-sm text-blue-600 hover:underline">
-            查看全部 →
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-          {freeSubscriptions.map((sub, i) => (
-            <Link key={i} href="/subscriptions" className="card flex items-center gap-3">
-              <span className="text-2xl">{sub.logo}</span>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
-                <p className="text-xs text-green-600">免费</p>
-              </div>
-            </Link>
-          ))}
-          {subscriptions.filter(s => s.price > 0 && s.price <= 20).slice(0, 3 - freeSubscriptions.length).map((sub, i) => (
-            <Link key={i + 10} href="/subscriptions" className="card flex items-center gap-3">
-              <span className="text-2xl">{sub.logo}</span>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
-                <p className="text-xs text-gray-500">${sub.price}/月</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* 最近收录 */}
-      <section>
-        <h2 className="text-lg font-semibold text-gray-800 mb-3 font-outfit">最近收录</h2>
-        <div className="space-y-2">
-          {[
-            { type: 'MCP', name: 'Sequential Thinking', time: '2小时前' },
-            { type: 'Skill', name: 'Git Workflow Helper', time: '5小时前' },
-            { type: 'MCP', name: 'Postgres MCP', time: '1天前' },
-          ].map((item, i) => (
-            <div key={i} className="ai-card flex items-center justify-between py-3 px-4">
-              <div className="flex items-center gap-3">
-                <span className="tag text-xs">{item.type}</span>
-                <span className="text-sm text-gray-700">{item.name}</span>
-              </div>
-              <span className="text-xs text-gray-400">{item.time}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
+    </>
   );
 }

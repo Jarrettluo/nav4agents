@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./Header";
+import ContentWrapper from "./ContentWrapper";
 
 export const metadata: Metadata = {
-  title: "Nav4Agent - Agent 导航",
+  title: "Nav4Agent - AI Agent Skill MCP发现和分享",
   description: "发现、收藏优质 AI Agent 工具、MCP 服务器和订阅服务",
   icons: {
     icon: "/favicon.png",
@@ -43,8 +44,8 @@ export default function RootLayout({
             </a>
           </div>
         </nav>
-        <main className="container pt-6 pb-20 md:pt-6 md:pb-4">
-          {children}
+        <main className="min-h-screen pb-20 md:pb-4">
+          <ContentWrapper>{children}</ContentWrapper>
         </main>
         <footer className="bg-white border-t border-gray-200 py-4 mt-8">
           <div className="container text-center text-xs text-gray-500">
