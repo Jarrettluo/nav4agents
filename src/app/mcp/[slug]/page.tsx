@@ -126,13 +126,13 @@ export default function McpDetailPage() {
             {/* 安装命令 */}
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-700 mb-2">安装命令</h3>
-              <div className="bg-gray-900 rounded-lg p-4 flex items-center justify-between">
-                <code className="text-green-400 font-mono text-sm">
+              <div className="bg-gray-900 rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <code className="text-green-400 font-mono text-xs sm:text-sm break-all">
                   {extendedData.configuration.installOptions}
                 </code>
                 <button
                   onClick={() => handleCopy(extendedData.configuration.installOptions)}
-                  className="ml-4 p-2 hover:bg-gray-800 rounded transition-colors"
+                  className="p-2 hover:bg-gray-800 rounded transition-colors self-end sm:self-auto"
                 >
                   {copied ? (
                     <Check className="w-4 h-4 text-green-400" />
@@ -161,8 +161,8 @@ export default function McpDetailPage() {
             {/* Claude Desktop 配置 */}
             <div className="mt-6 pt-6 border-t border-gray-100">
               <h3 className="text-sm font-medium text-gray-700 mb-3">Claude Desktop 配置</h3>
-              <div className="bg-gray-900 rounded-lg p-4">
-                <pre className="text-green-400 font-mono text-sm whitespace-pre-wrap">
+              <div className="bg-gray-900 rounded-lg p-3 sm:p-4 overflow-x-auto">
+                <pre className="text-green-400 font-mono text-xs sm:text-sm whitespace-pre">
 {`{
   "mcpServers": {
     "${mcp.name}": {

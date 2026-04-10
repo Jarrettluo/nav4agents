@@ -16,13 +16,13 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="container">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-semibold text-gray-800 font-outfit">Nav4Agent</span>
-            <span className="text-sm text-gray-500">Agent 导航</span>
+          <Link href="/" className="flex items-center gap-1 sm:gap-2">
+            <span className="text-lg sm:text-xl font-semibold text-gray-800 font-outfit">Nav4Agent</span>
+            <span className="text-xs sm:text-sm text-gray-500 hidden sm:inline">Agent 导航</span>
           </Link>
 
           {/* 导航链接 - 桌面端 */}
@@ -55,7 +55,7 @@ export default function Header() {
                   : "text-gray-600 hover:text-blue-600 hover:bg-black/5"
               }`}
             >
-              订阅方案
+              智能体工具
             </Link>
             <Link
               href="/codingplan"

@@ -20,7 +20,7 @@ export default function McpPage() {
   return (
     <div>
       {/* 搜索和筛选 */}
-      <div className="mb-4 space-y-3">
+      <div className="mb-6 space-y-3">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
@@ -31,17 +31,17 @@ export default function McpPage() {
             className="search-input pl-9"
           />
         </div>
-        
+
         <div className="flex flex-wrap gap-2 items-center">
-          {/* 分类筛选 */}
-          <div className="flex gap-1 flex-wrap">
+          {/* 分类筛选 - Pill 按钮 */}
+          <div className="flex gap-2 flex-wrap">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
-                className={`px-3 py-1 text-xs rounded ${
-                  category === cat 
-                    ? 'bg-blue-600 text-white' 
+                className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-all ${
+                  category === cat
+                    ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
@@ -49,12 +49,12 @@ export default function McpPage() {
               </button>
             ))}
           </div>
-          
+
           {/* 类型筛选 */}
           <select
             value={type}
             onChange={(e) => setType(e.target.value)}
-            className="ml-auto text-xs border rounded px-2 py-1"
+            className="ml-auto text-xs sm:text-sm border border-gray-200 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 bg-white"
           >
             {mcpTypes.map(t => (
               <option key={t.value} value={t.value}>{t.label}</option>
@@ -64,18 +64,18 @@ export default function McpPage() {
       </div>
 
       {/* 结果统计 */}
-      <div className="text-sm text-gray-500 mb-3">
+      <div className="text-sm text-gray-500 mb-4">
         共 {filtered.length} 个 MCP 服务器
       </div>
 
       {/* 列表 */}
       <div className="space-y-3">
         {filtered.map(item => (
-          <div key={item.id} className="card">
-            <div className="flex items-start justify-between">
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <Link href={`/mcp/${item.slug}`} className="font-medium text-gray-800 hover:text-blue-600">
+          <div key={item.id} className="ai-card">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2">
+                  <Link href={`/mcp/${item.slug}`} className="font-semibold text-gray-800 hover:text-blue-600 text-sm sm:text-base">
                     {item.name}
                   </Link>
                   <span className="tag tag-primary text-xs">{item.category}</span>
@@ -83,8 +83,8 @@ export default function McpPage() {
                     {item.type === 'local' ? '本地' : '远程'}
                   </span>
                 </div>
-                <p className="text-sm text-gray-600 mb-2">{item.description}</p>
-                <div className="flex items-center gap-4 text-xs text-gray-500">
+                <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{item.description}</p>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
                   <span className="flex items-center gap-1">
                     <Star className="w-3 h-3" /> {item.stars}
                   </span>
@@ -94,14 +94,14 @@ export default function McpPage() {
                     </a>
                   )}
                   {item.installCmd && (
-                    <button className="text-blue-600 hover:underline" onClick={() => navigator.clipboard.writeText(item.installCmd || '')}>
-                      复制安装命令
+                    <button className="text-blue-600 hover:underline whitespace-nowrap" onClick={() => navigator.clipboard.writeText(item.installCmd || '')}>
+                      复制安装
                     </button>
                   )}
                 </div>
               </div>
-              <button className="text-gray-400 hover:text-blue-600 text-sm ml-2">
-                ☆ 收藏
+              <button className="text-gray-400 hover:text-blue-600 text-sm self-start sm:ml-2">
+                ☆
               </button>
             </div>
           </div>

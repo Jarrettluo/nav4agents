@@ -26,35 +26,35 @@ export default function SubscriptionsPage() {
         if (items.length === 0) return null;
         return (
           <section key={category} className="mb-8">
-            <h2 className="text-base font-semibold text-gray-800 mb-3">{category}</h2>
+            <h2 className="text-lg font-semibold text-gray-800 mb-3 font-outfit">{category}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {items.map((sub) => (
                 <div key={sub.id} className="card">
                   <div className="flex items-start gap-3">
                     {/* Logo */}
-                    <div className="text-3xl">{sub.logo}</div>
-                    
+                    <div className="text-2xl sm:text-3xl">{sub.logo}</div>
+
                     {/* 内容 */}
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className="font-medium text-gray-800">{sub.platform}</h3>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
+                        <h3 className="font-medium text-gray-800 text-sm sm:text-base">{sub.platform}</h3>
                         <span className="tag tag-primary text-xs">{sub.product}</span>
                       </div>
-                      <p className="text-sm text-gray-600 mb-2">{sub.description}</p>
-                      
+                      <p className="text-sm text-gray-600 mb-2 line-clamp-2">{sub.description}</p>
+
                       {/* 功能列表 */}
                       <div className="flex flex-wrap gap-1 mb-3">
                         {sub.features.slice(0, 3).map((feature, i) => (
                           <span key={i} className="flex items-center gap-1 text-xs text-gray-500">
-                            <Check className="w-3 h-3 text-green-500" /> {feature}
+                            <Check className="w-3 h-3 text-green-500 flex-shrink-0" /> {feature}
                           </span>
                         ))}
                       </div>
-                      
+
                       {/* 价格和链接 */}
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                         <div>
-                          <span className="text-lg font-semibold text-gray-800">
+                          <span className="text-base sm:text-lg font-semibold text-gray-800">
                             {sub.price === 0 ? '免费' : `$${sub.price}`}
                           </span>
                           <span className="text-xs text-gray-500">
@@ -66,7 +66,7 @@ export default function SubscriptionsPage() {
                           href={sub.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn btn-primary flex items-center gap-1 text-xs"
+                          className="btn btn-primary flex items-center justify-center gap-1 text-xs"
                         >
                           访问 <ExternalLink className="w-3 h-3" />
                         </a>
