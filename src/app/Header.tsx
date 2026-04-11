@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Search, X } from "lucide-react";
-import { useState } from "react";
+// import { X } from "lucide-react"; // 搜索功能暂时禁用
+// import { useState } from "react";
 
 export default function Header() {
-  const [searchValue, setSearchValue] = useState("");
+  // const [searchValue, setSearchValue] = useState(""); // 搜索功能暂时禁用
   const pathname = usePathname();
 
   const isActive = (path: string) => {
@@ -21,12 +21,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 sm:gap-2">
-            <span className="text-lg sm:text-xl font-semibold text-gray-800 font-outfit">Nav4Agent</span>
-            <span className="text-xs sm:text-sm text-gray-500 hidden sm:inline">Agent 导航</span>
+            <span className="text-lg sm:text-xl font-semibold text-gray-800 font-outfit">Nav4Agents</span>
+            <span className="text-xs sm:text-sm text-gray-500 hidden sm:inline">AI Agent Skill MCP发现和分享</span>
           </Link>
 
-          {/* 导航链接 - 桌面端 */}
-          <nav className="hidden md:flex items-center gap-2">
+          {/* 导航链接 - 桌面端 - 居中 */}
+          <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-2">
             <Link
               href="/mcp"
               className={`px-4 py-2 text-sm font-medium rounded-full transition-all ${
@@ -69,15 +69,14 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* 搜索框 */}
-          <div className="hidden md:block relative w-64">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+          {/* 搜索框 - 暂时禁用，等待后台服务 */}
+          {/* <div className="hidden md:block relative w-64">
             <input
               type="text"
               placeholder="搜索工具..."
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
-              className="search-input pl-10 w-full"
+              className="search-input w-full"
             />
             {searchValue && (
               <button
@@ -87,7 +86,9 @@ export default function Header() {
                 <X className="w-4 h-4" />
               </button>
             )}
-          </div>
+          </div> */}
+          {/* 右侧占位 - 保持布局平衡 */}
+          <div className="hidden md:block w-64" />
         </div>
       </div>
     </header>

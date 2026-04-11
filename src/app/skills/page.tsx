@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, User } from 'lucide-react';
+import { User } from 'lucide-react';
 import { skills, skillCategories, skillSources } from '@/data/skills';
 
 export default function SkillsPage() {
@@ -23,13 +23,12 @@ export default function SkillsPage() {
       {/* 搜索和筛选 */}
       <div className="mb-6 space-y-3">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
             type="text"
             placeholder="搜索 AI Skills..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="search-input pl-9"
+            className="search-input"
           />
         </div>
 

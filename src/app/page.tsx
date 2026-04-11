@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* Banner 以下内容 - 最大 1200px 居中 */}
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         {/* 分类导航 */}
         <div className="mb-6" id="features">
           <div className="flex flex-wrap gap-2">

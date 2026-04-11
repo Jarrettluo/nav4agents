@@ -143,10 +143,10 @@ export default function CodingPlanPage() {
 
       {/* 表格 */}
       <div className="overflow-x-auto rounded-lg border border-gray-200">
-        <table className="w-full text-sm">
+        <table className="w-full text-sm table-fixed">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap">
+              <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap sticky left-0 bg-gray-50 z-10 w-[100px]">
                 <button
                   onClick={() => handleSort('platform')}
                   className="flex items-center gap-1 hover:text-blue-600"
@@ -155,7 +155,7 @@ export default function CodingPlanPage() {
                   <SortIcon field="platform" />
                 </button>
               </th>
-              <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap">
+              <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap sticky left-[100px] bg-gray-50 z-10 w-[120px]">
                 <button
                   onClick={() => handleSort('plan')}
                   className="flex items-center gap-1 hover:text-blue-600"
@@ -164,7 +164,7 @@ export default function CodingPlanPage() {
                   <SortIcon field="plan" />
                 </button>
               </th>
-              <th className="px-3 py-3 text-right font-medium text-gray-600 whitespace-nowrap">
+              <th className="px-3 py-3 text-right font-medium text-gray-600 whitespace-nowrap sticky left-[220px] bg-gray-50 z-10 w-[100px]">
                 <button
                   onClick={() => handleSort('monthlyPrice')}
                   className="flex items-center gap-1 ml-auto hover:text-blue-600"
@@ -211,21 +211,21 @@ export default function CodingPlanPage() {
               </th>
               <th className="px-3 py-3 text-left font-medium text-gray-600 hidden xl:table-cell">支持模型</th>
               <th className="px-3 py-3 text-left font-medium text-gray-600 hidden xl:table-cell">其他权益</th>
-              <th className="px-3 py-3 text-center font-medium text-gray-600">操作</th>
+              <th className="px-3 py-3 text-center font-medium text-gray-600 w-[90px]">操作</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
             {sortedPlans.map((plan, idx) => (
               <tr key={idx} className="hover:bg-blue-50/30 transition-colors">
-                <td className="px-3 py-3">
+                <td className="px-3 py-3 sticky left-0 bg-white">
                   <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded ${platformColors[plan.platform] || 'bg-gray-100 text-gray-700'}`}>
                     {plan.platform}
                   </span>
                 </td>
-                <td className="px-3 py-3 font-medium text-gray-800 whitespace-nowrap">
+                <td className="px-3 py-3 font-medium text-gray-800 whitespace-nowrap sticky left-[100px] bg-white">
                   {plan.plan}
                 </td>
-                <td className="px-3 py-3 text-right whitespace-nowrap">
+                <td className="px-3 py-3 text-right whitespace-nowrap sticky left-[220px] bg-white">
                   {plan.monthlyPrice === '-' ? (
                     <span className="text-gray-400">-</span>
                   ) : (
@@ -266,15 +266,15 @@ export default function CodingPlanPage() {
                 <td className="px-3 py-3 text-gray-500 text-xs hidden xl:table-cell max-w-xs truncate">
                   {plan.otherBenefits === '-' ? '-' : plan.otherBenefits}
                 </td>
-                <td className="px-3 py-3 text-center">
+                <td className="px-3 py-3 text-center w-[90px]">
                   <a
                     href={plan.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded transition-colors"
+                    className="inline-flex items-center justify-center gap-1 px-3 py-1 min-w-[70px] whitespace-nowrap text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded transition-colors"
                   >
                     跳转
-                    <ExternalLink className="w-3 h-3" />
+                    <ExternalLink className="w-3 h-3 flex-shrink-0" />
                   </a>
                 </td>
               </tr>

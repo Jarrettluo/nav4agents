@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Star, ExternalLink } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
 import { mcpResources, categories, mcpTypes } from '@/data/mcp';
 
 export default function McpPage() {
@@ -22,13 +22,12 @@ export default function McpPage() {
       {/* 搜索和筛选 */}
       <div className="mb-6 space-y-3">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
             type="text"
             placeholder="搜索 MCP 服务器..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="search-input pl-9"
+            className="search-input"
           />
         </div>
 

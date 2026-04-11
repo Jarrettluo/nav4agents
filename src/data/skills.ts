@@ -8,6 +8,7 @@ export interface Skill {
   installCmd?: string;
   usage: number;
   featured: boolean;
+  githubUrl?: string;
 }
 
 export const skills: Skill[] = [
@@ -21,6 +22,7 @@ export const skills: Skill[] = [
     installCmd: 'npx skillfish add codereview/auto-review',
     usage: 3200,
     featured: true,
+    githubUrl: 'https://github.com/Leonxlnx/taste-skill/blob/main/skills/minimalist-skill/SKILL.md',
   },
   {
     id: 2,
