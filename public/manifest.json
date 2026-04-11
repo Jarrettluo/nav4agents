@@ -1,0 +1,24 @@
+{
+  "name": "Nav4Agent - AI Agent 工具导航",
+  "short_name": "Nav4Agent",
+  "description": "发现、收藏优质 AI Agent 工具、MCP 服务器和订阅服务",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1456f0",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["utilities", "productivity"],
+  "lang": "zh-CN"
+}

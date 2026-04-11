@@ -2,12 +2,32 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./Header";
 import ContentWrapper from "./ContentWrapper";
+import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
 export const metadata: Metadata = {
   title: "Nav4Agent - AI Agent Skill MCP发现和分享",
   description: "发现、收藏优质 AI Agent 工具、MCP 服务器和订阅服务",
   icons: {
     icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Nav4Agent",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Nav4Agent",
+    "theme-color": "#1456f0",
   },
 };
 
@@ -19,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <head>
+        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
@@ -52,6 +73,7 @@ export default function RootLayout({
             <p>© 2026 Nav4Agent · 发现好用的 Agent 工具 · <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">蜀ICP备2021021531号-3</a></p>
           </div>
         </footer>
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );
