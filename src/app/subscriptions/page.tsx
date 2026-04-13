@@ -48,6 +48,23 @@ export default function SubscriptionsPage() {
     fetchSubscriptions();
   }, [filter]);
 
+  // 解析 features（后端返回逗号分隔的字符串）
+  const parseFeatures = (featuresStr?: string): string[] => {
+    if (!featuresStr) return [];
+    return featuresStr.split(',').map(f => f.trim()).filter(Boolean);
+  };
+
+  // 格式化频率显示
+  const formatFrequency = (frequency?: string): string => {
+    if (!frequency) return '';
+    const map: Record<string, string> = {
+      'monthly': '月',
+      'yearly': '年',
+      'once': '一次性',
+    };
+    return map[frequency] || frequency;
+  };
+
   // 按分类分组
   const groupedSubscriptions = subscriptions.reduce((acc, sub) => {
     const cat = sub.category || '其他';
@@ -105,7 +122,7 @@ export default function SubscriptionsPage() {
 
                       {/* 功能列表 */}
                       <div className="flex flex-wrap gap-1 mb-3">
-                        {sub.features.slice(0, 3).map((feature, i) => (
+                        {parseFeatures(sub.features).slice(0, 3).map((feature, i) => (
                           <span key={i} className="flex items-center gap-1 text-xs text-gray-500">
                             <Check className="w-3 h-3 text-green-500 flex-shrink-0" /> {feature}
                           </span>
@@ -119,7 +136,7 @@ export default function SubscriptionsPage() {
                             {sub.price === 0 ? '免费' : `$${sub.price}`}
                           </span>
                           <span className="text-xs text-gray-500">
-                            /{sub.frequency === 'monthly' ? '月' : sub.frequency === 'yearly' ? '年' : ''}
+                            /{formatFrequency(sub.frequency)}
                           </span>
                           <span className="text-xs text-gray-400 ml-1">({sub.priceUnit})</span>
                         </div>

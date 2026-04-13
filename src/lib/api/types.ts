@@ -30,7 +30,7 @@ export interface LoginResult {
   token: string;
 }
 
-// Skill 相关
+// Skill 相关 - 与后端 SkillDTO 对齐
 export interface Skill {
   id: number;
   name: string;
@@ -42,9 +42,15 @@ export interface Skill {
   usage: number;
   featured: boolean;
   githubUrl?: string;
+  // 后端额外字段
+  markdownContent?: string;    // SKILL.md 内容（后端直接提供，无需前端再请求）
+  rating?: number;
+  reviewCount?: number;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
-// MCP 相关
+// MCP 相关 - 与后端 McpServerDTO 对齐
 export interface McpServer {
   id: number;
   name: string;
@@ -56,21 +62,37 @@ export interface McpServer {
   installCmd?: string;
   stars: number;
   featured: boolean;
+  // 后端额外字段
+  longDescription?: string;
+  features?: string;       // 后端返回的是逗号分隔的字符串，前端需解析
+  configuration?: string;
+  rating?: number;
+  reviewCount?: number;
+  source?: string;
+  contributors?: number;
+  lastUpdated?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
-// 订阅方案相关
+// 订阅方案相关 - 与后端 SubscriptionDTO 对齐
 export interface Subscription {
   id: number;
   platform: string;
   product: string;
   price: number;
   priceUnit: string;
-  frequency: 'monthly' | 'yearly' | 'once';
+  frequency: string;           // 后端返回的是字符串，前端可映射显示
   description: string;
-  features: string[];
+  features: string;            // 后端返回逗号分隔的字符串，前端需解析
   logo: string;
   link: string;
-  category: 'IDE' | '聊天助手' | '云IDE' | 'CLI';
+  category: string;            // 后端返回字符串，非联合类型
+  // 后端额外字段
+  rating?: number;
+  reviewCount?: number;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 // 收藏相关
@@ -94,17 +116,28 @@ export interface FavoriteItem {
   subscription?: Subscription;
 }
 
-// 首页数据
+// 首页数据 - 与后端 HomeDataDTO 对齐
 export interface HomeData {
   featuredMcp: McpServer[];
   featuredSkills: Skill[];
-  recentItems: Array<{
-    type: 'MCP' | 'Skill';
+  // 后端字段名: recentAdded -> 前端映射为 recentItems
+  recentAdded?: Array<{
+    type: string;
     name: string;
     slug: string;
-    time: string;
+    addedAt?: string;
   }>;
-  stats: {
+  // 后端字段名: addedAt -> 前端映射为 time (兼容处理)
+  recentItems?: Array<{
+    type: string;
+    name: string;
+    slug: string;
+    time?: string;
+  }>;
+  // 后端返回额外字段
+  freeSubscriptions?: Subscription[];
+  categories?: Record<string, string[]>;
+  stats?: {
     mcpCount: number;
     skillCount: number;
     subscriptionCount: number;

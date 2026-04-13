@@ -31,8 +31,8 @@ export default function LoginPage() {
         if (res.code === 200) {
           localStorage.setItem('token', res.data.token);
           localStorage.setItem('user', JSON.stringify(res.data));
-          // 触发存储事件以更新 Header
-          window.dispatchEvent(new Event('storage'));
+          // 触发自定义事件以更新 Header（同 Tab 内）
+          window.dispatchEvent(new CustomEvent('authchange'));
           router.push('/');
         } else {
           setError(res.msg || '登录失败');
@@ -51,7 +51,7 @@ export default function LoginPage() {
             username: formData.username,
             email: formData.email,
           }));
-          window.dispatchEvent(new Event('storage'));
+          window.dispatchEvent(new CustomEvent('authchange'));
           router.push('/');
         } else {
           setError(res.msg || '注册失败');

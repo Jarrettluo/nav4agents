@@ -10,6 +10,18 @@ import { getSkillBySlug } from '@/lib/api/skills';
 import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
 import type { Skill } from '@/lib/api/types';
 
+// source 显示映射
+const sourceLabels: Record<string, string> = {
+  'self': '自研',
+  'SELF': '自研',
+  'community': '社区',
+  'COMMUNITY': '社区',
+};
+const getSourceLabel = (source?: string): string => {
+  if (!source) return '未知';
+  return sourceLabels[source] || source;
+};
+
 export default function SkillDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
@@ -56,6 +68,14 @@ export default function SkillDetailPage() {
   }, [slug]);
 
   useEffect(() => {
+    // 优先使用后端返回的 markdownContent
+    if (skill?.markdownContent) {
+      setMarkdownContent(skill.markdownContent);
+      setContentError(false);
+      return;
+    }
+
+    // 后端没有则从 GitHub 获取
     if (!skill?.githubUrl) {
       setContentError(true);
       return;
@@ -80,7 +100,7 @@ export default function SkillDetailPage() {
     };
 
     fetchContent();
-  }, [skill?.githubUrl]);
+  }, [skill?.markdownContent, skill?.githubUrl]);
 
   const handleCopyInstallCmd = async () => {
     if (!skill?.installCmd) return;
@@ -96,7 +116,6 @@ export default function SkillDetailPage() {
   const handleToggleFavorite = async () => {
     if (!skill?.id) return;
 
-    // 检查是否登录
     const token = localStorage.getItem('token');
     if (!token) {
       alert('请先登录后再收藏');
@@ -177,8 +196,8 @@ export default function SkillDetailPage() {
             <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 font-outfit">{skill.name}</h1>
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
               <span className="tag tag-primary text-xs sm:text-sm">{skill.category}</span>
-              <span className={`tag text-xs sm:text-sm ${skill.source === '自研' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
-                {skill.source}
+              <span className={`tag text-xs sm:text-sm ${getSourceLabel(skill.source) === '自研' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+                {getSourceLabel(skill.source)}
               </span>
               <span className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
                 <User className="w-3 h-3 sm:w-4 sm:h-4" /> {skill.usage} 次使用

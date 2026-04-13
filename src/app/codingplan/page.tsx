@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { ArrowUpDown, ArrowUp, ArrowDown, ExternalLink } from 'lucide-react';
-import { codingPlans, platforms, CodingPlan } from '@/data/codingplan';
+import { useState, useEffect, useMemo } from 'react';
+import { ArrowUpDown, ArrowUp, ArrowDown, ExternalLink, Loader2 } from 'lucide-react';
+import { getCodingPlans, getCodingPlanPlatforms, type CodingPlan } from '@/lib/api/codingplans';
 
 type SortField = 'platform' | 'plan' | 'monthlyPrice' | 'yearlyPrice' | 'fiveHourRequests' | 'weeklyRequests' | 'monthlyRequests';
 type SortDirection = 'asc' | 'desc';
@@ -31,10 +31,42 @@ function parseNumber(val: string): number {
   return parseInt(val.replace(/,/g, '')) || 0;
 }
 
+// 解析 models（逗号分隔的字符串）
+function parseModels(modelsStr: string): string[] {
+  if (!modelsStr) return [];
+  return modelsStr.split(',').map(m => m.trim()).filter(Boolean);
+}
+
 export default function CodingPlanPage() {
+  const [loading, setLoading] = useState(true);
+  const [codingPlans, setCodingPlans] = useState<CodingPlan[]>([]);
+  const [platforms, setPlatforms] = useState<string[]>([]);
   const [sortField, setSortField] = useState<SortField>('monthlyPrice');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
   const [platformFilter, setPlatformFilter] = useState<string>('全部');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const [plansRes, platformsRes] = await Promise.all([
+          getCodingPlans({ pageSize: 100 }),
+          getCodingPlanPlatforms(),
+        ]);
+        if (plansRes.code === 200) {
+          setCodingPlans(plansRes.data.list || []);
+        }
+        if (platformsRes.code === 200) {
+          setPlatforms(platformsRes.data || []);
+        }
+      } catch (err) {
+        console.error('获取 CodingPlan 数据失败:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   const handleSort = (field: SortField) => {
     if (sortField === field) {
@@ -73,11 +105,11 @@ export default function CodingPlanPage() {
           break;
         case 'monthlyRequests':
           aVal = parseNumber(a.monthlyRequests);
-          bVal = parseNumber(a.monthlyRequests);
+          bVal = parseNumber(b.monthlyRequests);
           break;
         default:
-          aVal = a[sortField];
-          bVal = b[sortField];
+          aVal = a[sortField] as string;
+          bVal = b[sortField] as string;
       }
 
       if (typeof aVal === 'string' && typeof bVal === 'string') {
@@ -90,7 +122,7 @@ export default function CodingPlanPage() {
         ? (aVal as number) - (bVal as number)
         : (bVal as number) - (aVal as number);
     });
-  }, [sortField, sortDirection, platformFilter]);
+  }, [sortField, sortDirection, platformFilter, codingPlans]);
 
   const SortIcon = ({ field }: { field: SortField }) => {
     if (sortField !== field) return <ArrowUpDown className="w-3 h-3 opacity-40" />;
@@ -98,6 +130,14 @@ export default function CodingPlanPage() {
       ? <ArrowUp className="w-3 h-3 text-blue-600" />
       : <ArrowDown className="w-3 h-3 text-blue-600" />;
   };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -141,158 +181,165 @@ export default function CodingPlanPage() {
         共 {sortedPlans.length} 个套餐
       </div>
 
-      {/* 表格 */}
-      <div className="overflow-x-auto rounded-lg border border-gray-200">
-        <table className="w-full text-sm table-fixed">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap sticky left-0 bg-gray-50 z-10 w-[100px]">
-                <button
-                  onClick={() => handleSort('platform')}
-                  className="flex items-center gap-1 hover:text-blue-600"
-                >
-                  平台
-                  <SortIcon field="platform" />
-                </button>
-              </th>
-              <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap sticky left-[100px] bg-gray-50 z-10 w-[120px]">
-                <button
-                  onClick={() => handleSort('plan')}
-                  className="flex items-center gap-1 hover:text-blue-600"
-                >
-                  套餐
-                  <SortIcon field="plan" />
-                </button>
-              </th>
-              <th className="px-3 py-3 text-right font-medium text-gray-600 whitespace-nowrap sticky left-[220px] bg-gray-50 z-10 w-[100px]">
-                <button
-                  onClick={() => handleSort('monthlyPrice')}
-                  className="flex items-center gap-1 ml-auto hover:text-blue-600"
-                >
-                  月费
-                  <SortIcon field="monthlyPrice" />
-                </button>
-              </th>
-              <th className="px-3 py-3 text-right font-medium text-gray-600 whitespace-nowrap">
-                <button
-                  onClick={() => handleSort('yearlyPrice')}
-                  className="flex items-center gap-1 ml-auto hover:text-blue-600"
-                >
-                  年费
-                  <SortIcon field="yearlyPrice" />
-                </button>
-              </th>
-              <th className="px-3 py-3 text-center font-medium text-gray-600 hidden lg:table-cell">
-                <button
-                  onClick={() => handleSort('fiveHourRequests')}
-                  className="flex items-center gap-1 mx-auto hover:text-blue-600"
-                >
-                  5小时/请求
-                  <SortIcon field="fiveHourRequests" />
-                </button>
-              </th>
-              <th className="px-3 py-3 text-center font-medium text-gray-600 hidden lg:table-cell">
-                <button
-                  onClick={() => handleSort('weeklyRequests')}
-                  className="flex items-center gap-1 mx-auto hover:text-blue-600"
-                >
-                  每周/请求
-                  <SortIcon field="weeklyRequests" />
-                </button>
-              </th>
-              <th className="px-3 py-3 text-center font-medium text-gray-600 hidden lg:table-cell">
-                <button
-                  onClick={() => handleSort('monthlyRequests')}
-                  className="flex items-center gap-1 mx-auto hover:text-blue-600"
-                >
-                  每月/请求
-                  <SortIcon field="monthlyRequests" />
-                </button>
-              </th>
-              <th className="px-3 py-3 text-left font-medium text-gray-600 hidden xl:table-cell">支持模型</th>
-              <th className="px-3 py-3 text-left font-medium text-gray-600 hidden xl:table-cell">其他权益</th>
-              <th className="px-3 py-3 text-center font-medium text-gray-600 w-[90px]">操作</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-100">
-            {sortedPlans.map((plan, idx) => (
-              <tr key={idx} className="hover:bg-blue-50/30 transition-colors">
-                <td className="px-3 py-3 sticky left-0 bg-white">
-                  <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded ${platformColors[plan.platform] || 'bg-gray-100 text-gray-700'}`}>
-                    {plan.platform}
-                  </span>
-                </td>
-                <td className="px-3 py-3 font-medium text-gray-800 whitespace-nowrap sticky left-[100px] bg-white">
-                  {plan.plan}
-                </td>
-                <td className="px-3 py-3 text-right whitespace-nowrap sticky left-[220px] bg-white">
-                  {plan.monthlyPrice === '-' ? (
-                    <span className="text-gray-400">-</span>
-                  ) : (
-                    <span className="font-medium text-orange-600">{plan.monthlyPrice}</span>
-                  )}
-                </td>
-                <td className="px-3 py-3 text-right whitespace-nowrap">
-                  {plan.yearlyPrice === '-' ? (
-                    <span className="text-gray-400">-</span>
-                  ) : (
-                    <span className="font-medium text-green-600">{plan.yearlyPrice}</span>
-                  )}
-                </td>
-                <td className="px-3 py-3 text-center whitespace-nowrap hidden lg:table-cell">
-                  <span className={plan.fiveHourRequests === '无限制' ? 'text-green-600 font-medium' : ''}>
-                    {plan.fiveHourRequests}
-                  </span>
-                </td>
-                <td className="px-3 py-3 text-center whitespace-nowrap hidden lg:table-cell">
-                  <span className={plan.weeklyRequests === '无限制' ? 'text-green-600 font-medium' : ''}>
-                    {plan.weeklyRequests}
-                  </span>
-                </td>
-                <td className="px-3 py-3 text-center whitespace-nowrap hidden lg:table-cell">
-                  <span className={plan.monthlyRequests === '无限制' ? 'text-green-600 font-medium' : ''}>
-                    {plan.monthlyRequests}
-                  </span>
-                </td>
-                <td className="px-3 py-3 hidden xl:table-cell">
-                  <div className="flex flex-wrap gap-1 max-w-xs">
-                    {plan.models.map((m, i) => (
-                      <span key={i} className="inline-block px-1.5 py-0.5 text-xs bg-gray-100 text-gray-600 rounded">
-                        {m}
+      {sortedPlans.length === 0 ? (
+        <div className="text-center py-12 text-gray-500">
+          暂无数据
+        </div>
+      ) : (
+        <>
+          {/* 表格 */}
+          <div className="overflow-x-auto rounded-lg border border-gray-200">
+            <table className="w-full text-sm table-fixed">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap sticky left-0 bg-gray-50 z-10 w-[100px]">
+                    <button
+                      onClick={() => handleSort('platform')}
+                      className="flex items-center gap-1 hover:text-blue-600"
+                    >
+                      平台
+                      <SortIcon field="platform" />
+                    </button>
+                  </th>
+                  <th className="px-3 py-3 text-left font-medium text-gray-600 whitespace-nowrap sticky left-[100px] bg-gray-50 z-10 w-[120px]">
+                    <button
+                      onClick={() => handleSort('plan')}
+                      className="flex items-center gap-1 hover:text-blue-600"
+                    >
+                      套餐
+                      <SortIcon field="plan" />
+                    </button>
+                  </th>
+                  <th className="px-3 py-3 text-right font-medium text-gray-600 whitespace-nowrap sticky left-[220px] bg-gray-50 z-10 w-[100px]">
+                    <button
+                      onClick={() => handleSort('monthlyPrice')}
+                      className="flex items-center gap-1 ml-auto hover:text-blue-600"
+                    >
+                      月费
+                      <SortIcon field="monthlyPrice" />
+                    </button>
+                  </th>
+                  <th className="px-3 py-3 text-right font-medium text-gray-600 whitespace-nowrap">
+                    <button
+                      onClick={() => handleSort('yearlyPrice')}
+                      className="flex items-center gap-1 ml-auto hover:text-blue-600"
+                    >
+                      年费
+                      <SortIcon field="yearlyPrice" />
+                    </button>
+                  </th>
+                  <th className="px-3 py-3 text-center font-medium text-gray-600 hidden lg:table-cell">
+                    <button
+                      onClick={() => handleSort('fiveHourRequests')}
+                      className="flex items-center gap-1 mx-auto hover:text-blue-600"
+                    >
+                      5小时/请求
+                      <SortIcon field="fiveHourRequests" />
+                    </button>
+                  </th>
+                  <th className="px-3 py-3 text-center font-medium text-gray-600 hidden lg:table-cell">
+                    <button
+                      onClick={() => handleSort('weeklyRequests')}
+                      className="flex items-center gap-1 mx-auto hover:text-blue-600"
+                    >
+                      每周/请求
+                      <SortIcon field="weeklyRequests" />
+                    </button>
+                  </th>
+                  <th className="px-3 py-3 text-center font-medium text-gray-600 hidden lg:table-cell">
+                    <button
+                      onClick={() => handleSort('monthlyRequests')}
+                      className="flex items-center gap-1 mx-auto hover:text-blue-600"
+                    >
+                      每月/请求
+                      <SortIcon field="monthlyRequests" />
+                    </button>
+                  </th>
+                  <th className="px-3 py-3 text-left font-medium text-gray-600 hidden xl:table-cell">支持模型</th>
+                  <th className="px-3 py-3 text-left font-medium text-gray-600 hidden xl:table-cell">其他权益</th>
+                  <th className="px-3 py-3 text-center font-medium text-gray-600 w-[90px]">操作</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {sortedPlans.map((plan) => (
+                  <tr key={plan.id} className="hover:bg-blue-50/30 transition-colors">
+                    <td className="px-3 py-3 sticky left-0 bg-white">
+                      <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded ${platformColors[plan.platform] || 'bg-gray-100 text-gray-700'}`}>
+                        {plan.platform}
                       </span>
-                    ))}
-                  </div>
-                </td>
-                <td className="px-3 py-3 text-gray-500 text-xs hidden xl:table-cell max-w-xs truncate">
-                  {plan.otherBenefits === '-' ? '-' : plan.otherBenefits}
-                </td>
-                <td className="px-3 py-3 text-center w-[90px]">
-                  <a
-                    href={plan.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1 px-3 py-1 min-w-[70px] whitespace-nowrap text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded transition-colors"
-                  >
-                    跳转
-                    <ExternalLink className="w-3 h-3 flex-shrink-0" />
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+                    </td>
+                    <td className="px-3 py-3 font-medium text-gray-800 whitespace-nowrap sticky left-[100px] bg-white">
+                      {plan.plan}
+                    </td>
+                    <td className="px-3 py-3 text-right whitespace-nowrap sticky left-[220px] bg-white">
+                      {plan.monthlyPrice === '-' ? (
+                        <span className="text-gray-400">-</span>
+                      ) : (
+                        <span className="font-medium text-orange-600">{plan.monthlyPrice}</span>
+                      )}
+                    </td>
+                    <td className="px-3 py-3 text-right whitespace-nowrap">
+                      {plan.yearlyPrice === '-' ? (
+                        <span className="text-gray-400">-</span>
+                      ) : (
+                        <span className="font-medium text-green-600">{plan.yearlyPrice}</span>
+                      )}
+                    </td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap hidden lg:table-cell">
+                      <span className={plan.fiveHourRequests === '无限制' ? 'text-green-600 font-medium' : ''}>
+                        {plan.fiveHourRequests}
+                      </span>
+                    </td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap hidden lg:table-cell">
+                      <span className={plan.weeklyRequests === '无限制' ? 'text-green-600 font-medium' : ''}>
+                        {plan.weeklyRequests}
+                      </span>
+                    </td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap hidden lg:table-cell">
+                      <span className={plan.monthlyRequests === '无限制' ? 'text-green-600 font-medium' : ''}>
+                        {plan.monthlyRequests}
+                      </span>
+                    </td>
+                    <td className="px-3 py-3 hidden xl:table-cell">
+                      <div className="flex flex-wrap gap-1 max-w-xs">
+                        {parseModels(plan.models).map((m, i) => (
+                          <span key={i} className="inline-block px-1.5 py-0.5 text-xs bg-gray-100 text-gray-600 rounded">
+                            {m}
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                    <td className="px-3 py-3 text-gray-500 text-xs hidden xl:table-cell max-w-xs truncate">
+                      {plan.otherBenefits === '-' ? '-' : plan.otherBenefits}
+                    </td>
+                    <td className="px-3 py-3 text-center w-[90px]">
+                      <a
+                        href={plan.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-1 px-3 py-1 min-w-[70px] whitespace-nowrap text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded transition-colors"
+                      >
+                        跳转
+                        <ExternalLink className="w-3 h-3 flex-shrink-0" />
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-      {/* 备注 */}
-      <div className="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
-        <h3 className="text-sm font-medium text-amber-800 mb-2">说明</h3>
-        <ul className="text-xs text-amber-700 space-y-1">
-          <li>• 包季/包年价格中的划线数字表示原始价格（包月×3 或 包月×12），未划线的为实际优惠价格</li>
-          <li>• 使用表格邀请链接，部分平台可享优惠</li>
-          <li>• 本页面数据仅供参考，价格及权益最终以平台官方公布为准</li>
-          <li>• 数据来源：<a href="https://github.com/wmpeng/codingplan" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">wmpeng/codingplan</a></li>
-        </ul>
-      </div>
+          {/* 备注 */}
+          <div className="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+            <h3 className="text-sm font-medium text-amber-800 mb-2">说明</h3>
+            <ul className="text-xs text-amber-700 space-y-1">
+              <li>• 包季/包年价格中的划线数字表示原始价格（包月×3 或 包月×12），未划线的为实际优惠价格</li>
+              <li>• 使用表格邀请链接，部分平台可享优惠</li>
+              <li>• 本页面数据仅供参考，价格及权益最终以平台官方公布为准</li>
+            </ul>
+          </div>
+        </>
+      )}
     </div>
   );
 }

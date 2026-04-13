@@ -4,8 +4,20 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { User, Loader2 } from 'lucide-react';
 import { getSkills, getSkillCategories } from '@/lib/api/skills';
-import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import { addFavorite, removeFavorite } from '@/lib/api/favorites';
 import type { Skill } from '@/lib/api/types';
+
+// source 显示映射
+const sourceLabels: Record<string, string> = {
+  'self': '自研',
+  'SELF': '自研',
+  'community': '社区',
+  'COMMUNITY': '社区',
+};
+const getSourceLabel = (source?: string): string => {
+  if (!source) return '未知';
+  return sourceLabels[source] || source;
+};
 
 const sourceMap: Record<string, string> = {
   'self': '自研',
@@ -33,19 +45,8 @@ export default function SkillsPage() {
       const res = await getSkills(params);
       if (res.code === 200) {
         setSkills(res.data.list || []);
-        // 检查每个 item 的收藏状态
-        const newFavorited: number[] = [];
-        for (const skill of res.data.list || []) {
-          if (skill.id) {
-            try {
-              const favRes = await checkFavorite('skill', skill.id);
-              if (favRes.data?.isFavorited) {
-                newFavorited.push(skill.id);
-              }
-            } catch {}
-          }
-        }
-        setFavoritedIds(newFavorited);
+        // 不再在列表加载时检查每个 item 的收藏状态，减少 N+1 请求
+        // 收藏状态通过乐观更新在用户点击时处理
       }
     } catch (err) {
       console.error('获取 Skills 失败:', err);
@@ -78,16 +79,29 @@ export default function SkillsPage() {
       return;
     }
 
+    const isFavorited = favoritedIds.includes(skill.id);
+    // 乐观更新：立即更新 UI
+    setFavoritingIds(prev => [...prev, skill.id!]);
+    if (isFavorited) {
+      setFavoritedIds(prev => prev.filter(id => id !== skill.id));
+    } else {
+      setFavoritedIds(prev => [...prev, skill.id!]);
+    }
+
     try {
-      setFavoritingIds(prev => [...prev, skill.id!]);
-      if (favoritedIds.includes(skill.id)) {
+      // 实际调用 API
+      if (isFavorited) {
         await removeFavorite('skill', skill.id);
-        setFavoritedIds(prev => prev.filter(id => id !== skill.id));
       } else {
         await addFavorite('skill', skill.id);
-        setFavoritedIds(prev => [...prev, skill.id!]);
       }
     } catch (err: any) {
+      // API 失败时回滚 UI
+      if (isFavorited) {
+        setFavoritedIds(prev => [...prev, skill.id!]);
+      } else {
+        setFavoritedIds(prev => prev.filter(id => id !== skill.id));
+      }
       if (err.response?.status === 401) {
         alert('请先登录后再收藏');
         window.location.href = '/login';
@@ -177,8 +191,8 @@ export default function SkillsPage() {
                       {item.name}
                     </Link>
                     <span className="tag tag-primary text-xs">{item.category}</span>
-                    <span className={`tag text-xs ${item.source === '自研' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
-                      {item.source}
+                    <span className={`tag text-xs ${getSourceLabel(item.source) === '自研' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+                      {getSourceLabel(item.source)}
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{item.description}</p>

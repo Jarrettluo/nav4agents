@@ -44,10 +44,22 @@ export default function Home() {
 
   const featuredMcp = homeData?.featuredMcp || [];
   const featuredSkills = homeData?.featuredSkills || [];
-  const recentItems = homeData?.recentItems || [];
+  // 适配后端 recentAdded -> 前端 recentItems
+  const recentItems = homeData?.recentAdded?.map(item => ({
+    type: item.type,
+    name: item.name,
+    slug: item.slug,
+    time: item.addedAt,
+  })) || [];
 
-  const freeSubscriptions = subscriptions.filter(s => s.price === 0);
-  const paidSubscriptions = subscriptions.filter(s => s.price > 0 && s.price <= 20);
+  // 从后端获取分类（后端返回 categories: { mcp: [...], skills: [...] }）
+  const mcpCategories = homeData?.categories?.mcp || [];
+  // 统计数据
+  const stats = homeData?.stats;
+  // 使用后端返回的免费订阅
+  const freeSubscriptions = homeData?.freeSubscriptions || [];
+  // 所有订阅（来自 getSubscriptions API）
+  const allSubscriptions = subscriptions;
 
   return (
     <>
@@ -119,10 +131,10 @@ export default function Home() {
 
       {/* Banner 以下内容 - 最大 1200px 居中 */}
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        {/* 分类导航 */}
+        {/* 分类导航 - 使用后端数据 */}
         <div className="mb-6" id="features">
           <div className="flex flex-wrap gap-2">
-            {['开发工具', '效率工具', 'AI 增强', '内容处理', '数据处理', '垂直行业'].map((cat) => (
+            {mcpCategories.length > 0 ? mcpCategories.slice(0, 6).map((cat) => (
               <Link
                 key={cat}
                 href={`/mcp?category=${cat}`}
@@ -130,7 +142,18 @@ export default function Home() {
               >
                 {cat}
               </Link>
-            ))}
+            )) : (
+              // 兜底：显示默认分类
+              ['开发工具', '效率工具', 'AI 增强', '内容处理', '数据处理', '垂直行业'].map((cat) => (
+                <Link
+                  key={cat}
+                  href={`/mcp?category=${cat}`}
+                  className="tag hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                >
+                  {cat}
+                </Link>
+              ))
+            )}
           </div>
         </div>
 
@@ -196,7 +219,7 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-            {paidSubscriptions.slice(0, Math.max(0, 3 - freeSubscriptions.length)).map((sub) => (
+            {allSubscriptions.filter(s => s.price > 0 && s.price <= 20).slice(0, Math.max(0, 3 - freeSubscriptions.length)).map((sub) => (
               <Link key={sub.id} href="/subscriptions" className="card flex items-center gap-3">
                 <span className="text-2xl">{sub.logo}</span>
                 <div>
@@ -207,6 +230,26 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* 统计数据 */}
+        {stats && (
+          <section className="mb-8">
+            <div className="grid grid-cols-3 gap-4">
+              <div className="card text-center py-4">
+                <div className="text-2xl font-bold text-blue-600">{stats.mcpCount}</div>
+                <div className="text-sm text-gray-500">MCP 服务器</div>
+              </div>
+              <div className="card text-center py-4">
+                <div className="text-2xl font-bold text-purple-600">{stats.skillCount}</div>
+                <div className="text-sm text-gray-500">AI Skills</div>
+              </div>
+              <div className="card text-center py-4">
+                <div className="text-2xl font-bold text-green-600">{stats.subscriptionCount}</div>
+                <div className="text-sm text-gray-500">订阅方案</div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* 最近收录 */}
         <section>
@@ -221,22 +264,9 @@ export default function Home() {
                 <span className="text-xs text-gray-400">{item.time}</span>
               </div>
             )) : (
-              <>
-                <div className="ai-card flex items-center justify-between py-3 px-4">
-                  <div className="flex items-center gap-3">
-                    <span className="tag text-xs">MCP</span>
-                    <span className="text-sm text-gray-700">Sequential Thinking</span>
-                  </div>
-                  <span className="text-xs text-gray-400">2小时前</span>
-                </div>
-                <div className="ai-card flex items-center justify-between py-3 px-4">
-                  <div className="flex items-center gap-3">
-                    <span className="tag text-xs">Skill</span>
-                    <span className="text-sm text-gray-700">Git Workflow Helper</span>
-                  </div>
-                  <span className="text-xs text-gray-400">5小时前</span>
-                </div>
-              </>
+              <div className="ai-card text-center py-6 text-gray-500">
+                暂无最近收录
+              </div>
             )}
           </div>
         </section>

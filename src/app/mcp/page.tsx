@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Star, ExternalLink, Loader2 } from 'lucide-react';
 import { getMcpServers, getMcpCategories } from '@/lib/api/mcp';
-import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import { addFavorite, removeFavorite } from '@/lib/api/favorites';
 import type { McpServer } from '@/lib/api/types';
 
 const typeLabels: Record<string, string> = {
@@ -33,19 +33,8 @@ export default function McpPage() {
       const res = await getMcpServers(params);
       if (res.code === 200) {
         setMcpServers(res.data.list || []);
-        // 检查每个 item 的收藏状态
-        const newFavorited: number[] = [];
-        for (const mcp of res.data.list || []) {
-          if (mcp.id) {
-            try {
-              const favRes = await checkFavorite('mcp', mcp.id);
-              if (favRes.data?.isFavorited) {
-                newFavorited.push(mcp.id);
-              }
-            } catch {}
-          }
-        }
-        setFavoritedIds(newFavorited);
+        // 不再在列表加载时检查每个 item 的收藏状态，减少 N+1 请求
+        // 收藏状态通过乐观更新在用户点击时处理
       }
     } catch (err) {
       console.error('获取 MCP 服务器失败:', err);
@@ -78,16 +67,29 @@ export default function McpPage() {
       return;
     }
 
+    const isFavorited = favoritedIds.includes(mcp.id);
+    // 乐观更新：立即更新 UI
+    setFavoritingIds(prev => [...prev, mcp.id!]);
+    if (isFavorited) {
+      setFavoritedIds(prev => prev.filter(id => id !== mcp.id));
+    } else {
+      setFavoritedIds(prev => [...prev, mcp.id!]);
+    }
+
     try {
-      setFavoritingIds(prev => [...prev, mcp.id!]);
-      if (favoritedIds.includes(mcp.id)) {
+      // 实际调用 API
+      if (isFavorited) {
         await removeFavorite('mcp', mcp.id);
-        setFavoritedIds(prev => prev.filter(id => id !== mcp.id));
       } else {
         await addFavorite('mcp', mcp.id);
-        setFavoritedIds(prev => [...prev, mcp.id!]);
       }
     } catch (err: any) {
+      // API 失败时回滚 UI
+      if (isFavorited) {
+        setFavoritedIds(prev => [...prev, mcp.id!]);
+      } else {
+        setFavoritedIds(prev => prev.filter(id => id !== mcp.id));
+      }
       if (err.response?.status === 401) {
         alert('请先登录后再收藏');
         window.location.href = '/login';

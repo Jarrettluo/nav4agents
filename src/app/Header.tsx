@@ -47,9 +47,14 @@ export default function Header() {
       }
     };
     checkAuth();
-    // 监听存储变化
+    // 监听存储变化（跨 Tab）
     window.addEventListener('storage', checkAuth);
-    return () => window.removeEventListener('storage', checkAuth);
+    // 监听自定义登录变化事件（同 Tab 内）
+    window.addEventListener('authchange', checkAuth);
+    return () => {
+      window.removeEventListener('storage', checkAuth);
+      window.removeEventListener('authchange', checkAuth);
+    };
   }, [pathname]);
 
   const handleLogout = useCallback(() => {
