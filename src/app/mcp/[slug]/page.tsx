@@ -1,17 +1,45 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Star, Copy, Check, Terminal, BookOpen, Zap, Globe, Server } from 'lucide-react';
-import { mcpResources } from '@/data/mcp';
+import { ArrowLeft, ExternalLink, Star, Copy, Check, Terminal, BookOpen, Zap, Globe, Server, Loader2 } from 'lucide-react';
+import { getMcpBySlug } from '@/lib/api/mcp';
+import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import type { McpServer } from '@/lib/api/types';
 
 export default function McpDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const mcp = mcpResources.find(m => m.slug === slug);
 
+  const [loading, setLoading] = useState(true);
+  const [mcp, setMcp] = useState<McpServer | null>(null);
   const [copied, setCopied] = useState(false);
+  const [isFavorited, setIsFavorited] = useState(false);
+  const [favoriting, setFavoriting] = useState(false);
+
+  useEffect(() => {
+    const fetchMcp = async () => {
+      try {
+        setLoading(true);
+        const res = await getMcpBySlug(slug);
+        if (res.code === 200) {
+          setMcp(res.data);
+          // 检查收藏状态
+          if (res.data.id) {
+            const favRes = await checkFavorite('mcp', res.data.id);
+            setIsFavorited(favRes.data?.isFavorited || false);
+          }
+        }
+      } catch (err) {
+        console.error('获取 MCP 服务器失败:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMcp();
+  }, [slug]);
 
   const handleCopy = async (text: string) => {
     try {
@@ -22,6 +50,46 @@ export default function McpDetailPage() {
       console.error('Failed to copy:', err);
     }
   };
+
+  const handleToggleFavorite = async () => {
+    if (!mcp?.id) return;
+
+    // 检查是否登录
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('请先登录后再收藏');
+      window.location.href = '/login';
+      return;
+    }
+
+    try {
+      setFavoriting(true);
+      if (isFavorited) {
+        await removeFavorite('mcp', mcp.id);
+        setIsFavorited(false);
+      } else {
+        await addFavorite('mcp', mcp.id);
+        setIsFavorited(true);
+      }
+    } catch (err: any) {
+      if (err.response?.status === 401) {
+        alert('请先登录后再收藏');
+        window.location.href = '/login';
+      } else {
+        console.error('收藏操作失败:', err);
+      }
+    } finally {
+      setFavoriting(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      </div>
+    );
+  }
 
   if (!mcp) {
     return (
@@ -34,7 +102,6 @@ export default function McpDetailPage() {
     );
   }
 
-  // 模拟扩展数据（后续可移到数据文件）
   const extendedData = {
     longDescription: `${mcp.description}\n\n此 MCP 服务器为 AI 助手提供了强大的扩展能力，可以与现有工作流程无缝集成。适用于需要自动化、集成外部服务的场景。`,
     features: [
@@ -92,8 +159,14 @@ export default function McpDetailPage() {
               </div>
 
               {/* 收藏按钮 */}
-              <button className="text-gray-400 hover:text-yellow-500 transition-colors">
-                ☆ 收藏
+              <button
+                onClick={handleToggleFavorite}
+                disabled={favoriting}
+                className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm transition-colors ${
+                  isFavorited ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {isFavorited ? '★ 已收藏' : '☆ 收藏'}
               </button>
             </div>
 

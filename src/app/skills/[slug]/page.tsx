@@ -5,18 +5,23 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ArrowLeft, Copy, Download, ExternalLink, Check, FileText, User } from 'lucide-react';
-import { skills } from '@/data/skills';
+import { ArrowLeft, Copy, Download, ExternalLink, Check, FileText, User, Loader2 } from 'lucide-react';
+import { getSkillBySlug } from '@/lib/api/skills';
+import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import type { Skill } from '@/lib/api/types';
 
 export default function SkillDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const skill = skills.find(s => s.slug === slug);
 
+  const [loading, setLoading] = useState(true);
+  const [skill, setSkill] = useState<Skill | null>(null);
   const [markdownContent, setMarkdownContent] = useState<string>('');
-  const [loading, setLoading] = useState(false);
+  const [contentLoading, setContentLoading] = useState(false);
   const [copied, setCopied] = useState(false);
   const [contentError, setContentError] = useState(false);
+  const [isFavorited, setIsFavorited] = useState(false);
+  const [favoriting, setFavoriting] = useState(false);
 
   const getGithubUrl = () => skill?.githubUrl || null;
 
@@ -28,13 +33,36 @@ export default function SkillDetailPage() {
   };
 
   useEffect(() => {
+    const fetchSkill = async () => {
+      try {
+        setLoading(true);
+        const res = await getSkillBySlug(slug);
+        if (res.code === 200) {
+          setSkill(res.data);
+          // 检查收藏状态
+          if (res.data.id) {
+            const favRes = await checkFavorite('skill', res.data.id);
+            setIsFavorited(favRes.data?.isFavorited || false);
+          }
+        }
+      } catch (err) {
+        console.error('获取 Skill 失败:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSkill();
+  }, [slug]);
+
+  useEffect(() => {
     if (!skill?.githubUrl) {
       setContentError(true);
       return;
     }
 
     const fetchContent = async () => {
-      setLoading(true);
+      setContentLoading(true);
       setContentError(false);
       try {
         const rawUrl = getRawContentUrl();
@@ -47,7 +75,7 @@ export default function SkillDetailPage() {
         console.error('Failed to fetch SKILL.md:', error);
         setContentError(true);
       } finally {
-        setLoading(false);
+        setContentLoading(false);
       }
     };
 
@@ -65,6 +93,38 @@ export default function SkillDetailPage() {
     }
   };
 
+  const handleToggleFavorite = async () => {
+    if (!skill?.id) return;
+
+    // 检查是否登录
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('请先登录后再收藏');
+      window.location.href = '/login';
+      return;
+    }
+
+    try {
+      setFavoriting(true);
+      if (isFavorited) {
+        await removeFavorite('skill', skill.id);
+        setIsFavorited(false);
+      } else {
+        await addFavorite('skill', skill.id);
+        setIsFavorited(true);
+      }
+    } catch (err: any) {
+      if (err.response?.status === 401) {
+        alert('请先登录后再收藏');
+        window.location.href = '/login';
+      } else {
+        console.error('收藏操作失败:', err);
+      }
+    } finally {
+      setFavoriting(false);
+    }
+  };
+
   const handleDownload = () => {
     if (!markdownContent) return;
     const blob = new Blob([markdownContent], { type: 'text/markdown' });
@@ -77,6 +137,14 @@ export default function SkillDetailPage() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      </div>
+    );
+  }
 
   if (!skill) {
     return (
@@ -118,17 +186,28 @@ export default function SkillDetailPage() {
             </div>
           </div>
 
-          {githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-xs sm:text-sm text-gray-700 transition-colors self-start"
+          <div className="flex items-center gap-2">
+            {githubUrl && (
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-xs sm:text-sm text-gray-700 transition-colors self-start"
+              >
+                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                GitHub
+              </a>
+            )}
+            <button
+              onClick={handleToggleFavorite}
+              disabled={favoriting}
+              className={`flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm transition-colors self-start ${
+                isFavorited ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
             >
-              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
-              GitHub
-            </a>
-          )}
+              {isFavorited ? '★ 已收藏' : '☆ 收藏'}
+            </button>
+          </div>
         </div>
 
         <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{skill.description}</p>
@@ -183,14 +262,10 @@ export default function SkillDetailPage() {
           文件详情
         </h3>
 
-        {loading && (
+        {contentLoading && (
           <div className="card text-center py-12">
-            <div className="animate-pulse">
-              <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto mb-4"></div>
-              <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto mb-4"></div>
-              <div className="h-4 bg-gray-200 rounded w-2/3 mx-auto"></div>
-            </div>
-            <p className="text-gray-500 mt-4">正在加载 SKILL.md...</p>
+            <Loader2 className="w-8 h-8 animate-spin text-blue-600 mx-auto mb-4" />
+            <p className="text-gray-500">正在加载 SKILL.md...</p>
           </div>
         )}
 
@@ -210,7 +285,7 @@ export default function SkillDetailPage() {
           </div>
         )}
 
-        {!loading && !contentError && markdownContent && (
+        {!contentLoading && !contentError && markdownContent && (
           <div className="card markdown-content">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}

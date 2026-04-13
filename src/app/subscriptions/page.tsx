@@ -1,8 +1,61 @@
-import Link from "next/link";
-import { subscriptions, categories } from "@/data/subscriptions";
-import { ExternalLink, Check } from "lucide-react";
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ExternalLink, Check, Loader2 } from 'lucide-react';
+import { getSubscriptions, getSubscriptionCategories } from '@/lib/api/subscriptions';
+import type { Subscription } from '@/lib/api/types';
 
 export default function SubscriptionsPage() {
+  const [loading, setLoading] = useState(true);
+  const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [filter, setFilter] = useState<string>('all');
+
+  const fetchSubscriptions = async () => {
+    try {
+      setLoading(true);
+      const params: any = {};
+      if (filter !== 'all') params.category = filter;
+
+      const res = await getSubscriptions(params);
+      if (res.code === 200) {
+        setSubscriptions(res.data.list || []);
+      }
+    } catch (err) {
+      console.error('获取订阅方案失败:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchCategories = async () => {
+    try {
+      const res = await getSubscriptionCategories();
+      if (res.code === 200) {
+        setCategories(['全部', ...(res.data || [])]);
+      }
+    } catch (err) {
+      console.error('获取分类失败:', err);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    fetchSubscriptions();
+  }, [filter]);
+
+  // 按分类分组
+  const groupedSubscriptions = subscriptions.reduce((acc, sub) => {
+    const cat = sub.category || '其他';
+    if (!acc[cat]) acc[cat] = [];
+    acc[cat].push(sub);
+    return acc;
+  }, {} as Record<string, Subscription[]>);
+
   return (
     <div>
       {/* 分类 */}
@@ -12,7 +65,13 @@ export default function SubscriptionsPage() {
             <Link
               key={cat}
               href={`/subscriptions?type=${cat}`}
-              className="tag hover:bg-blue-50 hover:text-blue-600"
+              onClick={(e) => {
+                e.preventDefault();
+                setFilter(cat);
+              }}
+              className={`tag hover:bg-blue-50 hover:text-blue-600 ${
+                filter === cat ? 'bg-blue-600 text-white' : ''
+              }`}
             >
               {cat}
             </Link>
@@ -21,10 +80,12 @@ export default function SubscriptionsPage() {
       </div>
 
       {/* 订阅列表 - 按分类 */}
-      {categories.filter(c => c !== '全部').map((category) => {
-        const items = subscriptions.filter(s => s.category === category);
-        if (items.length === 0) return null;
-        return (
+      {loading ? (
+        <div className="flex justify-center py-12">
+          <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+        </div>
+      ) : (
+        Object.entries(groupedSubscriptions).map(([category, items]) => (
           <section key={category} className="mb-8">
             <h2 className="text-lg font-semibold text-gray-800 mb-3 font-outfit">{category}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -77,8 +138,8 @@ export default function SubscriptionsPage() {
               ))}
             </div>
           </section>
-        );
-      })}
+        ))
+      )}
     </div>
   );
 }

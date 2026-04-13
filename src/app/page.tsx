@@ -1,12 +1,53 @@
-import Link from "next/link";
-import { mcpResources } from "@/data/mcp";
-import { skills } from "@/data/skills";
-import { subscriptions } from "@/data/subscriptions";
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Loader2 } from 'lucide-react';
+import { getHomeData } from '@/lib/api/home';
+import { getSubscriptions } from '@/lib/api/subscriptions';
+import type { HomeData, Subscription } from '@/lib/api/types';
 
 export default function Home() {
-  const featuredMcp = mcpResources.filter(m => m.featured).slice(0, 4);
-  const featuredSkill = skills.filter(s => s.featured).slice(0, 4);
-  const freeSubscriptions = subscriptions.filter(s => s.price === 0).slice(0, 3);
+  const [loading, setLoading] = useState(true);
+  const [homeData, setHomeData] = useState<HomeData | null>(null);
+  const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [homeRes, subRes] = await Promise.all([
+          getHomeData(),
+          getSubscriptions({ pageSize: 6 }),
+        ]);
+        if (homeRes.code === 200) {
+          setHomeData(homeRes.data);
+        }
+        if (subRes.code === 200) {
+          setSubscriptions(subRes.data.list || []);
+        }
+      } catch (err) {
+        console.error('获取数据失败:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      </div>
+    );
+  }
+
+  const featuredMcp = homeData?.featuredMcp || [];
+  const featuredSkills = homeData?.featuredSkills || [];
+  const recentItems = homeData?.recentItems || [];
+
+  const freeSubscriptions = subscriptions.filter(s => s.price === 0);
+  const paidSubscriptions = subscriptions.filter(s => s.price > 0 && s.price <= 20);
 
   return (
     <>
@@ -124,7 +165,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-            {featuredSkill.map((item) => (
+            {featuredSkills.map((item) => (
               <Link key={item.id} href={`/skills/${item.slug}`} className="card block">
                 <div className="flex items-start justify-between mb-2">
                   <span className="tag tag-primary text-xs">{item.category}</span>
@@ -146,8 +187,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-            {freeSubscriptions.map((sub, i) => (
-              <Link key={i} href="/subscriptions" className="card flex items-center gap-3">
+            {freeSubscriptions.map((sub) => (
+              <Link key={sub.id} href="/subscriptions" className="card flex items-center gap-3">
                 <span className="text-2xl">{sub.logo}</span>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
@@ -155,8 +196,8 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-            {subscriptions.filter(s => s.price > 0 && s.price <= 20).slice(0, 3 - freeSubscriptions.length).map((sub, i) => (
-              <Link key={i + 10} href="/subscriptions" className="card flex items-center gap-3">
+            {paidSubscriptions.slice(0, Math.max(0, 3 - freeSubscriptions.length)).map((sub) => (
+              <Link key={sub.id} href="/subscriptions" className="card flex items-center gap-3">
                 <span className="text-2xl">{sub.logo}</span>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
@@ -171,11 +212,7 @@ export default function Home() {
         <section>
           <h2 className="text-lg font-semibold text-gray-800 mb-3 font-outfit">最近收录</h2>
           <div className="space-y-2">
-            {[
-              { type: 'MCP', name: 'Sequential Thinking', time: '2小时前' },
-              { type: 'Skill', name: 'Git Workflow Helper', time: '5小时前' },
-              { type: 'MCP', name: 'Postgres MCP', time: '1天前' },
-            ].map((item, i) => (
+            {recentItems.length > 0 ? recentItems.map((item, i) => (
               <div key={i} className="ai-card flex items-center justify-between py-3 px-4">
                 <div className="flex items-center gap-3">
                   <span className="tag text-xs">{item.type}</span>
@@ -183,7 +220,24 @@ export default function Home() {
                 </div>
                 <span className="text-xs text-gray-400">{item.time}</span>
               </div>
-            ))}
+            )) : (
+              <>
+                <div className="ai-card flex items-center justify-between py-3 px-4">
+                  <div className="flex items-center gap-3">
+                    <span className="tag text-xs">MCP</span>
+                    <span className="text-sm text-gray-700">Sequential Thinking</span>
+                  </div>
+                  <span className="text-xs text-gray-400">2小时前</span>
+                </div>
+                <div className="ai-card flex items-center justify-between py-3 px-4">
+                  <div className="flex items-center gap-3">
+                    <span className="tag text-xs">Skill</span>
+                    <span className="text-sm text-gray-700">Git Workflow Helper</span>
+                  </div>
+                  <span className="text-xs text-gray-400">5小时前</span>
+                </div>
+              </>
+            )}
           </div>
         </section>
       </div>
