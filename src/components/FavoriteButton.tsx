@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Star } from 'lucide-react';
 import { addFavorite, removeFavorite, checkFavorite } from '@/lib/data/favorites';
 import type { FavoriteType } from '@/lib/data/types';
 
@@ -41,16 +42,17 @@ export default function FavoriteButton({
 
   const cls =
     size === 'md'
-      ? 'flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm transition-colors self-start'
-      : 'flex items-center gap-1 px-3 py-1.5 rounded-full text-sm transition-colors';
+      ? 'flex items-center justify-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm transition-colors self-start'
+      : 'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm transition-colors';
 
   return (
     <button
       onClick={handleToggle}
       disabled={favoriting}
-      className={`${cls} ${isFavorited ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+      className={`${cls} flex-shrink-0 whitespace-nowrap ${isFavorited ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
     >
-      {isFavorited ? '★ 已收藏' : '☆ 收藏'}
+      <Star className={`w-3.5 h-3.5 ${isFavorited ? 'fill-current' : ''}`} />
+      {isFavorited ? '已收藏' : '收藏'}
     </button>
   );
 }

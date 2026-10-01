@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ExternalLink, Check, Loader2 } from 'lucide-react';
 import { getSubscriptions, getSubscriptionCategories } from '@/lib/data/subscriptions';
+import PlatformIcon from '@/components/PlatformIcon';
 import type { Subscription } from '@/lib/data/types';
 
 export default function SubscriptionsClient() {
@@ -93,7 +94,9 @@ export default function SubscriptionsClient() {
                 <div key={sub.id} className="card">
                   <div className="flex items-start gap-3">
                     {/* Logo */}
-                    <div className="text-2xl sm:text-3xl">{sub.logo}</div>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gray-50 flex items-center justify-center flex-shrink-0">
+                      <PlatformIcon name={sub.logo} className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
+                    </div>
 
                     {/* 内容 */}
                     <div className="flex-1 min-w-0">

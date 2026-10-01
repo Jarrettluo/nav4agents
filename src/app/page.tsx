@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { Plug, BrainCircuit, Zap, Star, User, ArrowRight } from 'lucide-react';
 import { getHomeDataSync } from '@/lib/data/home';
 import { getAllSubscriptions } from '@/lib/data/subscriptions';
 import { ogImage } from '@/lib/seo';
 import { displayDesc } from '@/lib/i18n';
 import HiddenShareImage from '@/components/HiddenShareImage';
+import PlatformIcon from '@/components/PlatformIcon';
 
 // 首页：服务端渲染（SSG）——首屏即含完整内容 + OG 标签，微信/搜索爬虫可读
 export default function Home() {
@@ -46,17 +48,17 @@ export default function Home() {
                 {/* 功能标签 - Pill 样式（数量来自最新扫描数据） */}
                 <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 mb-6 md:mb-10">
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
-                    <span>🔌</span>
+                    <Plug className="w-4 h-4 text-gray-600" />
                     <span className="font-medium text-gray-700">MCP 生态</span>
                     <span className="text-gray-400 hidden sm:inline">已收录 {stats.mcpCount}+ 个</span>
                   </div>
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
-                    <span>🧠</span>
+                    <BrainCircuit className="w-4 h-4 text-gray-600" />
                     <span className="font-medium text-gray-700">AI Skills</span>
                     <span className="text-gray-400 hidden sm:inline">已收录 {stats.skillCount}+ 个</span>
                   </div>
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
-                    <span>⚡</span>
+                    <Zap className="w-4 h-4 text-gray-600" />
                     <span className="font-medium text-gray-700">Coding Plan</span>
                     <span className="text-gray-400 hidden sm:inline">{stats.codingplanCount}+ 套餐对比</span>
                   </div>
@@ -70,7 +72,7 @@ export default function Home() {
                     style={{ fontSize: '14px' }}
                   >
                     开始探索
-                    <span>→</span>
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
                     href="#features"
@@ -113,8 +115,8 @@ export default function Home() {
         <section className="mb-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-semibold text-gray-800 font-outfit">精选 MCP 服务器</h2>
-            <Link href="/mcp" className="text-sm text-blue-600 hover:underline">
-              查看全部 →
+            <Link href="/mcp" className="text-sm text-blue-600 hover:underline inline-flex items-center gap-1">
+              查看全部 <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
@@ -122,7 +124,7 @@ export default function Home() {
               <Link key={item.id} href={`/mcp/${item.slug}`} className="card block">
                 <div className="flex items-start justify-between mb-2">
                   <span className="tag tag-primary text-xs">{item.category}</span>
-                  <span className="text-xs text-gray-400">⭐ {item.stars}</span>
+                  <span className="text-xs text-gray-400 inline-flex items-center gap-1"><Star className="w-3 h-3" />{item.stars}</span>
                 </div>
                 <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
                 <p className="text-xs text-gray-500 line-clamp-2">{displayDesc(item.descriptionZh, item.description)}</p>
@@ -135,8 +137,8 @@ export default function Home() {
         <section className="mb-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-semibold text-gray-800 font-outfit">热门 AI Skills</h2>
-            <Link href="/skills" className="text-sm text-blue-600 hover:underline">
-              查看全部 →
+            <Link href="/skills" className="text-sm text-blue-600 hover:underline inline-flex items-center gap-1">
+              查看全部 <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
@@ -144,7 +146,7 @@ export default function Home() {
               <Link key={item.id} href={`/skills/${item.slug}`} className="card block">
                 <div className="flex items-start justify-between mb-2">
                   <span className="tag tag-primary text-xs">{item.category}</span>
-                  <span className="text-xs text-gray-400">👤 {item.usage}</span>
+                  <span className="text-xs text-gray-400 inline-flex items-center gap-1"><User className="w-3 h-3" />{item.usage}</span>
                 </div>
                 <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
                 <p className="text-xs text-gray-500 line-clamp-2">{displayDesc(item.descriptionZh, item.description)}</p>
@@ -157,14 +159,16 @@ export default function Home() {
         <section className="mb-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-semibold text-gray-800 font-outfit">智能体工具对比</h2>
-            <Link href="/subscriptions" className="text-sm text-blue-600 hover:underline">
-              查看全部 →
+            <Link href="/subscriptions" className="text-sm text-blue-600 hover:underline inline-flex items-center gap-1">
+              查看全部 <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {freeSubscriptions.map((sub) => (
               <Link key={sub.id} href="/subscriptions" className="card flex items-center gap-3">
-                <span className="text-2xl">{sub.logo}</span>
+                <span className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center flex-shrink-0">
+                  <PlatformIcon name={sub.logo} className="w-5 h-5 text-gray-700" />
+                </span>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
                   <p className="text-xs text-green-600">免费</p>
@@ -173,7 +177,9 @@ export default function Home() {
             ))}
             {paidSubscriptions.slice(0, Math.max(0, 3 - freeSubscriptions.length)).map((sub) => (
               <Link key={sub.id} href="/subscriptions" className="card flex items-center gap-3">
-                <span className="text-2xl">{sub.logo}</span>
+                <span className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center flex-shrink-0">
+                  <PlatformIcon name={sub.logo} className="w-5 h-5 text-gray-700" />
+                </span>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-800">{sub.platform}</h3>
                   <p className="text-xs text-gray-500">${sub.price}/月</p>

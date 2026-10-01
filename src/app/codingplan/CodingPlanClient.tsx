@@ -141,7 +141,7 @@ export default function CodingPlanClient() {
       <div className="mb-4 flex flex-wrap gap-2">
         <button
           onClick={() => setPlatformFilter('全部')}
-          className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all ${
+          className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all whitespace-nowrap ${
             platformFilter === '全部'
               ? 'bg-blue-600 text-white'
               : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -153,7 +153,7 @@ export default function CodingPlanClient() {
           <button
             key={p}
             onClick={() => setPlatformFilter(p)}
-            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all ${
+            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all whitespace-nowrap ${
               platformFilter === p
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -246,7 +246,7 @@ export default function CodingPlanClient() {
             {sortedPlans.map((plan, idx) => (
               <tr key={idx} className="hover:bg-blue-50/30 transition-colors">
                 <td className="px-3 py-3 sticky left-0 bg-white">
-                  <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded ${colorFor(plan.platform)}`}>
+                  <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded whitespace-nowrap ${colorFor(plan.platform)}`}>
                     {plan.platform}
                   </span>
                 </td>

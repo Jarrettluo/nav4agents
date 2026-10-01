@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Star, Loader2, ExternalLink } from 'lucide-react';
+import { Star, Loader2, ExternalLink, ArrowRight } from 'lucide-react';
 import { getFavorites, removeFavorite } from '@/lib/data/favorites';
 import { displayDesc } from '@/lib/i18n';
 import type { FavoriteItem, FavoriteType } from '@/lib/data/types';
@@ -77,7 +77,7 @@ export default function FavoritesPage() {
           <button
             key={type}
             onClick={() => setFilter(type)}
-            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all ${
+            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all whitespace-nowrap ${
               filter === type
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -97,8 +97,8 @@ export default function FavoritesPage() {
         <div className="text-center py-12 text-gray-500">
           <Star className="w-12 h-12 mx-auto mb-4 text-gray-300" />
           <p>暂无收藏内容</p>
-          <Link href="/mcp" className="text-blue-600 hover:underline mt-2 inline-block">
-            去发现 →
+          <Link href="/mcp" className="text-blue-600 hover:underline mt-2 inline-flex items-center gap-1">
+            去发现 <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
       ) : (
@@ -141,7 +141,7 @@ export default function FavoritesPage() {
                     {deleting === item.itemId ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
                     ) : (
-                      '☆'
+                      <Star className="w-4 h-4 fill-current" />
                     )}
                   </button>
                 </div>

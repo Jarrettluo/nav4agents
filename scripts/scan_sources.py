@@ -80,6 +80,16 @@ def clean_name(name, fallback=""):
     return s[:120]
 
 
+EMOJI_RE = re.compile("[\U0001F000-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F]+")
+
+
+def clean_desc(s, limit=400):
+    """清理描述：去 emoji、压缩空白、截断。"""
+    s = EMOJI_RE.sub("", (s or "")).strip()
+    s = re.sub(r"\s+", " ", s).strip()
+    return s[:limit]
+
+
 def stable_id(key):
     """由稳定键派生一个稳定正整数 id（收藏功能依赖其跨周稳定）。"""
     return int(hashlib.md5(key.encode("utf-8")).hexdigest()[:8], 16) % 90_000_000 + 10_000_000
@@ -144,7 +154,7 @@ def scan_smithery():
         seen.add(qn)
         slug = slugify(qn)
         name = x.get("displayName") or qn
-        desc = (x.get("description") or "").strip()
+        desc = clean_desc(x.get("description"))
         if len(desc) < 10:
             continue
         remote = bool(x.get("remote"))
@@ -205,7 +215,7 @@ def scan_official_registry():
         if slug in seen:
             continue
         seen.add(slug)
-        desc = (s.get("description") or "").strip()
+        desc = clean_desc(s.get("description"))
         if len(desc) < 10:
             continue
         remotes = s.get("remotes") or []
@@ -253,7 +263,7 @@ def scan_clawhub():
             continue
         seen.add(slug)
         name = clean_name(x.get("displayName") or raw_slug, raw_slug)
-        desc = (x.get("summary") or "").strip()
+        desc = clean_desc(x.get("summary"))
         if len(desc) < 15:
             continue
         topics = x.get("topics") or []

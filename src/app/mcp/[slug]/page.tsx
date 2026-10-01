@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ExternalLink, Star, Terminal, Zap, Globe, Server, Settings } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Star, Terminal, Zap, Globe, Server, Settings, BadgeCheck } from 'lucide-react';
 import { getAllMcp } from '@/lib/data/mcp';
 import { getMcpDetail } from '@/lib/data/mcpDetails';
 import { buildMcpMetadata, ogImage } from '@/lib/seo';
@@ -54,17 +54,17 @@ export default function McpDetailPage({ params }: { params: { slug: string } }) 
         <div className="lg:col-span-2 space-y-6">
           {/* 头部卡片 */}
           <div className="card">
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+              <div className="flex items-start gap-3 min-w-0 flex-1">
                 {detail?.iconUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={detail.iconUrl}
                     alt={mcp.name}
-                    className="w-12 h-12 rounded-xl object-contain bg-gray-50 p-1.5"
+                    className="w-12 h-12 rounded-xl object-contain bg-gray-50 p-1.5 flex-shrink-0"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
                     {mcp.type === 'local' ? (
                       <Server className="w-6 h-6 text-white" />
                     ) : (
@@ -72,28 +72,32 @@ export default function McpDetailPage({ params }: { params: { slug: string } }) 
                     )}
                   </div>
                 )}
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-800 font-outfit">
+                <div className="min-w-0">
+                  <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 font-outfit break-words">
                     {mcp.name}
-                    {detail?.verified && (
-                      <span className="ml-2 align-middle text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full">✓ 已验证</span>
-                    )}
                   </h1>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className={`tag text-xs ${mcp.type === 'local' ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'}`}>
+                  <div className="flex flex-wrap items-center gap-2">
+                    {detail?.verified && (
+                      <span className="inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full whitespace-nowrap">
+                        <BadgeCheck className="w-3.5 h-3.5" />已验证
+                      </span>
+                    )}
+                    <span className={`tag text-xs whitespace-nowrap ${mcp.type === 'local' ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'}`}>
                       {mcp.type === 'local' ? '本地 MCP' : '远程 MCP'}
                     </span>
-                    <span className="tag tag-primary text-xs">{mcp.category}</span>
-                    <span className="text-xs text-gray-400">来源：{mcp.source || '——'}</span>
+                    <span className="tag tag-primary text-xs whitespace-nowrap">{mcp.category}</span>
+                    <span className="text-xs text-gray-400 whitespace-nowrap">来源：{mcp.source || '——'}</span>
                   </div>
                 </div>
               </div>
 
-              {/* 收藏按钮（客户端组件，收藏状态存本地浏览器） */}
-              <FavoriteButton type="mcp" itemId={mcp.id} />
+              {/* 操作区（客户端组件，收藏状态存本地浏览器） */}
+              <div className="flex items-center gap-2 flex-shrink-0">
+                <FavoriteButton type="mcp" itemId={mcp.id} size="md" />
+              </div>
             </div>
 
-            <p className="text-gray-600 leading-relaxed">{displayDesc(mcp.descriptionZh, mcp.description)}</p>
+            <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{displayDesc(mcp.descriptionZh, mcp.description)}</p>
           </div>
 
           {/* 工具能力（真实数据） */}
@@ -251,7 +255,9 @@ export default function McpDetailPage({ params }: { params: { slug: string } }) 
               {detail?.verified && (
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">认证状态</span>
-                  <span className="text-sm font-medium text-green-600">✓ 已验证</span>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-green-600">
+                    <BadgeCheck className="w-4 h-4" />已验证
+                  </span>
                 </div>
               )}
             </div>

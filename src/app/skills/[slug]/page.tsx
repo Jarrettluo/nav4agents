@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ExternalLink, FileText, User } from 'lucide-react';
+import { ArrowLeft, ExternalLink, FileText, User, ArrowRight } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getAllSkills } from '@/lib/data/skills';
@@ -51,35 +51,35 @@ export default function SkillDetailPage({ params }: { params: { slug: string } }
       {/* 头部信息 */}
       <div className="card mb-6">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-          <div>
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 font-outfit">{skill.name}</h1>
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-              <span className="tag tag-primary text-xs sm:text-sm">{skill.category}</span>
-              <span className="tag text-xs sm:text-sm bg-blue-100 text-blue-700">
+          <div className="min-w-0 flex-1">
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 font-outfit break-words">{skill.name}</h1>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="tag tag-primary text-xs whitespace-nowrap">{skill.category}</span>
+              <span className="tag text-xs bg-blue-100 text-blue-700 whitespace-nowrap">
                 {skill.source}
               </span>
-              <span className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
-                <User className="w-3 h-3 sm:w-4 sm:h-4" /> {skill.usage.toLocaleString()} 次使用
+              <span className="flex items-center gap-1 text-xs text-gray-500 whitespace-nowrap">
+                <User className="w-3.5 h-3.5" /> {skill.usage.toLocaleString()} 次使用
               </span>
             </div>
             {skill.topics && skill.topics.length > 0 && (
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {skill.topics.slice(0, 10).map((t: string) => (
-                  <span key={t} className="text-xs text-gray-400 bg-gray-50 rounded px-1.5 py-0.5">#{t}</span>
+                  <span key={t} className="text-xs text-gray-400 bg-gray-50 rounded px-1.5 py-0.5 whitespace-nowrap">#{t}</span>
                 ))}
               </div>
             )}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-shrink-0">
             {githubUrl && (
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-xs sm:text-sm text-gray-700 transition-colors self-start"
+                className="flex items-center justify-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-xs sm:text-sm text-gray-700 transition-colors whitespace-nowrap"
               >
-                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                <ExternalLink className="w-3.5 h-3.5" />
                 GitHub
               </a>
             )}
@@ -91,10 +91,8 @@ export default function SkillDetailPage({ params }: { params: { slug: string } }
       </div>
 
       {/* 操作按钮 */}
-      <div className="flex flex-wrap gap-3 mb-6">
-        {skill.installCmd && <CopyButton text={skill.installCmd} label="复制安装命令" />}
-
-        {skill.url && (
+      {skill.url && (
+        <div className="flex flex-wrap gap-3 mb-6">
           <a
             href={skill.url}
             target="_blank"
@@ -104,25 +102,28 @@ export default function SkillDetailPage({ params }: { params: { slug: string } }
             <ExternalLink className="w-4 h-4" />
             在 ClawHub 查看
           </a>
-        )}
-      </div>
+        </div>
+      )}
 
-      {/* 安装命令展示 */}
+      {/* 安装命令展示（与 MCP 详情页样式一致） */}
       {skill.installCmd && (
         <div className="mb-6">
-          <h3 className="text-sm font-semibold text-gray-700 mb-2">安装命令</h3>
-          <div className="bg-gray-100 rounded-lg px-3 py-2 sm:px-4 sm:py-3 font-mono text-xs sm:text-sm text-gray-800 break-all">
-            {skill.installCmd}
+          <h3 className="text-sm font-medium text-gray-700 mb-2">安装命令</h3>
+          <div className="bg-gray-900 rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <code className="text-green-400 font-mono text-xs sm:text-sm break-all">
+              {skill.installCmd}
+            </code>
+            <CopyButton text={skill.installCmd} dark />
           </div>
         </div>
       )}
 
       {/* 版本说明 */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-          <FileText className="w-4 h-4" />
+        <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+          <FileText className="w-5 h-5 text-blue-500" />
           版本说明{skill.version ? ` (v${skill.version})` : ''}
-        </h3>
+        </h2>
 
         {!markdownContent && (
           <div className="card text-center py-12">
@@ -132,9 +133,9 @@ export default function SkillDetailPage({ params }: { params: { slug: string } }
                 href={skill.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline text-sm"
+                className="text-blue-600 hover:underline text-sm inline-flex items-center gap-1"
               >
-                在 ClawHub 上查看详情 →
+                在 ClawHub 上查看详情 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             )}
           </div>

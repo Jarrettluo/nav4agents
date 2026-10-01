@@ -88,10 +88,10 @@ export default function RootLayout({
               <span className="text-xs">Skills</span>
             </a>
             <a href="/subscriptions" className="flex flex-col items-center justify-center flex-1 py-1">
-              <span className="text-xs">订阅</span>
+              <span className="text-xs whitespace-nowrap">智能体工具</span>
             </a>
             <a href="/codingplan" className="flex flex-col items-center justify-center flex-1 py-1">
-              <span className="text-xs">对比</span>
+              <span className="text-xs whitespace-nowrap">套餐对比</span>
             </a>
           </div>
         </nav>

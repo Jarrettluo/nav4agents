@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { User, Loader2 } from 'lucide-react';
+import { User, Loader2, Star } from 'lucide-react';
 import { getSkills, getSkillCategories } from '@/lib/data/skills';
 import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/data/favorites';
 import { displayDesc } from '@/lib/i18n';
@@ -98,7 +98,7 @@ export default function SkillsListClient() {
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
-                className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-all ${
+                className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-all whitespace-nowrap ${
                   category === cat
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -157,7 +157,11 @@ export default function SkillsListClient() {
                   disabled={favoritingIds.includes(item.id!)}
                   className={`text-sm self-start sm:ml-2 ${favoritedIds.includes(item.id!) ? 'text-yellow-500' : 'text-gray-400 hover:text-blue-600'}`}
                 >
-                  {favoritedIds.includes(item.id!) ? '★' : '☆'}
+                  {favoritedIds.includes(item.id!) ? (
+                    <Star className="w-4 h-4" fill="currentColor" />
+                  ) : (
+                    <Star className="w-4 h-4" />
+                  )}
                 </button>
               </div>
             </div>

@@ -63,6 +63,7 @@ body {
   background: #f0f0f0;
   border-radius: 4px;
   color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 .tag-primary {
@@ -97,6 +98,7 @@ body {
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .btn-primary {

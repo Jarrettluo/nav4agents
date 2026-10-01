@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Star } from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname();
@@ -53,7 +54,7 @@ export default function Header() {
               }`}
               title="我的收藏（保存在本地浏览器）"
             >
-              <span className="text-base">★</span>
+              <Star className="w-4 h-4" />
               <span className="hidden sm:inline">收藏</span>
             </Link>
 
