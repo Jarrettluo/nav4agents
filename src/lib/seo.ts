@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { McpServer, Skill } from '@/lib/data/types';
-import { pickZh } from '@/lib/i18n';
+import { displayDesc } from '@/lib/i18n';
 
 // 站点级 SEO / 分享配置（微信、社交平台卡片统一从这里出）
 export const SITE_URL = 'https://nav4agents.com';
@@ -55,7 +55,7 @@ const sharedTwitter = (title: string, description: string, image: string): Metad
 /** MCP 详情页元数据 */
 export function buildMcpMetadata(mcp: McpServer): Metadata {
   const title = `${mcp.name} - MCP 服务器`;
-  const description = cleanText(pickZh(mcp.descriptionZh, mcp.description), 92) + `｜${mcp.category} · 一键复制安装命令 · Nav4Agent`;
+  const description = cleanText(displayDesc(mcp.descriptionZh, mcp.description), 92) + `｜${mcp.category} · 一键复制安装命令 · Nav4Agent`;
   const url = `${SITE_URL}/mcp/${mcp.slug}`;
   const image = ogImage.mcp(mcp.slug);
   return {
@@ -70,7 +70,7 @@ export function buildMcpMetadata(mcp: McpServer): Metadata {
 /** Skill 详情页元数据 */
 export function buildSkillMetadata(skill: Skill): Metadata {
   const title = `${skill.name} - AI Skill`;
-  const description = cleanText(pickZh(skill.descriptionZh, skill.description), 92) + `｜${skill.category} · 装进 Claude / Cursor 即用 · Nav4Agent`;
+  const description = cleanText(displayDesc(skill.descriptionZh, skill.description), 92) + `｜${skill.category} · 装进 Claude / Cursor 即用 · Nav4Agent`;
   const url = `${SITE_URL}/skills/${skill.slug}`;
   const image = ogImage.skill(skill.slug);
   return {

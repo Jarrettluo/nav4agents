@@ -53,6 +53,11 @@ def clean(s, limit=None):
         return ""
     s = EMOJI_RE.sub("", str(s))
     s = re.sub(r"^(description|name|title)\s*[:：]\s*", "", s.strip(), flags=re.IGNORECASE)
+    # 去 Markdown 语法符号（卡片是纯文本展示）
+    s = re.sub(r"\[([^\]]+)\]\([^)]*\)?", r"\1", s)
+    s = re.sub(r"`([^`]+)`", r"\1", s)
+    s = s.replace("`", "")
+    s = re.sub(r"\*\*([^*]+)\*\*", r"\1", s)
     s = re.sub(r"\s+", " ", s).strip()
     if limit and len(s) > limit:
         s = s[: limit - 1].rstrip() + "…"
