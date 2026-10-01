@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Star, ExternalLink, Loader2 } from 'lucide-react';
 import { getMcpServers, getMcpCategories } from '@/lib/api/mcp';
-import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/api/favorites';
 import type { McpServer } from '@/lib/api/types';
 
 const typeLabels: Record<string, string> = {
@@ -33,19 +33,7 @@ export default function McpPage() {
       const res = await getMcpServers(params);
       if (res.code === 200) {
         setMcpServers(res.data.list || []);
-        // 检查每个 item 的收藏状态
-        const newFavorited: number[] = [];
-        for (const mcp of res.data.list || []) {
-          if (mcp.id) {
-            try {
-              const favRes = await checkFavorite('mcp', mcp.id);
-              if (favRes.data?.isFavorited) {
-                newFavorited.push(mcp.id);
-              }
-            } catch {}
-          }
-        }
-        setFavoritedIds(newFavorited);
+        setFavoritedIds(getFavoriteIds('mcp'));
       }
     } catch (err) {
       console.error('获取 MCP 服务器失败:', err);
@@ -70,14 +58,6 @@ export default function McpPage() {
     e.stopPropagation();
     if (!mcp.id || favoritingIds.includes(mcp.id)) return;
 
-    // 检查是否登录
-    const token = localStorage.getItem('token');
-    if (!token) {
-      alert('请先登录后再收藏');
-      window.location.href = '/login';
-      return;
-    }
-
     try {
       setFavoritingIds(prev => [...prev, mcp.id!]);
       if (favoritedIds.includes(mcp.id)) {
@@ -87,13 +67,8 @@ export default function McpPage() {
         await addFavorite('mcp', mcp.id);
         setFavoritedIds(prev => [...prev, mcp.id!]);
       }
-    } catch (err: any) {
-      if (err.response?.status === 401) {
-        alert('请先登录后再收藏');
-        window.location.href = '/login';
-      } else {
-        console.error('收藏操作失败:', err);
-      }
+    } catch (err) {
+      console.error('收藏操作失败:', err);
     } finally {
       setFavoritingIds(prev => prev.filter(id => id !== mcp.id));
     }
@@ -184,7 +159,7 @@ export default function McpPage() {
                   <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{item.description}</p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
                     <span className="flex items-center gap-1">
-                      <Star className="w-3 h-3" /> {item.stars}
+                      <Star className="w-3 h-3" /> {item.stars > 0 ? item.stars.toLocaleString() : '官方收录'}
                     </span>
                     {item.url && (
                       <a href={item.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600">

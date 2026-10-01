@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { User, Loader2 } from 'lucide-react';
 import { getSkills, getSkillCategories } from '@/lib/api/skills';
-import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/api/favorites';
 import type { Skill } from '@/lib/api/types';
 
 const sourceMap: Record<string, string> = {
@@ -33,19 +33,7 @@ export default function SkillsPage() {
       const res = await getSkills(params);
       if (res.code === 200) {
         setSkills(res.data.list || []);
-        // 检查每个 item 的收藏状态
-        const newFavorited: number[] = [];
-        for (const skill of res.data.list || []) {
-          if (skill.id) {
-            try {
-              const favRes = await checkFavorite('skill', skill.id);
-              if (favRes.data?.isFavorited) {
-                newFavorited.push(skill.id);
-              }
-            } catch {}
-          }
-        }
-        setFavoritedIds(newFavorited);
+        setFavoritedIds(getFavoriteIds('skill'));
       }
     } catch (err) {
       console.error('获取 Skills 失败:', err);
@@ -70,14 +58,6 @@ export default function SkillsPage() {
     e.stopPropagation();
     if (!skill.id || favoritingIds.includes(skill.id)) return;
 
-    // 检查是否登录
-    const token = localStorage.getItem('token');
-    if (!token) {
-      alert('请先登录后再收藏');
-      window.location.href = '/login';
-      return;
-    }
-
     try {
       setFavoritingIds(prev => [...prev, skill.id!]);
       if (favoritedIds.includes(skill.id)) {
@@ -87,13 +67,8 @@ export default function SkillsPage() {
         await addFavorite('skill', skill.id);
         setFavoritedIds(prev => [...prev, skill.id!]);
       }
-    } catch (err: any) {
-      if (err.response?.status === 401) {
-        alert('请先登录后再收藏');
-        window.location.href = '/login';
-      } else {
-        console.error('收藏操作失败:', err);
-      }
+    } catch (err) {
+      console.error('收藏操作失败:', err);
     } finally {
       setFavoritingIds(prev => prev.filter(id => id !== skill.id));
     }

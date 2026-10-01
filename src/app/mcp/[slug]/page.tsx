@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Star, Copy, Check, Terminal, BookOpen, Zap, Globe, Server, Loader2 } from 'lucide-react';
 import { getMcpBySlug } from '@/lib/api/mcp';
-import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import { addFavorite, removeFavorite, checkFavorite } from '@/lib/api/favorites';
 import type { McpServer } from '@/lib/api/types';
 
 export default function McpDetailPage() {
@@ -25,11 +25,8 @@ export default function McpDetailPage() {
         const res = await getMcpBySlug(slug);
         if (res.code === 200) {
           setMcp(res.data);
-          // 检查收藏状态
-          if (res.data.id) {
-            const favRes = await checkFavorite('mcp', res.data.id);
-            setIsFavorited(favRes.data?.isFavorited || false);
-          }
+          const favRes = await checkFavorite('mcp', res.data.id);
+          setIsFavorited(favRes.data?.isFavorited || false);
         }
       } catch (err) {
         console.error('获取 MCP 服务器失败:', err);
@@ -54,14 +51,6 @@ export default function McpDetailPage() {
   const handleToggleFavorite = async () => {
     if (!mcp?.id) return;
 
-    // 检查是否登录
-    const token = localStorage.getItem('token');
-    if (!token) {
-      alert('请先登录后再收藏');
-      window.location.href = '/login';
-      return;
-    }
-
     try {
       setFavoriting(true);
       if (isFavorited) {
@@ -71,13 +60,8 @@ export default function McpDetailPage() {
         await addFavorite('mcp', mcp.id);
         setIsFavorited(true);
       }
-    } catch (err: any) {
-      if (err.response?.status === 401) {
-        alert('请先登录后再收藏');
-        window.location.href = '/login';
-      } else {
-        console.error('收藏操作失败:', err);
-      }
+    } catch (err) {
+      console.error('收藏操作失败:', err);
     } finally {
       setFavoriting(false);
     }
@@ -283,13 +267,13 @@ export default function McpDetailPage() {
                 </a>
               )}
               <a
-                href={`https://github.com/modelcontextprotocol/server-${mcp.slug}`}
+                href={mcp.url || `https://smithery.ai/?q=${encodeURIComponent(mcp.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 transition-colors"
               >
                 <ExternalLink className="w-4 h-4" />
-                <span className="text-sm font-medium">GitHub 仓库</span>
+                <span className="text-sm font-medium">前往主页</span>
               </a>
             </div>
           </div>
@@ -363,7 +347,7 @@ export default function McpDetailPage() {
                 <span className="text-sm text-gray-500 flex items-center gap-1">
                   <Star className="w-4 h-4" /> GitHub Stars
                 </span>
-                <span className="text-sm font-medium text-gray-800">{mcp.stars.toLocaleString()}</span>
+                <span className="text-sm font-medium text-gray-800">{mcp.stars > 0 ? mcp.stars.toLocaleString() : '—'}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-500">贡献者</span>

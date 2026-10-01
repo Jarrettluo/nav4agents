@@ -2,23 +2,51 @@
 
 import { useState, useMemo } from 'react';
 import { ArrowUpDown, ArrowUp, ArrowDown, ExternalLink } from 'lucide-react';
-import { codingPlans, platforms, CodingPlan } from '@/data/codingplan';
+import rawPlans from '@/data/generated/codingplan.json';
+
+export interface CodingPlan {
+  id: number;
+  platform: string;
+  plan: string;
+  link: string;
+  firstMonthPrice: string;
+  quarterlyPrice: string;
+  monthlyPrice: string;
+  yearlyPrice: string;
+  models: string[];
+  fiveHourRequests: string;
+  weeklyRequests: string;
+  monthlyRequests: string;
+  otherBenefits: string;
+  notes?: string;
+  rating?: number;
+}
+
+// 静态数据模式：由 scripts/scan_sources.py 每周从 wmpeng/codingplan 同步生成
+const codingPlans = rawPlans as CodingPlan[];
+const platforms = Array.from(new Set(codingPlans.map((p) => p.platform)));
 
 type SortField = 'platform' | 'plan' | 'monthlyPrice' | 'yearlyPrice' | 'fiveHourRequests' | 'weeklyRequests' | 'monthlyRequests';
 type SortDirection = 'asc' | 'desc';
 
-const platformColors: Record<string, string> = {
-  '智谱AI': 'bg-blue-100 text-blue-700',
-  'MiniMax': 'bg-purple-100 text-purple-700',
-  '字节·方舟': 'bg-orange-100 text-orange-700',
-  '阿里·百炼': 'bg-red-100 text-red-700',
-  '小米·MiMo': 'bg-green-100 text-green-700',
-  '腾讯云': 'bg-cyan-100 text-cyan-700',
-  '腾讯·Token': 'bg-cyan-50 text-cyan-600',
-  '百度·千帆': 'bg-yellow-100 text-yellow-700',
-  '京东云': 'bg-pink-100 text-pink-700',
-  'Kimi': 'bg-indigo-100 text-indigo-700',
-};
+const PALETTE = [
+  'bg-blue-100 text-blue-700',
+  'bg-purple-100 text-purple-700',
+  'bg-orange-100 text-orange-700',
+  'bg-red-100 text-red-700',
+  'bg-green-100 text-green-700',
+  'bg-cyan-100 text-cyan-700',
+  'bg-yellow-100 text-yellow-700',
+  'bg-pink-100 text-pink-700',
+  'bg-indigo-100 text-indigo-700',
+  'bg-teal-100 text-teal-700',
+];
+
+function colorFor(name: string): string {
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0;
+  return PALETTE[h % PALETTE.length];
+}
 
 function parsePrice(price: string): number {
   if (price === '-' || price === '无限制' || price === '未公开') return 0;
@@ -105,7 +133,7 @@ export default function CodingPlanPage() {
       <div className="mb-6">
         <h1 className="text-2xl font-semibold text-gray-800 mb-2">AI Coding Plan 对比</h1>
         <p className="text-sm text-gray-500">
-          九大平台智谱AI、Kimi、MiniMax、字节·方舟、阿里·百炼、百度·千帆、腾讯云、京东云、小米·MiMo 全面对比
+          覆盖 {platforms.length} 个平台的 AI 编程套餐对比（数据每周一自动更新）
         </p>
       </div>
 
@@ -218,7 +246,7 @@ export default function CodingPlanPage() {
             {sortedPlans.map((plan, idx) => (
               <tr key={idx} className="hover:bg-blue-50/30 transition-colors">
                 <td className="px-3 py-3 sticky left-0 bg-white">
-                  <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded ${platformColors[plan.platform] || 'bg-gray-100 text-gray-700'}`}>
+                  <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded ${colorFor(plan.platform)}`}>
                     {plan.platform}
                   </span>
                 </td>
@@ -290,7 +318,7 @@ export default function CodingPlanPage() {
           <li>• 包季/包年价格中的划线数字表示原始价格（包月×3 或 包月×12），未划线的为实际优惠价格</li>
           <li>• 使用表格邀请链接，部分平台可享优惠</li>
           <li>• 本页面数据仅供参考，价格及权益最终以平台官方公布为准</li>
-          <li>• 数据来源：<a href="https://github.com/wmpeng/codingplan" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">wmpeng/codingplan</a></li>
+          <li>• 数据来源：<a href="https://github.com/wmpeng/codingplan" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">wmpeng/codingplan</a>（每周一自动同步）</li>
         </ul>
       </div>
     </div>

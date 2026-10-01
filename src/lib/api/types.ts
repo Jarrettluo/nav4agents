@@ -41,7 +41,11 @@ export interface Skill {
   installCmd?: string;
   usage: number;
   featured: boolean;
-  githubUrl?: string;
+  githubUrl?: string | null;
+  ownerHandle?: string;
+  rawSlug?: string;
+  url?: string;
+  createdAt?: string;
 }
 
 // MCP 相关
@@ -52,10 +56,12 @@ export interface McpServer {
   description: string;
   category: string;
   type: 'local' | 'remote';
-  url?: string;
-  installCmd?: string;
+  url?: string | null;
+  installCmd?: string | null;
   stars: number;
   featured: boolean;
+  source?: string;
+  createdAt?: string;
 }
 
 // 订阅方案相关

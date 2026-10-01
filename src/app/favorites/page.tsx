@@ -1,29 +1,21 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Star, Loader2, ExternalLink } from 'lucide-react';
 import { getFavorites, removeFavorite } from '@/lib/api/favorites';
 import type { FavoriteItem, FavoriteType } from '@/lib/api/types';
 
 export default function FavoritesPage() {
-  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
   const [filter, setFilter] = useState<FavoriteType | 'all'>('all');
   const [deleting, setDeleting] = useState<number | null>(null);
 
   useEffect(() => {
-    // 检查是否登录
-    const token = localStorage.getItem('token');
-    if (!token) {
-      alert('请先登录后再查看收藏');
-      router.push('/login');
-      return;
-    }
     fetchFavorites();
-  }, [filter, router]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter]);
 
   const fetchFavorites = async () => {
     try {
@@ -32,13 +24,8 @@ export default function FavoritesPage() {
       if (res.code === 200) {
         setFavorites(res.data.list || []);
       }
-    } catch (err: any) {
-      if (err.response?.status === 401) {
-        alert('请先登录后再查看收藏');
-        router.push('/login');
-      } else {
-        console.error('获取收藏失败:', err);
-      }
+    } catch (err) {
+      console.error('获取收藏失败:', err);
     } finally {
       setLoading(false);
     }
@@ -48,17 +35,10 @@ export default function FavoritesPage() {
     if (!confirm('确定要取消收藏吗？')) return;
     try {
       setDeleting(item.itemId);
-      const res = await removeFavorite(item.type, item.itemId);
-      if (res.code === 200) {
-        setFavorites(favorites.filter(f => f.itemId !== item.itemId || f.type !== item.type));
-      }
-    } catch (err: any) {
-      if (err.response?.status === 401) {
-        alert('请先登录后再操作');
-        router.push('/login');
-      } else {
-        console.error('取消收藏失败:', err);
-      }
+      await removeFavorite(item.type, item.itemId);
+      setFavorites(favorites.filter(f => !(f.itemId === item.itemId && f.type === item.type)));
+    } catch (err) {
+      console.error('取消收藏失败:', err);
     } finally {
       setDeleting(null);
     }
@@ -87,7 +67,8 @@ export default function FavoritesPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold text-gray-800 mb-6">我的收藏</h1>
+      <h1 className="text-2xl font-semibold text-gray-800 mb-2">我的收藏</h1>
+      <p className="text-xs text-gray-400 mb-6">收藏保存在本地浏览器，清理浏览器数据后会丢失</p>
 
       {/* 筛选 */}
       <div className="flex flex-wrap gap-2 mb-6">
@@ -154,6 +135,7 @@ export default function FavoritesPage() {
                     onClick={() => handleRemove(item)}
                     disabled={deleting === item.itemId}
                     className="text-gray-400 hover:text-red-500"
+                    title="取消收藏"
                   >
                     {deleting === item.itemId ? (
                       <Loader2 className="w-4 h-4 animate-spin" />

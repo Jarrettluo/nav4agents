@@ -5,9 +5,9 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ArrowLeft, Copy, Download, ExternalLink, Check, FileText, User, Loader2 } from 'lucide-react';
+import { ArrowLeft, Copy, ExternalLink, Check, FileText, User, Loader2 } from 'lucide-react';
 import { getSkillBySlug } from '@/lib/api/skills';
-import { checkFavorite, addFavorite, removeFavorite } from '@/lib/api/favorites';
+import { addFavorite, removeFavorite, checkFavorite } from '@/lib/api/favorites';
 import type { Skill } from '@/lib/api/types';
 
 export default function SkillDetailPage() {
@@ -17,20 +17,10 @@ export default function SkillDetailPage() {
   const [loading, setLoading] = useState(true);
   const [skill, setSkill] = useState<Skill | null>(null);
   const [markdownContent, setMarkdownContent] = useState<string>('');
-  const [contentLoading, setContentLoading] = useState(false);
   const [copied, setCopied] = useState(false);
   const [contentError, setContentError] = useState(false);
   const [isFavorited, setIsFavorited] = useState(false);
   const [favoriting, setFavoriting] = useState(false);
-
-  const getGithubUrl = () => skill?.githubUrl || null;
-
-  const getRawContentUrl = () => {
-    if (!skill?.githubUrl) return null;
-    return skill.githubUrl
-      .replace('github.com', 'raw.githubusercontent.com')
-      .replace('/blob/', '/');
-  };
 
   useEffect(() => {
     const fetchSkill = async () => {
@@ -39,11 +29,8 @@ export default function SkillDetailPage() {
         const res = await getSkillBySlug(slug);
         if (res.code === 200) {
           setSkill(res.data);
-          // 检查收藏状态
-          if (res.data.id) {
-            const favRes = await checkFavorite('skill', res.data.id);
-            setIsFavorited(favRes.data?.isFavorited || false);
-          }
+          const favRes = await checkFavorite('skill', res.data.id);
+          setIsFavorited(favRes.data?.isFavorited || false);
         }
       } catch (err) {
         console.error('获取 Skill 失败:', err);
@@ -56,31 +43,18 @@ export default function SkillDetailPage() {
   }, [slug]);
 
   useEffect(() => {
-    if (!skill?.githubUrl) {
-      setContentError(true);
+    // 静态模式：展示版本说明（来自 ClawHub 数据）
+    if (!skill) {
       return;
     }
-
-    const fetchContent = async () => {
-      setContentLoading(true);
+    const changelog = (skill as any).changelog as string | undefined;
+    if (changelog) {
+      setMarkdownContent(changelog);
       setContentError(false);
-      try {
-        const rawUrl = getRawContentUrl();
-        if (!rawUrl) throw new Error('No raw URL');
-        const response = await fetch(rawUrl);
-        if (!response.ok) throw new Error('Failed to fetch');
-        const text = await response.text();
-        setMarkdownContent(text);
-      } catch (error) {
-        console.error('Failed to fetch SKILL.md:', error);
-        setContentError(true);
-      } finally {
-        setContentLoading(false);
-      }
-    };
-
-    fetchContent();
-  }, [skill?.githubUrl]);
+    } else {
+      setContentError(true);
+    }
+  }, [skill]);
 
   const handleCopyInstallCmd = async () => {
     if (!skill?.installCmd) return;
@@ -96,14 +70,6 @@ export default function SkillDetailPage() {
   const handleToggleFavorite = async () => {
     if (!skill?.id) return;
 
-    // 检查是否登录
-    const token = localStorage.getItem('token');
-    if (!token) {
-      alert('请先登录后再收藏');
-      window.location.href = '/login';
-      return;
-    }
-
     try {
       setFavoriting(true);
       if (isFavorited) {
@@ -113,13 +79,8 @@ export default function SkillDetailPage() {
         await addFavorite('skill', skill.id);
         setIsFavorited(true);
       }
-    } catch (err: any) {
-      if (err.response?.status === 401) {
-        alert('请先登录后再收藏');
-        window.location.href = '/login';
-      } else {
-        console.error('收藏操作失败:', err);
-      }
+    } catch (err) {
+      console.error('收藏操作失败:', err);
     } finally {
       setFavoriting(false);
     }
@@ -131,13 +92,13 @@ export default function SkillDetailPage() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${skill?.slug || 'skill'}-SKILL.md`;
+    a.download = `${skill?.slug || 'skill'}-changelog.md`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-
+  void handleDownload;
   if (loading) {
     return (
       <div className="flex justify-center items-center py-20">
@@ -157,7 +118,7 @@ export default function SkillDetailPage() {
     );
   }
 
-  const githubUrl = getGithubUrl();
+  const githubUrl = skill.githubUrl || null;
 
   return (
     <div>
@@ -234,14 +195,16 @@ export default function SkillDetailPage() {
           </button>
         )}
 
-        {markdownContent && (
-          <button
-            onClick={handleDownload}
+        {skill.url && (
+          <a
+            href={skill.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-outline flex items-center gap-2"
           >
-            <Download className="w-4 h-4" />
-            下载 SKILL.md
-          </button>
+            <ExternalLink className="w-4 h-4" />
+            在 ClawHub 查看
+          </a>
         )}
       </div>
 
@@ -255,37 +218,30 @@ export default function SkillDetailPage() {
         </div>
       )}
 
-      {/* SKILL.md 内容 */}
+      {/* 版本说明 */}
       <div>
         <h3 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
           <FileText className="w-4 h-4" />
-          文件详情
+          版本说明{(skill as any).version ? ` (v${(skill as any).version})` : ''}
         </h3>
-
-        {contentLoading && (
-          <div className="card text-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-blue-600 mx-auto mb-4" />
-            <p className="text-gray-500">正在加载 SKILL.md...</p>
-          </div>
-        )}
 
         {contentError && (
           <div className="card text-center py-12">
-            <p className="text-gray-500 mb-2">无法加载 SKILL.md 内容</p>
-            {githubUrl && (
+            <p className="text-gray-500 mb-2">暂无版本说明</p>
+            {skill.url && (
               <a
-                href={githubUrl}
+                href={skill.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline text-sm"
               >
-                在 GitHub 上查看 →
+                在 ClawHub 上查看详情 →
               </a>
             )}
           </div>
         )}
 
-        {!contentLoading && !contentError && markdownContent && (
+        {!contentError && markdownContent && (
           <div className="card markdown-content">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}

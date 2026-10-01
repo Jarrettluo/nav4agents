@@ -4,4 +4,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-// build-probe: coda-20261001
