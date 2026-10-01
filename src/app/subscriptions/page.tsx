@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ExternalLink, Check, Loader2 } from 'lucide-react';
-import { getSubscriptions, getSubscriptionCategories } from '@/lib/api/subscriptions';
-import type { Subscription } from '@/lib/api/types';
+import { getSubscriptions, getSubscriptionCategories } from '@/lib/data/subscriptions';
+import type { Subscription } from '@/lib/data/types';
 
 export default function SubscriptionsPage() {
   const [loading, setLoading] = useState(true);

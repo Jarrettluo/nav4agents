@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Star, ExternalLink, Loader2 } from 'lucide-react';
-import { getMcpServers, getMcpCategories } from '@/lib/api/mcp';
-import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/api/favorites';
-import type { McpServer } from '@/lib/api/types';
+import { getMcpServers, getMcpCategories } from '@/lib/data/mcp';
+import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/data/favorites';
+import type { McpServer } from '@/lib/data/types';
 
 const typeLabels: Record<string, string> = {
   'local': '本地',

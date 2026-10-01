@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Star, Loader2, ExternalLink } from 'lucide-react';
-import { getFavorites, removeFavorite } from '@/lib/api/favorites';
-import type { FavoriteItem, FavoriteType } from '@/lib/api/types';
+import { getFavorites, removeFavorite } from '@/lib/data/favorites';
+import type { FavoriteItem, FavoriteType } from '@/lib/data/types';
 
 export default function FavoritesPage() {
   const [loading, setLoading] = useState(true);

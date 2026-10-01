@@ -141,10 +141,12 @@ def scan_smithery():
             "category": classify(f"{name} {qn} {desc}"),
             "type": "remote" if remote else "local",
             "url": x.get("homepage") or f"https://smithery.ai/servers/{qn}",
-            "installCmd": f"npx -y smithery mcp add {qn}" if remote else f"npx -y smithery mcp add {qn}",
+            "installCmd": f"npx -y smithery mcp add {qn}",
             "stars": x.get("useCount") or 0,
             "featured": False,
             "source": "Smithery",
+            "smitheryId": qn,
+            "verified": bool(x.get("verified")),
             "createdAt": norm_iso(x.get("createdAt")),
         })
     return out
@@ -250,6 +252,7 @@ def scan_clawhub():
             "description": desc[:400],
             "category": classify(f"{name} {' '.join(topics)} {desc}"),
             "source": "社区",
+            "topics": [str(t)[:40] for t in (topics or [])[:12]],
             "installCmd": f"clawhub install @{owner}/{raw_slug}",
             "usage": stats.get("downloads") or 0,
             "featured": False,
@@ -352,7 +355,7 @@ def bump_sw(force=False):
     if not os.path.exists(path):
         return False
     t = open(path, encoding="utf-8").read()
-    ver = datetime.now(CST).strftime("%Y%m%d")
+    ver = datetime.now(CST).strftime("%Y%m%d%H%M")
     new = re.sub(r"const CACHE_NAME = '[^']*';",
                  f"const CACHE_NAME = 'nav4agent-v{ver}';", t, count=1)
     if new != t:
@@ -372,6 +375,14 @@ def write_json(name, data):
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write("\n")
     os.replace(tmp, path)
+
+    # 同步一份到 public/data/（线上可直接访问，供外部工具/技能读取）
+    pub_dir = os.path.join(ROOT, "public", "data")
+    os.makedirs(pub_dir, exist_ok=True)
+    with open(os.path.join(pub_dir, name), "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+        f.write("\n")
+
     log(f"  [write] {name}: {len(data) if isinstance(data, list) else 'obj'} entries")
 
 

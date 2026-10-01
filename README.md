@@ -8,11 +8,13 @@ AI Agent 工具导航门户：MCP 服务器 / AI Skills / Coding Plan 对比。
 - **前端**: Next.js 14 (App Router) + Tailwind CSS + TypeScript
   - 数据层直读 `src/data/generated/*.json`（无 API 调用、无后端依赖）
   - 收藏功能保存在浏览器 localStorage（无需登录）
+  - 站点同时提供静态 JSON 接口（构建产物）：`https://nav4agents.com/data/{mcp,skills,codingplan,mcp-details,meta}.json`
 - **数据管线**: `scripts/scan_sources.py` 抓取并归一化数据
   - MCP 服务器: [Smithery Registry](https://registry.smithery.ai) + [MCP 官方注册表](https://registry.modelcontextprotocol.io)（约 200 条）
   - AI Skills: [ClawHub](https://clawhub.ai) 公开 API（约 165 条）
   - Coding Plan: [wmpeng/codingplan](https://github.com/wmpeng/codingplan)（约 75 条套餐）
-- **自动更新**: `scripts/weekly_update.sh` 每周一自动运行（拉取→扫描→构建验证→推送）
+- **详情增强**: `scripts/enhance_details.py` 抓取热门 MCP 的工具列表/配置项/认证状态（约 120 条）
+- **自动更新**: `scripts/weekly_update.sh` 每周一自动运行（拉取→扫描→增强→构建验证→推送）
 - **部署**: push 到 GitHub master → EdgeOne Pages 自动构建
 
 ## 本地命令
@@ -23,6 +25,7 @@ npm install
 npm run dev     # 开发模式
 npm run build   # 生产构建（构建前自动使用已生成的数据）
 npm run scan    # 手动扫描数据源，刷新 src/data/generated/*.json
+python3 scripts/enhance_details.py   # 手动增强 MCP 详情数据
 
 # 完整周更流程（拉取→扫描→构建→推送）
 bash scripts/weekly_update.sh

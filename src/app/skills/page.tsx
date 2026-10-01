@@ -3,21 +3,15 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { User, Loader2 } from 'lucide-react';
-import { getSkills, getSkillCategories } from '@/lib/api/skills';
-import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/api/favorites';
-import type { Skill } from '@/lib/api/types';
-
-const sourceMap: Record<string, string> = {
-  'self': '自研',
-  'community': '社区',
-};
+import { getSkills, getSkillCategories } from '@/lib/data/skills';
+import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/data/favorites';
+import type { Skill } from '@/lib/data/types';
 
 export default function SkillsPage() {
   const [loading, setLoading] = useState(true);
   const [skills, setSkills] = useState<Skill[]>([]);
   const [categories, setCategories] = useState<string[]>(['全部']);
   const [category, setCategory] = useState('全部');
-  const [source, setSource] = useState('all');
   const [search, setSearch] = useState('');
   const [favoritedIds, setFavoritedIds] = useState<number[]>([]);
   const [favoritingIds, setFavoritingIds] = useState<number[]>([]);
@@ -27,7 +21,6 @@ export default function SkillsPage() {
       setLoading(true);
       const params: any = {};
       if (category !== '全部') params.category = category;
-      if (source !== 'all') params.source = sourceMap[source] || source;
       if (search) params.search = search;
 
       const res = await getSkills(params);
@@ -80,7 +73,8 @@ export default function SkillsPage() {
 
   useEffect(() => {
     fetchSkills();
-  }, [category, source, search]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category, search]);
 
   return (
     <div>
@@ -113,17 +107,6 @@ export default function SkillsPage() {
               </button>
             ))}
           </div>
-
-          {/* 来源筛选 */}
-          <select
-            value={source}
-            onChange={(e) => setSource(e.target.value)}
-            className="ml-auto text-xs sm:text-sm border border-gray-200 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 bg-white"
-          >
-            <option value="all">全部来源</option>
-            <option value="self">自研</option>
-            <option value="community">社区</option>
-          </select>
         </div>
       </div>
 
@@ -152,14 +135,14 @@ export default function SkillsPage() {
                       {item.name}
                     </Link>
                     <span className="tag tag-primary text-xs">{item.category}</span>
-                    <span className={`tag text-xs ${item.source === '自研' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+                    <span className="tag text-xs bg-blue-100 text-blue-700">
                       {item.source}
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{item.description}</p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
                     <span className="flex items-center gap-1">
-                      <User className="w-3 h-3" /> {item.usage} 次使用
+                      <User className="w-3 h-3" /> {item.usage.toLocaleString()} 次使用
                     </span>
                     {item.installCmd && (
                       <button className="text-blue-600 hover:underline whitespace-nowrap" onClick={() => navigator.clipboard.writeText(item.installCmd || '')}>

@@ -6,9 +6,9 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Copy, ExternalLink, Check, FileText, User, Loader2 } from 'lucide-react';
-import { getSkillBySlug } from '@/lib/api/skills';
-import { addFavorite, removeFavorite, checkFavorite } from '@/lib/api/favorites';
-import type { Skill } from '@/lib/api/types';
+import { getSkillBySlug } from '@/lib/data/skills';
+import { addFavorite, removeFavorite, checkFavorite } from '@/lib/data/favorites';
+import type { Skill } from '@/lib/data/types';
 
 export default function SkillDetailPage() {
   const params = useParams();
@@ -85,20 +85,6 @@ export default function SkillDetailPage() {
       setFavoriting(false);
     }
   };
-
-  const handleDownload = () => {
-    if (!markdownContent) return;
-    const blob = new Blob([markdownContent], { type: 'text/markdown' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${skill?.slug || 'skill'}-changelog.md`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-  void handleDownload;
   if (loading) {
     return (
       <div className="flex justify-center items-center py-20">
@@ -138,13 +124,20 @@ export default function SkillDetailPage() {
             <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 font-outfit">{skill.name}</h1>
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
               <span className="tag tag-primary text-xs sm:text-sm">{skill.category}</span>
-              <span className={`tag text-xs sm:text-sm ${skill.source === '自研' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+              <span className="tag text-xs sm:text-sm bg-blue-100 text-blue-700">
                 {skill.source}
               </span>
               <span className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
-                <User className="w-3 h-3 sm:w-4 sm:h-4" /> {skill.usage} 次使用
+                <User className="w-3 h-3 sm:w-4 sm:h-4" /> {skill.usage.toLocaleString()} 次使用
               </span>
             </div>
+            {skill.topics && skill.topics.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 mt-2">
+                {skill.topics.slice(0, 10).map((t: string) => (
+                  <span key={t} className="text-xs text-gray-400 bg-gray-50 rounded px-1.5 py-0.5">#{t}</span>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="flex items-center gap-2">

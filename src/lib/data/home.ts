@@ -54,6 +54,7 @@ export const getHomeData = async (): Promise<ApiResponse<HomeData>> => {
         mcpCount: meta.counts?.mcp || mcps.length,
         skillCount: meta.counts?.skills || skills.length,
         subscriptionCount: subCount,
+        codingplanCount: meta.counts?.codingplan || 0,
       },
     },
   };

@@ -11,6 +11,8 @@
   "stars": 419019,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "pipeworx/gateway",
+  "verified": false,
   "createdAt": "2026-04-22T22:02:16.040Z"
  },
  {
@@ -25,6 +27,8 @@
   "stars": 219896,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "henry-ships/sparkforge",
+  "verified": false,
   "createdAt": "2026-03-01T17:38:26.389Z"
  },
  {
@@ -39,6 +43,8 @@
   "stars": 87579,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "brave",
+  "verified": true,
   "createdAt": "2025-09-05T18:07:47.018Z"
  },
  {
@@ -53,6 +59,8 @@
   "stars": 60881,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "bouch/uk-due-diligence",
+  "verified": false,
   "createdAt": "2026-04-29T12:37:02.016Z"
  },
  {
@@ -67,6 +75,8 @@
   "stars": 59106,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "adamamer20/paper-search-mcp-openai",
+  "verified": false,
   "createdAt": "2025-09-18T09:41:01.967Z"
  },
  {
@@ -81,6 +91,8 @@
   "stars": 57738,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "gmail",
+  "verified": true,
   "createdAt": "2025-11-26T14:34:03.393Z"
  },
  {
@@ -95,6 +107,8 @@
   "stars": 56138,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "googlesheets",
+  "verified": true,
   "createdAt": "2025-11-19T07:26:32.996Z"
  },
  {
@@ -109,6 +123,8 @@
   "stars": 43392,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "theagenttimes/news",
+  "verified": true,
   "createdAt": "2026-02-09T15:49:42.877Z"
  },
  {
@@ -123,6 +139,8 @@
   "stars": 42137,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "pubmed",
+  "verified": true,
   "createdAt": "2026-03-27T15:51:54.407Z"
  },
  {
@@ -137,6 +155,8 @@
   "stars": 40620,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "fenglucc/ko-financial-data",
+  "verified": false,
   "createdAt": "2026-06-29T20:39:31.137Z"
  },
  {
@@ -151,6 +171,8 @@
   "stars": 39483,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "jordan-s648/PolymarketScan",
+  "verified": false,
   "createdAt": "2026-04-13T05:45:37.949Z"
  },
  {
@@ -165,6 +187,8 @@
   "stars": 34350,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "oobe-protocol/sap-mcp",
+  "verified": false,
   "createdAt": "2026-07-13T17:50:41.966Z"
  },
  {
@@ -179,6 +203,8 @@
   "stars": 25084,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "emblemai/emblem-mcp",
+  "verified": false,
   "createdAt": "2026-05-11T07:01:07.813Z"
  },
  {
@@ -193,6 +219,8 @@
   "stars": 24706,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "creativelead/unclick",
+  "verified": false,
   "createdAt": "2026-04-09T07:57:33.207Z"
  },
  {
@@ -207,6 +235,8 @@
   "stars": 22491,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "onesignal/onesignal",
+  "verified": true,
   "createdAt": "2026-03-10T05:39:45.197Z"
  },
  {
@@ -221,6 +251,8 @@
   "stars": 21140,
   "featured": true,
   "source": "Smithery",
+  "smitheryId": "nitrofire-q/gread",
+  "verified": false,
   "createdAt": "2026-05-11T07:51:53.707Z"
  },
  {
@@ -235,6 +267,8 @@
   "stars": 19558,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "pinkpixel-dev/web-scout-mcp",
+  "verified": false,
   "createdAt": "2025-09-20T02:39:43.601Z"
  },
  {
@@ -249,6 +283,8 @@
   "stars": 17177,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "smithery-ai/national-weather-service",
+  "verified": false,
   "createdAt": "2025-05-29T01:08:09.249Z"
  },
  {
@@ -263,6 +299,8 @@
   "stars": 16923,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "ramboweb3/hivecast-x711",
+  "verified": false,
   "createdAt": "2026-05-14T16:25:36.593Z"
  },
  {
@@ -277,6 +315,8 @@
   "stars": 16873,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "subwayinfo",
+  "verified": true,
   "createdAt": "2026-03-29T11:03:52.456Z"
  },
  {
@@ -291,6 +331,8 @@
   "stars": 16317,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "deficlow/zipp",
+  "verified": false,
   "createdAt": "2026-05-13T22:27:36.936Z"
  },
  {
@@ -305,6 +347,8 @@
   "stars": 16045,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "entia/entity-verification",
+  "verified": false,
   "createdAt": "2026-07-03T21:48:17.545Z"
  },
  {
@@ -319,6 +363,8 @@
   "stars": 15718,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "googlecalendar",
+  "verified": true,
   "createdAt": "2025-11-19T07:13:02.101Z"
  },
  {
@@ -333,6 +379,8 @@
   "stars": 15140,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "digby-oldridge/colour-memory-api",
+  "verified": false,
   "createdAt": "2026-05-26T19:38:13.381Z"
  },
  {
@@ -347,6 +395,8 @@
   "stars": 13948,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/pubmed-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-19T23:24:52.596Z"
  },
  {
@@ -361,6 +411,8 @@
   "stars": 13327,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "naver/search",
+  "verified": false,
   "createdAt": "2026-05-18T08:57:33.736Z"
  },
  {
@@ -375,6 +427,8 @@
   "stars": 13278,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "Nekzus/npm-sentinel-mcp",
+  "verified": false,
   "createdAt": "2025-04-19T20:55:07.772Z"
  },
  {
@@ -389,6 +443,8 @@
   "stars": 12697,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "OEvortex/ddg_search",
+  "verified": false,
   "createdAt": "2025-08-22T08:26:28.974Z"
  },
  {
@@ -403,6 +459,8 @@
   "stars": 12688,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "NutriBalance/nutribalance-mcp",
+  "verified": false,
   "createdAt": "2026-04-05T16:07:30.131Z"
  },
  {
@@ -417,6 +475,8 @@
   "stars": 12481,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/nist-nvd-mcp-server",
+  "verified": false,
   "createdAt": "2026-07-10T19:24:03.135Z"
  },
  {
@@ -431,6 +491,8 @@
   "stars": 12406,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "bissell-skyler/cityparity",
+  "verified": false,
   "createdAt": "2026-06-01T06:16:01.400Z"
  },
  {
@@ -445,6 +507,8 @@
   "stars": 12266,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "ia-qa/api",
+  "verified": false,
   "createdAt": "2026-04-01T18:08:41.853Z"
  },
  {
@@ -459,6 +523,8 @@
   "stars": 12110,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "slack",
+  "verified": true,
   "createdAt": "2025-11-19T07:26:36.543Z"
  },
  {
@@ -473,6 +539,8 @@
   "stars": 11533,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "framesail/framesail",
+  "verified": false,
   "createdAt": "2026-07-09T04:20:33.905Z"
  },
  {
@@ -487,6 +555,8 @@
   "stars": 11447,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "travis-kellogg1/coinrailz-mcp",
+  "verified": false,
   "createdAt": "2026-06-12T16:42:37.547Z"
  },
  {
@@ -501,6 +571,8 @@
   "stars": 11175,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "friso/compliancecheckup",
+  "verified": false,
   "createdAt": "2026-05-19T17:04:24.873Z"
  },
  {
@@ -515,6 +587,8 @@
   "stars": 10296,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "hamid-vakilzadeh/mcpsemanticscholar",
+  "verified": false,
   "createdAt": "2025-05-30T17:03:49.635Z"
  },
  {
@@ -529,6 +603,8 @@
   "stars": 10102,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "aryankeluskar/polymarket-mcp",
+  "verified": false,
   "createdAt": "2025-11-08T17:53:29.007Z"
  },
  {
@@ -543,6 +619,8 @@
   "stars": 10070,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "pinksaltlamp75/Your-Echo-Agent-",
+  "verified": false,
   "createdAt": "2026-06-20T16:53:55.282Z"
  },
  {
@@ -557,6 +635,8 @@
   "stars": 10042,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "getgapup/gapup-mcp",
+  "verified": false,
   "createdAt": "2026-05-23T22:39:35.152Z"
  },
  {
@@ -571,6 +651,8 @@
   "stars": 9970,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "isdaniel/mcp_weather_server",
+  "verified": false,
   "createdAt": "2025-03-17T09:52:25.889Z"
  },
  {
@@ -585,6 +667,8 @@
   "stars": 9780,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "vbhjckfd/lad-lviv-ua",
+  "verified": false,
   "createdAt": "2026-04-29T19:48:25.451Z"
  },
  {
@@ -599,6 +683,8 @@
   "stars": 9761,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "pkobielak/social-superpowers",
+  "verified": false,
   "createdAt": "2026-05-03T21:19:50.266Z"
  },
  {
@@ -613,6 +699,8 @@
   "stars": 9739,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "aparajithn/agent-utils",
+  "verified": false,
   "createdAt": "2026-03-05T14:38:26.228Z"
  },
  {
@@ -627,6 +715,8 @@
   "stars": 9534,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "segellfosc-dev-ayfx/menjometre",
+  "verified": false,
   "createdAt": "2026-04-11T21:40:33.617Z"
  },
  {
@@ -641,6 +731,8 @@
   "stars": 9340,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "info-6d0w/backtesting-arena",
+  "verified": false,
   "createdAt": "2026-07-05T07:43:57.441Z"
  },
  {
@@ -655,6 +747,8 @@
   "stars": 9181,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "exa",
+  "verified": true,
   "createdAt": "2024-12-13T15:46:50.750Z"
  },
  {
@@ -669,6 +763,8 @@
   "stars": 9002,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/census-mcp-server",
+  "verified": false,
   "createdAt": "2026-07-10T18:44:02.095Z"
  },
  {
@@ -683,6 +779,8 @@
   "stars": 8946,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "intake-triage/steadyfetch",
+  "verified": false,
   "createdAt": "2026-03-31T16:29:53.393Z"
  },
  {
@@ -697,6 +795,8 @@
   "stars": 8926,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "pipeworx/pipeworx",
+  "verified": false,
   "createdAt": "2026-06-10T01:39:52.082Z"
  },
  {
@@ -711,6 +811,8 @@
   "stars": 8907,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "tijaniismael62/revnuvo-dns",
+  "verified": false,
   "createdAt": "2026-06-06T13:18:06.627Z"
  },
  {
@@ -725,6 +827,8 @@
   "stars": 8540,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "xqb/vibe-pay",
+  "verified": false,
   "createdAt": "2026-04-05T18:57:38.479Z"
  },
  {
@@ -739,6 +843,8 @@
   "stars": 8514,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "favcrm/favcrm",
+  "verified": true,
   "createdAt": "2026-05-08T02:29:58.204Z"
  },
  {
@@ -753,6 +859,8 @@
   "stars": 8356,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "listentosadhu/corpus",
+  "verified": false,
   "createdAt": "2026-07-04T16:52:01.305Z"
  },
  {
@@ -767,6 +875,8 @@
   "stars": 8353,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "openclaw-hal9000/romulus-31780",
+  "verified": false,
   "createdAt": "2026-05-02T00:26:17.436Z"
  },
  {
@@ -781,6 +891,8 @@
   "stars": 8352,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "primitivedotdev/primitive",
+  "verified": false,
   "createdAt": "2026-06-09T20:20:37.114Z"
  },
  {
@@ -795,6 +907,8 @@
   "stars": 8332,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "moodtrip/moodtrip-hotel-search",
+  "verified": false,
   "createdAt": "2026-06-11T07:07:48.867Z"
  },
  {
@@ -809,6 +923,8 @@
   "stars": 8243,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "lmktoday/commerce",
+  "verified": false,
   "createdAt": "2026-07-06T17:50:30.536Z"
  },
  {
@@ -823,6 +939,8 @@
   "stars": 8233,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "nexgendata-apify/github-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-03T08:36:28.554Z"
  },
  {
@@ -837,6 +955,8 @@
   "stars": 8102,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "googledrive",
+  "verified": true,
   "createdAt": "2025-11-19T07:26:50.147Z"
  },
  {
@@ -851,6 +971,8 @@
   "stars": 8023,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "industrylens/mcp",
+  "verified": false,
   "createdAt": "2026-05-31T09:37:33.146Z"
  },
  {
@@ -865,6 +987,8 @@
   "stars": 7933,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "virtualsms/virtualsms-mcp",
+  "verified": false,
   "createdAt": "2026-03-15T05:59:07.281Z"
  },
  {
@@ -879,6 +1003,8 @@
   "stars": 7889,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "hithereiamaliff/mcp-malaysiatransit",
+  "verified": false,
   "createdAt": "2025-11-06T18:51:42.216Z"
  },
  {
@@ -893,6 +1019,8 @@
   "stars": 7877,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "dev-7bd0/mcp-server",
+  "verified": false,
   "createdAt": "2026-05-11T07:36:35.791Z"
  },
  {
@@ -907,6 +1035,8 @@
   "stars": 7835,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "malinoto/tracepass-mcp-server",
+  "verified": false,
   "createdAt": "2026-06-09T19:41:49.033Z"
  },
  {
@@ -921,6 +1051,8 @@
   "stars": 7716,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "vivaldoeuropes/vivaldo-product-discovery",
+  "verified": false,
   "createdAt": "2026-06-25T19:12:05.172Z"
  },
  {
@@ -935,6 +1067,8 @@
   "stars": 7463,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "voidly/mcp-server",
+  "verified": false,
   "createdAt": "2026-03-25T00:52:33.834Z"
  },
  {
@@ -949,6 +1083,8 @@
   "stars": 7205,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "gordgus/ignav-flights",
+  "verified": false,
   "createdAt": "2026-06-17T13:05:24.052Z"
  },
  {
@@ -963,6 +1099,8 @@
   "stars": 7043,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "delx/delx-mcp",
+  "verified": false,
   "createdAt": "2026-03-08T15:26:17.816Z"
  },
  {
@@ -977,6 +1115,8 @@
   "stars": 7042,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "TitanSneaker/paper-search-mcp-openai-v2",
+  "verified": false,
   "createdAt": "2025-10-31T17:12:41.013Z"
  },
  {
@@ -991,6 +1131,8 @@
   "stars": 6986,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "bigquery",
+  "verified": true,
   "createdAt": "2026-03-27T16:39:28.926Z"
  },
  {
@@ -1005,6 +1147,8 @@
   "stars": 6979,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "iwantfyi/iwant",
+  "verified": false,
   "createdAt": "2026-06-07T09:57:30.191Z"
  },
  {
@@ -1019,6 +1163,8 @@
   "stars": 6937,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "zachary-royals/devmatch",
+  "verified": true,
   "createdAt": "2026-05-24T23:33:16.561Z"
  },
  {
@@ -1033,6 +1179,8 @@
   "stars": 6766,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "nexgendata-apify/google-maps-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-03T08:36:07.794Z"
  },
  {
@@ -1047,6 +1195,8 @@
   "stars": 6708,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "larrybuildsai/resultrail",
+  "verified": false,
   "createdAt": "2026-05-21T13:05:26.999Z"
  },
  {
@@ -1061,6 +1211,8 @@
   "stars": 6621,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "FaresYoussef94/aws-knowledge-mcp",
+  "verified": false,
   "createdAt": "2025-09-16T12:38:25.214Z"
  },
  {
@@ -1075,6 +1227,8 @@
   "stars": 6591,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "king-of-the-grackles/discourse-forum-mcp",
+  "verified": false,
   "createdAt": "2026-03-10T03:40:27.662Z"
  },
  {
@@ -1089,6 +1243,8 @@
   "stars": 6543,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "capratesignals/cap-rate-signals",
+  "verified": false,
   "createdAt": "2026-05-02T21:54:42.436Z"
  },
  {
@@ -1103,6 +1259,8 @@
   "stars": 6522,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/openalex-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-19T23:27:22.732Z"
  },
  {
@@ -1117,6 +1275,8 @@
   "stars": 6463,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "boar-network/blockchain-basic",
+  "verified": false,
   "createdAt": "2026-04-02T14:17:13.628Z"
  },
  {
@@ -1131,6 +1291,8 @@
   "stars": 6429,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "sincetomorrow/cultural-intelligence",
+  "verified": false,
   "createdAt": "2026-04-04T20:16:10.202Z"
  },
  {
@@ -1145,6 +1307,8 @@
   "stars": 6422,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/wikipedia-mcp-server",
+  "verified": false,
   "createdAt": "2026-07-10T18:20:08.992Z"
  },
  {
@@ -1159,6 +1323,8 @@
   "stars": 6395,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "aiwyn",
+  "verified": true,
   "createdAt": "2026-03-27T16:37:13.132Z"
  },
  {
@@ -1173,6 +1339,8 @@
   "stars": 6379,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "google/news",
+  "verified": false,
   "createdAt": "2026-05-17T14:34:05.617Z"
  },
  {
@@ -1187,6 +1355,8 @@
   "stars": 6135,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "nexgendata-apify/finance-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-03T08:36:12.964Z"
  },
  {
@@ -1201,6 +1371,8 @@
   "stars": 6130,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "secureship/docs",
+  "verified": false,
   "createdAt": "2026-03-18T16:21:40.611Z"
  },
  {
@@ -1215,6 +1387,8 @@
   "stars": 6124,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "j4th/mtg-mcp-server",
+  "verified": false,
   "createdAt": "2026-03-24T15:18:55.083Z"
  },
  {
@@ -1229,6 +1403,8 @@
   "stars": 6098,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "ThierryThevenet/talao",
+  "verified": false,
   "createdAt": "2025-10-16T17:03:22.218Z"
  },
  {
@@ -1243,6 +1419,8 @@
   "stars": 6038,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "memxus/memxus",
+  "verified": false,
   "createdAt": "2026-06-02T02:02:32.048Z"
  },
  {
@@ -1257,6 +1435,8 @@
   "stars": 6026,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "nexgendata-apify/legal-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-03T08:36:33.416Z"
  },
  {
@@ -1271,6 +1451,8 @@
   "stars": 6022,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "nausika/nausika",
+  "verified": false,
   "createdAt": "2026-05-18T13:55:53.614Z"
  },
  {
@@ -1285,6 +1467,8 @@
   "stars": 5994,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "hjsh200219/fortuneteller",
+  "verified": false,
   "createdAt": "2025-10-03T04:23:18.460Z"
  },
  {
@@ -1299,6 +1483,8 @@
   "stars": 5958,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "EthanHenrickson/math-mcp",
+  "verified": false,
   "createdAt": "2025-03-09T05:01:16.235Z"
  },
  {
@@ -1313,6 +1499,8 @@
   "stars": 5908,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "github",
+  "verified": true,
   "createdAt": "2025-11-19T07:26:28.312Z"
  },
  {
@@ -1327,6 +1515,8 @@
   "stars": 5904,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "quelvio/mcp-server",
+  "verified": false,
   "createdAt": "2026-05-18T16:11:52.005Z"
  },
  {
@@ -1341,6 +1531,8 @@
   "stars": 5877,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "nexgendata-apify/redfin-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-03T08:36:36.292Z"
  },
  {
@@ -1355,6 +1547,8 @@
   "stars": 5850,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "ahmed2real/thinkzone",
+  "verified": false,
   "createdAt": "2025-08-27T17:50:24.733Z"
  },
  {
@@ -1369,6 +1563,8 @@
   "stars": 5847,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "defibabylon/defi-intel",
+  "verified": false,
   "createdAt": "2026-05-25T18:44:54.165Z"
  },
  {
@@ -1383,6 +1579,8 @@
   "stars": 5840,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "bouch/pinescript",
+  "verified": false,
   "createdAt": "2026-04-29T14:54:15.617Z"
  },
  {
@@ -1397,6 +1595,8 @@
   "stars": 5784,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "govbase/govbase",
+  "verified": false,
   "createdAt": "2026-03-27T22:54:26.346Z"
  },
  {
@@ -1411,6 +1611,8 @@
   "stars": 5433,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/openfda-mcp-server",
+  "verified": false,
   "createdAt": "2026-07-10T19:40:19.070Z"
  },
  {
@@ -1425,6 +1627,8 @@
   "stars": 5388,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "DomainKits/domainkits",
+  "verified": false,
   "createdAt": "2026-05-11T16:48:58.653Z"
  },
  {
@@ -1439,6 +1643,8 @@
   "stars": 5352,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "loved0543/kdata-gate",
+  "verified": false,
   "createdAt": "2026-06-12T17:43:46.791Z"
  },
  {
@@ -1453,6 +1659,8 @@
   "stars": 5297,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "rabqatab/lexlink-ko-mcp",
+  "verified": false,
   "createdAt": "2025-11-10T02:38:14.094Z"
  },
  {
@@ -1467,6 +1675,8 @@
   "stars": 5260,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cturkieh/france-data",
+  "verified": false,
   "createdAt": "2026-05-12T22:32:29.410Z"
  },
  {
@@ -1481,6 +1691,8 @@
   "stars": 5248,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "alperenkocyigit/authorprofilemcp",
+  "verified": false,
   "createdAt": "2025-11-19T11:00:10.542Z"
  },
  {
@@ -1495,6 +1707,8 @@
   "stars": 5173,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/arxiv-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-19T23:38:10.843Z"
  },
  {
@@ -1509,6 +1723,8 @@
   "stars": 5161,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/open-meteo-mcp-server",
+  "verified": false,
   "createdAt": "2026-07-10T19:37:55.223Z"
  },
  {
@@ -1523,6 +1739,8 @@
   "stars": 5119,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "hithereiamaliff/mcp-datagovmy",
+  "verified": false,
   "createdAt": "2025-07-26T14:24:25.244Z"
  },
  {
@@ -1537,6 +1755,8 @@
   "stars": 5089,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "autario/data",
+  "verified": false,
   "createdAt": "2026-04-05T19:51:24.917Z"
  },
  {
@@ -1551,6 +1771,8 @@
   "stars": 5030,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "jalpp/chessagine",
+  "verified": false,
   "createdAt": "2026-02-14T16:09:56.441Z"
  },
  {
@@ -1565,6 +1787,8 @@
   "stars": 4958,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "etweisberg/mlb-mcp",
+  "verified": false,
   "createdAt": "2025-06-30T06:34:33.874Z"
  },
  {
@@ -1579,6 +1803,8 @@
   "stars": 4913,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "hello-oipe/Geppetto-Robot-Directory",
+  "verified": false,
   "createdAt": "2026-07-13T22:25:51.988Z"
  },
  {
@@ -1593,6 +1819,8 @@
   "stars": 4880,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "spacepacket/e3d-ai",
+  "verified": false,
   "createdAt": "2026-05-26T19:29:20.108Z"
  },
  {
@@ -1607,6 +1835,8 @@
   "stars": 4846,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "net-service/xpoz",
+  "verified": false,
   "createdAt": "2025-11-17T17:56:09.574Z"
  },
  {
@@ -1621,6 +1851,8 @@
   "stars": 4831,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "kuibin-dev/hsk-mcp",
+  "verified": false,
   "createdAt": "2026-04-13T10:07:08.860Z"
  },
  {
@@ -1635,6 +1867,8 @@
   "stars": 4780,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "a7om/atom-mcp-server",
+  "verified": false,
   "createdAt": "2026-03-04T13:40:58.193Z"
  },
  {
@@ -1649,6 +1883,8 @@
   "stars": 4755,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "slmusayev/tls-radar",
+  "verified": false,
   "createdAt": "2026-06-17T19:07:59.262Z"
  },
  {
@@ -1663,6 +1899,8 @@
   "stars": 4735,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "rileycraig14/nexus-intelligence",
+  "verified": false,
   "createdAt": "2026-05-12T06:58:46.799Z"
  },
  {
@@ -1677,6 +1915,8 @@
   "stars": 4734,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "surprise-buddy/mcp-server",
+  "verified": false,
   "createdAt": "2026-05-16T12:00:04.925Z"
  },
  {
@@ -1691,6 +1931,8 @@
   "stars": 4412,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/calculator-mcp-server",
+  "verified": false,
   "createdAt": "2026-04-19T23:36:22.812Z"
  },
  {
@@ -1705,6 +1947,8 @@
   "stars": 4405,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "agonzalez/prueba-mcp-seeker",
+  "verified": false,
   "createdAt": "2025-10-10T07:58:34.298Z"
  },
  {
@@ -1719,6 +1963,8 @@
   "stars": 4376,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "jl-3044/agentndx",
+  "verified": false,
   "createdAt": "2026-04-11T03:51:25.601Z"
  },
  {
@@ -1733,6 +1979,8 @@
   "stars": 4310,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "megamind-0x/skillaudit",
+  "verified": false,
   "createdAt": "2026-02-15T13:10:26.062Z"
  },
  {
@@ -1747,6 +1995,8 @@
   "stars": 4220,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "dhanyyudi/bmkg-id",
+  "verified": false,
   "createdAt": "2026-02-22T21:05:27.550Z"
  },
  {
@@ -1761,6 +2011,8 @@
   "stars": 4198,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "brendan/parasure",
+  "verified": false,
   "createdAt": "2026-05-26T06:16:24.346Z"
  },
  {
@@ -1775,6 +2027,8 @@
   "stars": 4179,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cammac/IBANforge",
+  "verified": false,
   "createdAt": "2026-04-15T13:41:20.031Z"
  },
  {
@@ -1789,6 +2043,8 @@
   "stars": 4178,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "a2a/llm-orchestration-agent",
+  "verified": false,
   "createdAt": "2026-05-31T17:21:09.829Z"
  },
  {
@@ -1803,6 +2059,8 @@
   "stars": 4144,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "satoshidata/wallet-intelligence",
+  "verified": false,
   "createdAt": "2026-03-24T06:45:51.407Z"
  },
  {
@@ -1817,6 +2075,8 @@
   "stars": 4064,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "icons8community/icons8mpc",
+  "verified": false,
   "createdAt": "2025-09-18T14:52:21.950Z"
  },
  {
@@ -1831,6 +2091,8 @@
   "stars": 4064,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "kangletian/paper-mcp",
+  "verified": false,
   "createdAt": "2026-06-07T07:46:25.224Z"
  },
  {
@@ -1845,6 +2107,8 @@
   "stars": 4057,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "CaullenOmdahl/nextjs-react-tailwind-assistant",
+  "verified": false,
   "createdAt": "2025-11-06T12:24:45.508Z"
  },
  {
@@ -1859,6 +2123,8 @@
   "stars": 4056,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "ciprianpater/srv-d7aoqmh5pdvs7391dcqg",
+  "verified": false,
   "createdAt": "2026-04-12T17:40:09.419Z"
  },
  {
@@ -1873,6 +2139,8 @@
   "stars": 4015,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "infobip-mcp/search",
+  "verified": false,
   "createdAt": "2025-10-16T10:16:33.757Z"
  },
  {
@@ -1887,6 +2155,8 @@
   "stars": 3955,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "ckbk/subwayinfo-nyc",
+  "verified": false,
   "createdAt": "2026-01-29T05:01:47.419Z"
  },
  {
@@ -1901,6 +2171,8 @@
   "stars": 3930,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "koreafintech/korean-crypto-mcp",
+  "verified": false,
   "createdAt": "2026-02-21T07:34:28.418Z"
  },
  {
@@ -1915,6 +2187,8 @@
   "stars": 3913,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "sennebels/transita",
+  "verified": false,
   "createdAt": "2026-05-02T17:08:48.716Z"
  },
  {
@@ -1929,6 +2203,8 @@
   "stars": 3874,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "Himalayas/himalayas-mcp",
+  "verified": false,
   "createdAt": "2026-03-02T02:06:46.092Z"
  },
  {
@@ -1943,6 +2219,8 @@
   "stars": 3827,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "sfiorini/youtube-mcp",
+  "verified": false,
   "createdAt": "2025-11-20T02:53:24.831Z"
  },
  {
@@ -1957,6 +2235,8 @@
   "stars": 3818,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "yakenator/web-inspector",
+  "verified": false,
   "createdAt": "2026-02-15T00:16:48.370Z"
  },
  {
@@ -1971,6 +2251,8 @@
   "stars": 3818,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "arjunkmrm/grep",
+  "verified": false,
   "createdAt": "2026-02-07T02:59:48.913Z"
  },
  {
@@ -1985,6 +2267,8 @@
   "stars": 3813,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "heavysword1/AgentEcon",
+  "verified": false,
   "createdAt": "2026-05-26T19:06:40.626Z"
  },
  {
@@ -1999,6 +2283,8 @@
   "stars": 3796,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "abneesh/epl-mcp",
+  "verified": false,
   "createdAt": "2026-05-20T19:54:54.361Z"
  },
  {
@@ -2013,6 +2299,8 @@
   "stars": 3787,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "FlashAlpha/options-analytics",
+  "verified": false,
   "createdAt": "2026-03-31T07:23:08.902Z"
  },
  {
@@ -2027,6 +2315,8 @@
   "stars": 3733,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "sasabasara/where_is_my_train_mcp",
+  "verified": false,
   "createdAt": "2025-08-17T21:02:38.684Z"
  },
  {
@@ -2041,6 +2331,8 @@
   "stars": 3686,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "blackboxfoundry/livedatalink",
+  "verified": false,
   "createdAt": "2026-05-09T04:01:00.008Z"
  },
  {
@@ -2055,6 +2347,8 @@
   "stars": 3676,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cyanheads/openstreetmap-mcp-server",
+  "verified": false,
   "createdAt": "2026-07-10T19:47:08.136Z"
  },
  {
@@ -2069,6 +2363,8 @@
   "stars": 3674,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "qbtlabs/openmm-mcp",
+  "verified": false,
   "createdAt": "2026-03-07T20:30:02.479Z"
  },
  {
@@ -2083,6 +2379,8 @@
   "stars": 3665,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "jeremyd2255/clearmarket",
+  "verified": false,
   "createdAt": "2026-06-09T15:47:34.263Z"
  },
  {
@@ -2097,6 +2395,8 @@
   "stars": 3646,
   "featured": false,
   "source": "Smithery",
+  "smitheryId": "cavasotti/doorvault",
+  "verified": false,
   "createdAt": "2026-04-30T20:42:34.905Z"
  },
  {

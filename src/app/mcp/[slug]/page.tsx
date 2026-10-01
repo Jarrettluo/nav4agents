@@ -3,10 +3,19 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Star, Copy, Check, Terminal, BookOpen, Zap, Globe, Server, Loader2 } from 'lucide-react';
-import { getMcpBySlug } from '@/lib/api/mcp';
-import { addFavorite, removeFavorite, checkFavorite } from '@/lib/api/favorites';
-import type { McpServer } from '@/lib/api/types';
+import { ArrowLeft, ExternalLink, Star, Copy, Check, Terminal, Zap, Globe, Server, Loader2, Settings } from 'lucide-react';
+import { getMcpBySlug } from '@/lib/data/mcp';
+import { addFavorite, removeFavorite, checkFavorite } from '@/lib/data/favorites';
+import type { McpServer } from '@/lib/data/types';
+
+interface McpDetail {
+  tools: { name: string; description: string }[];
+  config: { name: string; required: boolean; description: string }[];
+  remoteUrl: string | null;
+  iconUrl: string | null;
+  verified: boolean;
+  homepage?: string | null;
+}
 
 export default function McpDetailPage() {
   const params = useParams();
@@ -14,6 +23,7 @@ export default function McpDetailPage() {
 
   const [loading, setLoading] = useState(true);
   const [mcp, setMcp] = useState<McpServer | null>(null);
+  const [detail, setDetail] = useState<McpDetail | null>(null);
   const [copied, setCopied] = useState(false);
   const [isFavorited, setIsFavorited] = useState(false);
   const [favoriting, setFavoriting] = useState(false);
@@ -36,6 +46,20 @@ export default function McpDetailPage() {
     };
 
     fetchMcp();
+  }, [slug]);
+
+  // 详情增强数据（工具列表/配置项）运行时从静态 JSON 加载，不进构建产物
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/data/mcp-details.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((map) => {
+        if (!cancelled && map && map[slug]) setDetail(map[slug] as McpDetail);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
 
   const handleCopy = async (text: string) => {
@@ -86,25 +110,9 @@ export default function McpDetailPage() {
     );
   }
 
-  const extendedData = {
-    longDescription: `${mcp.description}\n\n此 MCP 服务器为 AI 助手提供了强大的扩展能力，可以与现有工作流程无缝集成。适用于需要自动化、集成外部服务的场景。`,
-    features: [
-      '支持多种操作类型',
-      '实时数据同步',
-      '安全认证机制',
-      '错误重试机制',
-    ],
-    configuration: {
-      envVars: [
-        { name: 'API_KEY', description: 'API 访问密钥' },
-        { name: 'ENDPOINT', description: '服务器端点地址' },
-      ],
-      installOptions: mcp.installCmd || `npx @modelcontextprotocol/server-${mcp.slug}`,
-    },
-    source: mcp.type === 'local' ? '社区开源' : '官方维护',
-    rating: Math.min(5, Math.floor(mcp.stars / 200) + 3),
-    reviewCount: Math.floor(mcp.stars / 50),
-  };
+  const installCmd = mcp.installCmd || '';
+  const hasTools = !!detail?.tools?.length;
+  const hasConfig = !!detail?.config?.length;
 
   return (
     <div>
@@ -124,20 +132,35 @@ export default function McpDetailPage() {
           <div className="card">
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  {mcp.type === 'local' ? (
-                    <Server className="w-6 h-6 text-white" />
-                  ) : (
-                    <Globe className="w-6 h-6 text-white" />
-                  )}
-                </div>
+                {detail?.iconUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={detail.iconUrl}
+                    alt={mcp.name}
+                    className="w-12 h-12 rounded-xl object-contain bg-gray-50 p-1.5"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    {mcp.type === 'local' ? (
+                      <Server className="w-6 h-6 text-white" />
+                    ) : (
+                      <Globe className="w-6 h-6 text-white" />
+                    )}
+                  </div>
+                )}
                 <div>
-                  <h1 className="text-2xl font-bold text-gray-800 font-outfit">{mcp.name}</h1>
+                  <h1 className="text-2xl font-bold text-gray-800 font-outfit">
+                    {mcp.name}
+                    {detail?.verified && (
+                      <span className="ml-2 align-middle text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full">✓ 已验证</span>
+                    )}
+                  </h1>
                   <div className="flex items-center gap-2 mt-1">
                     <span className={`tag text-xs ${mcp.type === 'local' ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'}`}>
                       {mcp.type === 'local' ? '本地 MCP' : '远程 MCP'}
                     </span>
                     <span className="tag tag-primary text-xs">{mcp.category}</span>
+                    <span className="text-xs text-gray-400">来源：{mcp.source || '——'}</span>
                   </div>
                 </div>
               </div>
@@ -157,21 +180,26 @@ export default function McpDetailPage() {
             <p className="text-gray-600 leading-relaxed">{mcp.description}</p>
           </div>
 
-          {/* 核心能力 */}
-          <div className="card">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-              <Zap className="w-5 h-5 text-blue-500" />
-              核心能力
-            </h2>
-            <div className="grid grid-cols-2 gap-3">
-              {extendedData.features.map((feature, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                  {feature}
-                </div>
-              ))}
+          {/* 工具能力（真实数据） */}
+          {hasTools ? (
+            <div className="card">
+              <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                <Zap className="w-5 h-5 text-blue-500" />
+                工具能力
+                <span className="text-xs font-normal text-gray-400">（{detail!.tools.length} 个工具）</span>
+              </h2>
+              <div className="space-y-3">
+                {detail!.tools.map((tool, i) => (
+                  <div key={i} className="bg-gray-50 rounded-lg px-4 py-3">
+                    <code className="text-blue-700 font-mono text-sm font-semibold">{tool.name}</code>
+                    {tool.description && (
+                      <p className="text-gray-600 text-sm mt-1 leading-relaxed">{tool.description}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null}
 
           {/* 配置方式 */}
           <div className="card">
@@ -181,71 +209,50 @@ export default function McpDetailPage() {
             </h2>
 
             {/* 安装命令 */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-2">安装命令</h3>
-              <div className="bg-gray-900 rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <code className="text-green-400 font-mono text-xs sm:text-sm break-all">
-                  {extendedData.configuration.installOptions}
-                </code>
-                <button
-                  onClick={() => handleCopy(extendedData.configuration.installOptions)}
-                  className="p-2 hover:bg-gray-800 rounded transition-colors self-end sm:self-auto"
-                >
-                  {copied ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400" />
-                  )}
-                </button>
+            {installCmd ? (
+              <div className="mb-6">
+                <h3 className="text-sm font-medium text-gray-700 mb-2">安装命令</h3>
+                <div className="bg-gray-900 rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <code className="text-green-400 font-mono text-xs sm:text-sm break-all">
+                    {installCmd}
+                  </code>
+                  <button
+                    onClick={() => handleCopy(installCmd)}
+                    className="p-2 hover:bg-gray-800 rounded transition-colors self-end sm:self-auto"
+                  >
+                    {copied ? (
+                      <Check className="w-4 h-4 text-green-400" />
+                    ) : (
+                      <Copy className="w-4 h-4 text-gray-400" />
+                    )}
+                  </button>
+                </div>
               </div>
-            </div>
+            ) : (
+              <p className="text-sm text-gray-400 mb-6">暂无标准安装命令，请通过上方官网了解接入方式。</p>
+            )}
 
-            {/* 环境变量 */}
-            {extendedData.configuration.envVars.length > 0 && (
+            {/* 配置项（真实数据） */}
+            {hasConfig && (
               <div>
-                <h3 className="text-sm font-medium text-gray-700 mb-2">环境变量</h3>
+                <h3 className="text-sm font-medium text-gray-700 mb-2 flex items-center gap-1.5">
+                  <Settings className="w-4 h-4" />
+                  配置项
+                </h3>
                 <div className="space-y-2">
-                  {extendedData.configuration.envVars.map((env, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-gray-50 rounded-lg px-4 py-3">
-                      <code className="text-blue-600 font-mono text-sm font-semibold">{env.name}</code>
-                      <span className="text-gray-500 text-sm">— {env.description}</span>
+                  {detail!.config.map((env, i) => (
+                    <div key={i} className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 bg-gray-50 rounded-lg px-4 py-3">
+                      <code className="text-blue-600 font-mono text-sm font-semibold whitespace-nowrap">
+                        {env.name}
+                        {env.required && <span className="text-red-500 ml-1" title="必填">*</span>}
+                      </code>
+                      <span className="text-gray-500 text-sm">{env.description || '——'}</span>
                     </div>
                   ))}
                 </div>
+                <p className="text-xs text-gray-400 mt-2">带 * 为必填配置项</p>
               </div>
             )}
-
-            {/* Claude Desktop 配置 */}
-            <div className="mt-6 pt-6 border-t border-gray-100">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Claude Desktop 配置</h3>
-              <div className="bg-gray-900 rounded-lg p-3 sm:p-4 overflow-x-auto">
-                <pre className="text-green-400 font-mono text-xs sm:text-sm whitespace-pre">
-{`{
-  "mcpServers": {
-    "${mcp.name}": {
-      "command": "${mcp.type === 'local' ? 'npx' : 'node'}",
-      "args": ${mcp.type === 'local'
-        ? `["@modelcontextprotocol/server-${mcp.slug}"]`
-        : `["-e", "require('@modelcontextprotocol/server-${mcp.slug}')"]`}
-    }
-  }
-}`}
-                </pre>
-              </div>
-            </div>
-          </div>
-
-          {/* 详情说明 */}
-          <div className="card">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-blue-500" />
-              详情说明
-            </h2>
-            <div className="prose prose-gray max-w-none">
-              <p className="text-gray-600 leading-relaxed whitespace-pre-line">
-                {extendedData.longDescription}
-              </p>
-            </div>
           </div>
         </div>
 
@@ -263,18 +270,41 @@ export default function McpDetailPage() {
                   className="flex items-center gap-2 px-4 py-3 bg-blue-50 hover:bg-blue-100 rounded-lg text-blue-700 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span className="text-sm font-medium">官方文档</span>
+                  <span className="text-sm font-medium">官方网站</span>
                 </a>
               )}
-              <a
-                href={mcp.url || `https://smithery.ai/?q=${encodeURIComponent(mcp.name)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span className="text-sm font-medium">前往主页</span>
-              </a>
+              {detail?.remoteUrl && (
+                <a
+                  href={detail.remoteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 bg-purple-50 hover:bg-purple-100 rounded-lg text-purple-700 transition-colors"
+                >
+                  <Globe className="w-4 h-4" />
+                  <span className="text-sm font-medium">远程服务地址</span>
+                </a>
+              )}
+              {mcp.smitheryId ? (
+                <a
+                  href={`https://smithery.ai/servers/${mcp.smitheryId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span className="text-sm font-medium">在 Smithery 查看</span>
+                </a>
+              ) : (
+                <a
+                  href={`https://registry.modelcontextprotocol.io/v0/servers?search=${encodeURIComponent(mcp.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span className="text-sm font-medium">在官方注册表查看</span>
+                </a>
+              )}
             </div>
           </div>
 
@@ -283,8 +313,8 @@ export default function McpDetailPage() {
             <h3 className="text-sm font-semibold text-gray-700 mb-3">来源说明</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500">来源</span>
-                <span className="text-sm font-medium text-gray-800">{extendedData.source}</span>
+                <span className="text-sm text-gray-500">数据源</span>
+                <span className="text-sm font-medium text-gray-800">{mcp.source || '——'}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-500">分类</span>
@@ -299,64 +329,24 @@ export default function McpDetailPage() {
             </div>
           </div>
 
-          {/* 点评星级 */}
+          {/* 使用数据 */}
           <div className="card">
-            <h3 className="text-sm font-semibold text-gray-700 mb-3">点评星级</h3>
-            <div className="space-y-4">
-              {/* 星级展示 */}
-              <div className="flex items-center gap-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className={`w-5 h-5 ${star <= extendedData.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
-                  />
-                ))}
-                <span className="ml-2 text-sm font-medium text-gray-800">{extendedData.rating.toFixed(1)}</span>
-              </div>
-
-              {/* 评分统计 */}
-              <div className="space-y-2">
-                {[5, 4, 3, 2, 1].map((level) => {
-                  const percentage = level === extendedData.rating ? 65 : level > extendedData.rating ? 20 : 10;
-                  return (
-                    <div key={level} className="flex items-center gap-2">
-                      <span className="text-xs text-gray-500 w-3">{level}星</span>
-                      <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-yellow-400 rounded-full"
-                          style={{ width: `${percentage}%` }}
-                        />
-                      </div>
-                      <span className="text-xs text-gray-500 w-8">{percentage}%</span>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="pt-3 border-t border-gray-100 text-center">
-                <span className="text-sm text-gray-500">{extendedData.reviewCount} 条点评</span>
-              </div>
-            </div>
-          </div>
-
-          {/* GitHub 统计 */}
-          <div className="card">
-            <h3 className="text-sm font-semibold text-gray-700 mb-3">社区统计</h3>
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">使用数据</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-500 flex items-center gap-1">
-                  <Star className="w-4 h-4" /> GitHub Stars
+                  <Star className="w-4 h-4" /> 热度
                 </span>
-                <span className="text-sm font-medium text-gray-800">{mcp.stars > 0 ? mcp.stars.toLocaleString() : '—'}</span>
+                <span className="text-sm font-medium text-gray-800">
+                  {mcp.stars > 0 ? `${mcp.stars.toLocaleString()} 次调用` : '官方收录'}
+                </span>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500">贡献者</span>
-                <span className="text-sm font-medium text-gray-800">12</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500">最后更新</span>
-                <span className="text-sm font-medium text-gray-800">3天前</span>
-              </div>
+              {detail?.verified && (
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">认证状态</span>
+                  <span className="text-sm font-medium text-green-600">✓ 已验证</span>
+                </div>
+              )}
             </div>
           </div>
         </div>

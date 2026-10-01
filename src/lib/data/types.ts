@@ -1,4 +1,4 @@
-// 通用响应类型
+// 通用响应类型（静态数据层沿用旧接口形状，便于页面迁移）
 export interface ApiResponse<T = any> {
   code: number;
   msg: string;
@@ -11,23 +11,6 @@ export interface PageResult<T> {
   total: number;
   page: number;
   pageSize: number;
-}
-
-// 用户相关
-export interface User {
-  id: number;
-  email: string;
-  username: string;
-  avatar?: string;
-  role: string;
-}
-
-export interface LoginResult {
-  userId: number;
-  username: string;
-  email: string;
-  avatar?: string;
-  token: string;
 }
 
 // Skill 相关
@@ -45,6 +28,9 @@ export interface Skill {
   ownerHandle?: string;
   rawSlug?: string;
   url?: string;
+  topics?: string[];
+  version?: string | null;
+  changelog?: string | null;
   createdAt?: string;
 }
 
@@ -61,6 +47,7 @@ export interface McpServer {
   stars: number;
   featured: boolean;
   source?: string;
+  smitheryId?: string;
   createdAt?: string;
 }
 
@@ -81,14 +68,6 @@ export interface Subscription {
 
 // 收藏相关
 export type FavoriteType = 'skill' | 'mcp' | 'subscription';
-
-export interface Favorite {
-  id: number;
-  userId: number;
-  type: FavoriteType;
-  itemId: number;
-  createdAt: string;
-}
 
 export interface FavoriteItem {
   id: number;
@@ -114,12 +93,6 @@ export interface HomeData {
     mcpCount: number;
     skillCount: number;
     subscriptionCount: number;
+    codingplanCount: number;
   };
-}
-
-// 搜索结果
-export interface SearchResult {
-  skills?: Skill[];
-  mcps?: McpServer[];
-  subscriptions?: Subscription[];
 }

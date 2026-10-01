@@ -52,9 +52,15 @@ fi
 scan_rc=0
 python3 scripts/scan_sources.py >>"$LOG" 2>&1 || scan_rc=$?
 
+# 2.5 增强 MCP 详情（工具列表/配置项，失败不阻断）
+python3 scripts/enhance_details.py >>"$LOG" 2>&1 || echo "  !! enhance_details failed" >>"$LOG"
+
 # 3. 检查是否有实质性数据变更（meta.json 时间戳/sw 版本不计入）
-if git diff --quiet -- src/data/generated/mcp.json src/data/generated/skills.json src/data/generated/codingplan.json; then
+git add -A src/data/generated public/data public/sw.js >>"$LOG" 2>&1
+if git diff --cached --quiet -- src/data/generated/mcp.json src/data/generated/skills.json src/data/generated/codingplan.json src/data/generated/mcp-details.json public/data; then
+  run git reset -q -- src/data/generated public/data public/sw.js
   run git checkout -- src/data/generated public/sw.js
+  run git checkout -- public/data 2>/dev/null || run git rm -r --cached -q --ignore-unmatch public/data
   if [ "$scan_rc" -ne 0 ]; then
     echo "⚠️ nav4agents 周更：本次扫描失败且无新数据，请检查 /tmp/nav4agents-weekly.log"
   else
@@ -68,20 +74,23 @@ echo "--- data changed, running build check ---" >>"$LOG" 2>&1
 # 4. 本地构建验证（防止坏数据上线）
 if ! run npm run build; then
   # 构建失败：回滚工作区改动，不推送
+  run git reset -q -- src/data/generated public/data public/sw.js
   run git checkout -- src/data/generated public/sw.js
+  run git checkout -- public/data 2>/dev/null || true
   echo "⚠️ nav4agents 周更：本地构建失败，数据未推送（详见 /tmp/nav4agents-weekly.log）"
   exit 0
 fi
 
 # 4.5 演练模式：不推送
 if [ "${1:-}" = "--dry-run" ]; then
+  run git reset -q -- src/data/generated public/data public/sw.js
   run git checkout -- src/data/generated public/sw.js
+  run git checkout -- public/data 2>/dev/null || true
   echo "🔍 nav4agents 周更演练完成：扫描 + 构建均通过，未推送（dry-run）"
   exit 0
 fi
 
 # 5. 提交并推送（触发 EdgeOne 自动构建）
-run git add src/data/generated public/sw.js
 run git commit -m "chore: weekly data update $(date +%F)"
 if ! run git push origin master; then
   echo "⚠️ nav4agents 周更：git push 失败（数据已提交未推送，详见 /tmp/nav4agents-weekly.log）"

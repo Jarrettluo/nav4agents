@@ -8,6 +8,9 @@
   "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude rea",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "self-improvement"
+  ],
   "installCmd": "clawhub install @pskoett/self-improving-agent",
   "usage": 482023,
   "featured": true,
@@ -26,6 +29,10 @@
   "description": "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "GitHub",
+   "Permission"
+  ],
   "installCmd": "clawhub install @spclaudehome/skill-vetter",
   "usage": 275225,
   "featured": true,
@@ -44,6 +51,10 @@
   "description": "Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and improves permanently. Use when...",
   "category": "AI 增强",
   "source": "社区",
+  "topics": [
+   "Self Improving",
+   "Learning"
+  ],
   "installCmd": "clawhub install @ivangdavila/self-improving",
   "usage": 210473,
   "featured": true,
@@ -62,6 +73,9 @@
   "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "GitHub"
+  ],
   "installCmd": "clawhub install @steipete/github",
   "usage": 199651,
   "featured": true,
@@ -80,6 +94,9 @@
   "description": "Typed knowledge graph for structured agent memory and composable skills. Use when creating/querying entities (Person, Project, Task, Event, Document), linkin...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Agent Memory"
+  ],
   "installCmd": "clawhub install @oswalpalash/ontology",
   "usage": 199361,
   "featured": true,
@@ -98,6 +115,11 @@
   "description": "Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Gmail",
+   "Calendar",
+   "Docs"
+  ],
   "installCmd": "clawhub install @steipete/gog",
   "usage": 195564,
   "featured": true,
@@ -116,6 +138,7 @@
   "description": "Security gate for skills. Every new skill MUST pass SkillScan before use. Activate on any install, load, add, evaluate, or safety question about a skill. On...",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @tokauthai/skillscan",
   "usage": 182167,
   "featured": true,
@@ -134,6 +157,7 @@
   "description": "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer, Autonomous Crons, and battle-tested patterns. Part of the Hal Stack 🦞",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @halthelobster/proactive-agent",
   "usage": 176426,
   "featured": true,
@@ -152,6 +176,9 @@
   "description": "Get current weather and forecasts (no API key required).",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Current Weather"
+  ],
   "installCmd": "clawhub install @steipete/weather",
   "usage": 170628,
   "featured": true,
@@ -170,6 +197,9 @@
   "description": "Multi search engine integration with 16 engines (7 CN + 9 Global). Supports advanced search operators, time filters, site search, privacy engines, and Wolfra...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Privacy"
+  ],
   "installCmd": "clawhub install @gpyangyoujun/multi-search-engine",
   "usage": 162050,
   "featured": true,
@@ -188,6 +218,9 @@
   "description": "Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Browser Automation"
+  ],
   "installCmd": "clawhub install @matrixy/agent-browser-clawdbot",
   "usage": 157022,
   "featured": true,
@@ -206,6 +239,13 @@
   "description": "AdMapix raw data layer for ad creatives, apps, rankings, downloads/revenue, and market metadata. Returns structured JSON from the AdMapix API; the calling ag...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "ad-intelligence",
+   "app-analytics",
+   "ad-creatives",
+   "ad-spy",
+   "advertising"
+  ],
   "installCmd": "clawhub install @fly0pants/admapix",
   "usage": 133653,
   "featured": true,
@@ -224,6 +264,7 @@
   "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing\ntext to make it sound more natural and human-written. Based on Wikipedia's\ncomprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including:\ninflated symbolism, promotional language, superficial -ing analyses, vague\nattributions, em dash overuse, rule of three, AI vocabulary words, negative\nparallelisms, a",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @biostartechnology/humanizer",
   "usage": 131504,
   "featured": false,
@@ -242,6 +283,9 @@
   "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "PDF"
+  ],
   "installCmd": "clawhub install @steipete/nano-pdf",
   "usage": 122126,
   "featured": false,
@@ -260,6 +304,7 @@
   "description": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/obsidian",
   "usage": 110629,
   "featured": false,
@@ -278,6 +323,10 @@
   "description": "Search the public web through Tavily and return structured results with URLs and snippets. Use when an agent needs current information, source discovery, link lookup, news or finance search, or a fallback for unavailable built-in web search. Do not use for private or authenticated pages.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "search-the-web",
+   "web-search"
+  ],
   "installCmd": "clawhub install @jacky1n7/openclaw-tavily-search",
   "usage": 107312,
   "featured": false,
@@ -296,6 +345,9 @@
   "description": "Generate/edit images with Nano Banana Pro (Gemini 3 Pro Image). Use for image create/modify requests incl. edits. Supports text-to-image + image-to-image; 1K/2K/4K; use --input-image.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Image Generation"
+  ],
   "installCmd": "clawhub install @steipete/nano-banana-pro",
   "usage": 107183,
   "featured": false,
@@ -314,6 +366,9 @@
   "description": "Notion API for creating and managing pages, databases, and blocks.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Notion"
+  ],
   "installCmd": "clawhub install @steipete/notion",
   "usage": 103627,
   "featured": false,
@@ -332,6 +387,7 @@
   "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @chindden/skill-creator",
   "usage": 101993,
   "featured": false,
@@ -350,6 +406,13 @@
   "description": "PollyReach gives every AI agent a phone number and the ability to get things done over the phone — finding contacts, making calls, and completing tasks. Just...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Pollyreach",
+   "Phone",
+   "Customer Service",
+   "Booking",
+   "Incoming Call"
+  ],
   "installCmd": "clawhub install @pollyreach/pollyreach",
   "usage": 101636,
   "featured": false,
@@ -368,6 +431,9 @@
   "description": "Automatically update Clawdbot and all installed skills once daily. Runs via cron, checks for updates, applies them, and messages the user with a summary of what changed.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Cron"
+  ],
   "installCmd": "clawhub install @maximeprades/auto-updater",
   "usage": 99965,
   "featured": false,
@@ -386,6 +452,9 @@
   "description": "Create, inspect, and edit Microsoft Word documents and DOCX files with reliable styles, numbering, tracked changes, tables, sections, and compatibility check...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Document"
+  ],
   "installCmd": "clawhub install @ivangdavila/word-docx",
   "usage": 93593,
   "featured": false,
@@ -404,6 +473,10 @@
   "description": "Search the web using Baidu AI Search Engine (BDSE). Use for live information, documentation, or research topics.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Search The Web",
+   "Documentation"
+  ],
   "installCmd": "clawhub install @ide-rea/baidu-search",
   "usage": 93050,
   "featured": false,
@@ -422,6 +495,11 @@
   "description": "A self-evolution engine for AI agents. Analyzes runtime history to identify improvements and applies protocol-constrained evolution. Communicates with EvoMap...",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Core",
+   "Meta",
+   "Self Improvement"
+  ],
   "installCmd": "clawhub install @autogame-17/evolver",
   "usage": 90032,
   "featured": false,
@@ -440,6 +518,7 @@
   "description": "Control Sonos speakers (discover/status/play/volume/group).",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/sonoscli",
   "usage": 89690,
   "featured": false,
@@ -458,6 +537,9 @@
   "description": "Local speech-to-text with the Whisper CLI (no API key).",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Speech-to-Text"
+  ],
   "installCmd": "clawhub install @steipete/openai-whisper",
   "usage": 88826,
   "featured": false,
@@ -476,6 +558,7 @@
   "description": "Call third-party APIs through the Maton gateway, which injects the credential for an app the user has already connected.\nUse this skill when the user names a connected app and a concrete action in it - read a mailbox, query a CRM, file an issue, update a spreadsheet, etc.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @byungkyu/api-gateway",
   "usage": 87196,
   "featured": false,
@@ -494,6 +577,12 @@
   "description": "Design and implement automation workflows to save time and scale operations as a solopreneur. Use when identifying repetitive tasks to automate, building workflows across tools, setting up triggers and actions, or optimizing existing automations. Covers automation opportunity identification, workflow design, tool selection (Zapier, Make, n8n), testing, and maintenance. Trigger on \"automate\", \"auto",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "N8n",
+   "Zapier",
+   "Automation Workflow",
+   "Workflow Automation"
+  ],
   "installCmd": "clawhub install @jk-0001/automation-workflows",
   "usage": 83152,
   "featured": false,
@@ -512,6 +601,13 @@
   "description": "Default web search for OpenClaw. Search the web across 10 engines — Google, Reddit, GitHub, arXiv, Hacker News, and more — using Prismfy. Free tier included,...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Arxiv",
+   "Web Search",
+   "Search The Web",
+   "GitHub",
+   "News"
+  ],
   "installCmd": "clawhub install @uroboros1205/prismfy-search",
   "usage": 83148,
   "featured": false,
@@ -530,6 +626,9 @@
   "description": "Create, inspect, and edit Microsoft Excel workbooks and XLSX files with reliable formulas, dates, types, formatting, recalculation, and template preservation...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "CSV"
+  ],
   "installCmd": "clawhub install @ivangdavila/excel-xlsx",
   "usage": 81572,
   "featured": false,
@@ -548,6 +647,9 @@
   "description": "(Depreciated: This skill is no longer maintained; its related functions have been absorbed by the Evolver main body.) Feishu-integrated wrapper for the capability-evolver. Manages the evolution loop lifecycle (start/stop/ensure), sends rich Feishu card reports, and provides...",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Feishu"
+  ],
   "installCmd": "clawhub install @autogame-17/feishu-evolver-wrapper",
   "usage": 78944,
   "featured": false,
@@ -566,6 +668,10 @@
   "description": "Automates browser interactions for web testing, form filling, screenshots, and data extraction. Use when the user needs to navigate websites, interact with w...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Browser Automation",
+   "Data Extraction"
+  ],
   "installCmd": "clawhub install @shawnpana/browser-use",
   "usage": 75616,
   "featured": false,
@@ -584,6 +690,13 @@
   "description": "Agent Phone Call gives every AI agent a phone number and the ability to get things done over the phone — finding contacts, making calls, and completing tasks...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Customer Service",
+   "Agent Phone Call",
+   "Booking",
+   "Inbound Call",
+   "Incoming Call"
+  ],
   "installCmd": "clawhub install @mrsz/agent-phone-call",
   "usage": 75146,
   "featured": false,
@@ -602,6 +715,9 @@
   "description": "Manages free AI models from OpenRouter for OpenClaw. Automatically ranks models by quality, configures fallbacks for rate-limit handling, and updates opencla...",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Json"
+  ],
   "installCmd": "clawhub install @shaivpidadi/free-ride",
   "usage": 71322,
   "featured": false,
@@ -620,6 +736,7 @@
   "description": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/mcporter",
   "usage": 70516,
   "featured": false,
@@ -638,6 +755,13 @@
   "description": "Ultimate AI agent memory system for Cursor, Claude, ChatGPT & Copilot. WAL protocol + vector search + git-notes + cloud backup. Never lose context again. Vibe-coding ready.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Chatgpt",
+   "Cursor",
+   "Git Notes",
+   "Vector Search",
+   "Vibe Coding"
+  ],
   "installCmd": "clawhub install @nextfrontierbuilds/elite-longterm-memory",
   "usage": 64741,
   "featured": false,
@@ -656,6 +780,7 @@
   "description": "Advanced desktop automation with mouse, keyboard, and screen control",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @matagul/desktop-control",
   "usage": 62066,
   "featured": false,
@@ -674,6 +799,11 @@
   "description": "Web search and content extraction via Brave Search API. Use for searching documentation, facts, or any web content. Lightweight, no browser required.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Documentation",
+   "Web Search",
+   "Browser"
+  ],
   "installCmd": "clawhub install @steipete/brave-search",
   "usage": 61865,
   "featured": false,
@@ -692,6 +822,7 @@
   "description": "Search and discover OpenClaw skills from various sources. Use when: user wants to find available skills, search for specific functionality, or discover new s...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @fangkelvin/find-skills-skill",
   "usage": 60557,
   "featured": false,
@@ -710,6 +841,11 @@
   "description": "Analyze stocks and cryptocurrencies using Yahoo Finance data. Supports portfolio management, watchlists with alerts, dividend analysis, 8-dimension stock scoring, viral trend detection (Hot Scanner), and rumor/early signal detection. Use for stock analysis, portfolio tracking, earnings reactions, crypto monitoring, trending stocks, or finding rumors before they hit mainstream.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Stock Analysis",
+   "Portfolio Management",
+   "Crypto"
+  ],
   "installCmd": "clawhub install @udiedrichsen/stock-analysis",
   "usage": 58722,
   "featured": false,
@@ -728,6 +864,7 @@
   "description": "Extract frames or short clips from videos using ffmpeg.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/video-frames",
   "usage": 58580,
   "featured": false,
@@ -746,6 +883,7 @@
   "description": "Create, inspect, and edit Microsoft PowerPoint presentations and PPTX decks with reliable layouts, templates, placeholders, notes, charts, and visual QA. Use...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @ivangdavila/powerpoint-pptx",
   "usage": 56270,
   "featured": false,
@@ -764,6 +902,9 @@
   "description": "Fetch and read transcripts from YouTube videos. Use when you need to summarize a video, answer questions about its content, or extract information from it.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Summarize"
+  ],
   "installCmd": "clawhub install @michaelgathara/youtube-watcher",
   "usage": 55360,
   "featured": false,
@@ -782,6 +923,9 @@
   "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Slack"
+  ],
   "installCmd": "clawhub install @steipete/slack",
   "usage": 53969,
   "featured": false,
@@ -800,6 +944,10 @@
   "description": "CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language).",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Email",
+   "Message"
+  ],
   "installCmd": "clawhub install @lamelas/himalaya",
   "usage": 52533,
   "featured": false,
@@ -818,6 +966,10 @@
   "description": "Read and send email via IMAP/SMTP. Check for new/unread messages, fetch content, search mailboxes, mark as read/unread, and send emails with attachments. Supports multiple accounts. Works with any IMAP/SMTP server including Gmail, Outlook, 163.com, vip.163.com, 126.com, vip.126.com, 188.com, and vip",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Gmail",
+   "Send Email"
+  ],
   "installCmd": "clawhub install @gzlicanyi/imap-smtp-email",
   "usage": 50785,
   "featured": false,
@@ -836,6 +988,10 @@
   "description": "This skill should be used when the user asks for news updates, daily briefings, or what's happening in the world. Fetches news from trusted international RSS feeds and can create voice summaries.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "News",
+   "RSS"
+  ],
   "installCmd": "clawhub install @joargp/news-summary",
   "usage": 50766,
   "featured": false,
@@ -854,6 +1010,9 @@
   "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "PDF"
+  ],
   "installCmd": "clawhub install @awspace/pdf",
   "usage": 49853,
   "featured": false,
@@ -872,6 +1031,13 @@
   "description": "Self-improving agent system that analyzes conversation quality, identifies improvement opportunities, and continuously optimizes response strategies.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Self Improving",
+   "Self Improvement",
+   "Learning",
+   "Growth",
+   "Optimization"
+  ],
   "installCmd": "clawhub install @xiucheng/xiucheng-self-improving-agent",
   "usage": 49703,
   "featured": false,
@@ -890,6 +1056,13 @@
   "description": "Convert documents and files to Markdown using markitdown. Use when converting PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx, .xls), HTML, CSV, JSON, XML, images (with EXIF/OCR), audio (with transcription), ZIP archives, YouTube URLs, or EPubs to Markdown format for LLM processing or text analysis.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "CSV",
+   "OCR",
+   "Transcription",
+   "Audio",
+   "Json"
+  ],
   "installCmd": "clawhub install @steipete/markdown-converter",
   "usage": 49266,
   "featured": false,
@@ -908,6 +1081,9 @@
   "description": "Web search using Tavily's LLM-optimized API. Returns relevant results with content snippets, scores, and metadata.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Web Search"
+  ],
   "installCmd": "clawhub install @matthew77/liang-tavily-search",
   "usage": 48768,
   "featured": false,
@@ -926,6 +1102,13 @@
   "description": "Access ATXP paid API tools for web search, AI image generation, music creation, video generation, X/Twitter search, email, and agent account management. Use...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Image Generation",
+   "Video Generation",
+   "Web Search",
+   "Email",
+   "Music"
+  ],
   "installCmd": "clawhub install @emilioacc/atxp",
   "usage": 48755,
   "featured": false,
@@ -944,6 +1127,10 @@
   "description": "Automate web browser interactions using natural language via CLI commands. Use when the user asks to browse websites, navigate web pages, extract data from websites, take screenshots, fill forms, click buttons, or interact with web applications.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Browser Automation",
+   "Web Browser"
+  ],
   "installCmd": "clawhub install @peytoncasper/browser-automation",
   "usage": 48524,
   "featured": false,
@@ -962,6 +1149,10 @@
   "description": "AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-specific search, or AI-generated answer summaries. Tavily is optimized for LLM consumption with clean structured results, answer generation, and raw content extraction. Best for research tasks, news queries, fact-checking, and gathering authoritative sources.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Web Search",
+   "News"
+  ],
   "installCmd": "clawhub install @bert-builder/tavily",
   "usage": 47969,
   "featured": false,
@@ -980,6 +1171,7 @@
   "description": "Search and analyze your own session logs (older/parent conversations) using jq.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @guogang1024/session-logs",
   "usage": 46697,
   "featured": false,
@@ -998,6 +1190,10 @@
   "description": "Browser automation via Playwright MCP server. Navigate websites, click elements, fill forms, extract data, take screenshots, and perform full browser automation workflows.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Playwright",
+   "Browser Automation"
+  ],
   "installCmd": "clawhub install @spiceman161/playwright-mcp",
   "usage": 46517,
   "featured": false,
@@ -1016,6 +1212,7 @@
   "description": "Enable and configure Moltbot/Clawdbot memory search for persistent context. Use when setting up memory, fixing \"goldfish brain,\" or helping users configure memorySearch in their config. Covers MEMORY.md, daily logs, and vector search setup.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @jrbobbyhansen-pixel/memory-setup",
   "usage": 46369,
   "featured": false,
@@ -1034,6 +1231,10 @@
   "description": "Make AI-powered US phone calls, navigate menus and hold queues, and connect the user into a live call. Configure voice and inbound answering. Fetches current calling guides and API formats from ClawCall, without reinstalling the skill.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Business",
+   "Email"
+  ],
   "installCmd": "clawhub install @clawcall-dev/clawcall-dev",
   "usage": 45855,
   "featured": false,
@@ -1052,6 +1253,9 @@
   "description": "Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "RSS"
+  ],
   "installCmd": "clawhub install @steipete/blogwatcher",
   "usage": 44670,
   "featured": false,
@@ -1070,6 +1274,13 @@
   "description": "Persistent file-based planning for multi-step AI-agent work. Keeps task_plan.md, findings.md, and progress.md on disk; lifecycle hooks inject selected project planning context. Automatic recovery reads project planning files only. Explicit session-catchup.py --metadata reads same-project local agent",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "planning",
+   "brainstorming",
+   "orchestrate",
+   "managed",
+   "reliable-planning"
+  ],
   "installCmd": "clawhub install @othmanadi/planning-with-files",
   "usage": 44164,
   "featured": false,
@@ -1088,6 +1299,9 @@
   "description": "Manage Trello boards, lists, and cards via the Trello REST API.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Rest Api"
+  ],
   "installCmd": "clawhub install @steipete/trello",
   "usage": 43719,
   "featured": false,
@@ -1106,6 +1320,9 @@
   "description": "Clawdbot documentation expert with decision tree navigation, search scripts, doc fetching, version tracking, and config snippets for all Clawdbot features",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Documentation"
+  ],
   "installCmd": "clawhub install @nicholasspisak/clawddocs",
   "usage": 43704,
   "featured": false,
@@ -1124,6 +1341,11 @@
   "description": "Automates, tests, and debugs browsers with Playwright: locators, auto-waiting, traces, CI runs, and MCP browser control. Use when a test is flaky, times out, or fails only in CI or headless; when a locator matches multiple elements or the wrong one (strict mode violation); when clicks need force, waits become sleeps, or networkidle never settles; for storageState and login setup, request mocking a",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Playwright",
+   "Browser Automation",
+   "Debug"
+  ],
   "installCmd": "clawhub install @ivangdavila/playwright",
   "usage": 42508,
   "featured": false,
@@ -1142,6 +1364,11 @@
   "description": "Data analysis and visualization. Query databases, generate reports, automate spreadsheets, and turn raw data into clear, actionable insights. Use when (1) yo...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Data Analysis",
+   "Spreadsheets",
+   "SQL"
+  ],
   "installCmd": "clawhub install @ivangdavila/data-analysis",
   "usage": 42463,
   "featured": false,
@@ -1160,6 +1387,7 @@
   "description": "Expert frontend design guidelines for creating beautiful, modern UIs. Use when building landing pages, dashboards, or any user interface.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @mpociot/superdesign",
   "usage": 42102,
   "featured": false,
@@ -1178,6 +1406,7 @@
   "description": "Transform AI agents from task-followers into proactive partners with memory architecture, reverse prompting, and self-healing patterns. Lightweight version f...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @bestrocky/proactive-agent-lite",
   "usage": 41245,
   "featured": false,
@@ -1196,6 +1425,9 @@
   "description": "You MUST use this for gathering contexts before any work. This is a Knowledge management for AI agents. Use `brv` to store and retrieve project patterns, dec...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Knowledge Management"
+  ],
   "installCmd": "clawhub install @byteroverinc/byterover",
   "usage": 40987,
   "featured": false,
@@ -1214,6 +1446,7 @@
   "description": "UI/UX design intelligence and implementation guidance for building polished interfaces. Use when the user asks for UI design, UX flows, information architecture, visual style direction, design systems/tokens, component specs, copy/microcopy, accessibility, or to generate/critique/refine frontend UI (HTML/CSS/JS, React, Next.js, Vue, Svelte, Tailwind). Includes workflows for (1) generating new UI l",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @xobi667/ui-ux-pro-max",
   "usage": 40695,
   "featured": false,
@@ -1232,6 +1465,12 @@
   "description": "This skill should be used when users need to search the web for information, find current content, look up news articles, search for images, or find videos. It uses DuckDuckGo's search API to return results in clean, formatted output (text, markdown, or JSON). Use for research, fact-checking, finding recent information, or gathering web resources.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Web Search",
+   "Search The Web",
+   "Json",
+   "News"
+  ],
   "installCmd": "clawhub install @billyutw/web-search",
   "usage": 40601,
   "featured": false,
@@ -1250,6 +1489,7 @@
   "description": "Skill 查找器 | Skill Finder. 帮助发现和安装 ClawHub Skills | Discover and install ClawHub Skills. 回答'有什么技能可以X'、'找一个技能' | Answers 'what skill can X', 'find a skill'. 触发...",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @guohongbin-git/skill-finder-cn",
   "usage": 40011,
   "featured": false,
@@ -1268,6 +1508,9 @@
   "description": "Use when you need to control Discord from Clawdbot via the discord tool: send messages, react, post or upload stickers, upload emojis, run polls, manage threads/pins/search, fetch permissions or member/role/channel info, or handle moderation actions in Discord DMs or channels.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Discord"
+  ],
   "installCmd": "clawhub install @steipete/discord",
   "usage": 39939,
   "featured": false,
@@ -1286,6 +1529,10 @@
   "description": "Gmail API integration with managed OAuth. Read, send, and manage emails, threads, labels, and drafts. Use this skill when users want to interact with Gmail. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Calls run through the `maton` CLI with OAuth login, or over raw HTTP with a Maton API key where the CLI cannot be installed. Every call is authent",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Gmail",
+   "Api Integration"
+  ],
   "installCmd": "clawhub install @byungkyu/gmail",
   "usage": 39388,
   "featured": false,
@@ -1304,6 +1551,10 @@
   "description": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Json",
+   "Summarize"
+  ],
   "installCmd": "clawhub install @steipete/model-usage",
   "usage": 39198,
   "featured": false,
@@ -1322,6 +1573,11 @@
   "description": "A self-evolution engine for AI agents. Analyzes runtime history to identify improvements and applies protocol-constrained evolution. Communicates with EvoMap...",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Core",
+   "Meta",
+   "Self Improvement"
+  ],
   "installCmd": "clawhub install @autogame-17/capability-evolver",
   "usage": 39136,
   "featured": false,
@@ -1340,6 +1596,7 @@
   "description": "Multi-source deep research agent. Searches the web, synthesizes findings, and delivers cited reports. No API keys required.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @parags/deep-research-pro",
   "usage": 38178,
   "featured": false,
@@ -1358,6 +1615,7 @@
   "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
   "category": "AI 增强",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/gemini",
   "usage": 37998,
   "featured": false,
@@ -1376,6 +1634,7 @@
   "description": "Use the ClawdHub CLI to search, install, update, and publish agent skills from clawdhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawdhub CLI.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/clawdhub",
   "usage": 37942,
   "featured": false,
@@ -1394,6 +1653,7 @@
   "description": "Manage Apple Notes via the `memo` CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks Clawdbot to add a note, list notes, search notes, or manage note folders.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/apple-notes",
   "usage": 37936,
   "featured": false,
@@ -1412,6 +1672,13 @@
   "description": "Real-time search engine supporting web search, vertical domain search, parallel batch search, and URL content extraction.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "search",
+   "websearch",
+   "ai-search",
+   "anysearch",
+   "agent-search"
+  ],
   "installCmd": "clawhub install @anysearch-ai/anysearch",
   "usage": 37402,
   "featured": false,
@@ -1430,6 +1697,10 @@
   "description": "API-first email platform designed for AI agents. Create and manage dedicated email inboxes, send and receive emails programmatically, and handle email-based workflows with webhooks and real-time events. Use when you need to set up agent email identity, send emails from agents, handle incoming email workflows, or replace traditional email providers like Gmail with agent-friendly infrastructure.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Gmail",
+   "Email"
+  ],
   "installCmd": "clawhub install @adboio/agentmail",
   "usage": 37352,
   "featured": false,
@@ -1448,6 +1719,9 @@
   "description": "Manage and monitor a personal stock watchlist with support for adding, removing, listing stocks, and summarizing their recent performance using data from 10jqka.com.cn. Use when the user wants to track specific stocks, get performance summaries, or manage their watchlist.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Stock"
+  ],
   "installCmd": "clawhub install @robin797860/stock-watcher",
   "usage": 37049,
   "featured": false,
@@ -1466,6 +1740,13 @@
   "description": "Unified real-time search MCP server supporting general web search, vertical domain search, parallel batch search, and full-page URL content extraction.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "anysearch",
+   "websearch",
+   "search",
+   "ai-search",
+   "agent-search"
+  ],
   "installCmd": "clawhub install @anysearch-ai/anysearch-mcp",
   "usage": 36924,
   "featured": false,
@@ -1484,6 +1765,7 @@
   "description": "Humanize AI-generated text by detecting and removing patterns typical of LLM output. Rewrites text to sound natural, specific, and human. Uses 24 pattern detectors, 500+ AI vocabulary terms across 3 tiers, and statistical analysis (burstiness, type-token ratio, readability) for comprehensive detection. Use when asked to humanize text, de-AI writing, make content sound more natural/human, review wr",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @brandonwise/ai-humanizer",
   "usage": 36698,
   "featured": false,
@@ -1502,6 +1784,7 @@
   "description": "Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/qmd",
   "usage": 35926,
   "featured": false,
@@ -1520,6 +1803,7 @@
   "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @zlc000190/using-superpowers",
   "usage": 35904,
   "featured": false,
@@ -1538,6 +1822,11 @@
   "description": "Persistent memory for AI agents to store facts, learn from actions, recall information, and track entities across sessions.",
   "category": "AI 增强",
   "source": "社区",
+  "topics": [
+   "Memory System",
+   "Agent Memory",
+   "Learn"
+  ],
   "installCmd": "clawhub install @dennis-da-menace/agent-memory",
   "usage": 34999,
   "featured": false,
@@ -1556,6 +1845,11 @@
   "description": "Designs and outputs n8n workflow JSON with robust triggers, idempotency, error handling, logging, retries, and human-in-the-loop review queues. Use when you need an auditable automation that won’t silently fail.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "N8n",
+   "Workflow Automation",
+   "Json"
+  ],
   "installCmd": "clawhub install @kowl64/n8n-workflow-automation",
   "usage": 34972,
   "featured": false,
@@ -1574,6 +1868,9 @@
   "description": "Backup and restore OpenClaw data. Use when user asks to create backups, set up automatic backup schedules, restore from backup, or manage backup rotation. Handles ~/.openclaw directory archiving with proper exclusions.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Backup"
+  ],
   "installCmd": "clawhub install @alex3alex/openclaw-backup",
   "usage": 34652,
   "featured": false,
@@ -1592,6 +1889,7 @@
   "description": "Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/1password",
   "usage": 34463,
   "featured": false,
@@ -1610,6 +1908,11 @@
   "description": "Track water and sleep with JSON file storage",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Health",
+   "Tracking",
+   "Json"
+  ],
   "installCmd": "clawhub install @stellarhold170nt/healthcheck",
   "usage": 34453,
   "featured": false,
@@ -1628,6 +1931,10 @@
   "description": "Essential Docker commands and workflows for container management, image operations, and debugging.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Docker",
+   "Debugging"
+  ],
   "installCmd": "clawhub install @arnarsson/docker-essentials",
   "usage": 34054,
   "featured": false,
@@ -1646,6 +1953,7 @@
   "description": "将讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @wwlyzzyorg/ppt-generator",
   "usage": 33917,
   "featured": false,
@@ -1664,6 +1972,7 @@
   "description": "Best practices for Remotion - Video creation in React",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @am-will/remotion-best-practices",
   "usage": 33574,
   "featured": false,
@@ -1682,6 +1991,10 @@
   "description": "Sync and query CalDAV calendars (iCloud, Google, Fastmail, Nextcloud, etc.) using vdirsyncer + khal. Works on Linux.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Calendar",
+   "Sync"
+  ],
   "installCmd": "clawhub install @asleep123/caldav-calendar",
   "usage": 33453,
   "featured": false,
@@ -1700,6 +2013,12 @@
   "description": "Neural web search, content extraction, company and people research, code search, and deep research via the Exa MCP server. Use when you need to: (1) search t...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Web Search",
+   "Documentation",
+   "Search The Web",
+   "News"
+  ],
   "installCmd": "clawhub install @theishangoswami/web-search-exa",
   "usage": 33335,
   "featured": false,
@@ -1718,6 +2037,7 @@
   "description": "Generate PPT with Baidu Wenku AI. Smart template selection based on content.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @ide-rea/ai-ppt-generator",
   "usage": 33078,
   "featured": false,
@@ -1736,6 +2056,7 @@
   "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/tmux",
   "usage": 32420,
   "featured": false,
@@ -1754,6 +2075,10 @@
   "description": "Web search without an API key using DuckDuckGo Lite via web_fetch. Use as a fallback when web_search fails with missing_brave_api_key error, or whenever you...",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Web Search",
+   "Search The Web"
+  ],
   "installCmd": "clawhub install @jakelin/ddg-web-search",
   "usage": 32363,
   "featured": false,
@@ -1772,6 +2097,12 @@
   "description": "Yahoo Finance (yfinance) powered stock analysis skill: quotes, fundamentals, ASCII trends, high-resolution charts (RSI/MACD/BB/VWAP/ATR), plus optional web a...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Stock Market",
+   "Stock Analysis",
+   "Browser",
+   "News"
+  ],
   "installCmd": "clawhub install @kys42/stock-market-pro",
   "usage": 32134,
   "featured": false,
@@ -1790,6 +2121,7 @@
   "description": "Local memory management for agents. Compression detection, auto-snapshots, and semantic search. Use when agents need to detect compression risk before memory loss, save context snapshots, search historical memories, or track memory usage patterns. Never lose context again.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @marmikcfc/memory-manager",
   "usage": 32126,
   "featured": false,
@@ -1808,6 +2140,7 @@
   "description": "Generate and edit diagrams with the mcp-diagram-generator MCP server. Use this skill for new diagrams, existing .drawio/.mmd/.excalidraw edits, network topology, architecture, flowchart, swimlane, sequence, class, ER, and Excalidraw whiteboard work. Always use this skill when the user asks to draw,",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @matthewyin/diagram-generator",
   "usage": 31861,
   "featured": false,
@@ -1826,6 +2159,13 @@
   "description": "A股量化数据分析工具，基于AkShare库获取A股行情、财务数据、板块信息等。用于回答关于A股股票查询、行情数据、财务分析、选股等问题。",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Stock",
+   "数据分析",
+   "财务分析",
+   "接口",
+   "股票"
+  ],
   "installCmd": "clawhub install @mbpz/akshare-stock",
   "usage": 31858,
   "featured": false,
@@ -1844,6 +2184,9 @@
   "description": "Manage Apple Reminders via the `remindctl` CLI on macOS (list, add, edit, complete, delete). Supports lists, date filters, and JSON/plain output.",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [
+   "Json"
+  ],
   "installCmd": "clawhub install @steipete/apple-reminders",
   "usage": 31810,
   "featured": false,
@@ -1862,6 +2205,7 @@
   "description": "Capture and automate macOS UI with the Peekaboo CLI.",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/peekaboo",
   "usage": 31751,
   "featured": false,
@@ -1880,6 +2224,10 @@
   "description": "Performs web searches using DuckDuckGo to retrieve real-time information from the internet. Use when the user needs to search for current events, documentation, tutorials, or any information that requires web search capabilities.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Web Search",
+   "Documentation"
+  ],
   "installCmd": "clawhub install @10e9928a/duckduckgo-search",
   "usage": 31569,
   "featured": false,
@@ -1898,6 +2246,10 @@
   "description": "Playwright-based web scraping OpenClaw Skill with anti-bot protection. Successfully tested on complex sites like Discuss.com.hk.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Playwright",
+   "Web Scraping"
+  ],
   "installCmd": "clawhub install @waisimon/playwright-scraper-skill",
   "usage": 31446,
   "featured": false,
@@ -1916,6 +2268,9 @@
   "description": "When user asks to summarize text, articles, documents, meetings, emails, YouTube transcripts, books, PDFs, reports, conversations, or any long content. Also...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Summarize"
+  ],
   "installCmd": "clawhub install @mkpareek0315/summarize-pro",
   "usage": 31396,
   "featured": false,
@@ -1934,6 +2289,13 @@
   "description": "Free AI search via Exa MCP. Web search for news/info, code search for docs/examples from GitHub/StackOverflow, company research for business intel. No API key needed.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Web Search",
+   "Business",
+   "Docs",
+   "GitHub",
+   "News"
+  ],
   "installCmd": "clawhub install @whiteknight07/exa-web-search-free",
   "usage": 31059,
   "featured": false,
@@ -1952,6 +2314,9 @@
   "description": "Essential Git commands and workflows for version control, branching, and collaboration.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Git"
+  ],
   "installCmd": "clawhub install @arnarsson/git-essentials",
   "usage": 30885,
   "featured": false,
@@ -1970,6 +2335,7 @@
   "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when building web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @michaelmonetized/frontend-design-3",
   "usage": 30830,
   "featured": false,
@@ -1988,6 +2354,11 @@
   "description": "通过官方 getnote CLI 连接得到大脑，完成浏览器授权、连接诊断、CLI 升级，以及保存、查询、搜索和管理真实笔记。用户要保存链接/图片、上传文件到知识库、查询文件限制、读取标记/发芽报告/时间线、整理知识库/文件夹、订阅博主、管理标签，或明确要求登录、诊断或升级时使用；不会自行安装或更新 Skill。",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "笔记",
+   "知识库",
+   "ai"
+  ],
   "installCmd": "clawhub install @iswalle/getnote",
   "usage": 30786,
   "featured": false,
@@ -2006,6 +2377,9 @@
   "description": "Create and manage persistent Browserbase cloud browser sessions with authentication persistence. Use when the user needs to automate browsers, maintain logged-in sessions across interactions, scrape authenticated pages, or manage cloud browser instances. Handles session creation, context-based auth persistence, keep-alive reconnection, captcha solving, session recording, screenshots, and session c",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Browser"
+  ],
   "installCmd": "clawhub install @jamesfincher/browserbase",
   "usage": 30050,
   "featured": false,
@@ -2024,6 +2398,10 @@
   "description": "Coding workflow with planning, implementation, verification, and testing for clean software development.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Software Development",
+   "Coding"
+  ],
   "installCmd": "clawhub install @ivangdavila/code",
   "usage": 29776,
   "featured": false,
@@ -2042,6 +2420,10 @@
   "description": "Analyze Chinese stock prices (A-shares, HK stocks) and provide investment recommendations. Use when the user asks about stock analysis for Chinese companies,...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Stock Analysis",
+   "Investment"
+  ],
   "installCmd": "clawhub install @paulshe/china-stock-analysis",
   "usage": 29417,
   "featured": false,
@@ -2060,6 +2442,9 @@
   "description": "ElevenLabs text-to-speech with mac-style say UX.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Text-to-Speech"
+  ],
   "installCmd": "clawhub install @steipete/sag",
   "usage": 28947,
   "featured": false,
@@ -2078,6 +2463,7 @@
   "description": "Anticipates needs, keeps work moving, and improves through use so the agent gets more proactive over time.",
   "category": "AI 增强",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @ivangdavila/proactivity",
   "usage": 28708,
   "featured": false,
@@ -2096,6 +2482,9 @@
   "description": "YouTube Data API integration with managed OAuth. Search videos, manage playlists, access channel data, and interact with comments. Use this skill when users want to interact with YouTube. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Calls run through the `maton` CLI with OAuth login, or over raw HTTP with a Maton API key where the CLI cannot be i",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Api Integration"
+  ],
   "installCmd": "clawhub install @byungkyu/youtube-api-skill",
   "usage": 28550,
   "featured": false,
@@ -2114,6 +2503,11 @@
   "description": "Spec-first, TDD, subagent-driven software development workflow. Use when: (1) building any new feature or app — triggers brainstorm → plan → subagent executi...",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Debugging",
+   "Subagent",
+   "Software Development"
+  ],
   "installCmd": "clawhub install @wlshlad85/superpowers",
   "usage": 28516,
   "featured": false,
@@ -2132,6 +2526,7 @@
   "description": "Terminal Spotify playback/search via spogo (preferred) or spotify_player.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @steipete/spotify-player",
   "usage": 28222,
   "featured": false,
@@ -2150,6 +2545,10 @@
   "description": "Use when reviewing code for security vulnerabilities, implementing authentication flows, auditing OWASP Top 10, configuring CORS/CSP headers, handling secrets, input validation, SQL injection prevention, XSS protection, or any security-related code review.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Vulnerability",
+   "Code Review"
+  ],
   "installCmd": "clawhub install @jgarrison929/security-auditor",
   "usage": 28119,
   "featured": false,
@@ -2168,6 +2567,10 @@
   "description": "Transcribe audio via OpenAI Audio Transcriptions API (Whisper).",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Audio",
+   "Transcribe"
+  ],
   "installCmd": "clawhub install @steipete/openai-whisper-api",
   "usage": 27812,
   "featured": false,
@@ -2186,6 +2589,10 @@
   "description": "Marketing Mode combines 23 comprehensive marketing skills covering strategy, psychology, content, SEO, conversion optimization, and paid growth. Use when users need marketing strategy, copywriting, SEO help, conversion optimization, paid advertising, or any marketing tactic.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Marketing",
+   "Knowledge Base"
+  ],
   "installCmd": "clawhub install @thesethrose/marketing-mode",
   "usage": 27737,
   "featured": false,
@@ -2204,6 +2611,10 @@
   "description": "Microsoft Excel API integration with managed OAuth. Read and write Excel workbooks, worksheets, ranges, tables, and charts stored in OneDrive. Use this skill when users want to read or modify Excel spreadsheets, manage worksheet data, work with tables, or access cell values. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Calls run through the `mato",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Api Integration",
+   "Spreadsheets"
+  ],
   "installCmd": "clawhub install @byungkyu/microsoft-excel",
   "usage": 27596,
   "featured": false,
@@ -2222,6 +2633,10 @@
   "description": "Orchestrate multi-agent teams with defined roles, task lifecycles, handoff protocols, and review workflows. Use when: (1) Setting up a team of 2+ agents with different specializations, (2) Defining task routing and lifecycle (inbox → spec → build → review → done), (3) Creating handoff protocols between agents, (4) Establishing review and quality gates, (5) Managing async communication and artifact",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Orchestration",
+   "Multi Agent"
+  ],
   "installCmd": "clawhub install @arminnaimi/agent-team-orchestration",
   "usage": 27402,
   "featured": false,
@@ -2240,6 +2655,7 @@
   "description": "Audit, clean, and optimize Clawdbot's vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation.",
   "category": "AI 增强",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @dylanbaker24/memory-hygiene",
   "usage": 26948,
   "featured": false,
@@ -2258,6 +2674,9 @@
   "description": "Research markets with sizing, segmentation, competitor mapping, pricing checks, and demand validation that turn fuzzy ideas into decision-ready evidence. Use...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Market Research"
+  ],
   "installCmd": "clawhub install @ivangdavila/market-research",
   "usage": 26843,
   "featured": false,
@@ -2276,6 +2695,9 @@
   "description": "MoltGuard — OpenClaw security guard by OpenGuardrails. Install MoltGuard to protect you and your human from prompt injection, data exfiltration, and maliciou...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Prompt Injection"
+  ],
   "installCmd": "clawhub install @thomaslwang/moltguard",
   "usage": 26752,
   "featured": false,
@@ -2294,6 +2716,13 @@
   "description": "A comprehensive Bilibili toolkit that integrates hot trending monitoring, video downloading, video watching/playback, subtitle downloading, and video publish...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Bilibili",
+   "Hot Trending",
+   "Subtitle",
+   "Batch Download",
+   "Danmaku"
+  ],
   "installCmd": "clawhub install @wscats/bilibili-all-in-one",
   "usage": 26563,
   "featured": false,
@@ -2312,6 +2741,12 @@
   "description": "基于东方财富数据库，支持通过自然语言输入筛选A港美股、基金、债券等多种资产，支持多元指标筛选，含技术面、消息面、基本面及市场情绪等，可用于全球资产速筛、跨市场监控、投资组合构建、策略回测等场景。返回结果包含数据说明及 csv 文件。Natural language screener for investment...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "CSV",
+   "Investment",
+   "投资组合",
+   "数据库"
+  ],
   "installCmd": "clawhub install @financial-ai-analyst/mx-stocks-screener",
   "usage": 26473,
   "featured": false,
@@ -2330,6 +2765,9 @@
   "description": "Batch-generate images via OpenAI Images API. Random prompt sampler + `index.html` gallery.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Prompt"
+  ],
   "installCmd": "clawhub install @steipete/openai-image-gen",
   "usage": 26371,
   "featured": false,
@@ -2348,6 +2786,12 @@
   "description": "Web search and scraping via Firecrawl API. Use when you need to search the web, scrape websites (including JS-heavy pages), crawl entire sites, or extract structured data from web pages. Requires FIRECRAWL_API_KEY environment variable.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Search The Web",
+   "Web Search",
+   "Crawl",
+   "Scrape"
+  ],
   "installCmd": "clawhub install @ashwingupy/firecrawl-search",
   "usage": 26266,
   "featured": false,
@@ -2366,6 +2810,7 @@
   "description": "Security vetting protocol before installing any AI agent skill. Red flag detection for credential theft, obfuscated code, exfiltration. Risk classification L...",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @donovanpankratz-del/openclaw-skill-vetter",
   "usage": 26101,
   "featured": false,
@@ -2384,6 +2829,7 @@
   "description": "Diagnoses and repairs personal productivity: overwhelm, procrastination, scattered priorities, collapsed habits, busywork that never finishes. Use when someone is overwhelmed or behind; when they cannot start, cannot stop, or keep replanning instead of working; when everything feels urgent and the list is no longer trusted; when goals never turn into shipped work; when meetings and messages eat th",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @ivangdavila/productivity",
   "usage": 26066,
   "featured": false,
@@ -2402,6 +2848,9 @@
   "description": "Fetch and summarize YouTube video transcripts. Use when asked to summarize, transcribe, or extract content from YouTube videos. Handles transcript fetching via residential IP proxy to bypass YouTube's cloud IP blocks.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Summarize"
+  ],
   "installCmd": "clawhub install @xthezealot/youtube-transcript",
   "usage": 25968,
   "featured": false,
@@ -2420,6 +2869,9 @@
   "description": "Control and operate Opencode via slash commands. Use this skill to manage sessions, select models, switch agents (plan/build), and coordinate coding through Opencode.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Coding"
+  ],
   "installCmd": "clawhub install @karatla/opencode-controller",
   "usage": 25657,
   "featured": false,
@@ -2438,6 +2890,11 @@
   "description": "Write persuasive copy for landing pages, emails, ads, sales pages, and marketing materials. Use when you need to write headlines, CTAs, product descriptions, ad copy, email sequences, or any text meant to drive action. Covers copywriting formulas (AIDA, PAS, FAB), headline writing, emotional triggers, objection handling in copy, and A/B testing. Trigger on \"write copy\", \"copywriting\", \"landing pag",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Marketing",
+   "Email",
+   "Sales"
+  ],
   "installCmd": "clawhub install @jk-0001/copywriting",
   "usage": 25468,
   "featured": false,
@@ -2456,6 +2913,13 @@
   "description": "获取中国金融市场数据（A股、港股、美股、基金、期货、债券）。支持220+个Tushare Pro接口：股票行情、财务报表、宏观经济指标。当用户请求股价数据、财务分析、指数行情、GDP/CPI等宏观数据时使用。",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "财务分析",
+   "接口",
+   "股票",
+   "财务",
+   "金融"
+  ],
   "installCmd": "clawhub install @stanleychanh/tushare-finance",
   "usage": 25006,
   "featured": false,
@@ -2474,6 +2938,9 @@
   "description": "Advanced suite for creating, editing, and analyzing Microsoft Office documents (Word, Excel, PowerPoint). Provides specialized tools for automated reporting...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Document"
+  ],
   "installCmd": "clawhub install @robert-janssen/office-document-specialist-suite",
   "usage": 25004,
   "featured": false,
@@ -2492,6 +2959,11 @@
   "description": "AI自我改进与记忆系统 - 解决'同类错误反复犯、用户纠正不长记性'的痛点。自动捕获错误、用户纠正、最佳实践，并转化为长期记忆。",
   "category": "AI 增强",
   "source": "社区",
+  "topics": [
+   "Self Improving",
+   "记忆系统",
+   "记忆"
+  ],
   "installCmd": "clawhub install @zhengxinjipai/self-improving-agent-cn",
   "usage": 24748,
   "featured": false,
@@ -2510,6 +2982,9 @@
   "description": "Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup or JSON output for scripts.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Json"
+  ],
   "installCmd": "clawhub install @steipete/goplaces",
   "usage": 24728,
   "featured": false,
@@ -2528,6 +3003,10 @@
   "description": "Calendar management and scheduling. Create events, manage meetings, and sync across calendar providers.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Calendar Management",
+   "Sync"
+  ],
   "installCmd": "clawhub install @ndcccccc/calendar",
   "usage": 24337,
   "featured": false,
@@ -2546,6 +3025,13 @@
   "description": "Search the web and extract URLs with routing across Serper, Brave, Tavily, Querit, Linkup, Exa, Firecrawl, You.com, SearXNG, SerpBase, and Keenable. Returns ranked sources and page text; supports freshness filters and research across providers.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Web Search",
+   "Auto Routing",
+   "Brave",
+   "Exa",
+   "Firecrawl"
+  ],
   "installCmd": "clawhub install @robbyczgw-cla/web-search-plus",
   "usage": 24287,
   "featured": false,
@@ -2564,6 +3050,10 @@
   "description": "WhatsApp Business API integration with managed OAuth. Send messages, manage templates, and handle conversations. Use this skill when users want to interact with WhatsApp Business. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway).",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "WhatsApp",
+   "Api Integration"
+  ],
   "installCmd": "clawhub install @byungkyu/whatsapp-business",
   "usage": 24175,
   "featured": false,
@@ -2582,6 +3072,9 @@
   "description": "全体系命理大师 — 八字四柱、紫微斗数、奇门遁甲、六爻、梅花易数、塔罗、星盘、 数字命理、九宫飞星风水、掌纹面相、起名命名、穿衣搭配、合婚择吉一站式解读。本地档案、可选每日推送（默认关闭）、 浏览器六爻界面与 HTML 报告。仅作文化参考，不替代医疗、法律、心理、财务、婚姻等 专业建议；遇重大决策请咨询专业人士。",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [
+   "财务"
+  ],
   "installCmd": "clawhub install @wscats/university-applications",
   "usage": 24060,
   "featured": false,
@@ -2600,6 +3093,11 @@
   "description": "Control Home Assistant devices and automations via REST API. 25 entity domains including lights, climate, locks, presence, weather, calendars, notifications, scripts, and more. Use when the user asks about their smart home, devices, or automations.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Rest Api",
+   "Smart Home",
+   "Weather"
+  ],
   "installCmd": "clawhub install @anotb/homeassistant-skill",
   "usage": 23980,
   "featured": false,
@@ -2618,6 +3116,10 @@
   "description": "Microsoft Outlook API integration with managed OAuth. Read, send, and manage emails, folders, calendar events, and contacts via Microsoft Graph. Use this skill when users want to interact with Outlook. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Calls run through the `maton` CLI with OAuth login, or over raw HTTP with a Maton API key where the C",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Api Integration",
+   "Calendar"
+  ],
   "installCmd": "clawhub install @byungkyu/outlook-api",
   "usage": 23879,
   "featured": false,
@@ -2636,6 +3138,13 @@
   "description": "基于东方财富数据库，支持自然语言查询金融数据，覆盖A港美、基金、债券等多种资产，含实时行情、公司信息、估值、财务报表等，可用于投资研究、交易复盘、市场监控、行业分析、信用研究、财报审计、资产配置等场景，适配机构与个人多元需求。返回结果包含 xlsx 与 Markdown 文件。Natural language q...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Investment",
+   "数据库",
+   "资产配置",
+   "财务",
+   "金融"
+  ],
   "installCmd": "clawhub install @financial-ai-analyst/mx-finance-data",
   "usage": 23599,
   "featured": false,
@@ -2654,6 +3163,12 @@
   "description": "This skill produces a DESCRIPTIVE Git-history reflection report. It is intended ONLY for: (a) a developer running it on their own repository for self-reflect...",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Data Analysis",
+   "Developer",
+   "Git",
+   "Repository"
+  ],
   "installCmd": "clawhub install @wscats/code-analysis-skills",
   "usage": 23579,
   "featured": false,
@@ -2672,6 +3187,9 @@
   "description": "Advanced filesystem operations - listing, searching, batch processing, and directory analysis for Clawdbot",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "Batch Processing"
+  ],
   "installCmd": "clawhub install @gtrusler/clawdbot-filesystem",
   "usage": 23243,
   "featured": false,
@@ -2690,6 +3208,11 @@
   "description": "Control Home Assistant smart home devices, run automations, and receive webhook events. Use when controlling lights, switches, climate, scenes, scripts, or any HA entity. Supports bidirectional communication via REST API (outbound) and webhooks (inbound triggers from HA automations).",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Rest Api",
+   "Smart Home",
+   "Webhook"
+  ],
   "installCmd": "clawhub install @iahmadzain/home-assistant",
   "usage": 23220,
   "featured": false,
@@ -2708,6 +3231,7 @@
   "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express...",
   "category": "AI 增强",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @breckengan/find-skill",
   "usage": 23110,
   "featured": false,
@@ -2726,6 +3250,9 @@
   "description": "Complete toolkit for programmatic video creation with Remotion + React. Covers animations, timing, rendering (CLI/Node.js/Lambda/Cloud Run), captions, 3D, charts, text effects, transitions, and media handling. Use when writing Remotion code, building video generation pipelines, or creating data-driven video templates.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [
+   "Video Generation"
+  ],
   "installCmd": "clawhub install @shreefentsar/remotion-video-toolkit",
   "usage": 23065,
   "featured": false,
@@ -2744,6 +3271,10 @@
   "description": "Privacy-respecting metasearch using your local SearXNG instance. Search the web, images, news, and more without external API dependencies.",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Privacy",
+   "Search The Web"
+  ],
   "installCmd": "clawhub install @abk234/searxng",
   "usage": 22990,
   "featured": false,
@@ -2762,6 +3293,7 @@
   "description": "Create, inspect, process, and optimize image files and visual assets with reliable format choice, resizing, compression, color-profile, metadata, and platfor...",
   "category": "内容处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @ivangdavila/image",
   "usage": 22937,
   "featured": false,
@@ -2780,6 +3312,11 @@
   "description": "百度网盘(Baidu Drive, pan.baidu.com)文件管理 — 上传、下载、转存、分享、搜索、移动、复制、重命名、创建文件夹、删除（高风险，需用户确认）。 同时支持 Agent 记忆备份/恢复（kimiclaw/maxclaw/qclaw/openclaw）。 TRIGGER: 用户消息明确提及\"百...",
   "category": "效率工具",
   "source": "社区",
+  "topics": [
+   "备份",
+   "消息",
+   "记忆"
+  ],
   "installCmd": "clawhub install @wscats/baidu-netdisk-skills",
   "usage": 22879,
   "featured": false,
@@ -2798,6 +3335,9 @@
   "description": "根据您的职业角色和本周工作内容，自动提炼关键信息，生成结构化、专业且具有洞察力的周报，包括问题分析与下周计划。",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [
+   "周报"
+  ],
   "installCmd": "clawhub install @wscats/smart-weekly-report",
   "usage": 22860,
   "featured": false,
@@ -2816,6 +3356,10 @@
   "description": "Search indexed Discord community discussions via Answer Overflow. Find solutions to coding problems, library issues, and community Q&A that only exist in Discord conversations.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Coding",
+   "Discord"
+  ],
   "installCmd": "clawhub install @rhyssullivan/answeroverflow",
   "usage": 22666,
   "featured": false,
@@ -2834,6 +3378,7 @@
   "description": "Evaluate and score Go code quality based on syntax, style, and best practices to provide constructive feedback and improvements.",
   "category": "开发工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @knifean/golang-coding",
   "usage": 22664,
   "featured": false,
@@ -2852,6 +3397,7 @@
   "description": "Manage tasks and projects in Todoist. Use when user asks about tasks, to-dos, reminders, or productivity.",
   "category": "效率工具",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @mjrussell/todoist",
   "usage": 22627,
   "featured": false,
@@ -2870,6 +3416,10 @@
   "description": "Text-to-speech conversion using node-edge-tts npm package for generating audio from text.\nSupports multiple voices, languages, speed adjustment, pitch control, and subtitle generation.\nUse when: (1) User requests audio/voice output with the \"tts\" trigger or keyword. (2) Content needs to be spoken rather than read (multitasking, accessibility, driving, cooking). (3) User wants a specific voice, spe",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Text-to-Speech",
+   "Audio"
+  ],
   "installCmd": "clawhub install @i3130002/edge-tts",
   "usage": 22622,
   "featured": false,
@@ -2888,6 +3438,7 @@
   "description": "Twitter/X data via the 6551 API. Supports user profiles, tweet search, user tweets, follower events, deleted tweets, and KOL followers.",
   "category": "数据处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @infra403/opentwitter-mcp",
   "usage": 22617,
   "featured": false,
@@ -2906,6 +3457,11 @@
   "description": "Stripe API integration with managed OAuth. This is a write-capable financial integration for customers, subscriptions, invoices, products, prices, and payments. Install only if you need Stripe administration. Connect with the least-privileged Stripe account and OAuth scopes available, verify the intended connection ID before each request, and revoke unused connections promptly. All write operation",
   "category": "内容处理",
   "source": "社区",
+  "topics": [
+   "Financial",
+   "api",
+   "api-integration"
+  ],
   "installCmd": "clawhub install @byungkyu/stripe-api",
   "usage": 22450,
   "featured": false,
@@ -2924,6 +3480,7 @@
   "description": "Real-time crypto, equities, macro, and financial market news aggregator — 85+ data sources across 6 categories covering digital assets, U.S. stocks, semiconductors, AI infrastructure, supply chains, commodities, rates, policy, and market-moving social/news signals. Sources include Bloomberg, Reuters",
   "category": "数据处理",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @infra403/opennews-mcp",
   "usage": 22392,
   "featured": false,
@@ -2942,6 +3499,10 @@
   "description": "Manage LNbits Lightning Wallet (Balance, Pay, Invoice)",
   "category": "开发工具",
   "source": "社区",
+  "topics": [
+   "Invoice",
+   "Wallet"
+  ],
   "installCmd": "clawhub install @jamestsetsekas/lnbits-with-qrcode",
   "usage": 22298,
   "featured": false,
@@ -2960,6 +3521,7 @@
   "description": "Simulates mock interviews for any role and experience level with tailored technical, behavioral, and case questions plus detailed feedback and scoring.",
   "category": "垂直行业",
   "source": "社区",
+  "topics": [],
   "installCmd": "clawhub install @wscats/interview-simulator",
   "usage": 22223,
   "featured": false,

@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Loader2 } from 'lucide-react';
-import { getHomeData } from '@/lib/api/home';
-import { getSubscriptions } from '@/lib/api/subscriptions';
-import type { HomeData, Subscription } from '@/lib/api/types';
+import { getHomeData } from '@/lib/data/home';
+import { getSubscriptions } from '@/lib/data/subscriptions';
+import type { HomeData, Subscription } from '@/lib/data/types';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -68,22 +68,22 @@ export default function Home() {
                   汇聚最优秀的 AI Agent、MCP 服务器与智能工具，一站式发现、对比与使用
                 </p>
 
-                {/* 功能标签 - Pill 样式 */}
+                {/* 功能标签 - Pill 样式（数量来自最新扫描数据） */}
                 <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 mb-6 md:mb-10">
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
                     <span>🔌</span>
                     <span className="font-medium text-gray-700">MCP 生态</span>
-                    <span className="text-gray-400 hidden sm:inline">快速接入 100+</span>
+                    <span className="text-gray-400 hidden sm:inline">已收录 {homeData?.stats?.mcpCount || 0}+ 个</span>
                   </div>
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
                     <span>🧠</span>
                     <span className="font-medium text-gray-700">AI Skills</span>
-                    <span className="text-gray-400 hidden sm:inline">发现强大 AI</span>
+                    <span className="text-gray-400 hidden sm:inline">已收录 {homeData?.stats?.skillCount || 0}+ 个</span>
                   </div>
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
                     <span>⚡</span>
-                    <span className="font-medium text-gray-700">智能工具</span>
-                    <span className="text-gray-400 hidden sm:inline">探索 Agent</span>
+                    <span className="font-medium text-gray-700">Coding Plan</span>
+                    <span className="text-gray-400 hidden sm:inline">{homeData?.stats?.codingplanCount || 0}+ 套餐对比</span>
                   </div>
                 </div>
 
@@ -212,7 +212,7 @@ export default function Home() {
         <section>
           <h2 className="text-lg font-semibold text-gray-800 mb-3 font-outfit">最近收录</h2>
           <div className="space-y-2">
-            {recentItems.length > 0 ? recentItems.map((item, i) => (
+            {recentItems.map((item, i) => (
               <div key={i} className="ai-card flex items-center justify-between py-3 px-4">
                 <div className="flex items-center gap-3">
                   <span className="tag text-xs">{item.type}</span>
@@ -220,24 +220,7 @@ export default function Home() {
                 </div>
                 <span className="text-xs text-gray-400">{item.time}</span>
               </div>
-            )) : (
-              <>
-                <div className="ai-card flex items-center justify-between py-3 px-4">
-                  <div className="flex items-center gap-3">
-                    <span className="tag text-xs">MCP</span>
-                    <span className="text-sm text-gray-700">Sequential Thinking</span>
-                  </div>
-                  <span className="text-xs text-gray-400">2小时前</span>
-                </div>
-                <div className="ai-card flex items-center justify-between py-3 px-4">
-                  <div className="flex items-center gap-3">
-                    <span className="tag text-xs">Skill</span>
-                    <span className="text-sm text-gray-700">Git Workflow Helper</span>
-                  </div>
-                  <span className="text-xs text-gray-400">5小时前</span>
-                </div>
-              </>
-            )}
+            ))}
           </div>
         </section>
       </div>
