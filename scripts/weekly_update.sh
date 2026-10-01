@@ -55,9 +55,9 @@ python3 scripts/scan_sources.py >>"$LOG" 2>&1 || scan_rc=$?
 # 2.5 增强 MCP 详情（工具列表/配置项，失败不阻断）
 python3 scripts/enhance_details.py >>"$LOG" 2>&1 || echo "  !! enhance_details failed" >>"$LOG"
 
-# 3. 检查是否有实质性数据变更（meta.json 时间戳/sw 版本不计入）
+# 3. 检查是否有实质性数据变更（meta.json 时间戳不计入；排除后无变化则静默）
 git add -A src/data/generated public/data public/sw.js >>"$LOG" 2>&1
-if git diff --cached --quiet -- src/data/generated/mcp.json src/data/generated/skills.json src/data/generated/codingplan.json src/data/generated/mcp-details.json public/data; then
+if git diff --cached --quiet -- src/data/generated/mcp.json src/data/generated/skills.json src/data/generated/codingplan.json src/data/generated/mcp-details.json public/data/mcp.json public/data/skills.json public/data/codingplan.json public/data/mcp-details.json; then
   run git reset -q -- src/data/generated public/data public/sw.js
   run git checkout -- src/data/generated public/sw.js
   run git checkout -- public/data 2>/dev/null || run git rm -r --cached -q --ignore-unmatch public/data
