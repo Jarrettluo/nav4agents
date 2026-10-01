@@ -22,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 sm:gap-2">
             <span className="text-lg sm:text-xl font-semibold text-gray-800 font-outfit">Nav4Agents</span>
-            <span className="text-xs sm:text-sm text-gray-500 hidden lg:inline">AI Agent Skill MCP发现和分享</span>
+            <span className="text-xs sm:text-sm text-gray-500 hidden lg:inline">中文开发者的 AI 工具选型站</span>
           </Link>
 
           {/* 导航链接 - 桌面端 - 居中 */}

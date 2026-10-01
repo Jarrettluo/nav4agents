@@ -1,121 +1,44 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Star, Copy, Check, Terminal, Zap, Globe, Server, Loader2, Settings } from 'lucide-react';
-import { getMcpBySlug } from '@/lib/data/mcp';
-import { addFavorite, removeFavorite, checkFavorite } from '@/lib/data/favorites';
-import type { McpServer } from '@/lib/data/types';
+import { notFound } from 'next/navigation';
+import { ArrowLeft, ExternalLink, Star, Terminal, Zap, Globe, Server, Settings } from 'lucide-react';
+import { getAllMcp } from '@/lib/data/mcp';
+import { getMcpDetail } from '@/lib/data/mcpDetails';
+import { buildMcpMetadata, ogImage } from '@/lib/seo';
+import CopyButton from '@/components/CopyButton';
+import FavoriteButton from '@/components/FavoriteButton';
+import HiddenShareImage from '@/components/HiddenShareImage';
 
-interface McpDetail {
-  tools: { name: string; description: string }[];
-  config: { name: string; required: boolean; description: string }[];
-  remoteUrl: string | null;
-  iconUrl: string | null;
-  verified: boolean;
-  homepage?: string | null;
+// 静态生成全部详情页（SSG）：原始 HTML 即含完整内容 + OG 标签，微信/搜索爬虫可读
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getAllMcp().map((m) => ({ slug: m.slug }));
 }
 
-export default function McpDetailPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const res = getMcpBySlugSync(params.slug);
+  if (!res) return { title: 'MCP 服务器不存在' };
+  return buildMcpMetadata(res);
+}
 
-  const [loading, setLoading] = useState(true);
-  const [mcp, setMcp] = useState<McpServer | null>(null);
-  const [detail, setDetail] = useState<McpDetail | null>(null);
-  const [copied, setCopied] = useState(false);
-  const [isFavorited, setIsFavorited] = useState(false);
-  const [favoriting, setFavoriting] = useState(false);
+// 同步取数据（构建期）
+function getMcpBySlugSync(slug: string) {
+  return getAllMcp().find((x) => x.slug === slug) || null;
+}
 
-  useEffect(() => {
-    const fetchMcp = async () => {
-      try {
-        setLoading(true);
-        const res = await getMcpBySlug(slug);
-        if (res.code === 200) {
-          setMcp(res.data);
-          const favRes = await checkFavorite('mcp', res.data.id);
-          setIsFavorited(favRes.data?.isFavorited || false);
-        }
-      } catch (err) {
-        console.error('获取 MCP 服务器失败:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
+export default function McpDetailPage({ params }: { params: { slug: string } }) {
+  const mcp = getMcpBySlugSync(params.slug);
+  if (!mcp) notFound();
 
-    fetchMcp();
-  }, [slug]);
-
-  // 详情增强数据（工具列表/配置项）运行时从静态 JSON 加载，不进构建产物
-  useEffect(() => {
-    let cancelled = false;
-    fetch('/data/mcp-details.json')
-      .then((r) => (r.ok ? r.json() : null))
-      .then((map) => {
-        if (!cancelled && map && map[slug]) setDetail(map[slug] as McpDetail);
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, [slug]);
-
-  const handleCopy = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
-
-  const handleToggleFavorite = async () => {
-    if (!mcp?.id) return;
-
-    try {
-      setFavoriting(true);
-      if (isFavorited) {
-        await removeFavorite('mcp', mcp.id);
-        setIsFavorited(false);
-      } else {
-        await addFavorite('mcp', mcp.id);
-        setIsFavorited(true);
-      }
-    } catch (err) {
-      console.error('收藏操作失败:', err);
-    } finally {
-      setFavoriting(false);
-    }
-  };
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center py-20">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-      </div>
-    );
-  }
-
-  if (!mcp) {
-    return (
-      <div className="text-center py-20">
-        <h1 className="text-xl font-semibold text-gray-800 mb-4">MCP 服务器不存在</h1>
-        <Link href="/mcp" className="text-blue-600 hover:underline">
-          返回列表
-        </Link>
-      </div>
-    );
-  }
-
+  const detail = getMcpDetail(mcp.slug);
   const installCmd = mcp.installCmd || '';
   const hasTools = !!detail?.tools?.length;
   const hasConfig = !!detail?.config?.length;
 
   return (
     <div>
+      <HiddenShareImage src={ogImage.sqMcp(mcp.slug)} />
       {/* 返回链接 */}
       <Link
         href="/mcp"
@@ -165,16 +88,8 @@ export default function McpDetailPage() {
                 </div>
               </div>
 
-              {/* 收藏按钮 */}
-              <button
-                onClick={handleToggleFavorite}
-                disabled={favoriting}
-                className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm transition-colors ${
-                  isFavorited ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {isFavorited ? '★ 已收藏' : '☆ 收藏'}
-              </button>
+              {/* 收藏按钮（客户端组件，收藏状态存本地浏览器） */}
+              <FavoriteButton type="mcp" itemId={mcp.id} />
             </div>
 
             <p className="text-gray-600 leading-relaxed">{mcp.description}</p>
@@ -216,16 +131,7 @@ export default function McpDetailPage() {
                   <code className="text-green-400 font-mono text-xs sm:text-sm break-all">
                     {installCmd}
                   </code>
-                  <button
-                    onClick={() => handleCopy(installCmd)}
-                    className="p-2 hover:bg-gray-800 rounded transition-colors self-end sm:self-auto"
-                  >
-                    {copied ? (
-                      <Check className="w-4 h-4 text-green-400" />
-                    ) : (
-                      <Copy className="w-4 h-4 text-gray-400" />
-                    )}
-                  </button>
+                  <CopyButton text={installCmd} dark />
                 </div>
               </div>
             ) : (

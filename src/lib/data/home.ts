@@ -24,6 +24,38 @@ function relTime(iso?: string): string {
   return `${Math.floor(d / 30)}个月前`;
 }
 
+export const getHomeDataSync = (): HomeData => {
+  const featuredMcp = mcps.filter((x) => x.featured).slice(0, 8);
+  const featuredSkills = skills.filter((x) => x.featured).slice(0, 8);
+
+  const recent = [
+    ...mcps
+      .filter((x) => x.createdAt)
+      .map((x) => ({ type: 'MCP' as const, name: x.name, slug: x.slug, ts: Date.parse(x.createdAt!) })),
+    ...skills
+      .filter((x) => x.createdAt)
+      .map((x) => ({ type: 'Skill' as const, name: x.name, slug: x.slug, ts: Date.parse(x.createdAt!) })),
+  ]
+    .filter((x) => !Number.isNaN(x.ts))
+    .sort((a, b) => b.ts - a.ts)
+    .slice(0, 6)
+    .map((x) => ({ type: x.type, name: x.name, slug: x.slug, time: relTime(new Date(x.ts).toISOString()) }));
+
+  const subCount = getAllSubscriptions().length;
+
+  return {
+    featuredMcp,
+    featuredSkills,
+    recentItems: recent,
+    stats: {
+      mcpCount: meta.counts?.mcp || mcps.length,
+      skillCount: meta.counts?.skills || skills.length,
+      subscriptionCount: subCount,
+      codingplanCount: meta.counts?.codingplan || 0,
+    },
+  };
+};
+
 export const getHomeData = async (): Promise<ApiResponse<HomeData>> => {
   const featuredMcp = mcps.filter((x) => x.featured).slice(0, 8);
   const featuredSkills = skills.filter((x) => x.featured).slice(0, 8);

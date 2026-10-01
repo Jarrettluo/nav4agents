@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nav4agents.com/sitemap.xml

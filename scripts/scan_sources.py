@@ -65,6 +65,21 @@ def slugify(s):
     return s or "item"
 
 
+def clean_name(name, fallback=""):
+    """清理显示名：去掉误混入的字段前缀；异常超长时取首句或 fallback。"""
+    s = (name or "").strip()
+    s = re.sub(r"^(description|name|title)\s*[:：]\s*", "", s, flags=re.IGNORECASE)
+    if len(s) > 96:
+        m = re.search(r"[。.!?！？]", s[:96])
+        if m and m.start() >= 8:
+            s = s[: m.start() + 1]
+        elif fallback:
+            s = fallback
+        else:
+            s = s[:96]
+    return s[:120]
+
+
 def stable_id(key):
     """由稳定键派生一个稳定正整数 id（收藏功能依赖其跨周稳定）。"""
     return int(hashlib.md5(key.encode("utf-8")).hexdigest()[:8], 16) % 90_000_000 + 10_000_000
@@ -237,7 +252,7 @@ def scan_clawhub():
         if slug in seen:
             continue
         seen.add(slug)
-        name = x.get("displayName") or raw_slug
+        name = clean_name(x.get("displayName") or raw_slug, raw_slug)
         desc = (x.get("summary") or "").strip()
         if len(desc) < 15:
             continue
@@ -245,7 +260,7 @@ def scan_clawhub():
         stats = x.get("stats") or {}
         out.append({
             "id": stable_id("skill:" + slug),
-            "name": name[:120],
+            "name": name,
             "slug": slug,
             "ownerHandle": owner,
             "rawSlug": raw_slug,

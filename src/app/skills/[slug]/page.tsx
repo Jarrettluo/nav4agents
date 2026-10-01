@@ -1,113 +1,42 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
+import { notFound } from 'next/navigation';
+import { ArrowLeft, ExternalLink, FileText, User } from 'lucide-react';
+import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ArrowLeft, Copy, ExternalLink, Check, FileText, User, Loader2 } from 'lucide-react';
-import { getSkillBySlug } from '@/lib/data/skills';
-import { addFavorite, removeFavorite, checkFavorite } from '@/lib/data/favorites';
-import type { Skill } from '@/lib/data/types';
+import { getAllSkills } from '@/lib/data/skills';
+import { buildSkillMetadata, ogImage } from '@/lib/seo';
+import CopyButton from '@/components/CopyButton';
+import FavoriteButton from '@/components/FavoriteButton';
+import HiddenShareImage from '@/components/HiddenShareImage';
 
-export default function SkillDetailPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+// 静态生成全部详情页（SSG）：原始 HTML 即含完整内容 + OG 标签，微信/搜索爬虫可读
+export const dynamicParams = false;
 
-  const [loading, setLoading] = useState(true);
-  const [skill, setSkill] = useState<Skill | null>(null);
-  const [markdownContent, setMarkdownContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const [contentError, setContentError] = useState(false);
-  const [isFavorited, setIsFavorited] = useState(false);
-  const [favoriting, setFavoriting] = useState(false);
+export function generateStaticParams() {
+  return getAllSkills().map((s) => ({ slug: s.slug }));
+}
 
-  useEffect(() => {
-    const fetchSkill = async () => {
-      try {
-        setLoading(true);
-        const res = await getSkillBySlug(slug);
-        if (res.code === 200) {
-          setSkill(res.data);
-          const favRes = await checkFavorite('skill', res.data.id);
-          setIsFavorited(favRes.data?.isFavorited || false);
-        }
-      } catch (err) {
-        console.error('获取 Skill 失败:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
+function getSkillSync(slug: string) {
+  return getAllSkills().find((x) => x.slug === slug) || null;
+}
 
-    fetchSkill();
-  }, [slug]);
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const skill = getSkillSync(params.slug);
+  if (!skill) return { title: 'Skill 不存在' };
+  return buildSkillMetadata(skill);
+}
 
-  useEffect(() => {
-    // 静态模式：展示版本说明（来自 ClawHub 数据）
-    if (!skill) {
-      return;
-    }
-    const changelog = (skill as any).changelog as string | undefined;
-    if (changelog) {
-      setMarkdownContent(changelog);
-      setContentError(false);
-    } else {
-      setContentError(true);
-    }
-  }, [skill]);
-
-  const handleCopyInstallCmd = async () => {
-    if (!skill?.installCmd) return;
-    try {
-      await navigator.clipboard.writeText(skill.installCmd);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
-
-  const handleToggleFavorite = async () => {
-    if (!skill?.id) return;
-
-    try {
-      setFavoriting(true);
-      if (isFavorited) {
-        await removeFavorite('skill', skill.id);
-        setIsFavorited(false);
-      } else {
-        await addFavorite('skill', skill.id);
-        setIsFavorited(true);
-      }
-    } catch (err) {
-      console.error('收藏操作失败:', err);
-    } finally {
-      setFavoriting(false);
-    }
-  };
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center py-20">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-      </div>
-    );
-  }
-
-  if (!skill) {
-    return (
-      <div className="text-center py-20">
-        <h1 className="text-xl font-semibold text-gray-800 mb-4">Skill 不存在</h1>
-        <Link href="/skills" className="text-blue-600 hover:underline">
-          返回列表
-        </Link>
-      </div>
-    );
-  }
+export default function SkillDetailPage({ params }: { params: { slug: string } }) {
+  const skill = getSkillSync(params.slug);
+  if (!skill) notFound();
 
   const githubUrl = skill.githubUrl || null;
+  const markdownContent = skill.changelog || '';
 
   return (
     <div>
+      <HiddenShareImage src={ogImage.sqSkill(skill.slug)} />
       {/* 返回链接 */}
       <Link
         href="/skills"
@@ -152,15 +81,7 @@ export default function SkillDetailPage() {
                 GitHub
               </a>
             )}
-            <button
-              onClick={handleToggleFavorite}
-              disabled={favoriting}
-              className={`flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm transition-colors self-start ${
-                isFavorited ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {isFavorited ? '★ 已收藏' : '☆ 收藏'}
-            </button>
+            <FavoriteButton type="skill" itemId={skill.id} size="md" />
           </div>
         </div>
 
@@ -169,24 +90,7 @@ export default function SkillDetailPage() {
 
       {/* 操作按钮 */}
       <div className="flex flex-wrap gap-3 mb-6">
-        {skill.installCmd && (
-          <button
-            onClick={handleCopyInstallCmd}
-            className="btn btn-primary flex items-center gap-2"
-          >
-            {copied ? (
-              <>
-                <Check className="w-4 h-4" />
-                已复制
-              </>
-            ) : (
-              <>
-                <Copy className="w-4 h-4" />
-                复制安装命令
-              </>
-            )}
-          </button>
-        )}
+        {skill.installCmd && <CopyButton text={skill.installCmd} label="复制安装命令" />}
 
         {skill.url && (
           <a
@@ -215,10 +119,10 @@ export default function SkillDetailPage() {
       <div>
         <h3 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
           <FileText className="w-4 h-4" />
-          版本说明{(skill as any).version ? ` (v${(skill as any).version})` : ''}
+          版本说明{skill.version ? ` (v${skill.version})` : ''}
         </h3>
 
-        {contentError && (
+        {!markdownContent && (
           <div className="card text-center py-12">
             <p className="text-gray-500 mb-2">暂无版本说明</p>
             {skill.url && (
@@ -234,9 +138,9 @@ export default function SkillDetailPage() {
           </div>
         )}
 
-        {!contentError && markdownContent && (
+        {markdownContent && (
           <div className="card markdown-content">
-            <ReactMarkdown
+            <Markdown
               remarkPlugins={[remarkGfm]}
               components={{
                 h1: ({ children }) => <h1 className="text-2xl font-bold text-gray-800 mb-4 mt-6 first:mt-0 font-outfit">{children}</h1>,
@@ -290,24 +194,16 @@ export default function SkillDetailPage() {
                 hr: () => <hr className="border-gray-200 my-6" />,
                 strong: ({ children }) => <strong className="font-semibold text-gray-800">{children}</strong>,
                 img: ({ src, alt }) => (
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img src={src} alt={alt} className="max-w-full h-auto rounded-lg mb-4" />
                 ),
               }}
             >
               {markdownContent}
-            </ReactMarkdown>
+            </Markdown>
           </div>
         )}
       </div>
-
-      <style jsx global>{`
-        .markdown-content pre {
-          margin: 0;
-        }
-        .markdown-content pre code {
-          margin: 0;
-        }
-      `}</style>
     </div>
   );
 }

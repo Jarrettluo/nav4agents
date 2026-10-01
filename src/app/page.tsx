@@ -1,56 +1,25 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Loader2 } from 'lucide-react';
-import { getHomeData } from '@/lib/data/home';
-import { getSubscriptions } from '@/lib/data/subscriptions';
-import type { HomeData, Subscription } from '@/lib/data/types';
+import { getHomeDataSync } from '@/lib/data/home';
+import { getAllSubscriptions } from '@/lib/data/subscriptions';
+import { ogImage } from '@/lib/seo';
+import HiddenShareImage from '@/components/HiddenShareImage';
 
+// 首页：服务端渲染（SSG）——首屏即含完整内容 + OG 标签，微信/搜索爬虫可读
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-  const [homeData, setHomeData] = useState<HomeData | null>(null);
-  const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
+  const homeData = getHomeDataSync();
+  const subscriptions = getAllSubscriptions();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [homeRes, subRes] = await Promise.all([
-          getHomeData(),
-          getSubscriptions({ pageSize: 6 }),
-        ]);
-        if (homeRes.code === 200) {
-          setHomeData(homeRes.data);
-        }
-        if (subRes.code === 200) {
-          setSubscriptions(subRes.data.list || []);
-        }
-      } catch (err) {
-        console.error('获取数据失败:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const featuredMcp = homeData.featuredMcp;
+  const featuredSkills = homeData.featuredSkills;
+  const recentItems = homeData.recentItems;
+  const stats = homeData.stats;
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center py-20">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-      </div>
-    );
-  }
-
-  const featuredMcp = homeData?.featuredMcp || [];
-  const featuredSkills = homeData?.featuredSkills || [];
-  const recentItems = homeData?.recentItems || [];
-
-  const freeSubscriptions = subscriptions.filter(s => s.price === 0);
-  const paidSubscriptions = subscriptions.filter(s => s.price > 0 && s.price <= 20);
+  const freeSubscriptions = subscriptions.filter((s) => s.price === 0);
+  const paidSubscriptions = subscriptions.filter((s) => s.price > 0 && s.price <= 20);
 
   return (
     <>
+      <HiddenShareImage src={ogImage.sqSite} />
       {/* Hero Banner - 全宽独立布局，贴近 header */}
       <section className="relative overflow-hidden" style={{ marginTop: '-1px' }}>
         {/* 顶部装饰线 - 品牌渐变 */}
@@ -61,11 +30,16 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12">
               {/* 左侧文案 */}
               <div className="flex-1 max-w-3xl">
+                <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 rounded-full px-4 py-1.5 text-xs sm:text-sm font-medium mb-4 md:mb-6">
+                  <span>中文优先</span>
+                  <span className="text-blue-300">·</span>
+                  <span>为中国开发者打造</span>
+                </div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-800 mb-4 md:mb-6 font-outfit leading-tight" style={{ fontWeight: 500, lineHeight: 1.1 }}>
-                  让 AI 真正成为你的生产力
+                  让 AI 找对工具，不再翻 GitHub
                 </h1>
                 <p className="text-base md:text-lg lg:text-xl text-gray-500 mb-6 md:mb-10 max-w-2xl" style={{ lineHeight: 1.5 }}>
-                  汇聚最优秀的 AI Agent、MCP 服务器与智能工具，一站式发现、对比与使用
+                  中文开发者挑选 MCP 服务器、AI Skills 与智能体工具的第一站 —— 发现、对比、复制即用
                 </p>
 
                 {/* 功能标签 - Pill 样式（数量来自最新扫描数据） */}
@@ -73,17 +47,17 @@ export default function Home() {
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
                     <span>🔌</span>
                     <span className="font-medium text-gray-700">MCP 生态</span>
-                    <span className="text-gray-400 hidden sm:inline">已收录 {homeData?.stats?.mcpCount || 0}+ 个</span>
+                    <span className="text-gray-400 hidden sm:inline">已收录 {stats.mcpCount}+ 个</span>
                   </div>
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
                     <span>🧠</span>
                     <span className="font-medium text-gray-700">AI Skills</span>
-                    <span className="text-gray-400 hidden sm:inline">已收录 {homeData?.stats?.skillCount || 0}+ 个</span>
+                    <span className="text-gray-400 hidden sm:inline">已收录 {stats.skillCount}+ 个</span>
                   </div>
                   <div className="flex items-center gap-2 bg-gray-50 rounded-full px-4 py-2 text-sm">
                     <span>⚡</span>
                     <span className="font-medium text-gray-700">Coding Plan</span>
-                    <span className="text-gray-400 hidden sm:inline">{homeData?.stats?.codingplanCount || 0}+ 套餐对比</span>
+                    <span className="text-gray-400 hidden sm:inline">{stats.codingplanCount}+ 套餐对比</span>
                   </div>
                 </div>
 
