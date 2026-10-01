@@ -5004,8 +5004,8 @@
    },
    {
     "name": "get_weekly_review",
-    "description": "Surface the weekly review digest — every metro that needs manual attention before the next newsletter cycle. Returns two buckets: 1. 🔴 Stale Progress (col AF=TR",
-    "descriptionZh": "呈现每周审核摘要——每个在下一次简报周期前需要人工关注的都市区。返回两个分组：1. 🔴 Stale Progress（列 AF=TR"
+    "description": "Surface the weekly review digest — every metro that needs manual attention before the next newsletter cycle. Returns two buckets: 1. Stale Progress (col AF=TR",
+    "descriptionZh": "呈现每周审核摘要——每个在下一次简报周期前需要人工关注的都市区。返回两个分组：1. Stale Progress（列 AF=TR"
    },
    {
     "name": "set_published_tier",
@@ -6784,8 +6784,8 @@
    },
    {
     "name": "datagovmy_search_datasets_catalogue",
-    "description": "⚠️ CONSIDER USING search_all INSTEAD: This only searches datasets. For comprehensive results across datasets and dashboards, use search_all tool. ⚠️",
-    "descriptionZh": "⚠️ 建议改用 search_all：这仅搜索数据集。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。⚠️"
+    "description": "CONSIDER USING search_all INSTEAD: This only searches datasets. For comprehensive results across datasets and dashboards, use search_all tool.",
+    "descriptionZh": "建议改用 search_all：这仅搜索数据集。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。"
    },
    {
     "name": "datagovmy_filter_datasets_catalogue",
@@ -6834,8 +6834,8 @@
    },
    {
     "name": "datagovmy_search_dashboards",
-    "description": "⚠️ CONSIDER USING search_all INSTEAD: This only searches dashboards. For comprehensive results across datasets and dashboards, use search_all tool. ⚠️",
-    "descriptionZh": "⚠️ 建议改用 search_all：这仅搜索仪表板。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。⚠️"
+    "description": "CONSIDER USING search_all INSTEAD: This only searches dashboards. For comprehensive results across datasets and dashboards, use search_all tool.",
+    "descriptionZh": "建议改用 search_all：这仅搜索仪表板。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。"
    },
    {
     "name": "datagovmy_get_dashboard_details",
@@ -6849,8 +6849,8 @@
    },
    {
     "name": "datagovmy_search_all",
-    "description": "⭐⭐⭐ PRIMARY SEARCH TOOL: Always use this first for any data or visualization queries. Searches across both datasets and dashboards with intelligent fallback. ⭐⭐",
-    "descriptionZh": "⭐⭐⭐ 主要搜索工具：对于任何数据或可视化查询，请始终先使用此工具。它会同时搜索数据集和仪表板，并提供智能回退。⭐⭐"
+    "description": "PRIMARY SEARCH TOOL: Always use this first for any data or visualization queries. Searches across both datasets and dashboards with intelligent fallback.",
+    "descriptionZh": "主要搜索工具：对于任何数据或可视化查询，请始终先使用此工具。它会同时搜索数据集和仪表板，并提供智能回退。"
    }
   ],
   "config": [],

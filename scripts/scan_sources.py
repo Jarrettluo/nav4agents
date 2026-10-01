@@ -284,7 +284,7 @@ def scan_clawhub():
             "githubUrl": None,
             "url": f"https://clawhub.ai/{owner}/skills/{raw_slug}",
             "version": (x.get("latestVersion") or {}).get("version"),
-            "changelog": (((x.get("latestVersion") or {}).get("changelog") or "")[:3000]) or None,
+            "changelog": (EMOJI_RE.sub("", (x.get("latestVersion") or {}).get("changelog") or "")[:3000]) or None,
             "createdAt": norm_iso(x.get("createdAt")),
         })
     return out

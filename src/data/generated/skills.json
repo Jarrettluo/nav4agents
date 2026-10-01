@@ -178,7 +178,7 @@
   "version": "3.1.0",
   "changelog": "Added: Autonomous vs Prompted Crons, Verify Implementation Not Intent, Tool Migration Checklist",
   "createdAt": "2026-01-28T19:45:45.209000+00:00",
-  "descriptionZh": "将 AI 智能体从任务执行者转变为能预判需求、持续改进的主动型伙伴。现加入 WAL Protocol、Working Buffer、Autonomous Crons 以及久经实战检验的模式。Hal Stack 的一部分 🦞",
+  "descriptionZh": "将 AI 智能体从任务执行者转变为能预判需求、持续改进的主动型伙伴。现加入 WAL Protocol、Working Buffer、Autonomous Crons 以及久经实战检验的模式。Hal Stack 的一部分",
   "changelogZh": "新增：Autonomous vs Prompted Crons、Verify Implementation Not Intent、Tool Migration Checklist"
  },
  {
@@ -918,10 +918,10 @@
   "githubUrl": null,
   "url": "https://clawhub.ai/udiedrichsen/skills/stock-analysis",
   "version": "6.2.0",
-  "changelog": "🔮 Rumor Scanner: M&A rumors, insider activity, Twitter whispers, impact scoring",
+  "changelog": "Rumor Scanner: M&A rumors, insider activity, Twitter whispers, impact scoring",
   "createdAt": "2026-01-14T09:46:15.214000+00:00",
   "descriptionZh": "使用 Yahoo Finance 数据分析股票和加密货币。支持投资组合管理、带提醒的自选列表、股息分析、8 维股票评分、病毒式趋势检测（Hot Scanner）以及传闻/早期信号检测。适用于股票分析、投资组合跟踪、财报反应、加密货币监控、热门股票，或在传闻进入主流视野前发现它们。",
-  "changelogZh": "🔮 Rumor Scanner：并购传闻、内部人交易活动、Twitter 小道消息、影响评分"
+  "changelogZh": "Rumor Scanner：并购传闻、内部人交易活动、Twitter 小道消息、影响评分"
  },
  {
   "id": 19667862,
@@ -1841,10 +1841,10 @@
   "githubUrl": null,
   "url": "https://clawhub.ai/adboio/skills/agentmail",
   "version": "1.1.1",
-  "changelog": "🔒 Security: Webhook allowlist to prevent prompt injection",
+  "changelog": "Security: Webhook allowlist to prevent prompt injection",
   "createdAt": "2026-01-25T05:42:40.427000+00:00",
   "descriptionZh": "面向 AI 智能体的 API 优先电子邮件平台。可创建和管理专用电子邮件收件箱，以编程方式发送和接收电子邮件，并通过 webhook 和实时事件处理基于电子邮件的工作流。适用于需要设置智能体电子邮件身份、从智能体发送电子邮件、处理入站电子邮件工作流，或用对智能体友好的基础设施替代 Gmail 等传统电子邮件服务商的场景。",
-  "changelogZh": "🔒 安全：Webhook 允许列表，防止提示注入"
+  "changelogZh": "安全：Webhook 允许列表，防止提示注入"
  },
  {
   "id": 95036141,

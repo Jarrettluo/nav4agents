@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nav4agent-v202610011840';
+const CACHE_NAME = 'nav4agent-v202610011915';
 const urlsToCache = [
   '/',
   '/mcp',
