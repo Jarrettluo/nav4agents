@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { User, Loader2 } from 'lucide-react';
 import { getSkills, getSkillCategories } from '@/lib/data/skills';
 import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/data/favorites';
+import { pickZh } from '@/lib/i18n';
 import type { Skill } from '@/lib/data/types';
 
 export default function SkillsListClient() {
@@ -139,7 +140,7 @@ export default function SkillsListClient() {
                       {item.source}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{item.description}</p>
+                  <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{pickZh(item.descriptionZh, item.description)}</p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
                     <span className="flex items-center gap-1">
                       <User className="w-3 h-3" /> {item.usage.toLocaleString()} 次使用

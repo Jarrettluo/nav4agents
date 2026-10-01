@@ -1,5 +1,6 @@
 import data from '@/data/generated/skills.json';
 import type { ApiResponse, PageResult, Skill } from './types';
+import { searchBlob } from '@/lib/i18n';
 
 // 静态数据模式：数据由 scripts/scan_sources.py 每周生成（来源 ClawHub）
 const all = (data as unknown) as Skill[];
@@ -33,7 +34,7 @@ export const getSkills = async (
   if (params.search) {
     const q = params.search.trim().toLowerCase();
     list = list.filter((x) =>
-      `${x.name} ${x.description} ${x.category}`.toLowerCase().includes(q)
+      searchBlob(x.name, x.description, x.descriptionZh, x.category, (x.topics || []).join(' ')).includes(q)
     );
   }
   if (params.featured) {

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getHomeDataSync } from '@/lib/data/home';
 import { getAllSubscriptions } from '@/lib/data/subscriptions';
 import { ogImage } from '@/lib/seo';
+import { pickZh } from '@/lib/i18n';
 import HiddenShareImage from '@/components/HiddenShareImage';
 
 // 首页：服务端渲染（SSG）——首屏即含完整内容 + OG 标签，微信/搜索爬虫可读
@@ -124,7 +125,7 @@ export default function Home() {
                   <span className="text-xs text-gray-400">⭐ {item.stars}</span>
                 </div>
                 <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
-                <p className="text-xs text-gray-500 line-clamp-2">{item.description}</p>
+                <p className="text-xs text-gray-500 line-clamp-2">{pickZh(item.descriptionZh, item.description)}</p>
               </Link>
             ))}
           </div>
@@ -146,7 +147,7 @@ export default function Home() {
                   <span className="text-xs text-gray-400">👤 {item.usage}</span>
                 </div>
                 <h3 className="text-sm font-semibold text-gray-800 mb-1">{item.name}</h3>
-                <p className="text-xs text-gray-500 line-clamp-2">{item.description}</p>
+                <p className="text-xs text-gray-500 line-clamp-2">{pickZh(item.descriptionZh, item.description)}</p>
               </Link>
             ))}
           </div>

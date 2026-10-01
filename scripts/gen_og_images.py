@@ -69,6 +69,12 @@ def short_name(s):
     return s[:72].rstrip() + "…"
 
 
+def pick_zh(it):
+    """优先取中文描述（翻译管线产物），回退英文原文。"""
+    z = (it.get("descriptionZh") or "").strip()
+    return z or (it.get("description") or "")
+
+
 def text_w(draw, s, f):
     return draw.textlength(s, font=f)
 
@@ -364,12 +370,12 @@ def main():
         if not slug:
             continue
         name = short_name(clean(it.get("name", ""), 130))
-        desc = clean(it.get("description", ""), 90)
+        desc = clean(pick_zh(it), 90)
         cat = it.get("category", "")
         src = it.get("source", "")
         ty = "本地" if it.get("type") == "local" else "远程"
         meta_line = " · ".join(x for x in ["MCP 服务器", ty, src] if x)
-        f = fp("mcp-v1", name, desc, cat, ty, src)
+        f = fp("mcp-v2", name, desc, cat, ty, src)
         p = os.path.join(OUT, "mcp", f"{slug}.jpg")
         maybe(p, f, lambda name=name, desc=desc, cat=cat, meta_line=meta_line, p=p, f=f:
               item_card("MCP", meta_line, name, desc, cat, p, f))
@@ -380,11 +386,11 @@ def main():
         if not slug:
             continue
         name = short_name(clean(it.get("name", ""), 130))
-        desc = clean(it.get("description", ""), 90)
+        desc = clean(pick_zh(it), 90)
         cat = it.get("category", "")
         ver = it.get("version")
         meta_line = " · ".join(x for x in ["AI Skill", it.get("source", ""), (f"v{ver}" if ver else "")] if x)
-        f = fp("skill-v1", name, desc, cat, meta_line)
+        f = fp("skill-v2", name, desc, cat, meta_line)
         p = os.path.join(OUT, "skills", f"{slug}.jpg")
         maybe(p, f, lambda name=name, desc=desc, cat=cat, meta_line=meta_line, p=p, f=f:
               item_card("Skill", meta_line, name, desc, cat, p, f))

@@ -55,10 +55,16 @@ python3 scripts/scan_sources.py >>"$LOG" 2>&1 || scan_rc=$?
 # 2.5 增强 MCP 详情（工具列表/配置项，失败不阻断）
 python3 scripts/enhance_details.py >>"$LOG" 2>&1 || echo "  !! enhance_details failed" >>"$LOG"
 
-# 2.6 生成分享卡片图（仅增量，失败不阻断）
+# 2.6 中文化翻译（增量，失败不阻断；凭据缺失时自动跳过）
+if [ -f /home/ubuntu/nav4-llm.env ]; then
+  . /home/ubuntu/nav4-llm.env
+fi
+python3 scripts/translate_content.py >>"$LOG" 2>&1 || echo "  !! translate_content failed" >>"$LOG"
+
+# 2.7 生成分享卡片图（仅增量，失败不阻断）
 python3 scripts/gen_og_images.py >>"$LOG" 2>&1 || echo "  !! gen_og_images failed" >>"$LOG"
 
-# 2.7 生成 sitemap.xml
+# 2.8 生成 sitemap.xml
 python3 scripts/gen_sitemap.py >>"$LOG" 2>&1 || echo "  !! gen_sitemap failed" >>"$LOG"
 
 # 3. 检查是否有实质性数据变更（meta.json 时间戳不计入；排除后无变化则静默）

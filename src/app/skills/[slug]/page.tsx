@@ -6,6 +6,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getAllSkills } from '@/lib/data/skills';
 import { buildSkillMetadata, ogImage } from '@/lib/seo';
+import { pickZh } from '@/lib/i18n';
 import CopyButton from '@/components/CopyButton';
 import FavoriteButton from '@/components/FavoriteButton';
 import HiddenShareImage from '@/components/HiddenShareImage';
@@ -32,7 +33,8 @@ export default function SkillDetailPage({ params }: { params: { slug: string } }
   if (!skill) notFound();
 
   const githubUrl = skill.githubUrl || null;
-  const markdownContent = skill.changelog || '';
+  // 优先展示中文版本说明
+  const markdownContent = pickZh(skill.changelogZh, skill.changelog);
 
   return (
     <div>
@@ -85,7 +87,7 @@ export default function SkillDetailPage({ params }: { params: { slug: string } }
           </div>
         </div>
 
-        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{skill.description}</p>
+        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{pickZh(skill.descriptionZh, skill.description)}</p>
       </div>
 
       {/* 操作按钮 */}

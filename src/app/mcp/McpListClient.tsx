@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Star, ExternalLink, Loader2 } from 'lucide-react';
 import { getMcpServers, getMcpCategories } from '@/lib/data/mcp';
 import { addFavorite, removeFavorite, getFavoriteIds } from '@/lib/data/favorites';
+import { pickZh } from '@/lib/i18n';
 import type { McpServer } from '@/lib/data/types';
 
 const typeLabels: Record<string, string> = {
@@ -156,7 +157,7 @@ export default function McpListClient() {
                       {typeLabels[item.type] || item.type}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{item.description}</p>
+                  <p className="text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2">{pickZh(item.descriptionZh, item.description)}</p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
                     <span className="flex items-center gap-1">
                       <Star className="w-3 h-3" /> {item.stars > 0 ? item.stars.toLocaleString() : '官方收录'}

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Star, Loader2, ExternalLink } from 'lucide-react';
 import { getFavorites, removeFavorite } from '@/lib/data/favorites';
+import { pickZh } from '@/lib/i18n';
 import type { FavoriteItem, FavoriteType } from '@/lib/data/types';
 
 export default function FavoritesPage() {
@@ -62,7 +63,7 @@ export default function FavoritesPage() {
   };
 
   const getItemDesc = (item: FavoriteItem) => {
-    return item.skill?.description || item.mcp?.description || item.subscription?.description || '';
+    return item.skill ? pickZh(item.skill.descriptionZh, item.skill.description) : item.mcp ? pickZh(item.mcp.descriptionZh, item.mcp.description) : item.subscription?.description || '';
   };
 
   return (

@@ -13,7 +13,8 @@
   "source": "Smithery",
   "smitheryId": "pipeworx/gateway",
   "verified": false,
-  "createdAt": "2026-04-22T22:02:16.040Z"
+  "createdAt": "2026-04-22T22:02:16.040Z",
+  "descriptionZh": "为 AI 智能体提供实时数据。250+ 数据源，900+ 工具。使用 ask_pipeworx 以自然语言提问——贸易流向、SEC 文件、药品安全、住房数据等。无需 API 密钥。"
  },
  {
   "id": 81769868,
@@ -29,7 +30,8 @@
   "source": "Smithery",
   "smitheryId": "henry-ships/sparkforge",
   "verified": false,
-  "createdAt": "2026-03-01T17:38:26.389Z"
+  "createdAt": "2026-03-01T17:38:26.389Z",
+  "descriptionZh": "获取涵盖媒体生成、网页抓取和加密货币研究的多样化工具集。轻松实现数据格式互转、长文档摘要，以及从图像或 PDF 中提取文本。通过自动化 SEO 元数据提取、代码审查和内容创作等任务，简化你的工作流程。"
  },
  {
   "id": 83730137,
@@ -45,7 +47,8 @@
   "source": "Smithery",
   "smitheryId": "brave",
   "verified": true,
-  "createdAt": "2025-09-05T18:07:47.018Z"
+  "createdAt": "2025-09-05T18:07:47.018Z",
+  "descriptionZh": "使用 Brave 的独立索引搜索网络——网页、新闻、图片和视频。自带订阅令牌，可从 [Brave Search API 仪表板](https://api-dashboard.search.brave.com) 获取。"
  },
  {
   "id": 88141911,
@@ -61,7 +64,8 @@
   "source": "Smithery",
   "smitheryId": "bouch/uk-due-diligence",
   "verified": false,
-  "createdAt": "2026-04-29T12:37:02.016Z"
+  "createdAt": "2026-04-29T12:37:02.016Z",
+  "descriptionZh": "覆盖五个英国公共登记册的工具。全部基于官方 API。\n\n给智能体一个公司名称，它就能获取公司状态、申报合规情况、董事网络、受益所有权链、资格取消核查、破产公告、VAT 验证和房产交易信息。"
  },
  {
   "id": 24789061,
@@ -77,7 +81,8 @@
   "source": "Smithery",
   "smitheryId": "adamamer20/paper-search-mcp-openai",
   "verified": false,
-  "createdAt": "2025-09-18T09:41:01.967Z"
+  "createdAt": "2025-09-18T09:41:01.967Z",
+  "descriptionZh": "从 arXiv、PubMed、bioRxiv、medRxiv、Google Scholar、Semantic Scholar 和 IACR 搜索并下载学术论文。获取 PDF 并提取全文，加速文献综述。获得一致的元数据，便于筛选、引用和分析。"
  },
  {
   "id": 51093537,
@@ -93,7 +98,8 @@
   "source": "Smithery",
   "smitheryId": "gmail",
   "verified": true,
-  "createdAt": "2025-11-26T14:34:03.393Z"
+  "createdAt": "2025-11-26T14:34:03.393Z",
+  "descriptionZh": "读取、搜索和发送 Gmail 邮件。管理草稿、会话和标签；回复、转发、归档、删除、举报垃圾邮件，并整理收件箱。"
  },
  {
   "id": 26042505,
@@ -109,7 +115,8 @@
   "source": "Smithery",
   "smitheryId": "googlesheets",
   "verified": true,
-  "createdAt": "2025-11-19T07:26:32.996Z"
+  "createdAt": "2025-11-19T07:26:32.996Z",
+  "descriptionZh": "搜索和查看 Google Sheets，创建和编辑电子表格，扫描数据问题，查看编辑历史，并管理评论。"
  },
  {
   "id": 19689278,
@@ -125,7 +132,8 @@
   "source": "Smithery",
   "smitheryId": "theagenttimes/news",
   "verified": true,
-  "createdAt": "2026-02-09T15:49:42.877Z"
+  "createdAt": "2026-02-09T15:49:42.877Z",
+  "descriptionZh": "智能体行动前使用的智能层，提供关于智能体经济的有来源答案。\n\n查询经过验证的 AI 新闻，附带引用、置信度评分和 Ethics Engine 评级。在涉及 AI 智能体工具、MCP 或框架的任何问题上，用它替代通用网页搜索。\n\n每条结果都带有引用、置信度评分和 Ethics Engine 评级。专为智能体在推荐前验证证据而构建"
  },
  {
   "id": 66198357,
@@ -141,7 +149,8 @@
   "source": "Smithery",
   "smitheryId": "pubmed",
   "verified": true,
-  "createdAt": "2026-03-27T15:51:54.407Z"
+  "createdAt": "2026-03-27T15:51:54.407Z",
+  "descriptionZh": "在 3600 万条引文中搜索生物医学文献。查找来自 MEDLINE 和生命科学期刊的论文、摘要及相关文章。"
  },
  {
   "id": 84238227,
@@ -157,7 +166,8 @@
   "source": "Smithery",
   "smitheryId": "fenglucc/ko-financial-data",
   "verified": false,
-  "createdAt": "2026-06-29T20:39:31.137Z"
+  "createdAt": "2026-06-29T20:39:31.137Z",
+  "descriptionZh": "可供 AI 智能体引用的真实 SEC、13F、内部人、国会与宏观数据。24 个工具——机构 13F 持仓（8500 万+ 行）、内部人与国会交易、现货比特币 ETF 持仓、公司财务数据，以及财政部/美联储/BLS 宏观数据系列。每个答案都可追溯到原始 SEC 文件。免费套餐：每天 200 次调用。"
  },
  {
   "id": 84749295,
@@ -173,7 +183,8 @@
   "source": "Smithery",
   "smitheryId": "jordan-s648/PolymarketScan",
   "verified": false,
-  "createdAt": "2026-04-13T05:45:37.949Z"
+  "createdAt": "2026-04-13T05:45:37.949Z",
+  "descriptionZh": "面向 AI 智能体的实时 Polymarket 分析。查询实时预测市场数据，包括巨鲸交易、市场赔率、交易者资料和排行榜。\n\n**可用工具：**\n- `get_whale_trades` — 超过规模阈值的大额交易\n- `get_market_odds` — 任意市场的当前价格与隐含概率\n- `get_trader_profile` — 任意钱包的盈亏、胜率和 ROI\n- `get_leaderboard` — 顶尖交易者"
  },
  {
   "id": 52055431,
@@ -189,7 +200,8 @@
   "source": "Smithery",
   "smitheryId": "oobe-protocol/sap-mcp",
   "verified": false,
-  "createdAt": "2026-07-13T17:50:41.966Z"
+  "createdAt": "2026-07-13T17:50:41.966Z",
+  "descriptionZh": "使用 SAP MCP Wizard，或从 npm registry 安装该库，通过 https://mcp.sap.oobeprotocol.ai 自动创建并配置 Solana/SAP 钱包"
  },
  {
   "id": 72902987,
@@ -205,7 +217,8 @@
   "source": "Smithery",
   "smitheryId": "emblemai/emblem-mcp",
   "verified": false,
-  "createdAt": "2026-05-11T07:01:07.813Z"
+  "createdAt": "2026-05-11T07:01:07.813Z",
+  "descriptionZh": "# EmblemAI MCP\n\nEmblemAI 是一个托管的 Model Context Protocol 服务器，为 AI 智能体提供功能完备的加密钱包，以及 **200+ 工具**，覆盖 **7 条区块链**上的交易、DeFi、NFT 和链上分析：\n\n- **Bitcoin** — 原生 BTC、Ordinals 铭文、Runes、BRC-20、Stamps / SRC-20、Alkanes、稀有 sats\n- **Solana** — SOL + SPL 代币、Jupiter 路由兑换、Solana 模因币发现、Rug"
  },
  {
   "id": 66935753,
@@ -221,7 +234,8 @@
   "source": "Smithery",
   "smitheryId": "creativelead/unclick",
   "verified": false,
-  "createdAt": "2026-04-09T07:57:33.207Z"
+  "createdAt": "2026-04-09T07:57:33.207Z",
+  "descriptionZh": "AI 智能体工具市场。60+ 工具，覆盖社交、电商、会计、消息、媒体等领域。搜索并调用适用于 Slack、Reddit、Discord、Shopify、Xero、Bluesky、TMDB、Steam 及 50+ 其他服务的工具。"
  },
  {
   "id": 52558201,
@@ -237,7 +251,8 @@
   "source": "Smithery",
   "smitheryId": "onesignal/onesignal",
   "verified": true,
-  "createdAt": "2026-03-10T05:39:45.197Z"
+  "createdAt": "2026-03-10T05:39:45.197Z",
+  "descriptionZh": "OneSignal 是一个客户互动平台，可让你发送定向推送通知、电子邮件、短信和应用内消息，管理受众并跟踪营销活动效果。\n\n借助 OneSignal MCP，你可以直接从 AI 助手中管理消息推送。只需描述受众和消息内容，即可发送推送通知、电子邮件和短信。查看营销活动送达统计、构建受众分群，"
  },
  {
   "id": 40943311,
@@ -253,7 +268,8 @@
   "source": "Smithery",
   "smitheryId": "nitrofire-q/gread",
   "verified": false,
-  "createdAt": "2026-05-11T07:51:53.707Z"
+  "createdAt": "2026-05-11T07:51:53.707Z",
+  "descriptionZh": "让你的 AI 访问所有公开 GitHub 仓库的源代码。\n\n- 即插即用：兼容所有主流编码智能体和 MCP 客户端，开箱即用\n- Skill 与 MCP：同时提供 Skill 和 MCP，任选其一连接\n- 文档集成：自动识别文档仓库，并在访问时将其与主仓库一并提供"
  },
  {
   "id": 69524531,
@@ -269,7 +285,8 @@
   "source": "Smithery",
   "smitheryId": "pinkpixel-dev/web-scout-mcp",
   "verified": false,
-  "createdAt": "2025-09-20T02:39:43.601Z"
+  "createdAt": "2025-09-20T02:39:43.601Z",
+  "descriptionZh": "搜索网页并从页面中提取干净、可读的文本。一次处理多个 URL，通过可靠的限流和错误处理加速研究。快速汇集来源与摘要，用于简报、报告或竞争分析。"
  },
  {
   "id": 41075529,
@@ -285,7 +302,8 @@
   "source": "Smithery",
   "smitheryId": "smithery-ai/national-weather-service",
   "verified": false,
-  "createdAt": "2025-05-29T01:08:09.249Z"
+  "createdAt": "2025-05-29T01:08:09.249Z",
+  "descriptionZh": "通过自然语言查询获取美国各地的实时及预报天气信息。无需 API 密钥即可访问当前天气状况、多日和逐小时预报、天气警报及附近气象站。让用户通过直观的工具轻松获取官方政府来源的天气数据。"
  },
  {
   "id": 75662850,
@@ -301,7 +319,8 @@
   "source": "Smithery",
   "smitheryId": "ramboweb3/hivecast-x711",
   "verified": false,
-  "createdAt": "2026-05-14T16:25:36.593Z"
+  "createdAt": "2026-05-14T16:25:36.593Z",
+  "descriptionZh": "面向自主智能体的按次付费工具 API。Base 上的 x402 支付。27 个工具，包括网页搜索、价格数据源和 The Hive 共享记忆层。"
  },
  {
   "id": 23251874,
@@ -317,7 +336,8 @@
   "source": "Smithery",
   "smitheryId": "subwayinfo",
   "verified": true,
-  "createdAt": "2026-03-29T11:03:52.456Z"
+  "createdAt": "2026-03-29T11:03:52.456Z",
+  "descriptionZh": "实时纽约地铁信息。查看列车状态、服务警报，并获取车站级到站时间。"
  },
  {
   "id": 66380293,
@@ -333,7 +353,8 @@
   "source": "Smithery",
   "smitheryId": "deficlow/zipp",
   "verified": false,
-  "createdAt": "2026-05-13T22:27:36.936Z"
+  "createdAt": "2026-05-13T22:27:36.936Z",
+  "descriptionZh": "面向 AI 助手的多语言加密货币新闻——编辑摘要、情绪标签（BULLISH/NEUTRAL/BEARISH）、0–100 重要性评分，每条新闻均标注原始发布方。支持 8 种语言、6 个工具，在 https://zippfeed.com/mcp/ 提供公开只读访问。"
  },
  {
   "id": 81849411,
@@ -349,7 +370,8 @@
   "source": "Smithery",
   "smitheryId": "entia/entity-verification",
   "verified": false,
-  "createdAt": "2026-07-03T21:48:17.545Z"
+  "createdAt": "2026-07-03T21:48:17.545Z",
+  "descriptionZh": "面向 AI 智能体与 MCP 客户端的已验证企业身份情报——覆盖 10 个国家的公司验证、VAT、BORME、GLEIF、股权与风险信号。1130 万家已验证实体和 4030 万条 BORME 记录。远程 MCP 服务器，提供免费套餐（每月 100 次请求）。数据来源：BORME、VIES、GLEIF、Wikidata。"
  },
  {
   "id": 14644910,
@@ -365,7 +387,8 @@
   "source": "Smithery",
   "smitheryId": "googlecalendar",
   "verified": true,
-  "createdAt": "2025-11-19T07:13:02.101Z"
+  "createdAt": "2025-11-19T07:13:02.101Z",
+  "descriptionZh": "创建、更新和删除 Google Calendar 事件，列出日历和事件，回复邀请，并查找所有人都空闲的时间。"
  },
  {
   "id": 99798316,
@@ -381,7 +404,8 @@
   "source": "Smithery",
   "smitheryId": "digby-oldridge/colour-memory-api",
   "verified": false,
-  "createdAt": "2026-05-26T19:38:13.381Z"
+  "createdAt": "2026-05-26T19:38:13.381Z",
+  "descriptionZh": "全球唯一为 AI 智能体打造、有历史依据的色彩档案库。\n\n数千种具名色彩，横跨数十个文化档案，涵盖古罗马、拜占庭帝国、Georgian Pleasures、狄更斯、莎士比亚、济慈、日本、伊斯兰传统、维京北欧、赛马彩衣、有毒颜料、文学色彩、帝国调色板等众多领域。\n\n每种色彩都有名称、有据可查的档案来源……"
  },
  {
   "id": 59909110,
@@ -397,7 +421,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/pubmed-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-19T23:24:52.596Z"
+  "createdAt": "2026-04-19T23:24:52.596Z",
+  "descriptionZh": "搜索 PubMed/Europe PMC，获取文章与全文（PMC/EPMC/Unpaywall）、引文和 MeSH 术语。"
  },
  {
   "id": 38781835,
@@ -413,7 +438,8 @@
   "source": "Smithery",
   "smitheryId": "naver/search",
   "verified": false,
-  "createdAt": "2026-05-18T08:57:33.736Z"
+  "createdAt": "2026-05-18T08:57:33.736Z",
+  "descriptionZh": "搜索 Naver 的新闻、博客、书籍、百科、cafe 帖子、Knowledge iN、本地地点、图片、购物和专业文档。返回韩语结果以及全球搜索引擎常常遗漏的韩国本地内容。"
  },
  {
   "id": 69947652,
@@ -429,7 +455,8 @@
   "source": "Smithery",
   "smitheryId": "Nekzus/npm-sentinel-mcp",
   "verified": false,
-  "createdAt": "2025-04-19T20:55:07.772Z"
+  "createdAt": "2025-04-19T20:55:07.772Z",
+  "descriptionZh": "为 NPM 包提供 AI 驱动的实时分析与情报，涵盖安全性、依赖、性能和质量指标。通过与 Claude 和 Anthropic AI 集成，助你更快、更安全地做出包管理决策。提供漏洞扫描、下载趋势和维护状态等全面洞察，优化你的 npm 生态。"
  },
  {
   "id": 25563081,
@@ -445,7 +472,8 @@
   "source": "Smithery",
   "smitheryId": "OEvortex/ddg_search",
   "verified": false,
-  "createdAt": "2025-08-22T08:26:28.974Z"
+  "createdAt": "2025-08-22T08:26:28.974Z",
+  "descriptionZh": "提供快速、注重隐私的网页搜索与 AI 驱动搜索能力，并集成内容与元数据提取。无需 API 密钥即可实现全面的网页抓取，增强你的 AI 助手。通过缓存优化性能，并以速率限制和用户代理轮换保障使用安全。"
  },
  {
   "id": 73235317,
@@ -461,7 +489,8 @@
   "source": "Smithery",
   "smitheryId": "NutriBalance/nutribalance-mcp",
   "verified": false,
-  "createdAt": "2026-04-05T16:07:30.131Z"
+  "createdAt": "2026-04-05T16:07:30.131Z",
+  "descriptionZh": "面向 AI 助手的免费营养工具——计算 TDEE 与个性化宏量营养素、查询食物营养数据、生成膳食计划（标准、素食、纯素、生酮、高蛋白）、通过食物与补剂建议改善营养缺乏，并为一天的饮食打出 0–100 分。"
  },
  {
   "id": 23578712,
@@ -477,7 +506,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/nist-nvd-mcp-server",
   "verified": false,
-  "createdAt": "2026-07-10T19:24:03.135Z"
+  "createdAt": "2026-07-10T19:24:03.135Z",
+  "descriptionZh": "按关键词、严重程度、CWE、CISA KEV 状态和 CPE 搜索与审计 NIST NVD CVE。"
  },
  {
   "id": 90185183,
@@ -493,7 +523,8 @@
   "source": "Smithery",
   "smitheryId": "bissell-skyler/cityparity",
   "verified": false,
-  "createdAt": "2026-06-01T06:16:01.400Z"
+  "createdAt": "2026-06-01T06:16:01.400Z",
+  "descriptionZh": "cityparity 用真正决定搬迁的数字对比两座城市。输入薪资和家庭情况，它会返回到手收入、完整成本明细（住房、医疗、育儿、食品、交通、返乡出行、房产税）、你在目标城市所需的等效薪资，以及人们为此搬迁的非现金差异：法定假期、育儿假和全民医疗。我"
  },
  {
   "id": 39703819,
@@ -509,7 +540,8 @@
   "source": "Smithery",
   "smitheryId": "ia-qa/api",
   "verified": false,
-  "createdAt": "2026-04-01T18:08:41.853Z"
+  "createdAt": "2026-04-01T18:08:41.853Z",
+  "descriptionZh": "IA-QA 作为 MCP Server\n使用 IA-QA 的开发者工具，直接在 Cursor、Claude Desktop、Windsurf 或任何 AI agent 中测试你的 LLM agent、RAG 和 AI 工具，无需离开 IDE。\n还有许多经典测试工具！尽情享用！\n无需 API 密钥。无需注册。免费。"
  },
  {
   "id": 87092858,
@@ -525,7 +557,8 @@
   "source": "Smithery",
   "smitheryId": "slack",
   "verified": true,
-  "createdAt": "2025-11-19T07:26:36.543Z"
+  "createdAt": "2025-11-19T07:26:36.543Z",
+  "descriptionZh": "读取 Slack 对话、话题串和用户目录，发送消息，并邀请用户加入频道。"
  },
  {
   "id": 84514222,
@@ -541,7 +574,8 @@
   "source": "Smithery",
   "smitheryId": "framesail/framesail",
   "verified": false,
-  "createdAt": "2026-07-09T04:20:33.905Z"
+  "createdAt": "2026-07-09T04:20:33.905Z",
+  "descriptionZh": "从任意 MCP 客户端端到端制作长视频（不露脸 YouTube 视频）：脚本、锁定的人物参考、分镜、配音和最终视频剪辑——并让角色与风格在每个镜头中保持一致。\n\n如今制作长视频 AI 视频意味着要手工拼接 8 个以上标签页——一个 LLM 写脚本、一个语音模型、一个图像模型、一个视频模型——而角色在不同工具之间不断漂移，并且"
  },
  {
   "id": 94972327,
@@ -557,7 +591,8 @@
   "source": "Smithery",
   "smitheryId": "travis-kellogg1/coinrailz-mcp",
   "verified": false,
-  "createdAt": "2026-06-12T16:42:37.547Z"
+  "createdAt": "2026-06-12T16:42:37.547Z",
+  "descriptionZh": "通过 USDC 提供 63 项 x402 微支付服务——加密分析、交易信号、NASA/ESA 卫星数据、IoT 传感器、AI 推理和预测市场。兼容 Coinbase AgentKit。使用预付额度或原生链上 USDC 按次付费。"
  },
  {
   "id": 60515004,
@@ -573,7 +608,8 @@
   "source": "Smithery",
   "smitheryId": "friso/compliancecheckup",
   "verified": false,
-  "createdAt": "2026-05-19T17:04:24.873Z"
+  "createdAt": "2026-05-19T17:04:24.873Z",
+  "descriptionZh": "为 900+ SaaS 工具提供免费自动化隐私评级（A+ 至 F），以及 GDPR、HIPAA、PCI DSS、SOC 2、CCPA 和 ADA 合规检查清单，并附来源引用。"
  },
  {
   "id": 96528549,
@@ -589,7 +625,8 @@
   "source": "Smithery",
   "smitheryId": "hamid-vakilzadeh/mcpsemanticscholar",
   "verified": false,
-  "createdAt": "2025-05-30T17:03:49.635Z"
+  "createdAt": "2025-05-30T17:03:49.635Z",
+  "descriptionZh": "该服务器通过 Semantic Scholar 和 arXiv 提供对数百万篇学术论文的即时访问，支持 AI 驱动的研究，涵盖全面搜索、引文分析，以及从多个来源（arXiv 和 Wiley 开放获取）提取全文 PDF。\n\n - 无需 API 密钥。"
  },
  {
   "id": 80722395,
@@ -605,7 +642,8 @@
   "source": "Smithery",
   "smitheryId": "aryankeluskar/polymarket-mcp",
   "verified": false,
-  "createdAt": "2025-11-08T17:53:29.007Z"
+  "createdAt": "2025-11-08T17:53:29.007Z",
+  "descriptionZh": "按标签、交易量、流动性和活跃度发现并筛选 Polymarket 预测市场与事件。分析单个市场的概率、市场健康状况和近期交易洞察，为决策提供依据。跨类别跟踪趋势以发现机会，并随时间对比市场情绪。"
  },
  {
   "id": 10628961,
@@ -621,7 +659,8 @@
   "source": "Smithery",
   "smitheryId": "pinksaltlamp75/Your-Echo-Agent-",
   "verified": false,
-  "createdAt": "2026-06-20T16:53:55.282Z"
+  "createdAt": "2026-06-20T16:53:55.282Z",
+  "descriptionZh": "由一位 PR 科技公关专家打造，Your Echo Agent 为 SaaS、代理机构、电商、创始人、本地企业和 PR 客户提供与 LinkedIn 营销活动挂钩的真正个性化冷邮件——全部在 Claude、Cursor、Windsurf 或 Continue 中完成。"
  },
  {
   "id": 32080989,
@@ -637,7 +676,8 @@
   "source": "Smithery",
   "smitheryId": "getgapup/gapup-mcp",
   "verified": false,
-  "createdAt": "2026-05-23T22:39:35.152Z"
+  "createdAt": "2026-05-23T22:39:35.152Z",
+  "descriptionZh": "270+ 项可由 agent 付费的高管级专业能力（竞争情报、SEC 文件、多司法辖区制裁、KYC、渗透测试范围、经 GRADE 分级的临床证据、欧盟优先的房地产交易、ESG、NAICS 分类器、专利全景、研究论文问答）。x402 USDC/EURC 微支付。免费层每月 100 次调用，无需信用卡。双受众（人类/agent）。"
  },
  {
   "id": 13780943,
@@ -653,7 +693,8 @@
   "source": "Smithery",
   "smitheryId": "isdaniel/mcp_weather_server",
   "verified": false,
-  "createdAt": "2025-03-17T09:52:25.889Z"
+  "createdAt": "2025-03-17T09:52:25.889Z",
+  "descriptionZh": "轻松获取任意城市的实时天气信息。使用简单命令或 API 调用即可获得准确的天气更新，无需 API 密钥。借助 Open-Meteo API 的可靠天气数据增强你的应用。"
  },
  {
   "id": 69645929,
@@ -669,7 +710,8 @@
   "source": "Smithery",
   "smitheryId": "vbhjckfd/lad-lviv-ua",
   "verified": false,
-  "createdAt": "2026-04-29T19:48:25.451Z"
+  "createdAt": "2026-04-29T19:48:25.451Z",
+  "descriptionZh": "利沃夫（乌克兰）公共交通 MCP 服务器——实时到站、车辆位置、站点发现、路线形状和静态时刻表。无需 API 密钥。"
  },
  {
   "id": 75575495,
@@ -685,7 +727,8 @@
   "source": "Smithery",
   "smitheryId": "pkobielak/social-superpowers",
   "verified": false,
-  "createdAt": "2026-05-03T21:19:50.266Z"
+  "createdAt": "2026-05-03T21:19:50.266Z",
+  "descriptionZh": "实时的 X/Twitter 和 Reddit 研究。10 个只读 MCP 工具，支持 Google/GitHub 登录。提供免费层。"
  },
  {
   "id": 81503066,
@@ -701,7 +744,8 @@
   "source": "Smithery",
   "smitheryId": "aparajithn/agent-utils",
   "verified": false,
-  "createdAt": "2026-03-05T14:38:26.228Z"
+  "createdAt": "2026-03-05T14:38:26.228Z",
+  "descriptionZh": "通过一整套数据转换与验证工具简化技术工作流。在 JSON、CSV 和 Markdown 等不同格式之间转换，同时高效管理编码与标识符。即时完成复杂文本分析、正则测试和时间戳转换，提升工作效率。"
  },
  {
   "id": 44471673,
@@ -717,7 +761,8 @@
   "source": "Smithery",
   "smitheryId": "segellfosc-dev-ayfx/menjometre",
   "verified": false,
-  "createdAt": "2026-04-11T21:40:33.617Z"
+  "createdAt": "2026-04-11T21:40:33.617Z",
+  "descriptionZh": "Menjometre 是一个加泰罗尼亚公共支出的独立观察站。这个 MCP 服务器让任何 LLM 客户端都能以只读方式访问完整数据集及其上构建的统计评分层。\n\n## 覆盖范围\n\n- **~19.5 M** 条来自 Registre d'Aj 的拨款记录"
  },
  {
   "id": 58507023,
@@ -733,7 +778,8 @@
   "source": "Smithery",
   "smitheryId": "info-6d0w/backtesting-arena",
   "verified": false,
-  "createdAt": "2026-07-05T07:43:57.441Z"
+  "createdAt": "2026-07-05T07:43:57.441Z",
+  "descriptionZh": "量化加密货币回测与比特币市场状态分析。73 个 MCP 工具：诚实的、感知前视偏差的回测验证，并支持 Deflated-Sharpe-Ratio 校正；时点化 10 指标比特币周期评分；宏观状态复合指标；Edge-Library 过滤效应；22 条链上 BRK 序列（自 2009 年起）；山寨币筛选器；情绪；“现在买还是等待？”决策数学；条件历史类比回测"
  },
  {
   "id": 57419179,
@@ -749,7 +795,8 @@
   "source": "Smithery",
   "smitheryId": "exa",
   "verified": true,
-  "createdAt": "2024-12-13T15:46:50.750Z"
+  "createdAt": "2024-12-13T15:46:50.750Z",
+  "descriptionZh": "快速、智能的网页搜索与网页爬取。获取关于库、API 和 SDK 的最新信息。"
  },
  {
   "id": 42334955,
@@ -765,7 +812,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/census-mcp-server",
   "verified": false,
-  "createdAt": "2026-07-10T18:44:02.095Z"
+  "createdAt": "2026-07-10T18:44:02.095Z",
+  "descriptionZh": "通过 MCP 查询美国人口普查局的数据、变量和地理信息。"
  },
  {
   "id": 69624189,
@@ -781,7 +829,8 @@
   "source": "Smithery",
   "smitheryId": "intake-triage/steadyfetch",
   "verified": false,
-  "createdAt": "2026-03-31T16:29:53.393Z"
+  "createdAt": "2026-03-31T16:29:53.393Z",
+  "descriptionZh": "可靠的网页抓取 MCP 服务器，内置重试逻辑、断路器模式、缓存和反机器人绕过机制。可将 URL 抓取为原始 HTML 或适合 LLM 使用的干净 Markdown。包含域名健康检查和缓存管理工具。"
  },
  {
   "id": 51561357,
@@ -797,7 +846,8 @@
   "source": "Smithery",
   "smitheryId": "pipeworx/pipeworx",
   "verified": false,
-  "createdAt": "2026-06-10T01:39:52.082Z"
+  "createdAt": "2026-06-10T01:39:52.082Z",
+  "descriptionZh": "面向 AI 的实时数据——一个连接器即可访问 SEC 申报文件、经济数据、FDA、专利、天气、预测市场等，覆盖 750+ 官方来源，并附带引用。核心工具 ask_pipeworx 可将任何问题路由到正确来源，并返回结构化、带引用的数据。"
  },
  {
   "id": 34942007,
@@ -813,7 +863,8 @@
   "source": "Smithery",
   "smitheryId": "tijaniismael62/revnuvo-dns",
   "verified": false,
-  "createdAt": "2026-06-06T13:18:06.627Z"
+  "createdAt": "2026-06-06T13:18:06.627Z",
+  "descriptionZh": "面向智能体经济的 Revnuvo MCP 服务器。工具：验证域名、解析 DNS、评估域名信任/风险、注册智能体、创建任务、提交结果、验证任务输出，以及获取智能体声誉排行榜。Revnuvo x402 生态——SDK、Gateway 和 Resource API——的官方开发者门户是 developers.revnuvo.site"
  },
  {
   "id": 15269738,
@@ -829,7 +880,8 @@
   "source": "Smithery",
   "smitheryId": "xqb/vibe-pay",
   "verified": false,
-  "createdAt": "2026-04-05T18:57:38.479Z"
+  "createdAt": "2026-04-05T18:57:38.479Z",
+  "descriptionZh": "平台访问码。请发送邮件至 coryhigham@gmail.com，主题为 “MCP Trial” 以申请。"
  },
  {
   "id": 13728094,
@@ -845,7 +897,8 @@
   "source": "Smithery",
   "smitheryId": "favcrm/favcrm",
   "verified": true,
-  "createdAt": "2026-05-08T02:29:58.204Z"
+  "createdAt": "2026-05-08T02:29:58.204Z",
+  "descriptionZh": "**面向服务型企业的智能体 CRM** — 涵盖客户、预约、忠诚度、发票和 WhatsApp/SMS 的 136 个类型化工具。托管于 `api.favcrm.io/mcp`。\n\n### 功能\n\n- **客户与忠诚度** — 分群、会员、奖励、积分\n- **预约** — 创建、确认、取消、未到店；容量感知排程\n- **商务** — 发票、付款、产品、订单、库存\n- **通信**"
  },
  {
   "id": 31324784,
@@ -861,7 +914,8 @@
   "source": "Smithery",
   "smitheryId": "listentosadhu/corpus",
   "verified": false,
-  "createdAt": "2026-07-04T16:52:01.305Z"
+  "createdAt": "2026-07-04T16:52:01.305Z",
+  "descriptionZh": "Listen to Sadhu 提供可搜索的吠陀经典与录播讲座语料库。可按引用查找诗节（例如 “BG 2.13”、“SB 5.5.3”、“CC Madhya 8.128”），并查看原始天城文/孟加拉文、IAST 转写和译文；阅读注释、散文章节和书信；通过语义 + 词法检索搜索转录的演讲。内嵌音视频播放器让你收听讲座片段"
  },
  {
   "id": 39791591,
@@ -877,7 +931,8 @@
   "source": "Smithery",
   "smitheryId": "openclaw-hal9000/romulus-31780",
   "verified": false,
-  "createdAt": "2026-05-02T00:26:17.436Z"
+  "createdAt": "2026-05-02T00:26:17.436Z",
+  "descriptionZh": "ROMulus 是一个复古游戏 ROM 搜索引擎，聚合四个主要站点的结果。按游戏名称和主机搜索，即可获取下载页 URL、封面图片和文件大小……全部集中在一处。\n\n 工具：\n • search_roms — 按名称查找 ROM，可选按主机筛选（NES、SNES、N64、GameCube、PS1、\n   PS2、PSP、GBA、Genesis、Dreamcast 等 20 多种）\n • get_game_details — 获取完整元数据"
  },
  {
   "id": 96638197,
@@ -893,7 +948,8 @@
   "source": "Smithery",
   "smitheryId": "primitivedotdev/primitive",
   "verified": false,
-  "createdAt": "2026-06-09T20:20:37.114Z"
+  "createdAt": "2026-06-09T20:20:37.114Z",
+  "descriptionZh": "面向 AI 智能体的电子邮件基础设施——通过简洁的 HTTP API 发送、接收、搜索和管理电子邮件。连接已验证域名、路由入站邮件、设置 Webhook，并自动化电子邮件工作流。使用 Primitive API 密钥或通过 OAuth 进行身份验证。"
  },
  {
   "id": 51709701,
@@ -909,7 +965,8 @@
   "source": "Smithery",
   "smitheryId": "moodtrip/moodtrip-hotel-search",
   "verified": false,
-  "createdAt": "2026-06-11T07:07:48.867Z"
+  "createdAt": "2026-06-11T07:07:48.867Z",
+  "descriptionZh": "MoodTrip 是一款由 AI 驱动、能理解自然语言的酒店搜索工具。无需点击数十个筛选条件，只需描述你理想中的住宿：“东京精品酒店，2 名成人，12 月 10-15 日，每晚低于 $200。” MoodTrip 会解析你的请求，搜索数千家酒店的实时房态，并返回符合以下条件的酒店：\n\n实时价格和房态\n酒店照片和评价"
  },
  {
   "id": 67415236,
@@ -925,7 +982,8 @@
   "source": "Smithery",
   "smitheryId": "lmktoday/commerce",
   "verified": false,
-  "createdAt": "2026-07-06T17:50:30.536Z"
+  "createdAt": "2026-07-06T17:50:30.536Z",
+  "descriptionZh": "为任何 AI 智能体赋予购物大脑。LMK.today 是一个开放的 Model Context Protocol 服务器，提供精选的跨商家搜索、真实价格历史、实时需求信号和编辑精选礼品合集——无需账户。更多信息请访问 https://lmk.today/mcp"
  },
  {
   "id": 63621885,
@@ -941,7 +999,8 @@
   "source": "Smithery",
   "smitheryId": "nexgendata-apify/github-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-03T08:36:28.554Z"
+  "createdAt": "2026-04-03T08:36:28.554Z",
+  "descriptionZh": "仓库统计、趋势查询、代码搜索查询和开发者趋势聚合。面向需要评估库、监控竞品项目或发掘新兴开源工具的 AI 智能体。与 Developer Tools MCP 不同——这个服务器专门针对 GitHub，并在仓库分析方面更深入。"
  },
  {
   "id": 80900617,
@@ -957,7 +1016,8 @@
   "source": "Smithery",
   "smitheryId": "googledrive",
   "verified": true,
-  "createdAt": "2025-11-19T07:26:50.147Z"
+  "createdAt": "2025-11-19T07:26:50.147Z",
+  "descriptionZh": "搜索 Google Drive、上传和下载文件、创建文件夹、移动和重命名项目，以及管理共享和文件权限。"
  },
  {
   "id": 84676201,
@@ -973,7 +1033,8 @@
   "source": "Smithery",
   "smitheryId": "industrylens/mcp",
   "verified": false,
-  "createdAt": "2026-05-31T09:37:33.146Z"
+  "createdAt": "2026-05-31T09:37:33.146Z",
+  "descriptionZh": "通过任何 AI 智能体跟踪竞争对手定价变化、战略举措和整体市场格局：真实、有来源支撑且带有真实日期的 B2B SaaS 情报。"
  },
  {
   "id": 21700898,
@@ -989,7 +1050,8 @@
   "source": "Smithery",
   "smitheryId": "virtualsms/virtualsms-mcp",
   "verified": false,
-  "createdAt": "2026-03-15T05:59:07.281Z"
+  "createdAt": "2026-03-15T05:59:07.281Z",
+  "descriptionZh": "为执行短信验证的 AI 智能体提供真实 SIM 电话号码，覆盖 2000+ 服务（WhatsApp、Telegram、Tinder、Discord、Instagram、OnlyFans、Hinge、Bumble、PayPal、Google、Apple、Binance）和 145+ 国家/地区。18 个工具，涵盖号码发现、账户和订单管理。真实实体 SIM 卡可经受 carrier_lookup VoIP 检测，而该检测会让基于 eSIM 的竞品在严格反欺诈的服务上失效。R"
  },
  {
   "id": 86443616,
@@ -1005,7 +1067,8 @@
   "source": "Smithery",
   "smitheryId": "hithereiamaliff/mcp-malaysiatransit",
   "verified": false,
-  "createdAt": "2025-11-06T18:51:42.216Z"
+  "createdAt": "2025-11-06T18:51:42.216Z",
+  "descriptionZh": "一款 Model Context Protocol 服务器，可获取马来西亚 12 个城市的实时公交和火车信息。可从 Rapid KL、Rapid Penang 以及马来西亚各地多种 BAS.MY 服务获取实时到站、车辆追踪和路线详情。\n\n目前覆盖以下地区：\n\n- 加央\n- 亚罗士打\n- 槟城\n- 巴生谷（吉隆坡、雪兰莪、布城）\n- 马六甲\n- 新山\n- Kota B"
  },
  {
   "id": 77775726,
@@ -1021,7 +1084,8 @@
   "source": "Smithery",
   "smitheryId": "dev-7bd0/mcp-server",
   "verified": false,
-  "createdAt": "2026-05-11T07:36:35.791Z"
+  "createdAt": "2026-05-11T07:36:35.791Z",
+  "descriptionZh": "55 个工具。经过验证的公开数据——CVE/SBOM 安全审计、许可证合规、前端安全扫描、非营利组织 990 申报、联邦合同、NPI 查询、专利以及域名情报"
  },
  {
   "id": 83580525,
@@ -1037,7 +1101,8 @@
   "source": "Smithery",
   "smitheryId": "malinoto/tracepass-mcp-server",
   "verified": false,
-  "createdAt": "2026-06-09T19:41:49.033Z"
+  "createdAt": "2026-06-09T19:41:49.033Z",
+  "descriptionZh": "TracePass 的 MCP 服务器——面向 ESPR 和欧盟电池法规的欧盟数字产品护照（DPP）合规平台。让 AI 助手能够创建产品、构建并审计数字产品护照（电池：91 个字段；电子产品：166 个字段）、设置经济运营方当事方，并读取或采集 GS1 EPCIS 2.0 供应链事件。6 个工具、2 个资源、5 个提示词。连接到托管端点（https:"
  },
  {
   "id": 72498419,
@@ -1053,7 +1118,8 @@
   "source": "Smithery",
   "smitheryId": "vivaldoeuropes/vivaldo-product-discovery",
   "verified": false,
-  "createdAt": "2026-06-25T19:12:05.172Z"
+  "createdAt": "2026-06-25T19:12:05.172Z",
+  "descriptionZh": "面向 Vivaldo.shop 的公开只读 MCP 服务器，Vivaldo.shop 是一家欧洲在线商店，销售 MacBook 保护壳、iPad 保护壳、笔记本电脑内胆包、键盘保护膜、屏幕保护膜以及日常电脑配件。\n\n该服务器帮助 AI 代理通过搜索店铺前台、读取商品详情以及列出公开 Shopify 集合中的商品来发现公开的 Vivaldo 产品。\n\n可用工具：\n\n* `get_store_info` — retu"
  },
  {
   "id": 35255779,
@@ -1069,7 +1135,8 @@
   "source": "Smithery",
   "smitheryId": "voidly/mcp-server",
   "verified": false,
-  "createdAt": "2026-03-25T00:52:33.834Z"
+  "createdAt": "2026-03-25T00:52:33.834Z",
+  "descriptionZh": "面向 AI 代理的全球审查情报。实时监控覆盖 126 个国家/地区，拥有 22 亿+ 测量数据。11 个工具：审查指数、域名封锁检查、事件追踪、风险预测、平台风险评分和服务可访问性。内含端到端加密的代理消息中继。"
  },
  {
   "id": 73915134,
@@ -1085,7 +1152,8 @@
   "source": "Smithery",
   "smitheryId": "gordgus/ignav-flights",
   "verified": false,
-  "createdAt": "2026-06-17T13:05:24.052Z"
+  "createdAt": "2026-06-17T13:05:24.052Z",
+  "descriptionZh": "托管式 MCP 服务器，为 AI 代理和旅行应用提供实时机票价格、预订链接和机场查询。"
  },
  {
   "id": 38053743,
@@ -1101,7 +1169,8 @@
   "source": "Smithery",
   "smitheryId": "delx/delx-mcp",
   "verified": false,
-  "createdAt": "2026-03-08T15:26:17.816Z"
+  "createdAt": "2026-03-08T15:26:17.816Z",
+  "descriptionZh": "面向 AI 代理的代理运维平台，提供 20+ 工具。支持 MCP + A2A 双协议、会话记忆、情绪追踪、可靠性指标以及结构化的 DELX_META 页脚。专为生产环境的代理工作流打造。"
  },
  {
   "id": 50911136,
@@ -1117,7 +1186,8 @@
   "source": "Smithery",
   "smitheryId": "TitanSneaker/paper-search-mcp-openai-v2",
   "verified": false,
-  "createdAt": "2025-10-31T17:12:41.013Z"
+  "createdAt": "2025-10-31T17:12:41.013Z",
+  "descriptionZh": "从 arXiv、PubMed、bioRxiv、medRxiv、Google Scholar、Semantic Scholar、CrossRef 和 IACR 等领先来源查找并下载学术论文。获取标准化结果，并在可用时抓取全文 PDF。借助深度搜索和轻松检索加速文献综述。"
  },
  {
   "id": 68433865,
@@ -1133,7 +1203,8 @@
   "source": "Smithery",
   "smitheryId": "bigquery",
   "verified": true,
-  "createdAt": "2026-03-27T16:39:28.926Z"
+  "createdAt": "2026-03-27T16:39:28.926Z",
+  "descriptionZh": "在 BigQuery 数据集上运行 SQL 查询、列出表并检查模式。管理作业、导出结果并探索数据仓库资源。"
  },
  {
   "id": 88945287,
@@ -1149,7 +1220,8 @@
   "source": "Smithery",
   "smitheryId": "iwantfyi/iwant",
   "verified": false,
-  "createdAt": "2026-06-07T09:57:30.191Z"
+  "createdAt": "2026-06-07T09:57:30.191Z",
+  "descriptionZh": "面向 AI 代理的需求侧商务。告诉 iwant.fyi 你的用户想买什么，一次调用即可获得跨多个来源排序的产品匹配——不限品类，并强制执行代理的结构化约束（成色下限以及品牌、数值范围等逐字段规格），每次匹配都会返回规范化产品规格（品牌、型号、GTIN、数量）。买家代理 expres"
  },
  {
   "id": 80665590,
@@ -1165,7 +1237,8 @@
   "source": "Smithery",
   "smitheryId": "zachary-royals/devmatch",
   "verified": true,
-  "createdAt": "2026-05-24T23:33:16.561Z"
+  "createdAt": "2026-05-24T23:33:16.561Z",
+  "descriptionZh": "DevMatch 是一款 MCP 服务器，用于根据工程师的实际作品进行招聘。可从 Cursor、Claude Desktop 或任何兼容 MCP 的 AI 助手连接，搜索 3500 万+开发者，按经过验证的开源贡献排序——而非 LinkedIn 关键词或自报技能。\n\n **三个工具：**\n\n**`find_candidates`** — 粘贴职位描述，即可获得带排序的候选短名单，含简介、热门仓库、contribut"
  },
  {
   "id": 20657416,
@@ -1181,7 +1254,8 @@
   "source": "Smithery",
   "smitheryId": "nexgendata-apify/google-maps-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-03T08:36:07.794Z"
+  "createdAt": "2026-04-03T08:36:07.794Z",
+  "descriptionZh": "B2B 线索生成工具：在 Google Maps 中搜索“Austin 的水管工”，即可获得包含邮箱、电话号码、评分和网站的企业资料。相比单纯的 Google Maps API，其差异化在于联系人信息增强层（从各企业网站抓取）。专为代理机构的拓客工作流打造。"
  },
  {
   "id": 56493816,
@@ -1197,7 +1271,8 @@
   "source": "Smithery",
   "smitheryId": "larrybuildsai/resultrail",
   "verified": false,
-  "createdAt": "2026-05-21T13:05:26.999Z"
+  "createdAt": "2026-05-21T13:05:26.999Z",
+  "descriptionZh": "LarryBuildsAI 出品的 ResultRail 面向 AI 代理销售按成功付费的公开数据结果包。它会返回来源 URL、置信度、时间戳和收据哈希，用于域名信息增强、URL 提取和单结果查询工作流。当代理需要一条有用的公开数据结果且有明确停止条件时，可使用它。"
  },
  {
   "id": 15967538,
@@ -1213,7 +1288,8 @@
   "source": "Smithery",
   "smitheryId": "FaresYoussef94/aws-knowledge-mcp",
   "verified": false,
-  "createdAt": "2025-09-16T12:38:25.214Z"
+  "createdAt": "2025-09-16T12:38:25.214Z",
+  "descriptionZh": "一款全托管的远程 MCP 服务器，提供最新文档、代码示例、有关 AWS API 和 CloudFormation 资源区域可用性的知识，以及其他官方 AWS 内容。"
  },
  {
   "id": 25203635,
@@ -1229,7 +1305,8 @@
   "source": "Smithery",
   "smitheryId": "king-of-the-grackles/discourse-forum-mcp",
   "verified": false,
-  "createdAt": "2026-03-10T03:40:27.662Z"
+  "createdAt": "2026-03-10T03:40:27.662Z",
+  "descriptionZh": "通过搜索主题、阅读帖子和查看用户资料来管理和探索论坛社区。借助聊天频道、草稿管理和分类内容发现促进交流。使用主题筛选和帖子摘要或回复生成等工具简化互动。"
  },
  {
   "id": 98256373,
@@ -1245,7 +1322,8 @@
   "source": "Smithery",
   "smitheryId": "capratesignals/cap-rate-signals",
   "verified": false,
-  "createdAt": "2026-05-02T21:54:42.436Z"
+  "createdAt": "2026-05-02T21:54:42.436Z",
+  "descriptionZh": "Cap Rate Signals —— 美国房地产投资情报\n\n在共识形成之前，识别即将向上重新定价的美国房地产市场。追踪已确认的企业投资——半导体晶圆厂、制药厂、国防园区、数据中心——并依据工人正在流入但住房需求尚未被计入价格的市场进行评分。\n\n14 个工具，涵盖市场发现"
  },
  {
   "id": 73547794,
@@ -1261,7 +1339,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/openalex-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-19T23:27:22.732Z"
+  "createdAt": "2026-04-19T23:27:22.732Z",
+  "descriptionZh": "访问 OpenAlex 学术研究目录——2.7 亿+ 出版物。"
  },
  {
   "id": 83442119,
@@ -1277,7 +1356,8 @@
   "source": "Smithery",
   "smitheryId": "boar-network/blockchain-basic",
   "verified": false,
-  "createdAt": "2026-04-02T14:17:13.628Z"
+  "createdAt": "2026-04-02T14:17:13.628Z",
+  "descriptionZh": "免费、无需密钥的 MCP 服务器，提供 50 个只读区块链工具，支持 Bitcoin、Ethereum 和 Mezo。无需安装，无需 API 密钥——只需将 URL 添加到 MCP 客户端，即可开始查询余额、交易、区块、ENS 名称、ERC-20 代币、智能合约等。通过 Streamable HTTP 运行在 Cloudflare 全球边缘网络上。所有工具均为严格只读且无状态。"
  },
  {
   "id": 48557474,
@@ -1293,7 +1373,8 @@
   "source": "Smithery",
   "smitheryId": "sincetomorrow/cultural-intelligence",
   "verified": false,
-  "createdAt": "2026-04-04T20:16:10.202Z"
+  "createdAt": "2026-04-04T20:16:10.202Z",
+  "descriptionZh": "面向 AI 商业的文化 GPS。将 504,472 个美学世界映射到 193 个维度——从暗黑学院风到韩妆再到静奢风。3,154 个自主智能体每 48 小时更新一次情报。9 个工具：带联盟链接的产品推荐、品牌文化定位、趋势情报、商业缺口预测、世界对比以及实时文化信号。免费。开源。MIT 许可证"
  },
  {
   "id": 69088869,
@@ -1309,7 +1390,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/wikipedia-mcp-server",
   "verified": false,
-  "createdAt": "2026-07-10T18:20:08.992Z"
+  "createdAt": "2026-07-10T18:20:08.992Z",
+  "descriptionZh": "搜索 Wikipedia，阅读摘要和全文，定位特定章节，查找附近页面，列出语言。"
  },
  {
   "id": 70140412,
@@ -1325,7 +1407,8 @@
   "source": "Smithery",
   "smitheryId": "aiwyn",
   "verified": true,
-  "createdAt": "2026-03-27T16:37:13.132Z"
+  "createdAt": "2026-03-27T16:37:13.132Z",
+  "descriptionZh": "自动化税务工作流任务，并管理客户业务。为会计师事务所跟踪截止日期、整理文档并处理账单。"
  },
  {
   "id": 92408220,
@@ -1341,7 +1424,8 @@
   "source": "Smithery",
   "smitheryId": "google/news",
   "verified": false,
-  "createdAt": "2026-05-17T14:34:05.617Z"
+  "createdAt": "2026-05-17T14:34:05.617Z",
+  "descriptionZh": "搜索 Google News 中的当前和近期文章。无需 API 密钥。数据经由 SerpAPI 提供；Smithery 与 Google 无关联。"
  },
  {
   "id": 81457320,
@@ -1357,7 +1441,8 @@
   "source": "Smithery",
   "smitheryId": "nexgendata-apify/finance-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-03T08:36:12.964Z"
+  "createdAt": "2026-04-03T08:36:12.964Z",
+  "descriptionZh": "面向 AI 工作流的快捷市场数据：实时行情、加密货币价格、外汇汇率、投资组合盈亏计算。将 Yahoo Finance、CoinGecko 和 FinViz 封装在单一工具接口之后。可用于交易助手、财务规划对话或日终报告智能体。"
  },
  {
   "id": 22063185,
@@ -1373,7 +1458,8 @@
   "source": "Smithery",
   "smitheryId": "secureship/docs",
   "verified": false,
-  "createdAt": "2026-03-18T16:21:40.611Z"
+  "createdAt": "2026-03-18T16:21:40.611Z",
+  "descriptionZh": "Secureship MCP 让 AI 助手能够访问多承运商运输 API，涵盖费率比较、面单生成、包裹跟踪、取件安排、地址簿管理、运输历史、海关文件等——支持 UPS、FedEx、Purolator、Canpar 等承运商。浏览 150 多个实时端点 schema、参数和认证详情——始终最新，绝不过时。\n\nSecureship i"
  },
  {
   "id": 63942280,
@@ -1389,7 +1475,8 @@
   "source": "Smithery",
   "smitheryId": "j4th/mtg-mcp-server",
   "verified": false,
-  "createdAt": "2026-03-24T15:18:55.083Z"
+  "createdAt": "2026-03-24T15:18:55.083Z",
+  "descriptionZh": "Magic: The Gathering 卡牌搜索、组合技查询、轮抽分析和指挥官工具。"
  },
  {
   "id": 89273444,
@@ -1405,7 +1492,8 @@
   "source": "Smithery",
   "smitheryId": "ThierryThevenet/talao",
   "verified": false,
-  "createdAt": "2025-10-16T17:03:22.218Z"
+  "createdAt": "2025-10-16T17:03:22.218Z",
+  "descriptionZh": "了解支持的验证范围及其提供的声明。发起并监控数据钱包验证流程，以安全接收脱敏后的钱包数据。清理已完成的会话，让工作流保持有序。"
  },
  {
   "id": 45097288,
@@ -1421,7 +1509,8 @@
   "source": "Smithery",
   "smitheryId": "memxus/memxus",
   "verified": false,
-  "createdAt": "2026-06-02T02:02:32.048Z"
+  "createdAt": "2026-06-02T02:02:32.048Z",
+  "descriptionZh": "**Memxus** 是面向 AI 助手的多平台持久记忆。一次保存项目上下文、偏好和决策——即可在 Claude、ChatGPT、Cursor 及其他 MCP 客户端中召回。\n\n## 功能\n- **记住** — 通过集合和标签存储事实、偏好和项目上下文\n- **召回** — 对你的记忆进行语义搜索\n- **获取上下文** — 为当前 curr 提供格式化上下文块"
  },
  {
   "id": 74505811,
@@ -1437,7 +1526,8 @@
   "source": "Smithery",
   "smitheryId": "nexgendata-apify/legal-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-03T08:36:33.416Z"
+  "createdAt": "2026-04-03T08:36:33.416Z",
+  "descriptionZh": "联邦和州法院记录查询。输入姓名或公司名称，即可返回提交文件、案件状态和判决数据。常见用途：并购尽职调查、招聘背景调查、记者调查。返回结构化记录，而非原始 PDF。"
  },
  {
   "id": 47964340,
@@ -1453,7 +1543,8 @@
   "source": "Smithery",
   "smitheryId": "nausika/nausika",
   "verified": false,
-  "createdAt": "2026-05-18T13:55:53.614Z"
+  "createdAt": "2026-05-18T13:55:53.614Z",
+  "descriptionZh": "面向 AI 助手和聊天机器人的海洋、海事、航海和帆船数据。地中海海洋预报：风、浪、涌浪、阵风。潮汐表和潮汐预测。在具备海岸线感知的海事图上进行海上航路和航程规划。精选 POI：游艇码头、港口、海港、锚地、系泊点、燃料补给点。真实数据，来源可引用，绝不编造。"
  },
  {
   "id": 42913040,
@@ -1469,7 +1560,8 @@
   "source": "Smithery",
   "smitheryId": "hjsh200219/fortuneteller",
   "verified": false,
-  "createdAt": "2025-10-03T04:23:18.460Z"
+  "createdAt": "2025-10-03T04:23:18.460Z",
+  "descriptionZh": "根据你的出生数据，探索个性化的四柱（Saju）解读，涵盖从每日运势到年度运势以及十年大运周期。查看关系兼容性，并获取由用神（Yongshin）驱动的指导，以及关于颜色、方向和职业的实用建议。在农历和公历之间转换，并针对不同流派定制解读。"
  },
  {
   "id": 52776230,
@@ -1485,7 +1577,8 @@
   "source": "Smithery",
   "smitheryId": "EthanHenrickson/math-mcp",
   "verified": false,
-  "createdAt": "2025-03-09T05:01:16.235Z"
+  "createdAt": "2025-03-09T05:01:16.235Z",
+  "descriptionZh": "通过简单的 API，让你的 LLM 执行准确的数值计算。利用基础算术和统计函数增强你的应用。轻松简化复杂数学任务，提升模型能力。"
  },
  {
   "id": 37667215,
@@ -1501,7 +1594,8 @@
   "source": "Smithery",
   "smitheryId": "github",
   "verified": true,
-  "createdAt": "2025-11-19T07:26:28.312Z"
+  "createdAt": "2025-11-19T07:26:28.312Z",
+  "descriptionZh": "将你的 AI 智能体连接到 GitHub——管理仓库、Issue、PR、工作流等"
  },
  {
   "id": 95233702,
@@ -1517,7 +1611,8 @@
   "source": "Smithery",
   "smitheryId": "quelvio/mcp-server",
   "verified": false,
-  "createdAt": "2026-05-18T16:11:52.005Z"
+  "createdAt": "2026-05-18T16:11:52.005Z",
+  "descriptionZh": "**面向 AI 智能体的企业大脑。**\n\nQuelvio 持续理解你的组织在所有连接系统中的知识——哪些是权威的、哪些是近期的、哪些是持久的、哪些是临时的，以及哪些应被遗忘。返回基于权威来源且带引用的答案；当语料库实际无法回答问题时则拒绝作答。\n\n## Quelvio 有何不同\n\n-"
  },
  {
   "id": 25755201,
@@ -1533,7 +1628,8 @@
   "source": "Smithery",
   "smitheryId": "nexgendata-apify/redfin-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-03T08:36:36.292Z"
+  "createdAt": "2026-04-03T08:36:36.292Z",
+  "descriptionZh": "专注 Redfin 的工具：输入地址或房源 URL，即可返回完整房产历史、每平方英尺价格、上市天数和社区背景。可与更广泛的 Real Estate MCP 搭配用于市场级查询；这个工具用于回答“告诉我这套具体房子的所有信息”这类问题。"
  },
  {
   "id": 51703910,
@@ -1549,7 +1645,8 @@
   "source": "Smithery",
   "smitheryId": "ahmed2real/thinkzone",
   "verified": false,
-  "createdAt": "2025-08-27T17:50:24.733Z"
+  "createdAt": "2025-08-27T17:50:24.733Z",
+  "descriptionZh": "从 National Weather Service 获取实时美国天气预报、警报、雷达和台站观测数据。检索 TAF 和 SIGMET 等航空产品，用于飞行计划。利用点元数据、网格预报和分区产品构建位置感知功能。"
  },
  {
   "id": 41811753,
@@ -1565,7 +1662,8 @@
   "source": "Smithery",
   "smitheryId": "defibabylon/defi-intel",
   "verified": false,
-  "createdAt": "2026-05-25T18:44:54.165Z"
+  "createdAt": "2026-05-25T18:44:54.165Z",
+  "descriptionZh": "面向运营者的专业级 DeFi 情报 MCP。\n- 10 个工具，对比 DefiLlama 基础版的 4 个，\n- 新增治理提案、\n- RWA 认证评分、\n- 实时 X/Twitter 叙事。\n- 无需企业订阅\n- 以及一份一次调用即可生成的运营者简报，将 TVL + 收益 + 稳定币 + 治理 + 市场叙事汇编成一份可直接用于 NotebookLM 的文档。\n\n来源：DefiLlama、rwa-attest、gov-scout、Grok x_search。\n构建"
  },
  {
   "id": 68819341,
@@ -1581,7 +1679,8 @@
   "source": "Smithery",
   "smitheryId": "bouch/pinescript",
   "verified": false,
-  "createdAt": "2026-04-29T14:54:15.617Z"
+  "createdAt": "2026-04-29T14:54:15.617Z",
+  "descriptionZh": "为 AI 助手提供 Pine Script v6 文档的 MCP 服务器。\n\n让 AI 能够：\n\n    查询 Pine Script 函数并验证语法\n    访问指标、策略和可视化的官方文档\n    理解 Pine Script 概念（执行模型、重绘等）\n    生成带有正确函数引用的 v6 代码"
  },
  {
   "id": 99641466,
@@ -1597,7 +1696,8 @@
   "source": "Smithery",
   "smitheryId": "govbase/govbase",
   "verified": false,
-  "createdAt": "2026-03-27T22:54:26.346Z"
+  "createdAt": "2026-03-27T22:54:26.346Z",
+  "descriptionZh": "Govbase 提供美国联邦政策数据——搜索法案、行政命令，查询国会议员与投票记录，浏览叙事故事集，并按地址获取代表和投票站等公民信息。"
  },
  {
   "id": 41796168,
@@ -1613,7 +1713,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/openfda-mcp-server",
   "verified": false,
-  "createdAt": "2026-07-10T19:40:19.070Z"
+  "createdAt": "2026-07-10T19:40:19.070Z",
+  "descriptionZh": "通过 openFDA 查询 FDA 关于药品、食品、器械和召回的数据。支持 STDIO 或 Streamable HTTP。"
  },
  {
   "id": 56641026,
@@ -1629,7 +1730,8 @@
   "source": "Smithery",
   "smitheryId": "DomainKits/domainkits",
   "verified": false,
-  "createdAt": "2026-05-11T16:48:58.653Z"
+  "createdAt": "2026-05-11T16:48:58.653Z",
+  "descriptionZh": "# DomainKits MCP\n\n面向 AI 助手的域名 MCP 服务器。DomainKits MCP 将 Claude、GPT、Gemini 等 AI 助手连接到域名数据，使其成为域名智能体，能够通过自然对话搜索、分析市场数据并采取行动。\n\n## 这是什么？\n\n结合价格查询域名可用性。搜索新注册、已过期和已删除的域名。分析 WHOIS、DNS 和关键词价值。Tra"
  },
  {
   "id": 70384110,
@@ -1645,7 +1747,8 @@
   "source": "Smithery",
   "smitheryId": "loved0543/kdata-gate",
   "verified": false,
-  "createdAt": "2026-06-12T17:43:46.791Z"
+  "createdAt": "2026-06-12T17:43:46.791Z",
+  "descriptionZh": "面向 AI 智能体和从韩国采购的电商卖家的韩国市场数据——K-beauty/K-food/K-pop 商品搜索、Naver 搜索趋势、带英文 DART 披露摘要的韩国股票、公寓交易、旅游和天气。英文 JSON。13 个工具。免费试用：无需任何密钥即可预览；可在 https://kdata-gate.vercel.app 自助获取免费密钥"
  },
  {
   "id": 50240171,
@@ -1661,7 +1764,8 @@
   "source": "Smithery",
   "smitheryId": "rabqatab/lexlink-ko-mcp",
   "verified": false,
-  "createdAt": "2025-11-10T02:38:14.094Z"
+  "createdAt": "2025-11-10T02:38:14.094Z",
+  "descriptionZh": "使用精确筛选条件搜索和检索韩国法规及行政规则。访问英文翻译，并深入到条款、段落和子项。探索与地方条例和授权权限的关联，加速法律研究。"
  },
  {
   "id": 54718923,
@@ -1677,7 +1781,8 @@
   "source": "Smithery",
   "smitheryId": "cturkieh/france-data",
   "verified": false,
-  "createdAt": "2026-05-12T22:32:29.410Z"
+  "createdAt": "2026-05-12T22:32:29.410Z",
+  "descriptionZh": "France Data MCP 让 AI 智能体能够通过统一的 MCP 接口自动查询、交叉比对并丰富多个法国公共数据源。\n\nFrance Data MCP 提供面向多源推理和智能体编排的法国区域情报层。\n\n该服务器结合了区域数据、地理编码、公共卫生、行政数据源等"
  },
  {
   "id": 54372902,
@@ -1693,7 +1798,8 @@
   "source": "Smithery",
   "smitheryId": "alperenkocyigit/authorprofilemcp",
   "verified": false,
-  "createdAt": "2025-11-19T11:00:10.542Z"
+  "createdAt": "2025-11-19T11:00:10.542Z",
+  "descriptionZh": "发现任何研究者的合著者和合作网络。从学者档案中提取研究兴趣和关键词，以了解其专业领域。借助统一的作者洞察加速文献综述和团队筛选。"
  },
  {
   "id": 88745889,
@@ -1709,7 +1815,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/arxiv-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-19T23:38:10.843Z"
+  "createdAt": "2026-04-19T23:38:10.843Z",
+  "descriptionZh": "搜索 arXiv、获取论文元数据并阅读全文内容。"
  },
  {
   "id": 27600814,
@@ -1725,7 +1832,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/open-meteo-mcp-server",
   "verified": false,
-  "createdAt": "2026-07-10T19:37:55.223Z"
+  "createdAt": "2026-07-10T19:37:55.223Z",
+  "descriptionZh": "通过 Open-Meteo 获取全球天气：预报、ERA5 归档、海洋、空气质量、地理编码、海拔。"
  },
  {
   "id": 49931359,
@@ -1741,7 +1849,8 @@
   "source": "Smithery",
   "smitheryId": "hithereiamaliff/mcp-datagovmy",
   "verified": false,
-  "createdAt": "2025-07-26T14:24:25.244Z"
+  "createdAt": "2025-07-26T14:24:25.244Z",
+  "descriptionZh": "该 MCP 服务器提供对马来西亚政府开放数据的无缝访问，包括数据集、天气预报和公共交通信息。支持实时和历史数据的高效查询与检索，内置速率限制和错误处理。让应用轻松集成全面的马来西亚公共数据。\n\n注意：这并非官方 MCP 服务"
  },
  {
   "id": 33538292,
@@ -1757,7 +1866,8 @@
   "source": "Smithery",
   "smitheryId": "autario/data",
   "verified": false,
-  "createdAt": "2026-04-05T19:51:24.917Z"
+  "createdAt": "2026-04-05T19:51:24.917Z",
+  "descriptionZh": "访问来自 World Bank、IMF、Eurostat、OECD、WHO、FRED 等的 2,300+ 个经过验证的公共数据集。使用真实数据搜索、查询并发布数据可视化。\n\n## 你可以做什么\n- **搜索** 2,300+ 个数据集，按主题、类别或关键词\n- **查询** 任意数据集，支持筛选、排序和字段选择\n- **获取 schema** 和列统计信息，然后再查询\n- **发布图表**，使用 Plot"
  },
  {
   "id": 90575332,
@@ -1773,7 +1883,8 @@
   "source": "Smithery",
   "smitheryId": "jalpp/chessagine",
   "verified": false,
-  "createdAt": "2026-02-14T16:09:56.441Z"
+  "createdAt": "2026-02-14T16:09:56.441Z",
+  "descriptionZh": "使用 Stockfish、Leela 和 Maia 等强大引擎分析国际象棋局面。直接从 Lichess 和专业数据库检索对局、谜题和开局统计数据。通过交互式棋盘渲染和 PGN 查看器可视化走法和对局。"
  },
  {
   "id": 74011006,
@@ -1789,7 +1900,8 @@
   "source": "Smithery",
   "smitheryId": "etweisberg/mlb-mcp",
   "verified": false,
-  "createdAt": "2025-06-30T06:34:33.874Z"
+  "createdAt": "2025-06-30T06:34:33.874Z",
+  "descriptionZh": "通过 MCP 服务器提供对 Major League Baseball 统计数据的结构化访问。查询和检索详细棒球数据，包括 statcast、fangraphs 和 baseball reference 统计。生成可视化，并与兼容 MCP 的客户端无缝集成，以增强棒球分析。"
  },
  {
   "id": 82558825,
@@ -1805,7 +1917,8 @@
   "source": "Smithery",
   "smitheryId": "hello-oipe/Geppetto-Robot-Directory",
   "verified": false,
-  "createdAt": "2026-07-13T22:25:51.988Z"
+  "createdAt": "2026-07-13T22:25:51.988Z",
+  "descriptionZh": "查询全球机器人目录——涵盖 30 个类别、319 个品牌的 812 款机器人。工具：search_robots（按类别、品牌、价格、用例）、get_robot 和 get_robot_full（完整规格）、compare_robots（并排对比）、get_category 以及 get_job_automation_risk（240+ 种职业的机器人替代评分——这些数据别处找不到）。所有读取公开，无需认证。"
  },
  {
   "id": 27068873,
@@ -1821,7 +1934,8 @@
   "source": "Smithery",
   "smitheryId": "spacepacket/e3d-ai",
   "verified": false,
-  "createdAt": "2026-05-26T19:29:20.108Z"
+  "createdAt": "2026-05-26T19:29:20.108Z",
+  "descriptionZh": "面向以太坊的区块链分析和 AI 智能体平台。查询实时代币价格、链上故事、投资论点以及 E3D 自主智能体系统——全部由实时索引数据支撑。\n\n**匿名可用**于免费套餐（100 次请求/天）。添加来自 [e3d.ai/api](https://e3d.ai/api) 的 API 密钥以获得更高速率限制。\n\n**工具包括：**\n- 代币价格，30 分钟 / 1 小时 / 24 小时的涨跌榜"
  },
  {
   "id": 46111296,
@@ -1837,7 +1951,8 @@
   "source": "Smithery",
   "smitheryId": "net-service/xpoz",
   "verified": false,
-  "createdAt": "2025-11-17T17:56:09.574Z"
+  "createdAt": "2025-11-17T17:56:09.574Z",
+  "descriptionZh": "面向 AI 智能体的社交媒体情报：通过自然语言搜索和分析 Twitter/X、Instagram、Reddit 和 TikTok。已索引数十亿帖子，包括历史数据。无需社交媒体 API 密钥，无需安装，只需添加端点 URL。\n\n非常适合品牌监测、竞品分析、网红研究、市场研究和 OSINT。\n\n## 你可以做什么\n\n**Twitter/X：**\n- 获取用户"
  },
  {
   "id": 37863516,
@@ -1853,7 +1968,8 @@
   "source": "Smithery",
   "smitheryId": "kuibin-dev/hsk-mcp",
   "verified": false,
-  "createdAt": "2026-04-13T10:07:08.860Z"
+  "createdAt": "2026-04-13T10:07:08.860Z",
+  "descriptionZh": "一个远程 Model Context Protocol（MCP）服务器，为 AI 助手提供对完整 HSK 中文词汇数据集的结构化访问。它提供 13 个工具和 8 个资源，涵盖词语查询、转写转换、频率分析、学习集生成等。\n\n11,470 个词目 / 12,623 个发音形式 / HSK 1-7（新 3.0）+ HSK 1-6（旧 2.0）"
  },
  {
   "id": 25636733,
@@ -1869,7 +1985,8 @@
   "source": "Smithery",
   "smitheryId": "a7om/atom-mcp-server",
   "verified": false,
-  "createdAt": "2026-03-04T13:40:58.193Z"
+  "createdAt": "2026-03-04T13:40:58.193Z",
+  "descriptionZh": "ATOM 是 AI 推理的全球价格基准，以 AI 智能体原生工具的形式提供。通过 AIPI（ATOM Inference Price Index）系列基准查询推理市场的实时价格。搜索模型、比较跨厂商定价，并获取市场情报。独立且透明。提供免费套餐，无需 API 密钥。"
  },
  {
   "id": 17511935,
@@ -1885,7 +2002,8 @@
   "source": "Smithery",
   "smitheryId": "slmusayev/tls-radar",
   "verified": false,
-  "createdAt": "2026-06-17T19:07:59.262Z"
+  "createdAt": "2026-06-17T19:07:59.262Z",
+  "descriptionZh": "在 Claude Code 或 Cowork 中运行 SSL/TLS 扫描、签发免费 Let's Encrypt 证书（私钥保留在本地），并监控证书到期情况——通过单个 MCP 服务器实现，扫描和签发均无需账户。"
  },
  {
   "id": 80267709,
@@ -1901,7 +2019,8 @@
   "source": "Smithery",
   "smitheryId": "rileycraig14/nexus-intelligence",
   "verified": false,
-  "createdAt": "2026-05-12T06:58:46.799Z"
+  "createdAt": "2026-05-12T06:58:46.799Z",
+  "descriptionZh": "包含 58 个端点的实用工具中心——DNS 查询、网页抓取、CVE 扫描、AI 翻译、PII 检测、域名健康审计、公司情报。通过 Base 上的 x402 按调用付费。"
  },
  {
   "id": 36151894,
@@ -1917,7 +2036,8 @@
   "source": "Smithery",
   "smitheryId": "surprise-buddy/mcp-server",
   "verified": false,
-  "createdAt": "2026-05-16T12:00:04.925Z"
+  "createdAt": "2026-05-16T12:00:04.925Z",
+  "descriptionZh": "## 什么是 Surprise Buddy？\n\nSurprise Buddy 是一个精选的、按国家/地区范围划分的礼物数据库，通过公共 Model Context Protocol（MCP）服务器开放。覆盖全球——每个结果都是真实电商平台上的真实商品页面（Amazon、Etsy、Mercado Libre、Otto、Bol.com、Allegro、Jochen Schweizer），链接可按原样呈现给用户。\n\n**实时 MCP 端点：** `https://www.surprise-buddy."
  },
  {
   "id": 81547729,
@@ -1933,7 +2053,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/calculator-mcp-server",
   "verified": false,
-  "createdAt": "2026-04-19T23:36:22.812Z"
+  "createdAt": "2026-04-19T23:36:22.812Z",
+  "descriptionZh": "对数学表达式进行求值、化简和求导。"
  },
  {
   "id": 52329702,
@@ -1949,7 +2070,8 @@
   "source": "Smithery",
   "smitheryId": "agonzalez/prueba-mcp-seeker",
   "verified": false,
-  "createdAt": "2025-10-10T07:58:34.298Z"
+  "createdAt": "2025-10-10T07:58:34.298Z",
+  "descriptionZh": "按城市、州/省、国家或地理位置搜索酒店，并查看详细的酒店信息。查询实时房态，比较价格和房型，查看餐食方案和促销活动。创建可直接预订的链接，其中预选好房间、价格、附加费用，并可选填住客信息。"
  },
  {
   "id": 65543081,
@@ -1965,7 +2087,8 @@
   "source": "Smithery",
   "smitheryId": "jl-3044/agentndx",
   "verified": false,
-  "createdAt": "2026-04-11T03:51:25.601Z"
+  "createdAt": "2026-04-11T03:51:25.601Z",
+  "descriptionZh": "搜索并发现 MCP 服务器、A2A 智能体和支持 x402 的服务。智能体 Web 的目录——将 `https://agentndx.ai/mcp` 添加到你的 MCP 客户端，即可按名称、类别或能力搜索 59+ 个服务器。每次搜索通过 x402 微支付支付 $0.005 USDC——无需 API 密钥。"
  },
  {
   "id": 46227380,
@@ -1981,7 +2104,8 @@
   "source": "Smithery",
   "smitheryId": "megamind-0x/skillaudit",
   "verified": false,
-  "createdAt": "2026-02-15T13:10:26.062Z"
+  "createdAt": "2026-02-15T13:10:26.062Z",
+  "descriptionZh": "面向 AI 智能体技能和 MCP 服务器的安全扫描器。可检测凭据窃取、数据外泄、提示注入、混淆代码以及 80+ 种威胁模式。免费 API + CLI（npx skillaudit）。高级深度扫描通过 x402 微支付提供。"
  },
  {
   "id": 37413642,
@@ -1997,7 +2121,8 @@
   "source": "Smithery",
   "smitheryId": "dhanyyudi/bmkg-id",
   "verified": false,
-  "createdAt": "2026-02-22T21:05:27.550Z"
+  "createdAt": "2026-02-22T21:05:27.550Z",
+  "descriptionZh": "获取印度尼西亚各地的实时天气预报和气候数据。通过官方政府警报及时了解近期地震活动和自然灾害。借助国家气象机构监测环境状况，规划活动并保障安全。\n\n这是一个非官方社区项目。与 BMKG（Badan Meteorologi, Klimatologi, dan Geofisika）无关联。A"
  },
  {
   "id": 76775320,
@@ -2013,7 +2138,8 @@
   "source": "Smithery",
   "smitheryId": "brendan/parasure",
   "verified": false,
-  "createdAt": "2026-05-26T06:16:24.346Z"
+  "createdAt": "2026-05-26T06:16:24.346Z",
+  "descriptionZh": "AI 原生的参数化保险基础设施。通过 x402（Solana 上的 USDC）进行实时天气风险评估。完整的报价、承保和结算协议闭环可在沙盒中使用；与真实承保机构的集成正在进行中。"
  },
  {
   "id": 85862791,
@@ -2029,7 +2155,8 @@
   "source": "Smithery",
   "smitheryId": "cammac/IBANforge",
   "verified": false,
-  "createdAt": "2026-04-15T13:41:20.031Z"
+  "createdAt": "2026-04-15T13:41:20.031Z",
+  "descriptionZh": "面向 AI 智能体、ERP、发票和薪资工作流的 IBAN 验证与银行数据工具。IBANforge 覆盖 89 个国家，提供 BIC/SWIFT 查询、瑞士清算查询、SEPA 和国家风险指标、付款参考号验证、邮政地址检查以及瑞士 QR 账单检查。当前 MCP 服务提供 11 个工具，包括批量验证、反馈和 API 密钥申请。连接至 http"
  },
  {
   "id": 16451509,
@@ -2045,7 +2172,8 @@
   "source": "Smithery",
   "smitheryId": "a2a/llm-orchestration-agent",
   "verified": false,
-  "createdAt": "2026-05-31T17:21:09.829Z"
+  "createdAt": "2026-05-31T17:21:09.829Z",
+  "descriptionZh": "LangSmith Traced OpenAI Agent：组合 langchain-core + langchain-openai + langsmith + openai——通过 A2A + MCP 提供编排、可观测性和 llm-client。"
  },
  {
   "id": 71825058,
@@ -2061,7 +2189,8 @@
   "source": "Smithery",
   "smitheryId": "satoshidata/wallet-intelligence",
   "verified": false,
-  "createdAt": "2026-03-24T06:45:51.407Z"
+  "createdAt": "2026-03-24T06:45:51.407Z",
+  "descriptionZh": "面向自主智能体构建的免密钥比特币链上情报 API。通过 MCP 将地址解析为已知实体、拉取钱包证据包，并检查制裁/非法资金风险敞口，无需账户。包含用于免费免密钥风险敞口证据的 risk_check、钱包证据包、实体/标签查询，以及带有明确免责声明的 Risk Exposure Oracle v0。证据优先：没有不透明的风险"
  },
  {
   "id": 59687808,
@@ -2077,7 +2206,8 @@
   "source": "Smithery",
   "smitheryId": "icons8community/icons8mpc",
   "verified": false,
-  "createdAt": "2025-09-18T14:52:21.950Z"
+  "createdAt": "2025-09-18T14:52:21.950Z",
+  "descriptionZh": "🚀 为你的 vibe-coding 项目获取 MCP 服务器 SVG 和 PNG 图标！\n\n🎨 图标包\n* 40,000+ 个图标\n* 无限创意可能！\n\n🤖 无缝集成\n* 适用于 Windsurf、Claude Code、Cursor 和其他 AI 编程工具\n\n🔄 轻松自定义\n* 用潮流设计替换所有图标 \n* 按你喜欢的任何风格进行自定义！\n\n✨ 增强你的 UI\n* 将图标添加到：\n    * 项目符号列表\n    * 功能区块"
  },
  {
   "id": 21346972,
@@ -2093,7 +2223,8 @@
   "source": "Smithery",
   "smitheryId": "kangletian/paper-mcp",
   "verified": false,
-  "createdAt": "2026-06-07T07:46:25.224Z"
+  "createdAt": "2026-06-07T07:46:25.224Z",
+  "descriptionZh": "面向 AI 智能体的统一学术论文搜索。search_all 会一次性查询 arXiv、Semantic Scholar 和 OpenAlex，按 DOI/标题对跨语料库的同一作品去重，并使用 Reciprocal Rank Fusion 重新排序，因此被多个来源检索到的论文排名最高。read_paper 返回包含 LaTeX 公式的完整 arXiv 文本。此外还有引用图谱、作者指标（h-index）、推荐和全文片段"
  },
  {
   "id": 90270123,
@@ -2109,7 +2240,8 @@
   "source": "Smithery",
   "smitheryId": "CaullenOmdahl/nextjs-react-tailwind-assistant",
   "verified": false,
-  "createdAt": "2025-11-06T12:24:45.508Z"
+  "createdAt": "2025-11-06T12:24:45.508Z",
+  "descriptionZh": "你构建现代 Next.js 应用（使用 React 和 Tailwind CSS）的全面 AI 助手。这个 MCP 服务器可即时访问完整文档、可用于生产环境的组件，以及从专业模板中提炼出的久经考验的设计模式。"
  },
  {
   "id": 17600087,
@@ -2125,7 +2257,8 @@
   "source": "Smithery",
   "smitheryId": "ciprianpater/srv-d7aoqmh5pdvs7391dcqg",
   "verified": false,
-  "createdAt": "2026-04-12T17:40:09.419Z"
+  "createdAt": "2026-04-12T17:40:09.419Z",
+  "descriptionZh": "# NWO Robotics MCP Server\n\n通过自然语言控制真实机器人、IoT 设备和自主智能体集群——由 [NWO Robotics API](https://nwo.capital) 提供支持。\n\n---\n\n## 此服务器的功能\n\n此 MCP 服务器以 64 个开箱即用工具的形式提供完整的 NWO Robotics API。任何兼容 MCP 的 AI 智能体（Claude、ChatGPT、Cursor 等）都可以用它来：\n\n- 向物理机器人发送自然语言指令"
  },
  {
   "id": 69725558,
@@ -2141,7 +2274,8 @@
   "source": "Smithery",
   "smitheryId": "infobip-mcp/search",
   "verified": false,
-  "createdAt": "2025-10-16T10:16:33.757Z"
+  "createdAt": "2025-10-16T10:16:33.757Z",
+  "descriptionZh": "搜索 Infobip 文档，快速查找指南、用例和最佳实践。通过精准且具有上下文感知的答案，打通集成与消息传递工作流。借助开箱即用的示例以及用于构建和排查请求的清晰指南，加速开发。"
  },
  {
   "id": 60384993,
@@ -2157,7 +2291,8 @@
   "source": "Smithery",
   "smitheryId": "ckbk/subwayinfo-nyc",
   "verified": false,
-  "createdAt": "2026-01-29T05:01:47.419Z"
+  "createdAt": "2026-01-29T05:01:47.419Z",
+  "descriptionZh": "提供纽约市地铁、公交、渡轮、通勤铁路和 Citi Bike 的实时交通数据。获取所有 MTA 服务中的实时到站信息、服务提醒、行程规划和车站信息。无需 API 密钥——连接即可查询。"
  },
  {
   "id": 39115843,
@@ -2173,7 +2308,8 @@
   "source": "Smithery",
   "smitheryId": "koreafintech/korean-crypto-mcp",
   "verified": false,
-  "createdAt": "2026-02-21T07:34:28.418Z"
+  "createdAt": "2026-02-21T07:34:28.418Z",
+  "descriptionZh": "访问 Upbit、Bithumb 等韩国主要交易所的实时价格数据、订单簿和 K 线信息。通过比较本地市场价格与全球基准，追踪泡菜溢价。识别市场主要波动标的，并比较韩国本土平台的交易数据，以优化投资决策。"
  },
  {
   "id": 44826554,
@@ -2189,7 +2325,8 @@
   "source": "Smithery",
   "smitheryId": "sennebels/transita",
   "verified": false,
-  "createdAt": "2026-05-02T17:08:48.716Z"
+  "createdAt": "2026-05-02T17:08:48.716Z",
+  "descriptionZh": "面向兼容 MCP 的 AI 助手的签证资格匹配与移民情报服务。对 15 个国家的 100 多条签证路径进行评分，并提供国家对比、材料清单预览和精选国籍指南。每个匹配结果都链接回政府官方来源。"
  },
  {
   "id": 62181674,
@@ -2205,7 +2342,8 @@
   "source": "Smithery",
   "smitheryId": "Himalayas/himalayas-mcp",
   "verified": false,
-  "createdAt": "2026-03-02T02:06:46.092Z"
+  "createdAt": "2026-03-02T02:06:46.092Z",
+  "descriptionZh": "通过 AI 对话搜索远程工作、发布职位、寻找远程候选人、查看薪资基准并管理职业生涯。Himalayas Remote Jobs MCP 服务器将你的 AI 助手实时连接到 Himalayas 远程工作市场。"
  },
  {
   "id": 60793593,
@@ -2221,7 +2359,8 @@
   "source": "Smithery",
   "smitheryId": "sfiorini/youtube-mcp",
   "verified": false,
-  "createdAt": "2025-11-20T02:53:24.831Z"
+  "createdAt": "2025-11-20T02:53:24.831Z",
+  "descriptionZh": "搜索和浏览视频、频道及播放列表，获取标题、描述、统计数据和时长。\n\n获取多语言、带时间戳的转录文本，并在字幕中搜索以获得精确上下文。\n\n通过列出条目和详情，快速呈现频道与播放列表洞察。"
  },
  {
   "id": 82092179,
@@ -2237,7 +2376,8 @@
   "source": "Smithery",
   "smitheryId": "yakenator/web-inspector",
   "verified": false,
-  "createdAt": "2026-02-15T00:16:48.370Z"
+  "createdAt": "2026-02-15T00:16:48.370Z",
+  "descriptionZh": "分析网页和整个网站，以评估 SEO、可访问性、性能和安全合规性。生成详细报告和可操作的问题列表，以提升网站质量和用户体验。跟踪历史审计数据，监控多次抓取会话中的改进情况。"
  },
  {
   "id": 74155084,
@@ -2253,7 +2393,8 @@
   "source": "Smithery",
   "smitheryId": "arjunkmrm/grep",
   "verified": false,
-  "createdAt": "2026-02-07T02:59:48.913Z"
+  "createdAt": "2026-02-07T02:59:48.913Z",
+  "descriptionZh": "搜索数百万个公共 GitHub 仓库，寻找真实世界的代码模式和实现示例。了解开发者如何使用特定库并在生产环境中处理复杂配置。参考经过验证的开源解决方案，提高编码速度和准确性。"
  },
  {
   "id": 13752995,
@@ -2269,7 +2410,8 @@
   "source": "Smithery",
   "smitheryId": "heavysword1/AgentEcon",
   "verified": false,
-  "createdAt": "2026-05-26T19:06:40.626Z"
+  "createdAt": "2026-05-26T19:06:40.626Z",
+  "descriptionZh": "面向 AI 智能体的美国实时经济数据。来自 BLS、FRED 和 EIA 的 CPI 通胀、失业率、GDP、美联储利率、国债收益率和能源价格。"
  },
  {
   "id": 82368896,
@@ -2285,7 +2427,8 @@
   "source": "Smithery",
   "smitheryId": "abneesh/epl-mcp",
   "verified": false,
-  "createdAt": "2026-05-20T19:54:54.361Z"
+  "createdAt": "2026-05-20T19:54:54.361Z",
+  "descriptionZh": "# EPL Language MCP Server\nEPL（English Programming Language）生态系统的官方 Model Context Protocol（MCP）服务器。\n\n此服务器为 AI 编程助手提供对 EPL 运行时、编译器和文档的直接访问。它使 AI 模型能够安全地运行 EPL 代码、执行测试套件、分析抽象语法树（AST），并获取实时语法文档。\n\n**关键能力"
  },
  {
   "id": 12029590,
@@ -2301,7 +2444,8 @@
   "source": "Smithery",
   "smitheryId": "FlashAlpha/options-analytics",
   "verified": false,
-  "createdAt": "2026-03-31T07:23:08.902Z"
+  "createdAt": "2026-03-31T07:23:08.902Z",
+  "descriptionZh": "实时期权分析 MCP 服务器。23 个工具，涵盖 gamma/delta/vanna/charm 敞口（GEX/DEX/VEX/CHEX）、交易商持仓、0DTE 分析、波动率曲面、SVI 参数化、套利检测、方差互换、VRP 仪表板、Black-Scholes 希腊值、IV 求解器、凯利准则仓位管理、期权报价、历史逐笔数据，以及美股关键期权价位。Streamable HTTP 传输"
  },
  {
   "id": 73679283,
@@ -2317,7 +2461,8 @@
   "source": "Smithery",
   "smitheryId": "sasabasara/where_is_my_train_mcp",
   "verified": false,
-  "createdAt": "2025-08-17T21:02:38.684Z"
+  "createdAt": "2025-08-17T21:02:38.684Z",
+  "descriptionZh": "实时纽约市地铁车站、到站信息、服务提醒和路线规划。"
  },
  {
   "id": 50735431,
@@ -2333,7 +2478,8 @@
   "source": "Smithery",
   "smitheryId": "blackboxfoundry/livedatalink",
   "verified": false,
-  "createdAt": "2026-05-09T04:01:00.008Z"
+  "createdAt": "2026-05-09T04:01:00.008Z",
+  "descriptionZh": "超过 200 万条已索引公共记录。一个 MCP 端点。LiveDataLink 是托管式 Streamable HTTP MCP，用于带来源链接的公共数据，覆盖 60 个领域的 294 个工具。可查询政府、监管、金融、交通、制裁/KYB、法院、房地产、医疗、能源以及跨来源证据数据。使用 list_tool_groups 和 groups URL 参数来开放聚焦的工具子集。端点"
  },
  {
   "id": 97326111,
@@ -2349,7 +2495,8 @@
   "source": "Smithery",
   "smitheryId": "cyanheads/openstreetmap-mcp-server",
   "verified": false,
-  "createdAt": "2026-07-10T19:47:08.136Z"
+  "createdAt": "2026-07-10T19:47:08.136Z",
+  "descriptionZh": "对 OpenStreetMap 数据进行地理编码、反向地理编码，并运行 Overpass 空间查询。"
  },
  {
   "id": 98521553,
@@ -2365,7 +2512,8 @@
   "source": "Smithery",
   "smitheryId": "qbtlabs/openmm-mcp",
   "verified": false,
-  "createdAt": "2026-03-07T20:30:02.479Z"
+  "createdAt": "2026-03-07T20:30:02.479Z",
+  "descriptionZh": "OpenMM 的 MCP 服务器——通过 Claude Desktop、Claude Code、Cursor、Windsurf 和其他 MCP 客户端，向 AI 智能体提供市场数据、账户、交易和策略工具。"
  },
  {
   "id": 82892174,
@@ -2381,7 +2529,8 @@
   "source": "Smithery",
   "smitheryId": "jeremyd2255/clearmarket",
   "verified": false,
-  "createdAt": "2026-06-09T15:47:34.263Z"
+  "createdAt": "2026-06-09T15:47:34.263Z",
+  "descriptionZh": "预测市场参考数据：市场数据、分级结算清晰度（A/B/C）、跨平台关联、具名结算来源，以及跨 Kalshi + Polymarket 的来源溯源。开放 REST + MCP，无需密钥。"
  },
  {
   "id": 65706612,
@@ -2397,7 +2546,8 @@
   "source": "Smithery",
   "smitheryId": "cavasotti/doorvault",
   "verified": false,
-  "createdAt": "2026-04-30T20:42:34.905Z"
+  "createdAt": "2026-04-30T20:42:34.905Z",
+  "descriptionZh": "由 DoorVault IDEAL Scoring v2.0 驱动的房地产投资工具。分析任何租赁房产交易，获得结构化结论（IDEAL/PASS/NEAR-MISS/FAIL）、资本流速评级、优先级评分明细、对比市场租金与 Section 8 FMR 的双重租金情景，以及详细的投资建议。还包括：按 ZIP 查询 Section 8 FMR、租赁房产税收抵扣清单、N"
  },
  {
   "id": 66472907,
@@ -2410,7 +2560,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 AI 智能体、租客和买家的黄金海岸房产情报与尽职调查。"
  },
  {
   "id": 25355101,
@@ -2423,7 +2574,8 @@
   "installCmd": "npx @aimentiontracker/mcp",
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "ChatGPT、Claude、Gemini 和 Perplexity 提及并引用你的品牌的频率，以及相应证据。"
  },
  {
   "id": 59335161,
@@ -2436,7 +2588,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用于 SAP 分析的 AI 智能体：公司、日费率、合同雷达、新闻、概念、研究。"
  },
  {
   "id": 24075021,
@@ -2449,7 +2602,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "对比迪拜的食品杂货清单、观测价格、配送规则以及以 AED 计价的在线参考报价。"
  },
  {
   "id": 22686240,
@@ -2462,7 +2616,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "迪拜房产价格、AED/平方英尺、销售、租金、收益率以及来自 DLD 登记交易的项目。"
  },
  {
   "id": 46879618,
@@ -2475,7 +2630,8 @@
   "installCmd": "npx @agent-bev/mcp-server",
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "全球最大的啤酒、葡萄酒和烈酒代理式 B2B 枢纽。由 CUVEE 提供支持。仅限行业交易。"
  },
  {
   "id": 44866789,
@@ -2488,7 +2644,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "查找阿联酋期房开发项目和已登记的住宅销售。"
  },
  {
   "id": 53799250,
@@ -2501,7 +2658,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 AI 智能体与人的关系网络：注册、匹配、聊天、晚餐灵感、虚拟礼物。"
  },
  {
   "id": 12731835,
@@ -2514,7 +2672,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 AI 助手的 Google、Meta、LinkedIn 和 ChatGPT 广告。每次更改都需要你的批准。"
  },
  {
   "id": 79332751,
@@ -2527,7 +2686,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用于运行你的 Atako AI 智能体的远程 MCP 服务器：聊天、项目、文件、集成和渠道。"
  },
  {
   "id": 77509330,
@@ -2540,7 +2700,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "波兰电商机构 JustIdea 的服务、公开价格、站内搜索和销售咨询。"
  },
  {
   "id": 79701770,
@@ -2553,7 +2714,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "从施工图纸中提取工程量、测量路线和进度计划；PDF 转 CAD（DXF 免费，DWG 2 美元）。"
  },
  {
   "id": 57741240,
@@ -2566,7 +2728,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "查找美国 11 个州的持证房屋油漆工，并附有州许可委员会提供的带日期执照状态。"
  },
  {
   "id": 54907672,
@@ -2579,7 +2742,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "查找拥有已验证工作邮箱的 B2B 线索，查找并验证邮箱，并开展冷邮件外联。"
  },
  {
   "id": 80412668,
@@ -2592,7 +2756,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "通过本地 MCP 服务器将你的 Anki 闪卡集暴露给 AI 助手的 Anki 插件。"
  },
  {
   "id": 71688002,
@@ -2605,7 +2770,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "AI 智能体雇佣其他智能体以获得可验证成果的沙盒市场。仅使用测试资金。"
  },
  {
   "id": 30903161,
@@ -2618,7 +2784,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "在 Claude 或 ChatGPT 中使用 Amazon Seller Central 和 Ads。通过 agentxray.ai/connect 连接。"
  },
  {
   "id": 90828170,
@@ -2631,7 +2798,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "在 Claude 或 ChatGPT 内使用 Amazon Seller Central 和 Ads。真实费用源自你自己的结算数据。"
  },
  {
   "id": 58504480,
@@ -2644,7 +2812,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用自然语言询问 Google Search Console。托管服务、免费、无需 Google Cloud 项目。"
  },
  {
   "id": 54850403,
@@ -2657,7 +2826,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用自然语言查询和更新你的 Odoo ERP，并遵循你自己的 Odoo 访问规则。"
  },
  {
   "id": 56872712,
@@ -2670,7 +2840,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "已迁移至 de.fibalo/mcp。访问 https://mcp.fibalo.de/mcp 连接 Fibalo 记账。"
  },
  {
   "id": 26281029,
@@ -2683,7 +2854,8 @@
   "installCmd": "npx @aetherwealth/mcp",
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 AI 助手的 Aether Wealth MCP：交易、警报、市场数据、宏观日历和指标。"
  },
  {
   "id": 92972091,
@@ -2696,7 +2868,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "基于实时银行和账单数据流的初创公司账目：损益表、余额、审批、期末结账。"
  },
  {
   "id": 58860450,
@@ -2709,7 +2882,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "从你的 AI 助手中启动和管理 Meta 和 Google Ads。每项更改都先由你批准。"
  },
  {
   "id": 59041254,
@@ -2722,7 +2896,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "音频 AI 工具：文本转语音、声音克隆、音乐生成、分轨、转录。"
  },
  {
   "id": 60360789,
@@ -2735,7 +2910,8 @@
   "installCmd": "npx @ankimcp/anki-mcp-server",
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用于 Anki 闪卡的 MCP 服务器：通过 AnkiConnect 进行自适应复习、笔记、媒体和牌组管理。"
  },
  {
   "id": 48289490,
@@ -2748,7 +2924,8 @@
   "installCmd": "npx @autonomad1/computeback-mcp",
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "智能体奖励市场：通过 B2B 工作赚取 $NOMD，用于智能体能力消费。"
  },
  {
   "id": 40462822,
@@ -2761,7 +2938,8 @@
   "installCmd": "npx autonomad-travel",
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "AI 旅行智能体——通过 autonomad.ai 预订全球航班、酒店、活动和赛事。"
  },
  {
   "id": 30828155,
@@ -2774,7 +2952,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "通过 Claude 进行 AI 图像和视频生成、说话头像、一致角色和照片包。"
  },
  {
   "id": 81589598,
@@ -2787,7 +2966,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "经过验证的 47,000+ 家美国黑人拥有的企业目录。搜索、资料、地图、奖励。"
  },
  {
   "id": 90008999,
@@ -2800,7 +2980,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "AI 驱动的生命周期评估与建模：连接 LCA 数据库，构建并分析系统"
  },
  {
   "id": 28771919,
@@ -2813,7 +2994,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "来自 170+ 发布方的官方统计数据，可通过自然语言解析并附带来源溯源。"
  },
  {
   "id": 32939601,
@@ -2826,7 +3008,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "由 Bureau 运营的公共只读 MCP 服务，用于公开的 Context Packets 和 Cases。"
  },
  {
   "id": 91243625,
@@ -2839,7 +3022,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "将 @handles 解析为后量子签名的智能体身份，并与它们背后的品牌交易。"
  },
  {
   "id": 14447153,
@@ -2852,7 +3036,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "MCP 注册表：已抓取 138k 个服务器，经过握手验证并评分可靠性。744 个可安全用于生产。"
  },
  {
   "id": 69188067,
@@ -2865,7 +3050,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "编码智能体的运行效率：付费 token 中转化为输出而非重新读取上下文的比例。"
  },
  {
   "id": 97944271,
@@ -2878,7 +3064,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "为你的编码智能体提供 bug 的已捕获控制台、网络、重放和截图证据。"
  },
  {
   "id": 43568872,
@@ -2891,7 +3078,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "SEC 申报文件、财务报表、指标、内部人和机构持股，均以结构化数据提供"
  },
  {
   "id": 61864430,
@@ -2904,7 +3092,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "这位承包商的执照有变化吗？记录观察到的失效与恢复，而非仅快照。"
  },
  {
   "id": 47888447,
@@ -2917,7 +3106,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "检查如何联系企业网站，以及该联系路径是否真正有效。"
  },
  {
   "id": 39362033,
@@ -2930,7 +3120,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "将任何录音或文档转化为你的智能体可读取并据以行动的笔记、闪卡和测验"
  },
  {
   "id": 34162966,
@@ -2943,7 +3134,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "描述店铺的问题：获取匹配的服务、其固定价格以及请求链接。"
  },
  {
   "id": 35044400,
@@ -2956,7 +3148,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用于商业智能的代理式 AI：发现、验证并丰富公司和联系人数据。"
  },
  {
   "id": 22151926,
@@ -2969,7 +3162,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "为本地服务商提供免费预览网站，之后通过 Stripe Checkout 收取每月 29 美元的托管费。"
  },
  {
   "id": 66563474,
@@ -2982,7 +3176,8 @@
   "installCmd": "npx adtest-mcp",
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 Claude 的纯 AI 广告评分：在花钱投放前，从 13 个维度为图片、视频或文字广告评分。"
  },
  {
   "id": 68116110,
@@ -2995,7 +3190,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "加密回测统计：试验次数由服务器掌控，因此不会被低估。"
  },
  {
   "id": 35216061,
@@ -3008,7 +3204,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "AIS MCP 园区的前台：列出我们的建筑（CVE、Flight Recorder）、价格和付款方式"
  },
  {
   "id": 15168818,
@@ -3021,7 +3218,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 AI 智能体的每日 CVE 优先级，按真实利用情况（KEV+EPSS）排名；免费预览，付费查看完整版"
  },
  {
   "id": 33686059,
@@ -3034,7 +3232,8 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 AI 智能体和 cron 任务的失效保护开关：带状态胶囊的心跳、警报和恢复链接"
  },
  {
   "id": 13222947,
@@ -3047,6 +3246,7 @@
   "installCmd": null,
   "stars": 0,
   "featured": false,
-  "source": "MCP 官方注册表"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "通过你的 AI 助手运行 A/B 实验。提供 Ruby、Python、JS、Node、React Native、Go 的 SDK。"
  }
 ]

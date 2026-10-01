@@ -1,5 +1,6 @@
 import data from '@/data/generated/mcp.json';
 import type { ApiResponse, McpServer, PageResult } from './types';
+import { searchBlob } from '@/lib/i18n';
 
 // 静态数据模式：数据由 scripts/scan_sources.py 每周生成
 const all = (data as unknown) as McpServer[];
@@ -33,7 +34,7 @@ export const getMcpServers = async (
   if (params.search) {
     const q = params.search.trim().toLowerCase();
     list = list.filter((x) =>
-      `${x.name} ${x.description} ${x.category}`.toLowerCase().includes(q)
+      searchBlob(x.name, x.description, x.descriptionZh, x.category).includes(q)
     );
   }
   if (params.featured) {

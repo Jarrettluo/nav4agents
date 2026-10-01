@@ -19,6 +19,8 @@ export interface Skill {
   name: string;
   slug: string;
   description: string;
+  /** 中文描述（翻译管线生成，缺失时回退 description） */
+  descriptionZh?: string | null;
   category: string;
   source: string;
   installCmd?: string;
@@ -31,6 +33,8 @@ export interface Skill {
   topics?: string[];
   version?: string | null;
   changelog?: string | null;
+  /** 中文版本说明 */
+  changelogZh?: string | null;
   createdAt?: string;
 }
 
@@ -40,6 +44,8 @@ export interface McpServer {
   name: string;
   slug: string;
   description: string;
+  /** 中文描述（翻译管线生成，缺失时回退 description） */
+  descriptionZh?: string | null;
   category: string;
   type: 'local' | 'remote';
   url?: string | null;

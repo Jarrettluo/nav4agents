@@ -5,6 +5,7 @@ import { ArrowLeft, ExternalLink, Star, Terminal, Zap, Globe, Server, Settings }
 import { getAllMcp } from '@/lib/data/mcp';
 import { getMcpDetail } from '@/lib/data/mcpDetails';
 import { buildMcpMetadata, ogImage } from '@/lib/seo';
+import { pickZh } from '@/lib/i18n';
 import CopyButton from '@/components/CopyButton';
 import FavoriteButton from '@/components/FavoriteButton';
 import HiddenShareImage from '@/components/HiddenShareImage';
@@ -92,7 +93,7 @@ export default function McpDetailPage({ params }: { params: { slug: string } }) 
               <FavoriteButton type="mcp" itemId={mcp.id} />
             </div>
 
-            <p className="text-gray-600 leading-relaxed">{mcp.description}</p>
+            <p className="text-gray-600 leading-relaxed">{pickZh(mcp.descriptionZh, mcp.description)}</p>
           </div>
 
           {/* 工具能力（真实数据） */}
@@ -108,7 +109,7 @@ export default function McpDetailPage({ params }: { params: { slug: string } }) 
                   <div key={i} className="bg-gray-50 rounded-lg px-4 py-3">
                     <code className="text-blue-700 font-mono text-sm font-semibold">{tool.name}</code>
                     {tool.description && (
-                      <p className="text-gray-600 text-sm mt-1 leading-relaxed">{tool.description}</p>
+                      <p className="text-gray-600 text-sm mt-1 leading-relaxed">{pickZh(tool.descriptionZh, tool.description)}</p>
                     )}
                   </div>
                 ))}
@@ -152,7 +153,7 @@ export default function McpDetailPage({ params }: { params: { slug: string } }) 
                         {env.name}
                         {env.required && <span className="text-red-500 ml-1" title="必填">*</span>}
                       </code>
-                      <span className="text-gray-500 text-sm">{env.description || '——'}</span>
+                      <span className="text-gray-500 text-sm">{pickZh(env.descriptionZh, env.description) || '——'}</span>
                     </div>
                   ))}
                 </div>
