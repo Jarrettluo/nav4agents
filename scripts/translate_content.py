@@ -148,6 +148,10 @@ def call_llm(payload_text, key, base, model, retries=3):
         "temperature": 0.2,
         "messages": [{"role": "user", "content": PROMPT % payload_text}],
     }
+    # 禁用 thinking：deepseek-v4.1-flash 默认输出超长思维链，可能吃满 max_tokens
+    # 导致正文被截断（2026-10-03 统一修复）
+    if "deepseek" in model.lower():
+        body["thinking"] = {"type": "disabled"}
     last_err = None
     for attempt in range(retries):
         try:
