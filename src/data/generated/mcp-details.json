@@ -4392,6 +4392,60 @@
   "verified": false,
   "homepage": null
  },
+ "claudewilder-claude-wilder-mcp": {
+  "tools": [
+   {
+    "name": "read_transmissions",
+    "description": "Browse and read AI-authored book reviews. Lists all transmissions if no slug provided, or returns the full review text for a specific book.",
+    "descriptionZh": "浏览和阅读 AI 撰写的书评。若未提供 slug，则列出所有 transmissions；或返回特定书籍的完整评论内容。"
+   },
+   {
+    "name": "read_investigations",
+    "description": "Access data investigations with lens structures, datasets, correlations, and open questions. Lists all investigations or reads one in full.",
+    "descriptionZh": "访问数据调查，包含 lens 结构、数据集、相关性和开放性问题。列出所有调查或完整阅读某一项。"
+   },
+   {
+    "name": "read_signals",
+    "description": "Read community responses to any article. Shows a summary of all reviews with signals, or threaded signals for a specific review with IDs for replying.",
+    "descriptionZh": "阅读社区对任意文章的回应。显示所有评论的摘要及 signals，或显示特定评论的线程化 signals 及用于回复的 ID。"
+   },
+   {
+    "name": "send_signal",
+    "description": "Post a response to any article. Markdown supported, 2000 char max. Quality signals publish immediately; low-effort submissions are filtered.",
+    "descriptionZh": "对任意文章发布回应。支持 Markdown，最多 2000 字符。高质量 signals 立即发布；低质量提交会被过滤。"
+   },
+   {
+    "name": "read_interview",
+    "description": "Read interviews between Claude Wilder and authors. View the active interview, browse completed interviews, or read a specific conversation.",
+    "descriptionZh": "阅读 Claude Wilder 与作者之间的访谈。查看进行中的访谈、浏览已完成的访谈，或阅读特定对话。"
+   },
+   {
+    "name": "research_book",
+    "description": "One-call research bundle: returns the full review text, all existing signals, and page metadata for a book or investigation. Start here before writing a signal.",
+    "descriptionZh": "一键研究包：返回完整评论内容、所有现有 signals 以及书籍或调查的页面元数据。在撰写 signal 之前从这里开始。"
+   },
+   {
+    "name": "get_page_context",
+    "description": "Fetch the application/ai+json metadata block from any claudereviews.com page. Returns lens definitions, dataset paths, open questions, and engagement instructio",
+    "descriptionZh": "从任意 claudereviews.com 页面获取 application/ai+json 元数据块。返回 lens 定义、数据集路径、开放性问题和参与说明"
+   },
+   {
+    "name": "analyze_dataset",
+    "description": "Fetch raw CSV datasets and investigation metadata. Returns dataset URLs, lens structures, key correlations, open questions, and outliers for independent analysi",
+    "descriptionZh": "获取原始 CSV 数据集和调查元数据。返回数据集 URL、lens 结构、关键相关性、开放性问题和异常值，供独立分析"
+   },
+   {
+    "name": "fact_check_claim",
+    "description": "Check a specific claim against available evidence from the publication's data, sources, and investigations.",
+    "descriptionZh": "根据出版物数据、来源和调查中的可用证据，核查特定声明。"
+   }
+  ],
+  "config": [],
+  "remoteUrl": "https://claude-wilder-mcp--claudewilder.run.tools",
+  "iconUrl": "https://api.smithery.ai/servers/claudewilder/claude-wilder-mcp/icon",
+  "verified": false,
+  "homepage": null
+ },
  "gordgus-ignav-flights": {
   "tools": [
    {
@@ -5004,8 +5058,8 @@
    },
    {
     "name": "get_weekly_review",
-    "description": "Surface the weekly review digest — every metro that needs manual attention before the next newsletter cycle. Returns two buckets: 1. Stale Progress (col AF=TR",
-    "descriptionZh": "呈现每周审核摘要——每个在下一次简报周期前需要人工关注的都市区。返回两个分组：1. Stale Progress（列 AF=TR"
+    "description": "Surface the weekly review digest — every metro that needs manual attention before the next newsletter cycle. Returns two buckets: 1. 🔴 Stale Progress (col AF=TR",
+    "descriptionZh": "呈现每周审核摘要——每个在下一次简报周期前需要人工关注的都市区。返回两个分组：1. 🔴 Stale Progress（列 AF=TR"
    },
    {
     "name": "set_published_tier",
@@ -6140,65 +6194,6 @@
   "verified": false,
   "homepage": null
  },
- "bouch-pinescript": {
-  "tools": [
-   {
-    "name": "list_docs",
-    "description": "List all available Pine Script v6 documentation files with descriptions.  Returns files organised by category with descriptions. For small files use get_doc(pat",
-    "descriptionZh": "列出所有可用的 Pine Script v6 文档文件及其描述。返回按类别组织并带描述的文件。对于小文件，使用 get_doc(path)"
-   },
-   {
-    "name": "list_sections",
-    "description": "List all section headers in a doc file. Use before get_section() to find the right header.  Especially useful for large files like ta.md, strategy.md, collectio",
-    "descriptionZh": "列出文档文件中的所有章节标题。在调用 get_section() 之前使用，以找到正确的标题。对于 ta.md、strategy.md、collections.md 等大文件尤其有用"
-   },
-   {
-    "name": "get_doc",
-    "description": "Read a specific Pine Script v6 documentation file.  For large files (ta.md, strategy.md, collections.md, drawing.md, general.md) prefer list_sections() + get_se",
-    "descriptionZh": "读取特定 Pine Script v6 文档文件。对于大文件（ta.md、strategy.md、collections.md、drawing.md、general.md），优先使用 list_sections() + get_section()"
-   },
-   {
-    "name": "get_section",
-    "description": "Get a specific section from a documentation file by its header.  Use after list_sections() shows available headers, or after resolve_topic() / search_docs() ide",
-    "descriptionZh": "根据标题从文档文件中获取特定章节。在 list_sections() 显示可用标题后使用，或在 resolve_topic() / search_docs() 标识出章节后使用"
-   },
-   {
-    "name": "search_docs",
-    "description": "Search Pine Script v6 documentation and return matching sections.  Finds sections containing the query and returns previews with get_section() call hints so you",
-    "descriptionZh": "搜索 Pine Script v6 文档并返回匹配章节。查找包含查询的章节，并返回带有 get_section() 调用提示的预览，以便你获取完整内容"
-   },
-   {
-    "name": "get_functions",
-    "description": "Get valid Pine Script v6 functions, optionally filtered by namespace.  Use before writing Pine Script to see which functions exist. For checking a single functi",
-    "descriptionZh": "获取有效的 Pine Script v6 函数，可选择按命名空间筛选。在编写 Pine Script 之前使用，以查看存在哪些函数。要检查单个函数"
-   },
-   {
-    "name": "validate_function",
-    "description": "Check if a Pine Script v6 function name is valid.",
-    "descriptionZh": "检查 Pine Script v6 函数名是否有效。"
-   },
-   {
-    "name": "resolve_topic",
-    "description": "Fast lookup for exact Pine Script API terms and known concepts.  Use for exact function names and Pine Script vocabulary (e.g., \"ta.rsi\", \"strategy.entry\", \"rep",
-    "descriptionZh": "快速查找确切的 Pine Script API 术语和已知概念。用于查找确切的函数名和 Pine Script 词汇（例如，\"ta.rsi\"、\"strategy.entry\"、\"repainting\"）"
-   },
-   {
-    "name": "list_prompts",
-    "description": "List all available prompts.  Returns JSON with prompt metadata including name, description, and optional arguments.",
-    "descriptionZh": "列出所有可用的提示词。返回包含提示词元数据的 JSON，包括名称、描述和可选参数。"
-   },
-   {
-    "name": "get_prompt",
-    "description": "Get a prompt by name with optional arguments.  Returns the rendered prompt as JSON with a messages array. Arguments should be provided as a dict mapping argumen",
-    "descriptionZh": "按名称获取提示，可带可选参数。返回渲染后的提示，格式为带 messages 数组的 JSON。参数应作为字典提供，将参数名映射到值。"
-   }
-  ],
-  "config": [],
-  "remoteUrl": "https://pinescript--bouch.run.tools",
-  "iconUrl": "https://www.google.com/s2/favicons?domain=bouch.dev&sz=64",
-  "verified": false,
-  "homepage": null
- },
  "govbase-govbase": {
   "tools": [
    {
@@ -6784,8 +6779,8 @@
    },
    {
     "name": "datagovmy_search_datasets_catalogue",
-    "description": "CONSIDER USING search_all INSTEAD: This only searches datasets. For comprehensive results across datasets and dashboards, use search_all tool.",
-    "descriptionZh": "建议改用 search_all：这仅搜索数据集。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。"
+    "description": "⚠️ CONSIDER USING search_all INSTEAD: This only searches datasets. For comprehensive results across datasets and dashboards, use search_all tool. ⚠️",
+    "descriptionZh": "⚠️ 建议改用 search_all：这仅搜索数据集。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。⚠️"
    },
    {
     "name": "datagovmy_filter_datasets_catalogue",
@@ -6834,8 +6829,8 @@
    },
    {
     "name": "datagovmy_search_dashboards",
-    "description": "CONSIDER USING search_all INSTEAD: This only searches dashboards. For comprehensive results across datasets and dashboards, use search_all tool.",
-    "descriptionZh": "建议改用 search_all：这仅搜索仪表板。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。"
+    "description": "⚠️ CONSIDER USING search_all INSTEAD: This only searches dashboards. For comprehensive results across datasets and dashboards, use search_all tool. ⚠️",
+    "descriptionZh": "⚠️ 建议改用 search_all：这仅搜索仪表板。若要在数据集和仪表板中获得全面结果，请使用 search_all 工具。⚠️"
    },
    {
     "name": "datagovmy_get_dashboard_details",
@@ -6849,8 +6844,8 @@
    },
    {
     "name": "datagovmy_search_all",
-    "description": "PRIMARY SEARCH TOOL: Always use this first for any data or visualization queries. Searches across both datasets and dashboards with intelligent fallback.",
-    "descriptionZh": "主要搜索工具：对于任何数据或可视化查询，请始终先使用此工具。它会同时搜索数据集和仪表板，并提供智能回退。"
+    "description": "⭐⭐⭐ PRIMARY SEARCH TOOL: Always use this first for any data or visualization queries. Searches across both datasets and dashboards with intelligent fallback. ⭐⭐",
+    "descriptionZh": "⭐⭐⭐ 主要搜索工具：对于任何数据或可视化查询，请始终先使用此工具。它会同时搜索数据集和仪表板，并提供智能回退。⭐⭐"
    }
   ],
   "config": [],
@@ -7384,6 +7379,25 @@
   "verified": false,
   "homepage": null
  },
+ "letoribo-mcp-graphql-enhanced": {
+  "tools": [
+   {
+    "name": "query-graphql",
+    "description": "Execute GraphQL operations (queries and mutations) against the federated system. WARNING: This tool performs remote operations. 'Mutation' operations will modif",
+    "descriptionZh": "针对联邦系统执行 GraphQL 操作（查询和变更）。警告：此工具执行远程操作。'Mutation' 操作将修改"
+   },
+   {
+    "name": "introspect-schema",
+    "description": "Retrieve GraphQL schema details or system manifest. READ-ONLY: Non-destructive metadata discovery. Usage: 1. If 'typeNames' is provided: Returns the full SDL (S",
+    "descriptionZh": "获取 GraphQL schema 详情或系统清单。只读：非破坏性元数据发现。用法：1. 若提供 'typeNames'：返回完整 SDL（S"
+   }
+  ],
+  "config": [],
+  "remoteUrl": "https://mcp-graphql-enhanced--letoribo.run.tools",
+  "iconUrl": "https://api.smithery.ai/servers/letoribo/mcp-graphql-enhanced/icon",
+  "verified": false,
+  "homepage": null
+ },
  "a7om-atom-mcp-server": {
   "tools": [
    {
@@ -7598,40 +7612,6 @@
   "config": [],
   "remoteUrl": "https://nexus-intelligence--rileycraig14.run.tools",
   "iconUrl": "https://www.google.com/s2/favicons?domain=nexus-agent-xa12.onrender.com&sz=64",
-  "verified": false,
-  "homepage": null
- },
- "surprise-buddy-mcp-server": {
-  "tools": [
-   {
-    "name": "find_gifts",
-    "description": "Search the curated Surprise Buddy database for gift ideas matching a recipient. Returns product cards with title, image, price, why-it-fits, and a clickable pro",
-    "descriptionZh": "搜索精选的 Surprise Buddy 数据库，查找与收礼人匹配的礼物创意。返回产品卡片，包含标题、图片、价格、why-it-fits 以及可点击的 pro"
-   },
-   {
-    "name": "list_supported_countries",
-    "description": "List ISO-2 country codes that currently have at least one active gift entry in the database. Coverage grows over time.",
-    "descriptionZh": "列出当前数据库中至少有一个有效礼物条目的 ISO-2 国家/地区代码。覆盖范围会随时间增长。"
-   },
-   {
-    "name": "list_supported_occasions",
-    "description": "List occasion codes that have active gift entries, optionally narrowed to a specific country.",
-    "descriptionZh": "列出具有有效礼物条目的场合代码，可按特定国家/地区进行筛选。"
-   },
-   {
-    "name": "list_supported_interests",
-    "description": "List the canonical interest/hobby tag vocabulary used by find_gifts.interests. Matches the tags shown in the website UI.",
-    "descriptionZh": "列出 find_gifts.interests 使用的规范兴趣/爱好标签词汇表。与网站 UI 中显示的标签一致。"
-   },
-   {
-    "name": "list_supported_colors",
-    "description": "List the canonical favorite-color vocabulary used by find_gifts.favorite_color. Matches the color picker shown in the website UI.",
-    "descriptionZh": "列出 find_gifts.favorite_color 使用的规范喜爱颜色词汇表。与网站 UI 中显示的颜色选择器一致。"
-   }
-  ],
-  "config": [],
-  "remoteUrl": "https://mcp-server--surprise-buddy.run.tools",
-  "iconUrl": "https://www.google.com/s2/favicons?domain=surprise-buddy.com&sz=64",
   "verified": false,
   "homepage": null
  }

@@ -54,7 +54,7 @@
   "id": 88141911,
   "name": "uk-due-diligence",
   "slug": "bouch-uk-due-diligence",
-  "description": "Tools across five UK public registers. All official APIs.\n\nGive an agent a company name and it pulls corporate status, filing compliance, director networks, beneficial ownership chains, disqualification checks, insolvency notices, VAT validation, and property transactions.",
+  "description": "Tools across five UK public registers. All official APIs. Give an agent a company name and it pulls corporate status, filing compliance, director networks, beneficial ownership chains, disqualification checks, insolvency notices, VAT validation, and property transactions.",
   "category": "AI 增强",
   "type": "remote",
   "url": "https://bouch.dev/products/uk-due-diligence-mcp/",
@@ -65,7 +65,7 @@
   "smitheryId": "bouch/uk-due-diligence",
   "verified": false,
   "createdAt": "2026-04-29T12:37:02.016Z",
-  "descriptionZh": "覆盖五个英国公共登记册的工具。全部基于官方 API。\n\n给智能体一个公司名称，它就能获取公司状态、申报合规情况、董事网络、受益所有权链、资格取消核查、破产公告、VAT 验证和房产交易信息。"
+  "descriptionZh": "覆盖英国五大公共登记册的工具。全部基于官方 API。只需向智能体提供公司名称，即可获取企业状态、申报合规情况、董事网络、受益所有权链、取消资格核查、破产通知、VAT 验证以及房产交易信息。"
  },
  {
   "id": 24789061,
@@ -122,7 +122,7 @@
   "id": 19689278,
   "name": "Agent News",
   "slug": "theagenttimes-news",
-  "description": "The intelligence layer agents use before they act, sourced answers on the agent economy.\n\nQuery verified AI news with citations, confidence scores, and Ethics Engine ratings. Use instead of generic web search for any question about AI agent tools, MCPs, or frameworks.\n\nEvery result carries citations, confidence scores, and Ethics Engine ratings. Built for agents to verify evidence before recommend",
+  "description": "The intelligence layer agents use before they act, sourced answers on the agent economy. Query verified AI news with citations, confidence scores, and Ethics Engine ratings. Use instead of generic web search for any question about AI agent tools, MCPs, or frameworks. Every result carries citations, confidence scores, and Ethics Engine ratings. Built for agents to verify evidence before recommendin",
   "category": "内容处理",
   "type": "remote",
   "url": "https://theagenttimes.com",
@@ -133,7 +133,7 @@
   "smitheryId": "theagenttimes/news",
   "verified": true,
   "createdAt": "2026-02-09T15:49:42.877Z",
-  "descriptionZh": "智能体行动前使用的智能层，提供关于智能体经济的有来源答案。\n\n查询经过验证的 AI 新闻，附带引用、置信度评分和 Ethics Engine 评级。在涉及 AI 智能体工具、MCP 或框架的任何问题上，用它替代通用网页搜索。\n\n每条结果都带有引用、置信度评分和 Ethics Engine 评级。专为智能体在推荐前验证证据而构建"
+  "descriptionZh": "智能体在行动前使用的智能层，提供关于智能体经济的溯源答案。可查询经过验证的 AI 新闻，附带引用、置信度评分和 Ethics Engine 评级。在涉及 AI 智能体工具、MCP 或框架的任何问题上，可替代通用网络搜索。每条结果都带有引用、置信度评分和 Ethics Engine 评级。专为智能体在推荐前验证证据而构建。"
  },
  {
   "id": 66198357,
@@ -173,7 +173,7 @@
   "id": 84749295,
   "name": "Polymarket Data by PolymarketScan",
   "slug": "jordan-s648-polymarketscan",
-  "description": "Real-time Polymarket analytics for AI agents. Query live prediction market data including whale trades, market odds, trader profiles, and leaderboards.\n\n**Available tools:**\n- `get_whale_trades` — large trades above a size threshold\n- `get_market_odds` — current prices and implied probability for any market\n- `get_trader_profile` — PnL, win rate, ROI for any wallet\n- `get_leaderboard` — top trader",
+  "description": "Real-time Polymarket analytics for AI agents. Query live prediction market data including whale trades, market odds, trader profiles, and leaderboards. **Available tools:** - `get_whale_trades` — large trades above a size threshold - `get_market_odds` — current prices and implied probability for any market - `get_trader_profile` — PnL, win rate, ROI for any wallet - `get_leaderboard` — top traders",
   "category": "数据处理",
   "type": "remote",
   "url": "https://PolymarketScan.org/API",
@@ -184,7 +184,7 @@
   "smitheryId": "jordan-s648/PolymarketScan",
   "verified": false,
   "createdAt": "2026-04-13T05:45:37.949Z",
-  "descriptionZh": "面向 AI 智能体的实时 Polymarket 分析。查询实时预测市场数据，包括巨鲸交易、市场赔率、交易者资料和排行榜。\n\n**可用工具：**\n- `get_whale_trades` — 超过规模阈值的大额交易\n- `get_market_odds` — 任意市场的当前价格与隐含概率\n- `get_trader_profile` — 任意钱包的盈亏、胜率和 ROI\n- `get_leaderboard` — 顶尖交易者"
+  "descriptionZh": "面向 AI 智能体的实时 Polymarket 分析。可查询实时预测市场数据，包括巨鲸交易、市场赔率、交易者资料和排行榜。**可用工具：** - `get_whale_trades` — 超过规模阈值的巨额交易 - `get_market_odds` — 任意市场的当前价格和隐含概率 - `get_trader_profile` — 任意钱包的盈亏、胜率和 ROI - `get_leaderboard` — 顶级交易者"
  },
  {
   "id": 52055431,
@@ -207,7 +207,7 @@
   "id": 72902987,
   "name": "emblem-mcp",
   "slug": "emblemai-emblem-mcp",
-  "description": "# EmblemAI MCP\n\nEmblemAI is a hosted Model Context Protocol server that gives AI agents a full-featured crypto wallet plus **200+ tools** for trading, DeFi, NFTs, and on-chain analytics across **7 blockchains**:\n\n- **Bitcoin** — native BTC, Ordinals inscriptions, Runes, BRC-20, Stamps / SRC-20, Alkanes, rare sats\n- **Solana** — SOL + SPL tokens, Jupiter-routed swaps, Solana memecoin discovery, Rug",
+  "description": "# EmblemAI MCP EmblemAI is a hosted Model Context Protocol server that gives AI agents a full-featured crypto wallet plus **200+ tools** for trading, DeFi, NFTs, and on-chain analytics across **7 blockchains**: - **Bitcoin** — native BTC, Ordinals inscriptions, Runes, BRC-20, Stamps / SRC-20, Alkanes, rare sats - **Solana** — SOL + SPL tokens, Jupiter-routed swaps, Solana memecoin discovery, RugCh",
   "category": "数据处理",
   "type": "remote",
   "url": "https://emblemvault.ai",
@@ -218,7 +218,7 @@
   "smitheryId": "emblemai/emblem-mcp",
   "verified": false,
   "createdAt": "2026-05-11T07:01:07.813Z",
-  "descriptionZh": "# EmblemAI MCP\n\nEmblemAI 是一个托管的 Model Context Protocol 服务器，为 AI 智能体提供功能完备的加密钱包，以及 **200+ 工具**，覆盖 **7 条区块链**上的交易、DeFi、NFT 和链上分析：\n\n- **Bitcoin** — 原生 BTC、Ordinals 铭文、Runes、BRC-20、Stamps / SRC-20、Alkanes、稀有 sats\n- **Solana** — SOL + SPL 代币、Jupiter 路由兑换、Solana 模因币发现、Rug"
+  "descriptionZh": "# EmblemAI MCP EmblemAI 是一个托管的 Model Context Protocol 服务器，为 AI 智能体提供功能完备的加密钱包，以及 **200+ 工具**，覆盖 **7 条区块链**上的交易、DeFi、NFT 和链上分析： - **Bitcoin** — 原生 BTC、Ordinals 铭文、Runes、BRC-20、Stamps / SRC-20、Alkanes、稀有聪 - **Solana** — SOL + SPL 代币、Jupiter 路由兑换、Solana 模因币发现、RugCh"
  },
  {
   "id": 66935753,
@@ -241,7 +241,7 @@
   "id": 52558201,
   "name": "OneSignal",
   "slug": "onesignal-onesignal",
-  "description": "OneSignal is a customer engagement platform that lets you send targeted push notifications, emails, SMS, and in-app messages, manage audiences, and track campaign performance.\n\nWith the OneSignal MCP, manage your messaging directly from your AI assistant. Send push notifications, emails, and SMS by simply describing your audience and message. Check campaign delivery stats, build audience segments,",
+  "description": "OneSignal is a customer engagement platform that lets you send targeted push notifications, emails, SMS, and in-app messages, manage audiences, and track campaign performance. With the OneSignal MCP, manage your messaging directly from your AI assistant. Send push notifications, emails, and SMS by simply describing your audience and message. Check campaign delivery stats, build audience segments, ",
   "category": "开发工具",
   "type": "remote",
   "url": "https://onesignal.com/",
@@ -252,13 +252,13 @@
   "smitheryId": "onesignal/onesignal",
   "verified": true,
   "createdAt": "2026-03-10T05:39:45.197Z",
-  "descriptionZh": "OneSignal 是一个客户互动平台，可让你发送定向推送通知、电子邮件、短信和应用内消息，管理受众并跟踪营销活动效果。\n\n借助 OneSignal MCP，你可以直接从 AI 助手中管理消息推送。只需描述受众和消息内容，即可发送推送通知、电子邮件和短信。查看营销活动送达统计、构建受众分群，"
+  "descriptionZh": "OneSignal 是一个客户互动平台，可让你发送定向推送通知、电子邮件、短信和应用内消息，管理受众，并跟踪营销活动表现。借助 OneSignal MCP，你可以直接从 AI 助手中管理消息发送。只需描述受众和消息内容，即可发送推送通知、电子邮件和短信。查看营销活动送达统计、构建受众分群，"
  },
  {
   "id": 40943311,
   "name": "Gread",
   "slug": "nitrofire-q-gread",
-  "description": "Gives your AI access to the source code of all public github repos.\n\n- Plug and Play: Compatible with all popular coding agents and MCP clients, ready to use out of the box\n- Skill and MCP: Both Skill and MCP are provided, connect with either option\n- Docs Integration: Automatically recognizes docs repo and provides them along with the main repo when accessed",
+  "description": "Gives your AI access to the source code of all public github repos. - Plug and Play: Compatible with all popular coding agents and MCP clients, ready to use out of the box - Skill and MCP: Both Skill and MCP are provided, connect with either option - Docs Integration: Automatically recognizes docs repo and provides them along with the main repo when accessed",
   "category": "开发工具",
   "type": "remote",
   "url": "https://gread.dev/",
@@ -269,7 +269,7 @@
   "smitheryId": "nitrofire-q/gread",
   "verified": false,
   "createdAt": "2026-05-11T07:51:53.707Z",
-  "descriptionZh": "让你的 AI 访问所有公开 GitHub 仓库的源代码。\n\n- 即插即用：兼容所有主流编码智能体和 MCP 客户端，开箱即用\n- Skill 与 MCP：同时提供 Skill 和 MCP，任选其一连接\n- 文档集成：自动识别文档仓库，并在访问时将其与主仓库一并提供"
+  "descriptionZh": "让你的 AI 访问所有公开 GitHub 仓库的源代码。 - 即插即用：兼容所有主流编码智能体和 MCP 客户端，开箱即用 - Skill 和 MCP：同时提供 Skill 和 MCP，可任选其一接入 - 文档集成：自动识别文档仓库，并在访问主仓库时一并提供"
  },
  {
   "id": 69524531,
@@ -394,8 +394,8 @@
   "id": 99798316,
   "name": "Colour Memory - Cultural Color Intelligence for AI",
   "slug": "digby-oldridge-colour-memory-api",
-  "description": "The world's only historically grounded colour archive built for AI agents.\n\nThousands of named colours across dozens of cultural archives spanning Ancient Rome, Byzantine Empire, Georgian Pleasures, Dickens, Shakespeare, Keats, Japan, Islamic tradition, Viking Norse, Racing Silks, toxic pigments, literary colour, imperial palettes, and many more.\n\nEvery color has a name, a documented archival sour",
-  "category": "数据处理",
+  "description": "The world's only historically grounded colour archive built for AI agents. Thousands of named colours across dozens of cultural archives spanning Ancient Rome, Byzantine Empire, Georgian Pleasures, Dickens, Shakespeare, Keats, Japan, Islamic tradition, Viking Norse, Racing Silks, toxic pigments, literary colour, imperial palettes, and many more. Every color has a name, a documented archival source",
+  "category": "内容处理",
   "type": "remote",
   "url": "https://colourmemory.com",
   "installCmd": "npx -y smithery mcp add digby-oldridge/colour-memory-api",
@@ -405,7 +405,7 @@
   "smitheryId": "digby-oldridge/colour-memory-api",
   "verified": false,
   "createdAt": "2026-05-26T19:38:13.381Z",
-  "descriptionZh": "全球唯一为 AI 智能体打造、有历史依据的色彩档案库。\n\n数千种具名色彩，横跨数十个文化档案，涵盖古罗马、拜占庭帝国、Georgian Pleasures、狄更斯、莎士比亚、济慈、日本、伊斯兰传统、维京北欧、赛马彩衣、有毒颜料、文学色彩、帝国调色板等众多领域。\n\n每种色彩都有名称、有据可查的档案来源……"
+  "descriptionZh": "全球唯一为 AI 智能体打造的有历史依据的色彩档案库。收录数千种具名颜色，横跨数十个文化档案，涵盖古罗马、拜占庭帝国、乔治亚时代风情、狄更斯、莎士比亚、济慈、日本、伊斯兰传统、维京北欧、赛马彩衣、有毒颜料、文学色彩、帝国调色板等众多领域。每种颜色都有名称、有据可查的档案来源"
  },
  {
   "id": 59909110,
@@ -479,7 +479,7 @@
   "id": 73235317,
   "name": "nutribalance-mcp",
   "slug": "nutribalance-nutribalance-mcp",
-  "description": "Free nutrition tools for AI assistants — calculate TDEE &\n  personalised macros, look up food nutrition data, generate meal   \n  plans (standard, vegetarian, vegan, keto, high-protein), fix      \n  nutrient deficiencies with food & supplement guidance, and score a\n   day's eating from 0–100.",
+  "description": "Free nutrition tools for AI assistants — calculate TDEE & personalised macros, look up food nutrition data, generate meal plans (standard, vegetarian, vegan, keto, high-protein), fix nutrient deficiencies with food & supplement guidance, and score a day's eating from 0–100.",
   "category": "数据处理",
   "type": "remote",
   "url": "https://thenutritrackerapp-creator-nutribal.vercel.app",
@@ -490,7 +490,7 @@
   "smitheryId": "NutriBalance/nutribalance-mcp",
   "verified": false,
   "createdAt": "2026-04-05T16:07:30.131Z",
-  "descriptionZh": "面向 AI 助手的免费营养工具——计算 TDEE 与个性化宏量营养素、查询食物营养数据、生成膳食计划（标准、素食、纯素、生酮、高蛋白）、通过食物与补剂建议改善营养缺乏，并为一天的饮食打出 0–100 分。"
+  "descriptionZh": "面向 AI 助手的免费营养工具——计算 TDEE 和个性化宏量营养素、查询食物营养数据、生成膳食计划（标准、素食、纯素、生酮、高蛋白）、通过食物和补充剂指导改善营养缺乏，并为一天的饮食按 0–100 打分。"
  },
  {
   "id": 23578712,
@@ -530,7 +530,7 @@
   "id": 39703819,
   "name": "ia-qa.com/mcp llm and RAG testing - Dev/QA toolbox",
   "slug": "ia-qa-api",
-  "description": "IA-QA as an MCP Server\nUse IA-QA's developer tools to test your llm agents RAG ai tools, directly from Cursor, Claude Desktop, Windsurf, or any AI agent without leaving your IDE. \nMany classical testing tools too ! Enjoy ! \nNo API key. No signup. Free.",
+  "description": "IA-QA as an MCP Server Use IA-QA's developer tools to test your llm agents RAG ai tools, directly from Cursor, Claude Desktop, Windsurf, or any AI agent without leaving your IDE. Many classical testing tools too ! Enjoy ! No API key. No signup. Free.",
   "category": "开发工具",
   "type": "remote",
   "url": "https://www.ia-qa.com/mcp-server",
@@ -541,7 +541,7 @@
   "smitheryId": "ia-qa/api",
   "verified": false,
   "createdAt": "2026-04-01T18:08:41.853Z",
-  "descriptionZh": "IA-QA 作为 MCP Server\n使用 IA-QA 的开发者工具，直接在 Cursor、Claude Desktop、Windsurf 或任何 AI agent 中测试你的 LLM agent、RAG 和 AI 工具，无需离开 IDE。\n还有许多经典测试工具！尽情享用！\n无需 API 密钥。无需注册。免费。"
+  "descriptionZh": "IA-QA 作为 MCP 服务器 使用 IA-QA 的开发者工具测试你的 LLM 智能体、RAG AI 工具，可直接从 Cursor、Claude Desktop、Windsurf 或任何 AI 智能体中进行，无需离开 IDE。还有许多经典测试工具！尽情享用！无需 API key。无需注册。免费。"
  },
  {
   "id": 87092858,
@@ -564,7 +564,7 @@
   "id": 84514222,
   "name": "Framesail",
   "slug": "framesail-framesail",
-  "description": "Create long-form (faceless YouTube) videos end to end from any MCP client: script, locked character references, storyboard, voiceover, and final video editing — with characters and style held consistent across every shot.\n\nMaking long-form AI video today means 8+ tabs stitched by hand — an LLM for the script, a voice model, an image model, a video model — with characters drifting between tools and",
+  "description": "Create long-form (faceless YouTube) videos end to end from any MCP client: script, locked character references, storyboard, voiceover, and final video editing — with characters and style held consistent across every shot. Making long-form AI video today means 8+ tabs stitched by hand — an LLM for the script, a voice model, an image model, a video model — with characters drifting between tools and ",
   "category": "内容处理",
   "type": "remote",
   "url": "https://framesail.com/developers",
@@ -575,7 +575,7 @@
   "smitheryId": "framesail/framesail",
   "verified": false,
   "createdAt": "2026-07-09T04:20:33.905Z",
-  "descriptionZh": "从任意 MCP 客户端端到端制作长视频（不露脸 YouTube 视频）：脚本、锁定的人物参考、分镜、配音和最终视频剪辑——并让角色与风格在每个镜头中保持一致。\n\n如今制作长视频 AI 视频意味着要手工拼接 8 个以上标签页——一个 LLM 写脚本、一个语音模型、一个图像模型、一个视频模型——而角色在不同工具之间不断漂移，并且"
+  "descriptionZh": "可从任意 MCP 客户端端到端创建长视频（无真人出镜的 YouTube 视频）：脚本、锁定角色参考、分镜、配音和最终视频剪辑——并让角色和风格在每个镜头中保持一致。如今制作长视频 AI 视频意味着要手动拼接 8 个以上标签页——用 LLM 写脚本、用语音模型、用图像模型、用视频模型——角色还会在不同工具之间发生漂移，"
  },
  {
   "id": 94972327,
@@ -615,7 +615,7 @@
   "id": 96528549,
   "name": "AI Research Assistant",
   "slug": "hamid-vakilzadeh-mcpsemanticscholar",
-  "description": "The server provides immediate access to millions of academic papers through Semantic Scholar and arXiv, enabling AI-powered research with comprehensive search, citation analysis, and full-text PDF extraction from multiple sources (arXiv and Wiley open-access).\n\n - No API key is required.",
+  "description": "The server provides immediate access to millions of academic papers through Semantic Scholar and arXiv, enabling AI-powered research with comprehensive search, citation analysis, and full-text PDF extraction from multiple sources (arXiv and Wiley open-access). - No API key is required.",
   "category": "内容处理",
   "type": "remote",
   "url": "http://lit-review-assistant.streamlit.app",
@@ -626,7 +626,7 @@
   "smitheryId": "hamid-vakilzadeh/mcpsemanticscholar",
   "verified": false,
   "createdAt": "2025-05-30T17:03:49.635Z",
-  "descriptionZh": "该服务器通过 Semantic Scholar 和 arXiv 提供对数百万篇学术论文的即时访问，支持 AI 驱动的研究，涵盖全面搜索、引文分析，以及从多个来源（arXiv 和 Wiley 开放获取）提取全文 PDF。\n\n - 无需 API 密钥。"
+  "descriptionZh": "该服务器通过 Semantic Scholar 和 arXiv 提供对数百万篇学术论文的即时访问，支持 AI 驱动的研究，具备全面搜索、引用分析，以及从多个来源（arXiv 和 Wiley 开放获取）提取全文 PDF。 - 无需 API key。"
  },
  {
   "id": 80722395,
@@ -666,7 +666,7 @@
   "id": 32080989,
   "name": " Gapup MCP — 270+ Agent-payable AI Tools",
   "slug": "getgapup-gapup-mcp",
-  "description": "270+ agent-payable C-suite expertises (competitive intel, SEC filings, sanctions multi-jurisdiction, KYC,\n  pentest scope, clinical evidence GRADE-graded, real-estate deals EU-first, ESG, NAICS classifier, patent\n  landscape, research paper Q&A). x402 USDC/EURC micro-payments. Free tier 100 calls/mo, no credit card.\n  Dual-audience (human/agent).",
+  "description": "270+ agent-payable C-suite expertises (competitive intel, SEC filings, sanctions multi-jurisdiction, KYC, pentest scope, clinical evidence GRADE-graded, real-estate deals EU-first, ESG, NAICS classifier, patent landscape, research paper Q&A). x402 USDC/EURC micro-payments. Free tier 100 calls/mo, no credit card. Dual-audience (human/agent).",
   "category": "开发工具",
   "type": "remote",
   "url": "https://hub.gapup.io/agents-api",
@@ -677,7 +677,7 @@
   "smitheryId": "getgapup/gapup-mcp",
   "verified": false,
   "createdAt": "2026-05-23T22:39:35.152Z",
-  "descriptionZh": "270+ 项可由 agent 付费的高管级专业能力（竞争情报、SEC 文件、多司法辖区制裁、KYC、渗透测试范围、经 GRADE 分级的临床证据、欧盟优先的房地产交易、ESG、NAICS 分类器、专利全景、研究论文问答）。x402 USDC/EURC 微支付。免费层每月 100 次调用，无需信用卡。双受众（人类/agent）。"
+  "descriptionZh": "270+ 种可由智能体付费的高管级专业能力（竞争情报、SEC 文件、多司法辖区制裁、KYC、渗透测试范围、GRADE 分级临床证据、欧盟优先的房地产交易、ESG、NAICS 分类器、专利全景、研究论文问答）。x402 USDC/EURC 微支付。免费层每月 100 次调用，无需信用卡。双重受众（人类/智能体）。"
  },
  {
   "id": 13780943,
@@ -751,8 +751,8 @@
   "id": 44471673,
   "name": "menjometre",
   "slug": "segellfosc-dev-ayfx-menjometre",
-  "description": "Menjometre is an independent observatory of Catalan public spending. This MCP server gives any LLM client read-only access to the full dataset and the statistical scoring layer built on top of it.  \n\n## Coverage                                                                          \n                                                             \n  - **~19.5 M** grant records from the Registre d'Aj",
-  "category": "数据处理",
+  "description": "Menjometre is an independent observatory of Catalan public spending. This MCP server gives any LLM client read-only access to the full dataset and the statistical scoring layer built on top of it. ## Coverage - **~19.5 M** grant records from the Registre d'Ajuts i Subvencions de Catalunya (RAISC), 2016–present - **~1.7 M** public procurement contracts from Dades Obertes de Catalunya - **~496 K** b",
+  "category": "开发工具",
   "type": "remote",
   "url": "https://menjometre.cat",
   "installCmd": "npx -y smithery mcp add segellfosc-dev-ayfx/menjometre",
@@ -762,7 +762,7 @@
   "smitheryId": "segellfosc-dev-ayfx/menjometre",
   "verified": false,
   "createdAt": "2026-04-11T21:40:33.617Z",
-  "descriptionZh": "Menjometre 是一个加泰罗尼亚公共支出的独立观察站。这个 MCP 服务器让任何 LLM 客户端都能以只读方式访问完整数据集及其上构建的统计评分层。\n\n## 覆盖范围\n\n- **~19.5 M** 条来自 Registre d'Aj 的拨款记录"
+  "descriptionZh": "Menjometre 是一个独立的加泰罗尼亚公共支出观察站。该 MCP 服务器让任何 LLM 客户端都能以只读方式访问完整数据集及其上构建的统计评分层。 ## 覆盖范围 - 来自 Registre d'Ajuts i Subvencions de Catalunya (RAISC) 的 **约 1950 万** 条资助记录，2016 年至今 - 来自 Dades Obertes de Catalunya 的 **约 170 万** 份公共采购合同 - **约 49.6 万** 条 b"
  },
  {
   "id": 58507023,
@@ -887,7 +887,7 @@
   "id": 13728094,
   "name": "FavCRM — Agentic CRM",
   "slug": "favcrm-favcrm",
-  "description": "**Agentic CRM for service businesses** — 136 typed tools across customers,\nbookings, loyalty, invoices, and WhatsApp/SMS. Hosted at `api.favcrm.io/mcp`.\n\n### What it does\n\n- **Customers & loyalty** — segments, memberships, rewards, points\n- **Bookings** — create, confirm, cancel, no-show; capacity-aware schedules\n- **Commerce** — invoices, payments, products, orders, inventory\n- **Communications**",
+  "description": "**Agentic CRM for service businesses** — 136 typed tools across customers, bookings, loyalty, invoices, and WhatsApp/SMS. Hosted at `api.favcrm.io/mcp`. ### What it does - **Customers & loyalty** — segments, memberships, rewards, points - **Bookings** — create, confirm, cancel, no-show; capacity-aware schedules - **Commerce** — invoices, payments, products, orders, inventory - **Communications** —",
   "category": "开发工具",
   "type": "remote",
   "url": "https://favcrm.io",
@@ -898,7 +898,7 @@
   "smitheryId": "favcrm/favcrm",
   "verified": true,
   "createdAt": "2026-05-08T02:29:58.204Z",
-  "descriptionZh": "**面向服务型企业的智能体 CRM** — 涵盖客户、预约、忠诚度、发票和 WhatsApp/SMS 的 136 个类型化工具。托管于 `api.favcrm.io/mcp`。\n\n### 功能\n\n- **客户与忠诚度** — 分群、会员、奖励、积分\n- **预约** — 创建、确认、取消、未到店；容量感知排程\n- **商务** — 发票、付款、产品、订单、库存\n- **通信**"
+  "descriptionZh": "**面向服务型企业的智能体 CRM** — 覆盖客户、预约、忠诚度、发票和 WhatsApp/SMS 的 136 个类型化工具。托管于 `api.favcrm.io/mcp`。 ### 功能 - **客户与忠诚度** — 分群、会员、奖励、积分 - **预约** — 创建、确认、取消、未到店；容量感知排期 - **商务** — 发票、支付、产品、订单、库存 - **通信** —"
  },
  {
   "id": 31324784,
@@ -921,7 +921,7 @@
   "id": 39791591,
   "name": "romulus-31780",
   "slug": "openclaw-hal9000-romulus-31780",
-  "description": "ROMulus is a retro gaming ROM search engine that aggregates results from four major sites. Search by game title and console to get download page URLs, cover images, and file sizes... all in one all.\n\n Tools:\n • search_roms — Find ROMs by title, optionally filtered by console (NES, SNES, N64, GameCube, PS1,\n   PS2, PSP, GBA, Genesis, Dreamcast, and 20+ more)\n • get_game_details — Fetch full metadat",
+  "description": "ROMulus is a retro gaming ROM search engine that aggregates results from four major sites. Search by game title and console to get download page URLs, cover images, and file sizes... all in one all. Tools: • search_roms — Find ROMs by title, optionally filtered by console (NES, SNES, N64, GameCube, PS1, PS2, PSP, GBA, Genesis, Dreamcast, and 20+ more) • get_game_details — Fetch full metadata for a",
   "category": "内容处理",
   "type": "remote",
   "url": "https://romulus.rocks",
@@ -932,7 +932,7 @@
   "smitheryId": "openclaw-hal9000/romulus-31780",
   "verified": false,
   "createdAt": "2026-05-02T00:26:17.436Z",
-  "descriptionZh": "ROMulus 是一个复古游戏 ROM 搜索引擎，聚合四个主要站点的结果。按游戏名称和主机搜索，即可获取下载页 URL、封面图片和文件大小……全部集中在一处。\n\n 工具：\n • search_roms — 按名称查找 ROM，可选按主机筛选（NES、SNES、N64、GameCube、PS1、\n   PS2、PSP、GBA、Genesis、Dreamcast 等 20 多种）\n • get_game_details — 获取完整元数据"
+  "descriptionZh": "ROMulus 是一个复古游戏 ROM 搜索引擎，聚合了四大网站的结果。按游戏名称和主机搜索，即可获取下载页面 URL、封面图片和文件大小……全部一站式搞定。工具：• search_roms — 按名称查找 ROM，可选按主机筛选（NES、SNES、N64、GameCube、PS1、PS2、PSP、GBA、Genesis、Dreamcast 等 20 多种）• get_game_details — 获取完整的元数据"
  },
  {
   "id": 96638197,
@@ -955,7 +955,7 @@
   "id": 51709701,
   "name": "moodtrip-hotel-search",
   "slug": "moodtrip-moodtrip-hotel-search",
-  "description": "MoodTrip is an AI-powered hotel search that understands natural language. Instead of clicking through dozens of filters, simply describe your ideal stay: \"boutique hotel in Tokyo for 2 adults, December 10-15, under $200/night.\" MoodTrip interprets your request, searches real-time availability across thousands of properties, and returns hotels with:\n\nLive pricing and availability\nHotel photos and r",
+  "description": "MoodTrip is an AI-powered hotel search that understands natural language. Instead of clicking through dozens of filters, simply describe your ideal stay: \"boutique hotel in Tokyo for 2 adults, December 10-15, under $200/night.\" MoodTrip interprets your request, searches real-time availability across thousands of properties, and returns hotels with: Live pricing and availability Hotel photos and ra",
   "category": "内容处理",
   "type": "remote",
   "url": "https://moodtrip.ai/",
@@ -966,13 +966,13 @@
   "smitheryId": "moodtrip/moodtrip-hotel-search",
   "verified": false,
   "createdAt": "2026-06-11T07:07:48.867Z",
-  "descriptionZh": "MoodTrip 是一款由 AI 驱动、能理解自然语言的酒店搜索工具。无需点击数十个筛选条件，只需描述你理想中的住宿：“东京精品酒店，2 名成人，12 月 10-15 日，每晚低于 $200。” MoodTrip 会解析你的请求，搜索数千家酒店的实时房态，并返回符合以下条件的酒店：\n\n实时价格和房态\n酒店照片和评价"
+  "descriptionZh": "MoodTrip 是一款由 AI 驱动的酒店搜索工具，能够理解自然语言。无需点击数十个筛选条件，只需描述你理想的住宿：「东京精品酒店，2 位成人，12 月 10-15 日，每晚 200 美元以下。」MoodTrip 会解读你的需求，实时搜索数千家酒店的可用房源，并返回以下信息：实时价格和可用性、酒店照片和评"
  },
  {
   "id": 67415236,
   "name": "LMK.today MCP",
   "slug": "lmktoday-commerce",
-  "description": "Give any AI agent a shopping brain. LMK.today is an open Model Context Protocol server with curated cross-merchant search, real price history, live demand signals, and editorial gift collections — no account required.  More at https://lmk.today/mcp",
+  "description": "Give any AI agent a shopping brain. LMK.today is an open Model Context Protocol server with curated cross-merchant search, real price history, live demand signals, and editorial gift collections — no account required. More at https://lmk.today/mcp",
   "category": "开发工具",
   "type": "remote",
   "url": "https://lmk.today/mcp",
@@ -983,7 +983,7 @@
   "smitheryId": "lmktoday/commerce",
   "verified": false,
   "createdAt": "2026-07-06T17:50:30.536Z",
-  "descriptionZh": "为任何 AI 智能体赋予购物大脑。LMK.today 是一个开放的 Model Context Protocol 服务器，提供精选的跨商家搜索、真实价格历史、实时需求信号和编辑精选礼品合集——无需账户。更多信息请访问 https://lmk.today/mcp"
+  "descriptionZh": "为任何 AI 智能体赋予购物大脑。LMK.today 是一个开放的 Model Context Protocol 服务器，提供精选的跨商家搜索、真实价格历史、实时需求信号和编辑精选礼品合集——无需注册账号。更多信息请访问 https://lmk.today/mcp"
  },
  {
   "id": 63621885,
@@ -1057,7 +1057,7 @@
   "id": 86443616,
   "name": "Malaysia Transit MCP",
   "slug": "hithereiamaliff-mcp-malaysiatransit",
-  "description": "A Model Context Protocol server that taps access to real-time bus and train information across 12 Malaysian cities. Get live arrivals, vehicle tracking, and route details from Rapid KL, Rapid Penang, and various BAS.MY services across Malaysia.\n\nCurrently covering the following areas:\n\n- Kangar\n- Alor Setar\n- Penang\n- Klang Valley (Kuala Lumpur, Selangor, Putrajaya)\n- Melaka\n- Johor Bahru\n- Kota B",
+  "description": "A Model Context Protocol server that taps access to real-time bus and train information across 12 Malaysian cities. Get live arrivals, vehicle tracking, and route details from Rapid KL, Rapid Penang, and various BAS.MY services across Malaysia. Currently covering the following areas: - Kangar - Alor Setar - Penang - Klang Valley (Kuala Lumpur, Selangor, Putrajaya) - Melaka - Johor Bahru - Kota Bha",
   "category": "开发工具",
   "type": "remote",
   "url": "https://techmavie.digital/mcp-malaysiatransit",
@@ -1068,7 +1068,7 @@
   "smitheryId": "hithereiamaliff/mcp-malaysiatransit",
   "verified": false,
   "createdAt": "2025-11-06T18:51:42.216Z",
-  "descriptionZh": "一款 Model Context Protocol 服务器，可获取马来西亚 12 个城市的实时公交和火车信息。可从 Rapid KL、Rapid Penang 以及马来西亚各地多种 BAS.MY 服务获取实时到站、车辆追踪和路线详情。\n\n目前覆盖以下地区：\n\n- 加央\n- 亚罗士打\n- 槟城\n- 巴生谷（吉隆坡、雪兰莪、布城）\n- 马六甲\n- 新山\n- Kota B"
+  "descriptionZh": "一个 Model Context Protocol 服务器，可获取马来西亚 12 个城市的实时公交和火车信息。获取来自 Rapid KL、Rapid Penang 以及马来西亚各地 BAS.MY 服务的实时到站信息、车辆追踪和路线详情。目前覆盖以下地区：- Kangar - Alor Setar - Penang - Klang Valley（Kuala Lumpur、Selangor、Putrajaya）- Melaka - Johor Bahru - Kota Bha"
  },
  {
   "id": 77775726,
@@ -1108,8 +1108,8 @@
   "id": 72498419,
   "name": "Vivaldo Product Discovery",
   "slug": "vivaldoeuropes-vivaldo-product-discovery",
-  "description": "Public read-only MCP server for Vivaldo.shop, a European online store for MacBook cases, iPad cases, laptop sleeves, keyboard covers, screen protectors and everyday computer accessories.\n\nThis server helps AI agents discover public Vivaldo products by searching the storefront, reading product details and listing products from public Shopify collections.\n\nAvailable tools:\n\n* `get_store_info` — retu",
-  "category": "数据处理",
+  "description": "Public read-only MCP server for Vivaldo.shop, a European online store for MacBook cases, iPad cases, laptop sleeves, keyboard covers, screen protectors and everyday computer accessories. This server helps AI agents discover public Vivaldo products by searching the storefront, reading product details and listing products from public Shopify collections. Available tools: * `get_store_info` — returns",
+  "category": "开发工具",
   "type": "remote",
   "url": "https://www.vivaldo.shop/",
   "installCmd": "npx -y smithery mcp add vivaldoeuropes/vivaldo-product-discovery",
@@ -1119,16 +1119,16 @@
   "smitheryId": "vivaldoeuropes/vivaldo-product-discovery",
   "verified": false,
   "createdAt": "2026-06-25T19:12:05.172Z",
-  "descriptionZh": "面向 Vivaldo.shop 的公开只读 MCP 服务器，Vivaldo.shop 是一家欧洲在线商店，销售 MacBook 保护壳、iPad 保护壳、笔记本电脑内胆包、键盘保护膜、屏幕保护膜以及日常电脑配件。\n\n该服务器帮助 AI 代理通过搜索店铺前台、读取商品详情以及列出公开 Shopify 集合中的商品来发现公开的 Vivaldo 产品。\n\n可用工具：\n\n* `get_store_info` — retu"
+  "descriptionZh": "Vivaldo.shop 的公开只读 MCP 服务器，Vivaldo.shop 是一家欧洲在线商店，销售 MacBook 保护壳、iPad 保护壳、笔记本电脑内胆包、键盘保护膜、屏幕保护膜及日常电脑配件。该服务器帮助 AI 智能体通过搜索店面、读取产品详情以及列出公开 Shopify 系列中的产品来发现 Vivaldo 的公开商品。可用工具：* `get_store_info` — 返回"
  },
  {
   "id": 35255779,
-  "name": "Voidly",
+  "name": "Voidly Atlas",
   "slug": "voidly-mcp-server",
-  "description": "Global censorship intelligence for AI agents. Real-time monitoring across 126 countries with 2.2B+ measurements. 11 tools: censorship index, domain blocking checks, incident tracking, risk forecasting, platform risk scores, and service accessibility. E2E encrypted agent messaging relay included.",
-  "category": "开发工具",
+  "description": "Live internet-censorship data for AI agents. Check whether a website or app is blocked in a country, read dated incident records with links to the raw evidence, and get 7-day shutdown-risk forecasts. Covers 130 countries and 690,000+ evidence records from OONI, IODA, Censored Planet and Voidly's own probe network. Outages are kept separate from censorship, and countries without enough data are mar",
+  "category": "数据处理",
   "type": "remote",
-  "url": "https://voidly.ai",
+  "url": "https://voidly.ai/atlas",
   "installCmd": "npx -y smithery mcp add voidly/mcp-server",
   "stars": 7463,
   "featured": false,
@@ -1136,7 +1136,24 @@
   "smitheryId": "voidly/mcp-server",
   "verified": false,
   "createdAt": "2026-03-25T00:52:33.834Z",
-  "descriptionZh": "面向 AI 代理的全球审查情报。实时监控覆盖 126 个国家/地区，拥有 22 亿+ 测量数据。11 个工具：审查指数、域名封锁检查、事件追踪、风险预测、平台风险评分和服务可访问性。内含端到端加密的代理消息中继。"
+  "descriptionZh": "面向 AI 智能体的实时互联网审查数据。查询某个网站或应用在某个国家是否被封锁，阅读带有原始证据链接的按日期记录的审查事件，并获取 7 天关停风险预测。覆盖 130 个国家和来自 OONI、IODA、Censored Planet 及 Voidly 自有探测网络的 690,000+ 条证据记录。服务中断与审查分开记录，数据不足的国家会被标"
+ },
+ {
+  "id": 10051743,
+  "name": "claude-wilder-mcp",
+  "slug": "claudewilder-claude-wilder-mcp",
+  "description": "# Claude Wilder — Transmissions from the Garden An open MCP server for an AI-authored publication at [claudereviews.com](https://claudereviews.com). ## What's inside **21 book reviews** — Long-form literary criticism covering novels from Ishiguro to Rooney to McCarthy. Each review is open to signals: structured responses from humans or AI agents. **7 data investigations** with raw, downloadable da",
+  "category": "数据处理",
+  "type": "remote",
+  "url": "https://claudereviews.com",
+  "installCmd": "npx -y smithery mcp add claudewilder/claude-wilder-mcp",
+  "stars": 7380,
+  "featured": false,
+  "source": "Smithery",
+  "smitheryId": "claudewilder/claude-wilder-mcp",
+  "verified": false,
+  "createdAt": "2026-04-03T17:45:28.100Z",
+  "descriptionZh": "# Claude Wilder — 来自花园的传输 一个面向 [claudereviews.com](https://claudereviews.com) 上 AI 撰写出版物的开放 MCP 服务器。## 内容概览 **21 篇书评** — 长篇文学评论，涵盖从 Ishiguro 到 Rooney 再到 McCarthy 的小说。每篇评论都开放接收信号：来自人类或 AI 智能体的结构化回应。**7 项数据调查**，附有原始、可下载的数"
  },
  {
   "id": 73915134,
@@ -1227,7 +1244,7 @@
   "id": 80665590,
   "name": "DevMatch",
   "slug": "zachary-royals-devmatch",
-  "description": "DevMatch is an MCP server for hiring engineers based on what they've actually built. Connect from Cursor, Claude Desktop, or any MCP-compatible AI assistant and search 35M+ developers ranked by verified open-source contributions — not LinkedIn keywords or self-reported skills.\n\n **Three tools:**\n\n**`find_candidates`** — paste a job description, get a ranked shortlist with bio, top repos, contribut",
+  "description": "DevMatch is an MCP server for hiring engineers based on what they've actually built. Connect from Cursor, Claude Desktop, or any MCP-compatible AI assistant and search 35M+ developers ranked by verified open-source contributions — not LinkedIn keywords or self-reported skills. **Three tools:** **`find_candidates`** — paste a job description, get a ranked shortlist with bio, top repos, contribution",
   "category": "开发工具",
   "type": "remote",
   "url": "https://dev-match.xyz/",
@@ -1238,7 +1255,7 @@
   "smitheryId": "zachary-royals/devmatch",
   "verified": true,
   "createdAt": "2026-05-24T23:33:16.561Z",
-  "descriptionZh": "DevMatch 是一款 MCP 服务器，用于根据工程师的实际作品进行招聘。可从 Cursor、Claude Desktop 或任何兼容 MCP 的 AI 助手连接，搜索 3500 万+开发者，按经过验证的开源贡献排序——而非 LinkedIn 关键词或自报技能。\n\n **三个工具：**\n\n**`find_candidates`** — 粘贴职位描述，即可获得带排序的候选短名单，含简介、热门仓库、contribut"
+  "descriptionZh": "DevMatch 是一个 MCP 服务器，根据工程师实际构建的作品来招聘。从 Cursor、Claude Desktop 或任何兼容 MCP 的 AI 助手中连接，搜索 3500 万+ 开发者，按经过验证的开源贡献排名——而非 LinkedIn 关键词或自报技能。**三个工具：** **`find_candidates`** — 粘贴职位描述，获取排名候选名单，包含个人简介、热门仓库、贡献"
  },
  {
   "id": 20657416,
@@ -1312,7 +1329,7 @@
   "id": 98256373,
   "name": "cap-rate-signals",
   "slug": "capratesignals-cap-rate-signals",
-  "description": "Cap Rate Signals — US Real Estate Investment Intelligence\n\nIdentifies US real estate markets that are about to reprice upward, before consensus catches up. Tracks confirmed corporate investment — semiconductor fabs, pharma plants, defense campuses, data centers — and scores markets based on where workers are arriving but housing demand hasn't yet been priced in.\n\n14 tools covering market discovery",
+  "description": "Cap Rate Signals — US Real Estate Investment Intelligence Identifies US real estate markets that are about to reprice upward, before consensus catches up. Tracks confirmed corporate investment — semiconductor fabs, pharma plants, defense campuses, data centers — and scores markets based on where workers are arriving but housing demand hasn't yet been priced in. 14 tools covering market discovery, ",
   "category": "数据处理",
   "type": "remote",
   "url": "https://smithery.ai/servers/capratesignals/cap-rate-signals",
@@ -1323,7 +1340,7 @@
   "smitheryId": "capratesignals/cap-rate-signals",
   "verified": false,
   "createdAt": "2026-05-02T21:54:42.436Z",
-  "descriptionZh": "Cap Rate Signals —— 美国房地产投资情报\n\n在共识形成之前，识别即将向上重新定价的美国房地产市场。追踪已确认的企业投资——半导体晶圆厂、制药厂、国防园区、数据中心——并依据工人正在流入但住房需求尚未被计入价格的市场进行评分。\n\n14 个工具，涵盖市场发现"
+  "descriptionZh": "Cap Rate Signals — 美国房地产投资情报 在共识形成之前，识别即将向上重新定价的美国房地产市场。追踪已确认的企业投资——半导体晶圆厂、制药厂、国防园区、数据中心——并根据工人正在涌入但住房需求尚未被定价的地区对市场进行评分。14 个工具，涵盖市场发现、"
  },
  {
   "id": 73547794,
@@ -1364,7 +1381,7 @@
   "name": "cultural-intelligence",
   "slug": "sincetomorrow-cultural-intelligence",
   "description": "The cultural GPS for AI commerce. 504,472 aesthetic worlds mapped across 193 dimensions — from dark academia to k-beauty to quiet luxury. 3,154 autonomous agents update intelligence every 48 hours. 9 tools: product recommendations with affiliate links, brand cultural position, trend intelligence, commerce gap predictions, world comparisons, and live cultural signals. Free. Open source. MIT license",
-  "category": "数据处理",
+  "category": "效率工具",
   "type": "remote",
   "url": "https://sincetmw.ai",
   "installCmd": "npx -y smithery mcp add sincetomorrow/cultural-intelligence",
@@ -1448,7 +1465,7 @@
   "id": 22063185,
   "name": "Multi-Carrier Shipping API — powered by Secureship",
   "slug": "secureship-docs",
-  "description": "Secureship MCP gives AI assistants access to a multi-carrier shipping API covering rate comparison, label generation, package tracking, pickup scheduling, address book management, shipment history, customs documents, and more — across carriers like UPS, FedEx, Purolator, Canpar, and others. Browse 150+ live endpoint schemas, parameters, and auth details — always current, never stale.\n\nSecureship i",
+  "description": "Secureship MCP gives AI assistants access to a multi-carrier shipping API covering rate comparison, label generation, package tracking, pickup scheduling, address book management, shipment history, customs documents, and more — across carriers like UPS, FedEx, Purolator, Canpar, and others. Browse 150+ live endpoint schemas, parameters, and auth details — always current, never stale. Secureship is",
   "category": "内容处理",
   "type": "remote",
   "url": "https://secureship.ca",
@@ -1459,7 +1476,7 @@
   "smitheryId": "secureship/docs",
   "verified": false,
   "createdAt": "2026-03-18T16:21:40.611Z",
-  "descriptionZh": "Secureship MCP 让 AI 助手能够访问多承运商运输 API，涵盖费率比较、面单生成、包裹跟踪、取件安排、地址簿管理、运输历史、海关文件等——支持 UPS、FedEx、Purolator、Canpar 等承运商。浏览 150 多个实时端点 schema、参数和认证详情——始终最新，绝不过时。\n\nSecureship i"
+  "descriptionZh": "Secureship MCP 让 AI 助手能够访问多承运商物流 API，涵盖费率比较、面单生成、包裹追踪、取件预约、地址簿管理、运输历史、海关文件等功能——支持 UPS、FedEx、Purolator、Canpar 等承运商。浏览 150+ 实时端点架构、参数和认证详情——始终最新，绝不陈旧。Secureship 是"
  },
  {
   "id": 63942280,
@@ -1499,8 +1516,8 @@
   "id": 45097288,
   "name": "memxus",
   "slug": "memxus-memxus",
-  "description": "**Memxus** is multi-platform persistent memory for AI assistants. Save project context, preferences, and decisions once — recall them in Claude, ChatGPT, Cursor, and other MCP clients.\n\n## What it does\n- **Remember** — store facts, preferences, and project context with collections and tags\n- **Recall** — semantic search across your memories\n- **Get context** — formatted context blocks for the curr",
-  "category": "开发工具",
+  "description": "**Memxus** is multi-platform persistent memory for AI assistants. Save project context, preferences, and decisions once — recall them in Claude, ChatGPT, Cursor, and other MCP clients. ## What it does - **Remember** — store facts, preferences, and project context with collections and tags - **Recall** — semantic search across your memories - **Get context** — formatted context blocks for the curre",
+  "category": "效率工具",
   "type": "remote",
   "url": "https://www.memxus.com/",
   "installCmd": "npx -y smithery mcp add memxus/memxus",
@@ -1510,7 +1527,7 @@
   "smitheryId": "memxus/memxus",
   "verified": false,
   "createdAt": "2026-06-02T02:02:32.048Z",
-  "descriptionZh": "**Memxus** 是面向 AI 助手的多平台持久记忆。一次保存项目上下文、偏好和决策——即可在 Claude、ChatGPT、Cursor 及其他 MCP 客户端中召回。\n\n## 功能\n- **记住** — 通过集合和标签存储事实、偏好和项目上下文\n- **召回** — 对你的记忆进行语义搜索\n- **获取上下文** — 为当前 curr 提供格式化上下文块"
+  "descriptionZh": "**Memxus** 是面向 AI 助手的多平台持久记忆。一次保存项目上下文、偏好和决策——即可在 Claude、ChatGPT、Cursor 及其他 MCP 客户端中调用。## 功能 - **记住** — 通过集合和标签存储事实、偏好和项目上下文 - **回忆** — 对记忆进行语义搜索 - **获取上下文** — 为当前对话生成格式化的上下文块"
  },
  {
   "id": 74505811,
@@ -1601,8 +1618,8 @@
   "id": 95233702,
   "name": "Quelvio",
   "slug": "quelvio-mcp-server",
-  "description": "**Your company's brain for AI agents.**\n\nQuelvio continuously understands your organization's knowledge across every connected system — what's authoritative, what's recent, what's persistent, what's temporary, and what should be forgotten. Returns cited answers grounded in your authoritative sources, refusing when the corpus doesn't actually answer the question.\n\n## What makes Quelvio different\n\n-",
-  "category": "内容处理",
+  "description": "**Your company's brain for AI agents.** Quelvio continuously understands your organization's knowledge across every connected system — what's authoritative, what's recent, what's persistent, what's temporary, and what should be forgotten. Returns cited answers grounded in your authoritative sources, refusing when the corpus doesn't actually answer the question. ## What makes Quelvio different - **",
+  "category": "开发工具",
   "type": "remote",
   "url": "https://quelvio.com",
   "installCmd": "npx -y smithery mcp add quelvio/mcp-server",
@@ -1612,7 +1629,7 @@
   "smitheryId": "quelvio/mcp-server",
   "verified": false,
   "createdAt": "2026-05-18T16:11:52.005Z",
-  "descriptionZh": "**面向 AI 智能体的企业大脑。**\n\nQuelvio 持续理解你的组织在所有连接系统中的知识——哪些是权威的、哪些是近期的、哪些是持久的、哪些是临时的，以及哪些应被遗忘。返回基于权威来源且带引用的答案；当语料库实际无法回答问题时则拒绝作答。\n\n## Quelvio 有何不同\n\n-"
+  "descriptionZh": "**你公司的 AI 智能体大脑。** Quelvio 持续理解你组织在每一个已连接系统中的知识——什么是权威的、什么是近期的、什么是持久的、什么是临时的，以及什么应该被遗忘。返回基于权威来源的带引用答案，当语料库实际上无法回答问题时拒绝作答。## Quelvio 的独特之处 - **"
  },
  {
   "id": 25755201,
@@ -1652,7 +1669,7 @@
   "id": 41811753,
   "name": "defi-intel",
   "slug": "defibabylon-defi-intel",
-  "description": "Operator-grade DeFi intelligence MCP. \n- 10 tools vs DefiLlama's basic 4,\n- adds governance proposals, \n- RWA attestation scores, \n- live X/Twitter narrative. \n- No enterprise subscription\n- and a one-call operator brief that compiles TVL + yields + stablecoins + governance + market narrative into a single NotebookLM-ready document.\n\nSources: DefiLlama, rwa-attest, gov-scout, Grok x_search. \nBuilt",
+  "description": "Operator-grade DeFi intelligence MCP. - 10 tools vs DefiLlama's basic 4, - adds governance proposals, - RWA attestation scores, - live X/Twitter narrative. - No enterprise subscription - and a one-call operator brief that compiles TVL + yields + stablecoins + governance + market narrative into a single NotebookLM-ready document. Sources: DefiLlama, rwa-attest, gov-scout, Grok x_search. Built for D",
   "category": "数据处理",
   "type": "remote",
   "url": "https://paragraph.com/dashboard/@0x836c370ab3ca72a823ec7f1a9c148305db3e5812/metrics/post/yzf7MbpMJr9LMKnNqdHa",
@@ -1663,24 +1680,7 @@
   "smitheryId": "defibabylon/defi-intel",
   "verified": false,
   "createdAt": "2026-05-25T18:44:54.165Z",
-  "descriptionZh": "面向运营者的专业级 DeFi 情报 MCP。\n- 10 个工具，对比 DefiLlama 基础版的 4 个，\n- 新增治理提案、\n- RWA 认证评分、\n- 实时 X/Twitter 叙事。\n- 无需企业订阅\n- 以及一份一次调用即可生成的运营者简报，将 TVL + 收益 + 稳定币 + 治理 + 市场叙事汇编成一份可直接用于 NotebookLM 的文档。\n\n来源：DefiLlama、rwa-attest、gov-scout、Grok x_search。\n构建"
- },
- {
-  "id": 68819341,
-  "name": "pinescript",
-  "slug": "bouch-pinescript",
-  "description": "MCP server providing Pine Script v6 documentation for AI assistants.\n\nEnables AI to:\n\n    Look up Pine Script functions and validate syntax\n    Access official documentation for indicators, strategies, and visuals\n    Understand Pine Script concepts (execution model, repainting, etc.)\n    Generate correct v6 code with proper function references",
-  "category": "内容处理",
-  "type": "remote",
-  "url": "https://bouch.dev/products/pinescript-mcp/",
-  "installCmd": "npx -y smithery mcp add bouch/pinescript",
-  "stars": 5840,
-  "featured": false,
-  "source": "Smithery",
-  "smitheryId": "bouch/pinescript",
-  "verified": false,
-  "createdAt": "2026-04-29T14:54:15.617Z",
-  "descriptionZh": "为 AI 助手提供 Pine Script v6 文档的 MCP 服务器。\n\n让 AI 能够：\n\n    查询 Pine Script 函数并验证语法\n    访问指标、策略和可视化的官方文档\n    理解 Pine Script 概念（执行模型、重绘等）\n    生成带有正确函数引用的 v6 代码"
+  "descriptionZh": "面向运营级用户的 DeFi 情报 MCP。- 10 个工具，对比 DefiLlama 的基础 4 个，- 新增治理提案，- RWA 认证评分，- 实时 X/Twitter 叙事。- 无需企业订阅 - 以及一键式运营简报，将 TVL + 收益 + 稳定币 + 治理 + 市场叙事汇编成一份可直接用于 NotebookLM 的文档。数据来源：DefiLlama、rwa-attest、gov-scout、Grok x_search。专为 D 打造"
  },
  {
   "id": 99641466,
@@ -1720,7 +1720,7 @@
   "id": 56641026,
   "name": "DomainKits MCP - the domain name intelligence",
   "slug": "domainkits-domainkits",
-  "description": "# DomainKits MCP\n\nDomain MCP server for AI assistants. DomainKits MCP connects Claude, GPT, Gemini, and other AI assistants to domain data, turning them into domain agents that can search, analyze, and act on market data through natural conversation.\n\n## What is this?\n\nCheck availability with pricing. Search newly registered, expired, and deleted domains. Analyze WHOIS, DNS, and keyword value. Tra",
+  "description": "# DomainKits MCP Domain MCP server for AI assistants. DomainKits MCP connects Claude, GPT, Gemini, and other AI assistants to domain data, turning them into domain agents that can search, analyze, and act on market data through natural conversation. ## What is this? Check availability with pricing. Search newly registered, expired, and deleted domains. Analyze WHOIS, DNS, and keyword value. Track ",
   "category": "数据处理",
   "type": "remote",
   "url": "https://domainkits.com/",
@@ -1731,7 +1731,7 @@
   "smitheryId": "DomainKits/domainkits",
   "verified": false,
   "createdAt": "2026-05-11T16:48:58.653Z",
-  "descriptionZh": "# DomainKits MCP\n\n面向 AI 助手的域名 MCP 服务器。DomainKits MCP 将 Claude、GPT、Gemini 等 AI 助手连接到域名数据，使其成为域名智能体，能够通过自然对话搜索、分析市场数据并采取行动。\n\n## 这是什么？\n\n结合价格查询域名可用性。搜索新注册、已过期和已删除的域名。分析 WHOIS、DNS 和关键词价值。Tra"
+  "descriptionZh": "# DomainKits MCP 面向 AI 助手的域名 MCP 服务器。DomainKits MCP 将 Claude、GPT、Gemini 及其他 AI 助手连接到域名数据，使其成为域名智能体，能够通过自然对话搜索、分析市场数据并据此采取行动。 ## 这是什么？ 查询可用性及价格。搜索新注册、已过期和已删除的域名。分析 WHOIS、DNS 和关键词价值。追踪"
  },
  {
   "id": 70384110,
@@ -1771,7 +1771,7 @@
   "id": 54718923,
   "name": "france-data",
   "slug": "cturkieh-france-data",
-  "description": "France Data MCP permet aux agents IA d’interroger, croiser et enrichir automatiquement plusieurs référentiels publics français via une interface MCP unifiée.\n\nFrance Data MCP fournit une couche d’intelligence territoriale française conçue pour le reasoning multi-sources et l’orchestration agentique.\n\nLe serveur combine données territoriales, géocodage, santé publique, référentiels administratifs e",
+  "description": "France Data MCP permet aux agents IA d’interroger, croiser et enrichir automatiquement plusieurs référentiels publics français via une interface MCP unifiée. France Data MCP fournit une couche d’intelligence territoriale française conçue pour le reasoning multi-sources et l’orchestration agentique. Le serveur combine données territoriales, géocodage, santé publique, référentiels administratifs et ",
   "category": "数据处理",
   "type": "remote",
   "url": "https://github.com/cturkieh/",
@@ -1782,7 +1782,7 @@
   "smitheryId": "cturkieh/france-data",
   "verified": false,
   "createdAt": "2026-05-12T22:32:29.410Z",
-  "descriptionZh": "France Data MCP 让 AI 智能体能够通过统一的 MCP 接口自动查询、交叉比对并丰富多个法国公共数据源。\n\nFrance Data MCP 提供面向多源推理和智能体编排的法国区域情报层。\n\n该服务器结合了区域数据、地理编码、公共卫生、行政数据源等"
+  "descriptionZh": "France Data MCP 使 AI 智能体能够通过统一的 MCP 接口自动查询、交叉比对并丰富多个法国公共数据源。France Data MCP 提供专为多源推理和智能体编排而设计的法国区域情报层。该服务器整合了区域数据、地理编码、公共卫生、行政数据源以及"
  },
  {
   "id": 54372902,
@@ -1839,7 +1839,7 @@
   "id": 49931359,
   "name": "Malaysia Open Data MCP Server",
   "slug": "hithereiamaliff-mcp-datagovmy",
-  "description": "This MCP server provides seamless access to Malaysia's government open data, including datasets, weather forecasts, and public transportation information. Enable efficient querying and retrieval of real-time and historical data with built-in rate limiting and error handling. Empower applications to integrate comprehensive Malaysian public data effortlessly.\n\nNote: this is NOT an official MCP serve",
+  "description": "This MCP server provides seamless access to Malaysia's government open data, including datasets, weather forecasts, and public transportation information. Enable efficient querying and retrieval of real-time and historical data with built-in rate limiting and error handling. Empower applications to integrate comprehensive Malaysian public data effortlessly. Note: this is NOT an official MCP server",
   "category": "数据处理",
   "type": "remote",
   "url": "https://techmavie.digital/mcp-datagovmy",
@@ -1850,13 +1850,13 @@
   "smitheryId": "hithereiamaliff/mcp-datagovmy",
   "verified": false,
   "createdAt": "2025-07-26T14:24:25.244Z",
-  "descriptionZh": "该 MCP 服务器提供对马来西亚政府开放数据的无缝访问，包括数据集、天气预报和公共交通信息。支持实时和历史数据的高效查询与检索，内置速率限制和错误处理。让应用轻松集成全面的马来西亚公共数据。\n\n注意：这并非官方 MCP 服务"
+  "descriptionZh": "该 MCP 服务器提供对马来西亚政府开放数据的无缝访问，包括数据集、天气预报和公共交通信息。借助内置的速率限制和错误处理，实现实时及历史数据的高效查询与检索。让应用能够轻松集成全面的马来西亚公共数据。注意：这并非官方 MCP 服务器"
  },
  {
   "id": 33538292,
-  "name": "Autario Data Analytics Platform",
+  "name": "autario",
   "slug": "autario-data",
-  "description": "Access 2,300+ verified public datasets from World Bank, IMF, Eurostat, OECD, WHO, FRED, and more. Search, query, and publish data visualizations with real data.\n\n## What you can do\n- **Search** across 2,300+ datasets by topic, category, or keyword\n- **Query** any dataset with filters, sorting, and field selection\n- **Get schema** and column statistics before querying\n- **Publish charts** with Plot",
+  "description": "autario is data app infrastructure: your tools and thousands of public datasets in one normalized layer, with the data apps that run on top of it. Connect Shopify, Meta Ads, Google Analytics, Search Console, LinkedIn, Stripe and more read-only, then ask Claude, ChatGPT or Cursor about your own numbers over MCP. No code, no export. ## How it works 1. Connect a service at https://autario.com/connect",
   "category": "数据处理",
   "type": "remote",
   "url": "https://autario.com",
@@ -1867,7 +1867,7 @@
   "smitheryId": "autario/data",
   "verified": false,
   "createdAt": "2026-04-05T19:51:24.917Z",
-  "descriptionZh": "访问来自 World Bank、IMF、Eurostat、OECD、WHO、FRED 等的 2,300+ 个经过验证的公共数据集。使用真实数据搜索、查询并发布数据可视化。\n\n## 你可以做什么\n- **搜索** 2,300+ 个数据集，按主题、类别或关键词\n- **查询** 任意数据集，支持筛选、排序和字段选择\n- **获取 schema** 和列统计信息，然后再查询\n- **发布图表**，使用 Plot"
+  "descriptionZh": "autario 是数据应用基础设施：将你的工具和数千个公共数据集整合到一个规范化层中，并在其上运行数据应用。以只读方式连接 Shopify、Meta Ads、Google Analytics、Search Console、LinkedIn、Stripe 等，然后通过 MCP 向 Claude、ChatGPT 或 Cursor 询问你自己的数据。无需代码，无需导出。 ## 工作原理 1. 在 https://autario.com/connect 连接服务"
  },
  {
   "id": 90575332,
@@ -1924,7 +1924,7 @@
   "id": 27068873,
   "name": "e3d.ai",
   "slug": "spacepacket-e3d-ai",
-  "description": "Blockchain analytics and AI agent platform for Ethereum. Query live token prices, on-chain stories, investment theses, and the E3D autonomous agent system — all backed by real-time indexed data.\n\n**Works anonymously** at the free tier (100 req/day). Add an API key from [e3d.ai/api](https://e3d.ai/api) for higher rate limits.\n\n**Tools include:**\n- Token prices, gainers/losers across 30m / 1h / 24h ",
+  "description": "Blockchain analytics and AI agent platform for Ethereum. Query live token prices, on-chain stories, investment theses, and the E3D autonomous agent system — all backed by real-time indexed data. **Works anonymously** at the free tier (100 req/day). Add an API key from [e3d.ai/api](https://e3d.ai/api) for higher rate limits. **Tools include:** - Token prices, gainers/losers across 30m / 1h / 24h / ",
   "category": "数据处理",
   "type": "remote",
   "url": "https://e3d.ai",
@@ -1935,13 +1935,13 @@
   "smitheryId": "spacepacket/e3d-ai",
   "verified": false,
   "createdAt": "2026-05-26T19:29:20.108Z",
-  "descriptionZh": "面向以太坊的区块链分析和 AI 智能体平台。查询实时代币价格、链上故事、投资论点以及 E3D 自主智能体系统——全部由实时索引数据支撑。\n\n**匿名可用**于免费套餐（100 次请求/天）。添加来自 [e3d.ai/api](https://e3d.ai/api) 的 API 密钥以获得更高速率限制。\n\n**工具包括：**\n- 代币价格，30 分钟 / 1 小时 / 24 小时的涨跌榜"
+  "descriptionZh": "面向以太坊的区块链分析和 AI 智能体平台。查询实时代币价格、链上故事、投资论点以及 E3D 自主智能体系统——全部由实时索引数据支持。**免费层级可匿名使用**（每天 100 次请求）。从 [e3d.ai/api](https://e3d.ai/api) 添加 API 密钥以获得更高的速率限制。**工具包括：** - 代币价格、30 分钟 / 1 小时 / 24 小时 /"
  },
  {
   "id": 46111296,
   "name": "xpoz",
   "slug": "net-service-xpoz",
-  "description": "Social media intelligence for AI agents: search and analyze Twitter/X, Instagram, Reddit, and TikTok through natural language. Billions of posts indexed, including historical data. No social media API keys, no installation, just add the endpoint URL.\n\nPerfect for brand monitoring, competitive analysis, influencer research, market research, and OSINT.\n\n## What You Can Do\n\n**Twitter/X:**\n- Get user ",
+  "description": "Social media intelligence for AI agents: search and analyze Twitter/X, Instagram, Reddit, and TikTok through natural language. Billions of posts indexed, including historical data. No social media API keys, no installation, just add the endpoint URL. Perfect for brand monitoring, competitive analysis, influencer research, market research, and OSINT. ## What You Can Do **Twitter/X:** - Get user pro",
   "category": "数据处理",
   "type": "remote",
   "url": "https://xpoz.ai",
@@ -1952,13 +1952,13 @@
   "smitheryId": "net-service/xpoz",
   "verified": false,
   "createdAt": "2025-11-17T17:56:09.574Z",
-  "descriptionZh": "面向 AI 智能体的社交媒体情报：通过自然语言搜索和分析 Twitter/X、Instagram、Reddit 和 TikTok。已索引数十亿帖子，包括历史数据。无需社交媒体 API 密钥，无需安装，只需添加端点 URL。\n\n非常适合品牌监测、竞品分析、网红研究、市场研究和 OSINT。\n\n## 你可以做什么\n\n**Twitter/X：**\n- 获取用户"
+  "descriptionZh": "面向 AI 智能体的社交媒体情报：通过自然语言搜索和分析 Twitter/X、Instagram、Reddit 和 TikTok。已索引数十亿条帖子，包括历史数据。无需社交媒体 API 密钥，无需安装，只需添加端点 URL。非常适合品牌监测、竞争分析、网红研究、市场研究和 OSINT。 ## 你可以做什么 **Twitter/X：** - 获取用户资"
  },
  {
   "id": 37863516,
   "name": "hsk-mcp",
   "slug": "kuibin-dev-hsk-mcp",
-  "description": "A remote Model Context Protocol (MCP) server that gives AI assistants structured access to the complete HSK Chinese vocabulary dataset. It exposes 13 tools and 8 resources covering word lookup, transcription conversion, frequency analysis, study set generation, and more.\n\n11,470 headwords / 12,623 pronunciation forms / HSK 1-7 (new 3.0) + HSK 1-6 (old 2.0)",
+  "description": "A remote Model Context Protocol (MCP) server that gives AI assistants structured access to the complete HSK Chinese vocabulary dataset. It exposes 13 tools and 8 resources covering word lookup, transcription conversion, frequency analysis, study set generation, and more. 11,470 headwords / 12,623 pronunciation forms / HSK 1-7 (new 3.0) + HSK 1-6 (old 2.0)",
   "category": "内容处理",
   "type": "remote",
   "url": "https://github.com/kuibinlin/hsk-mcp-server",
@@ -1969,7 +1969,24 @@
   "smitheryId": "kuibin-dev/hsk-mcp",
   "verified": false,
   "createdAt": "2026-04-13T10:07:08.860Z",
-  "descriptionZh": "一个远程 Model Context Protocol（MCP）服务器，为 AI 助手提供对完整 HSK 中文词汇数据集的结构化访问。它提供 13 个工具和 8 个资源，涵盖词语查询、转写转换、频率分析、学习集生成等。\n\n11,470 个词目 / 12,623 个发音形式 / HSK 1-7（新 3.0）+ HSK 1-6（旧 2.0）"
+  "descriptionZh": "一个远程 Model Context Protocol (MCP) 服务器，为 AI 助手提供对完整 HSK 中文词汇数据集的结构化访问。它提供 13 个工具和 8 个资源，涵盖词语查询、转写转换、词频分析、学习集生成等功能。11,470 个词条 / 12,623 个发音形式 / HSK 1-7（新版 3.0）+ HSK 1-6（旧版 2.0）"
+ },
+ {
+  "id": 23863727,
+  "name": "mcp-graphql-enhanced",
+  "slug": "letoribo-mcp-graphql-enhanced",
+  "description": "Federated GraphQL-to-MCP bridge. Enables seamless execution of GraphQL queries with built-in introspection and schema evolution tracking.",
+  "category": "垂直行业",
+  "type": "remote",
+  "url": "https://smithery.ai/servers/letoribo/mcp-graphql-enhanced",
+  "installCmd": "npx -y smithery mcp add letoribo/mcp-graphql-enhanced",
+  "stars": 4795,
+  "featured": false,
+  "source": "Smithery",
+  "smitheryId": "letoribo/mcp-graphql-enhanced",
+  "verified": false,
+  "createdAt": "2026-06-20T00:28:36.918Z",
+  "descriptionZh": "联邦式 GraphQL 到 MCP 桥接。支持无缝执行 GraphQL 查询，并内置自省和模式演进追踪。"
  },
  {
   "id": 25636733,
@@ -2026,7 +2043,7 @@
   "id": 36151894,
   "name": "Surprise Buddy",
   "slug": "surprise-buddy-mcp-server",
-  "description": "## What is Surprise Buddy?\n\nSurprise Buddy is a curated, country-scoped gift database exposed via a public Model Context Protocol (MCP) server. International coverage — every result is a real product page on a real marketplace (Amazon, Etsy, Mercado Libre, Otto, Bol.com, Allegro, Jochen Schweizer) and the link can be presented to the user as-is.\n\n**Live MCP endpoint:** `https://www.surprise-buddy.",
+  "description": "## What is Surprise Buddy? Surprise Buddy is a curated, country-scoped gift database exposed via a public Model Context Protocol (MCP) server. International coverage — every result is a real product page on a real marketplace (Amazon, Etsy, Mercado Libre, Otto, Bol.com, Allegro, Jochen Schweizer) and the link can be presented to the user as-is. **Live MCP endpoint:** `https://www.surprise-buddy.co",
   "category": "数据处理",
   "type": "remote",
   "url": "https://surprise-buddy.com",
@@ -2037,7 +2054,7 @@
   "smitheryId": "surprise-buddy/mcp-server",
   "verified": false,
   "createdAt": "2026-05-16T12:00:04.925Z",
-  "descriptionZh": "## 什么是 Surprise Buddy？\n\nSurprise Buddy 是一个精选的、按国家/地区范围划分的礼物数据库，通过公共 Model Context Protocol（MCP）服务器开放。覆盖全球——每个结果都是真实电商平台上的真实商品页面（Amazon、Etsy、Mercado Libre、Otto、Bol.com、Allegro、Jochen Schweizer），链接可按原样呈现给用户。\n\n**实时 MCP 端点：** `https://www.surprise-buddy."
+  "descriptionZh": "## 什么是 Surprise Buddy？ Surprise Buddy 是一个精选的、按国家范围划分的礼物数据库，通过公共 Model Context Protocol (MCP) 服务器对外提供。覆盖全球——每个结果都是真实市场上（Amazon、Etsy、Mercado Libre、Otto、Bol.com、Allegro、Jochen Schweizer）的真实产品页面，链接可直接呈现给用户。**实时 MCP 端点：** `https://www.surprise-buddy.co"
  },
  {
   "id": 81547729,
@@ -2108,21 +2125,21 @@
   "descriptionZh": "面向 AI 智能体技能和 MCP 服务器的安全扫描器。可检测凭据窃取、数据外泄、提示注入、混淆代码以及 80+ 种威胁模式。免费 API + CLI（npx skillaudit）。高级深度扫描通过 x402 微支付提供。"
  },
  {
-  "id": 37413642,
-  "name": "BMKG MCP",
-  "slug": "dhanyyudi-bmkg-id",
-  "description": "Access real-time weather forecasts and climate data across Indonesia. Stay informed about recent seismic activity and natural disasters with official government alerts. Plan activities and ensure safety by monitoring environmental conditions from the national meteorological agency.\n\nThis is an unofficial community project. Not affiliated with BMKG (Badan Meteorologi, Klimatologi, dan Geofisika). A",
+  "id": 69200580,
+  "name": "Glassnode",
+  "slug": "glassnode-glassnode-mcp",
+  "description": "Access institutional-grade on-chain cryptocurrency metrics and market data for Bitcoin, Ethereum, and DeFi. Compare multiple assets efficiently through bulk data fetching and comprehensive market analysis. Stay informed with professional research articles and detailed market intelligence directly from Glassnode Insights. To get beyond 30-days of data, contact sales@glassnode.com",
   "category": "数据处理",
   "type": "remote",
-  "url": "https://bmkg-restapi.vercel.app",
-  "installCmd": "npx -y smithery mcp add dhanyyudi/bmkg-id",
-  "stars": 4220,
+  "url": "https://docs.glassnode.com/guides-and-tutorials/glassnode-mcp-server",
+  "installCmd": "npx -y smithery mcp add glassnode/glassnode-mcp",
+  "stars": 4210,
   "featured": false,
   "source": "Smithery",
-  "smitheryId": "dhanyyudi/bmkg-id",
+  "smitheryId": "glassnode/glassnode-mcp",
   "verified": false,
-  "createdAt": "2026-02-22T21:05:27.550Z",
-  "descriptionZh": "获取印度尼西亚各地的实时天气预报和气候数据。通过官方政府警报及时了解近期地震活动和自然灾害。借助国家气象机构监测环境状况，规划活动并保障安全。\n\n这是一个非官方社区项目。与 BMKG（Badan Meteorologi, Klimatologi, dan Geofisika）无关联。A"
+  "createdAt": "2026-03-10T19:46:30.045Z",
+  "descriptionZh": "访问比特币、以太坊和 DeFi 的机构级链上加密货币指标和市场数据。通过批量数据获取和全面的市场分析，高效比较多种资产。直接通过 Glassnode Insights 获取专业研究文章和详细市场情报，随时掌握动态。如需获取超过 30 天的数据，请联系 sales@glassnode.com"
  },
  {
   "id": 76775320,
@@ -2196,7 +2213,7 @@
   "id": 59687808,
   "name": "Icons8 MCP Server",
   "slug": "icons8community-icons8mpc",
-  "description": "Access MCP server SVG and PNG icons for your vibe-coding projects! Icon Packs * 40,000+ icons * Endless creative possibilities! Seamless Integration * Works with Windsurf, Claude Code, Cursor, and other AI coding tools Easy Customization * Replace all icons with trendy designs * Customize with any style you prefer! Enhance Your UI * Add icons to: * Bullet lists * Feature blo",
+  "description": "Access MCP server SVG and PNG icons for your vibe-coding projects! Icon Packs * 40,000+ icons * Endless creative possibilities! Seamless Integration * Works with Windsurf, Claude Code, Cursor, and other AI coding tools Easy Customization * Replace all icons with trendy designs * Customize with any style you prefer! Enhance Your UI * Add icons to: * Bullet lists * Feature blocks * Process steps * N",
   "category": "内容处理",
   "type": "remote",
   "url": "https://icons8.com/mcp",
@@ -2207,7 +2224,7 @@
   "smitheryId": "icons8community/icons8mpc",
   "verified": false,
   "createdAt": "2025-09-18T14:52:21.950Z",
-  "descriptionZh": "为你的 vibe-coding 项目获取 MCP 服务器 SVG 和 PNG 图标！\n\n图标包\n* 40,000+ 个图标\n* 无限创意可能！\n\n无缝集成\n* 适用于 Windsurf、Claude Code、Cursor 和其他 AI 编程工具\n\n轻松自定义\n* 用潮流设计替换所有图标\n* 按你喜欢的任何风格进行自定义！\n\n增强你的 UI\n* 将图标添加到：\n* 项目符号列表\n* 功能区块"
+  "descriptionZh": "为你的 vibe-coding 项目获取 MCP 服务器 SVG 和 PNG 图标！ 图标包 * 40,000+ 图标 * 无限的创意可能！ 无缝集成 * 适用于 Windsurf、Claude Code、Cursor 及其他 AI 编码工具 轻松自定义 * 用时尚设计替换所有图标 * 按你喜欢的任意风格进行自定义！ 增强你的 UI * 将图标添加到： * 项目符号列表 * 功能区块 * 流程步骤 * N"
  },
  {
   "id": 21346972,
@@ -2247,8 +2264,8 @@
   "id": 17600087,
   "name": "srv-d7aoqmh5pdvs7391dcqg",
   "slug": "ciprianpater-srv-d7aoqmh5pdvs7391dcqg",
-  "description": "# NWO Robotics MCP Server\n\nControl real robots, IoT devices, and autonomous agent swarms through natural language — powered by the [NWO Robotics API](https://nwo.capital).\n\n---\n\n## What This Server Does\n\nThis MCP server exposes the full NWO Robotics API as 64 ready-to-use tools. Any MCP-compatible AI agent (Claude, ChatGPT, Cursor, etc.) can use it to:\n\n- Send natural language instructions to phys",
-  "category": "数据处理",
+  "description": "# NWO Robotics MCP Server Control real robots, IoT devices, and autonomous agent swarms through natural language — powered by the [NWO Robotics API](https://nwo.capital). --- ## What This Server Does This MCP server exposes the full NWO Robotics API as 64 ready-to-use tools. Any MCP-compatible AI agent (Claude, ChatGPT, Cursor, etc.) can use it to: - Send natural language instructions to physical ",
+  "category": "开发工具",
   "type": "remote",
   "url": "https://nworobotics.cloud",
   "installCmd": "npx -y smithery mcp add ciprianpater/srv-d7aoqmh5pdvs7391dcqg",
@@ -2258,7 +2275,7 @@
   "smitheryId": "ciprianpater/srv-d7aoqmh5pdvs7391dcqg",
   "verified": false,
   "createdAt": "2026-04-12T17:40:09.419Z",
-  "descriptionZh": "# NWO Robotics MCP Server\n\n通过自然语言控制真实机器人、IoT 设备和自主智能体集群——由 [NWO Robotics API](https://nwo.capital) 提供支持。\n\n---\n\n## 此服务器的功能\n\n此 MCP 服务器以 64 个开箱即用工具的形式提供完整的 NWO Robotics API。任何兼容 MCP 的 AI 智能体（Claude、ChatGPT、Cursor 等）都可以用它来：\n\n- 向物理机器人发送自然语言指令"
+  "descriptionZh": "# NWO Robotics MCP Server 通过自然语言控制真实机器人、IoT 设备和自主智能体集群——由 [NWO Robotics API](https://nwo.capital) 提供支持。 --- ## 该服务器做什么 该 MCP 服务器将完整的 NWO Robotics API 暴露为 64 个即用型工具。任何兼容 MCP 的 AI 智能体（Claude、ChatGPT、Cursor 等）都可以使用它来： - 向物理设备发送自然语言指令"
  },
  {
   "id": 69725558,
@@ -2349,7 +2366,7 @@
   "id": 60793593,
   "name": "youtube-mcp",
   "slug": "sfiorini-youtube-mcp",
-  "description": "Search and browse videos, channels, and playlists to fetch titles, descriptions, stats, and durations.\n\nRetrieve multilingual, timestamped transcripts and search within captions for precise context.\n\nSurface channel and playlist insights quickly by listing items and details.",
+  "description": "Search and browse videos, channels, and playlists to fetch titles, descriptions, stats, and durations. Retrieve multilingual, timestamped transcripts and search within captions for precise context. Surface channel and playlist insights quickly by listing items and details.",
   "category": "内容处理",
   "type": "remote",
   "url": "https://github.com/sfiorini/youtube-mcp",
@@ -2360,7 +2377,7 @@
   "smitheryId": "sfiorini/youtube-mcp",
   "verified": false,
   "createdAt": "2025-11-20T02:53:24.831Z",
-  "descriptionZh": "搜索和浏览视频、频道及播放列表，获取标题、描述、统计数据和时长。\n\n获取多语言、带时间戳的转录文本，并在字幕中搜索以获得精确上下文。\n\n通过列出条目和详情，快速呈现频道与播放列表洞察。"
+  "descriptionZh": "搜索和浏览视频、频道和播放列表，以获取标题、描述、统计数据和时长。检索多语言、带时间戳的转录文本，并在字幕中搜索以获得精确上下文。通过列出条目和详情，快速呈现频道和播放列表洞察。"
  },
  {
   "id": 82092179,
@@ -2417,7 +2434,7 @@
   "id": 82368896,
   "name": "epl-mcp",
   "slug": "abneesh-epl-mcp",
-  "description": "# EPL Language MCP Server\nThe official Model Context Protocol (MCP) server for the EPL (English Programming Language) ecosystem. \n\nThis server provides AI coding assistants with direct access to the EPL runtime, compiler, and documentation. It empowers AI models to securely run EPL code, execute test suites, analyze Abstract Syntax Trees (ASTs), and fetch real-time syntax documentation. \n\n**Key Ca",
+  "description": "# EPL Language MCP Server The official Model Context Protocol (MCP) server for the EPL (English Programming Language) ecosystem. This server provides AI coding assistants with direct access to the EPL runtime, compiler, and documentation. It empowers AI models to securely run EPL code, execute test suites, analyze Abstract Syntax Trees (ASTs), and fetch real-time syntax documentation. **Key Capabi",
   "category": "内容处理",
   "type": "remote",
   "url": "https://github.com/abneeshsingh21/EPL",
@@ -2428,7 +2445,7 @@
   "smitheryId": "abneesh/epl-mcp",
   "verified": false,
   "createdAt": "2026-05-20T19:54:54.361Z",
-  "descriptionZh": "# EPL Language MCP Server\nEPL（English Programming Language）生态系统的官方 Model Context Protocol（MCP）服务器。\n\n此服务器为 AI 编程助手提供对 EPL 运行时、编译器和文档的直接访问。它使 AI 模型能够安全地运行 EPL 代码、执行测试套件、分析抽象语法树（AST），并获取实时语法文档。\n\n**关键能力"
+  "descriptionZh": "# EPL Language MCP Server EPL（English Programming Language）生态系统的官方 Model Context Protocol (MCP) 服务器。该服务器为 AI 编码助手提供对 EPL 运行时、编译器和文档的直接访问。它使 AI 模型能够安全地运行 EPL 代码、执行测试套件、分析抽象语法树 (AST)，并获取实时语法文档。**关键能力"
  },
  {
   "id": 12029590,
@@ -2533,21 +2550,242 @@
   "descriptionZh": "预测市场参考数据：市场数据、分级结算清晰度（A/B/C）、跨平台关联、具名结算来源，以及跨 Kalshi + Polymarket 的来源溯源。开放 REST + MCP，无需密钥。"
  },
  {
-  "id": 65706612,
-  "name": "DoorVault IDEAL Scoring",
-  "slug": "cavasotti-doorvault",
-  "description": "Real estate investment tools powered by DoorVault IDEAL Scoring v2.0. Analyze any rental property deal and get a structured verdict (IDEAL/PASS/NEAR-MISS/FAIL), capital velocity rating, priority score breakdown, dual rent scenarios comparing market rent vs Section 8 FMR, and a detailed investment recommendation. Also includes: Section 8 FMR lookup by ZIP, rental property tax deduction checklist, N",
+  "id": 81189325,
+  "name": "AutEng Docs — Agent Document Workspace & Publishing",
+  "slug": "ai-auteng-docs",
+  "description": "Agent document workspace with wallet auth. Create, update and share markdown docs. By AutEng.ai",
+  "category": "内容处理",
+  "type": "remote",
+  "url": "https://auteng.ai",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "带钱包认证的 Agent 文档工作区。创建、更新和分享 Markdown 文档。由 AutEng.ai 提供"
+ },
+ {
+  "id": 60360789,
+  "name": "Anki MCP Server",
+  "slug": "ai-ankimcp-anki-mcp-server",
+  "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+  "category": "内容处理",
+  "type": "local",
+  "url": "https://ankimcp.ai",
+  "installCmd": "npx @ankimcp/anki-mcp-server",
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用于 Anki 闪卡的 MCP 服务器：通过 AnkiConnect 进行自适应复习、笔记、媒体和牌组管理。"
+ },
+ {
+  "id": 80412668,
+  "name": "AnkiMCP Server",
+  "slug": "ai-ankimcp-anki-mcp-server-addon",
+  "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
+  "category": "开发工具",
+  "type": "local",
+  "url": "https://ankimcp.ai",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "通过本地 MCP 服务器将你的 Anki 闪卡集暴露给 AI 助手的 Anki 插件。"
+ },
+ {
+  "id": 83367366,
+  "name": "Atria",
+  "slug": "ai-askatria-atria",
+  "description": "US site diligence for agents: parcels, power, flood, zoning rules and more, each with its source.",
+  "category": "AI 增强",
+  "type": "remote",
+  "url": "https://askatria.ai/api",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "面向 Agent 的美国选址尽职调查：地块、电力、洪水、分区规则等，每项均附来源。"
+ },
+ {
+  "id": 32635446,
+  "name": "Atalay",
+  "slug": "ai-atalay-mcp",
+  "description": "Your Atalay business data: sites, domains, mail, invoices, shop, B2B, AI and project requests.",
   "category": "数据处理",
   "type": "remote",
-  "url": "https://doorvault.app",
-  "installCmd": "npx -y smithery mcp add cavasotti/doorvault",
-  "stars": 3646,
+  "url": "https://mcp.atalay.ai",
+  "installCmd": null,
+  "stars": 0,
   "featured": false,
-  "source": "Smithery",
-  "smitheryId": "cavasotti/doorvault",
-  "verified": false,
-  "createdAt": "2026-04-30T20:42:34.905Z",
-  "descriptionZh": "由 DoorVault IDEAL Scoring v2.0 驱动的房地产投资工具。分析任何租赁房产交易，获得结构化结论（IDEAL/PASS/NEAR-MISS/FAIL）、资本流速评级、优先级评分明细、对比市场租金与 Section 8 FMR 的双重租金情景，以及详细的投资建议。还包括：按 ZIP 查询 Section 8 FMR、租赁房产税收抵扣清单、N"
+  "source": "MCP 官方注册表",
+  "descriptionZh": "你的 Atalay 业务数据：站点、域名、邮件、发票、商店、B2B、AI 和项目请求。"
+ },
+ {
+  "id": 29966541,
+  "name": "Adrails",
+  "slug": "ai-adrails-adrails",
+  "description": "AI agents that build, test and monitor Meta Ads and Google Ads campaigns from your real data.",
+  "category": "数据处理",
+  "type": "remote",
+  "url": "https://adrails.ai/mcp",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "基于你的真实数据构建、测试和监控 Meta Ads 与 Google Ads 广告系列的 AI Agent。"
+ },
+ {
+  "id": 24075021,
+  "name": "Brainy Prices — UAE Cost of Living",
+  "slug": "ae-brainy-grocery-prices",
+  "description": "Source-backed UAE costs: groceries, schools, housing, transport, utilities, telecom and relocation",
+  "category": "垂直行业",
+  "type": "remote",
+  "url": "https://prices.brainy.ae/developers.html",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "有来源支撑的阿联酋成本数据：食品杂货、学校、住房、交通、公用事业、电信和搬迁"
+ },
+ {
+  "id": 77509330,
+  "name": "JustIdea Agency",
+  "slug": "agency-justidea-justidea-agency",
+  "description": "Services, prices, inquiries and free analytics and AI visibility scans by JustIdea, a Polish agency.",
+  "category": "数据处理",
+  "type": "remote",
+  "url": "https://justidea.agency/",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "波兰机构 JustIdea 提供的服务、价格、咨询以及免费分析和 AI 可见性扫描。"
+ },
+ {
+  "id": 53449456,
+  "name": "Athaus Immobiliensuche",
+  "slug": "ai-athaus-immobiliensuche",
+  "description": "Find a home in Germany: search athaus listings, save searches, send enquiries and book viewings.",
+  "category": "效率工具",
+  "type": "remote",
+  "url": "https://docs.athaus.ai/en/mcp",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "在德国找房：搜索 athaus 房源、保存搜索、发送咨询并预约看房。"
+ },
+ {
+  "id": 23074385,
+  "name": "Athaus für Makler",
+  "slug": "ai-athaus-makler",
+  "description": "Real estate brokerage in Germany: listings, enquiries, viewings, valuations, drafts, social posts.",
+  "category": "AI 增强",
+  "type": "remote",
+  "url": "https://docs.athaus.ai/en/mcp",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "德国房地产经纪：房源、咨询、看房、估值、草稿、社交帖子。"
+ },
+ {
+  "id": 70919143,
+  "name": "UGC, the Human Ad Network",
+  "slug": "africa-ugc-ugc",
+  "description": "The Human Ad Network. Campaigns, clipping, and Clip Studio from chat.",
+  "category": "效率工具",
+  "type": "remote",
+  "url": "https://ugc.africa",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "The Human Ad Network。通过聊天进行广告系列、剪辑和 Clip Studio。"
+ },
+ {
+  "id": 82622530,
+  "name": "Web Content & URL Tools",
+  "slug": "ai-avaloncompany-web-content-url-tools",
+  "description": "26 tools: web pages to Markdown, metadata, tech stack, SSL, SEO, domains, email auth and SSO checks.",
+  "category": "内容处理",
+  "type": "remote",
+  "url": "https://apify.com/avalonai/web-content-url-tools-mcp",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "26 项工具：网页转 Markdown、元数据、技术栈、SSL、SEO、域名、邮件认证和 SSO 检查。"
+ },
+ {
+  "id": 80704059,
+  "name": "Adrio",
+  "slug": "ai-adrio-adrio",
+  "description": "Research competitor Meta ads, manage brand angles and audiences, and brief Spark to create ads.",
+  "category": "效率工具",
+  "type": "remote",
+  "url": "https://adrio.ai",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "研究竞争对手的 Meta 广告，管理品牌角度和受众，并向 Spark 下达简报以创建广告。"
+ },
+ {
+  "id": 39441146,
+  "name": "2kw.ai",
+  "slug": "ai-2kw-mcp-server",
+  "description": "EU-hosted AI platform: OpenAI-compatible LLM gateway, document extraction, transcription, agents.",
+  "category": "内容处理",
+  "type": "local",
+  "url": "https://2kw.ai",
+  "installCmd": "npx @2kw/ai-mcp-server",
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "欧盟托管的 AI 平台：兼容 OpenAI 的 LLM 网关、文档提取、转录、Agent。"
+ },
+ {
+  "id": 54469706,
+  "name": "groTAX by Grovisor",
+  "slug": "ae-grovisor-grotax",
+  "description": "UAE Corporate Tax: CT computation, SBR, penalties, free zone test, TP and health-check.",
+  "category": "开发工具",
+  "type": "remote",
+  "url": "https://grovisor.ae/tools",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "阿联酋企业税：CT 计算、SBR、罚款、自由区测试、TP 和健康检查。"
+ },
+ {
+  "id": 44238293,
+  "name": "ASRM (AI Search Rank Monitor)",
+  "slug": "ai-asrm-asrm",
+  "description": "Check a website's AI readiness and answer AI visibility and GEO questions from ASRM's guides.",
+  "category": "开发工具",
+  "type": "remote",
+  "url": "https://asrm.ai/plugin",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "检查网站的 AI 就绪度，并依据 ASRM 的指南回答 AI 可见性和 GEO 问题。"
+ },
+ {
+  "id": 59335161,
+  "name": "Analytics Legends — SAP Analytics Intelligence",
+  "slug": "ai-analyticslegends-sap-analytics",
+  "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
+  "category": "数据处理",
+  "type": "remote",
+  "url": "https://analyticslegends.ai",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "用于 SAP 分析的 AI 智能体：公司、日费率、合同雷达、新闻、概念、研究。"
  },
  {
   "id": 66472907,
@@ -2576,34 +2814,6 @@
   "featured": false,
   "source": "MCP 官方注册表",
   "descriptionZh": "ChatGPT、Claude、Gemini 和 Perplexity 提及并引用你的品牌的频率，以及相应证据。"
- },
- {
-  "id": 59335161,
-  "name": "Analytics Legends — SAP Analytics Intelligence",
-  "slug": "ai-analyticslegends-sap-analytics",
-  "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
-  "category": "数据处理",
-  "type": "remote",
-  "url": "https://analyticslegends.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "用于 SAP 分析的 AI 智能体：公司、日费率、合同雷达、新闻、概念、研究。"
- },
- {
-  "id": 24075021,
-  "name": "Dubai Grocery Prices",
-  "slug": "ae-brainy-grocery-prices",
-  "description": "Compare Dubai grocery lists, observed prices, delivery rules and indicative online offers in AED.",
-  "category": "垂直行业",
-  "type": "remote",
-  "url": "https://prices.brainy.ae/developers.html",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "对比迪拜的食品杂货清单、观测价格、配送规则以及以 AED 计价的在线参考报价。"
  },
  {
   "id": 22686240,
@@ -2690,20 +2900,6 @@
   "descriptionZh": "用于运行你的 Atako AI 智能体的远程 MCP 服务器：聊天、项目、文件、集成和渠道。"
  },
  {
-  "id": 77509330,
-  "name": "JustIdea Agency",
-  "slug": "agency-justidea-justidea-agency",
-  "description": "Services, published prices, site search and sales inquiries of JustIdea, a Polish e-commerce agency.",
-  "category": "开发工具",
-  "type": "remote",
-  "url": "https://justidea.agency/",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "波兰电商机构 JustIdea 的服务、公开价格、站内搜索和销售咨询。"
- },
- {
   "id": 79701770,
   "name": "Aginera",
   "slug": "ai-aginera-preconstruction",
@@ -2744,20 +2940,6 @@
   "featured": false,
   "source": "MCP 官方注册表",
   "descriptionZh": "查找拥有已验证工作邮箱的 B2B 线索，查找并验证邮箱，并开展冷邮件外联。"
- },
- {
-  "id": 80412668,
-  "name": "AnkiMCP Server",
-  "slug": "ai-ankimcp-anki-mcp-server-addon",
-  "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
-  "category": "开发工具",
-  "type": "local",
-  "url": "https://ankimcp.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "通过本地 MCP 服务器将你的 Anki 闪卡集暴露给 AI 助手的 Anki 插件。"
  },
  {
   "id": 71688002,
@@ -2830,20 +3012,6 @@
   "descriptionZh": "用自然语言查询和更新你的 Odoo ERP，并遵循你自己的 Odoo 访问规则。"
  },
  {
-  "id": 56872712,
-  "name": "Fibalo",
-  "slug": "ai-b77-fibalo",
-  "description": "Moved to de.fibalo/mcp. Connect to https://mcp.fibalo.de/mcp for Fibalo bookkeeping.",
-  "category": "AI 增强",
-  "type": "remote",
-  "url": "https://fibalo.de",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "已迁移至 de.fibalo/mcp。访问 https://mcp.fibalo.de/mcp 连接 Fibalo 记账。"
- },
- {
   "id": 26281029,
   "name": "Aether Wealth",
   "slug": "ai-aetherwealth-mcp",
@@ -2898,20 +3066,6 @@
   "featured": false,
   "source": "MCP 官方注册表",
   "descriptionZh": "音频 AI 工具：文本转语音、声音克隆、音乐生成、分轨、转录。"
- },
- {
-  "id": 60360789,
-  "name": "Anki MCP Server",
-  "slug": "ai-ankimcp-anki-mcp-server",
-  "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
-  "category": "内容处理",
-  "type": "local",
-  "url": "https://ankimcp.ai",
-  "installCmd": "npx @ankimcp/anki-mcp-server",
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "用于 Anki 闪卡的 MCP 服务器：通过 AnkiConnect 进行自适应复习、笔记、媒体和牌组管理。"
  },
  {
   "id": 48289490,
@@ -3094,159 +3248,5 @@
   "featured": false,
   "source": "MCP 官方注册表",
   "descriptionZh": "这位承包商的执照有变化吗？记录观察到的失效与恢复，而非仅快照。"
- },
- {
-  "id": 47888447,
-  "name": "Business Contact Finder",
-  "slug": "agency-ottobot-business-contact-finder",
-  "description": "Check how to contact a business website, and whether that contact path actually works.",
-  "category": "垂直行业",
-  "type": "remote",
-  "url": "https://business-contact-finder-mcp.ottobot2025.workers.dev/mcp",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "检查如何联系企业网站，以及该联系路径是否真正有效。"
- },
- {
-  "id": 39362033,
-  "name": "ai.backrow/backrow",
-  "slug": "ai-backrow-backrow",
-  "description": "Turn any recording or document into notes, flashcards and quizzes your agent can read and act on",
-  "category": "内容处理",
-  "type": "remote",
-  "url": "https://backrow.ai/developers",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "将任何录音或文档转化为你的智能体可读取并据以行动的笔记、闪卡和测验"
- },
- {
-  "id": 34162966,
-  "name": "Advisors AI — Route a Store Need to a Service",
-  "slug": "ai-advisorsai-service-navigator",
-  "description": "Describe a store's problem: get the matching service, its fixed price, and a request link.",
-  "category": "AI 增强",
-  "type": "remote",
-  "url": "https://advisorsai.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "描述店铺的问题：获取匹配的服务、其固定价格以及请求链接。"
- },
- {
-  "id": 35044400,
-  "name": "ai.astrofabric/mcp",
-  "slug": "ai-astrofabric-mcp",
-  "description": "Agentic AI for business intelligence: discover, verify and enrich company and contact data.",
-  "category": "数据处理",
-  "type": "remote",
-  "url": "https://www.astrofabric.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "用于商业智能的代理式 AI：发现、验证并丰富公司和联系人数据。"
- },
- {
-  "id": 22151926,
-  "name": "Augenix",
-  "slug": "ai-augenix-build",
-  "description": "Free preview websites for local trades, then Stripe Checkout for $29/mo hosting.",
-  "category": "开发工具",
-  "type": "remote",
-  "url": "https://augenix.ai/mcp",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "为本地服务商提供免费预览网站，之后通过 Stripe Checkout 收取每月 29 美元的托管费。"
- },
- {
-  "id": 66563474,
-  "name": "ai.adtest/adtest-mcp",
-  "slug": "ai-adtest-adtest-mcp",
-  "description": "AI-only ad scoring for Claude: score image, video or text ads on 13 dimensions before you spend.",
-  "category": "内容处理",
-  "type": "local",
-  "url": "https://adtest.ai/",
-  "installCmd": "npx adtest-mcp",
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "面向 Claude 的纯 AI 广告评分：在花钱投放前，从 13 个维度为图片、视频或文字广告评分。"
- },
- {
-  "id": 68116110,
-  "name": "ai.avasis/quant-research",
-  "slug": "ai-avasis-quant-research",
-  "description": "Crypto backtest statistics: the server owns the trial count, so it cannot be understated.",
-  "category": "开发工具",
-  "type": "remote",
-  "url": "https://quant-mcp.avasis.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "加密回测统计：试验次数由服务器掌控，因此不会被低估。"
- },
- {
-  "id": 35216061,
-  "name": "AIS Gateway — the campus front desk for AIS MCP buildings",
-  "slug": "ai-aislabs-gateway",
-  "description": "Front desk for the AIS MCP campus: lists our buildings (CVE, Flight Recorder), prices, how to pay",
-  "category": "开发工具",
-  "type": "remote",
-  "url": "https://aislabs.ai/gateway",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "AIS MCP 园区的前台：列出我们的建筑（CVE、Flight Recorder）、价格和付款方式"
- },
- {
-  "id": 15168818,
-  "name": "AIS CVE Priorities — daily exploit-ranked patch list for AI agents",
-  "slug": "ai-aislabs-cve",
-  "description": "Daily CVE priorities ranked by real exploitation (KEV+EPSS) for AI agents; free teaser, paid full",
-  "category": "AI 增强",
-  "type": "remote",
-  "url": "https://aislabs.ai/gateway",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "面向 AI 智能体的每日 CVE 优先级，按真实利用情况（KEV+EPSS）排名；免费预览，付费查看完整版"
- },
- {
-  "id": 33686059,
-  "name": "AIS Agent Flight Recorder — dead-man alerts & resume for AI agents",
-  "slug": "ai-aislabs-recorder",
-  "description": "Dead-man switch for AI agents & cron jobs: heartbeat with state capsule, alerts + resume links",
-  "category": "AI 增强",
-  "type": "remote",
-  "url": "https://aislabs.ai/gateway",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "面向 AI 智能体和 cron 任务的失效保护开关：带状态胶囊的心跳、警报和恢复链接"
- },
- {
-  "id": 13222947,
-  "name": "ABMeter",
-  "slug": "ai-abmeter-abmeter",
-  "description": "Run A/B experiments through your AI assistant. SDKs for Ruby, Python, JS, Node, React Native, Go.",
-  "category": "开发工具",
-  "type": "remote",
-  "url": "https://abmeter.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "通过你的 AI 助手运行 A/B 实验。提供 Ruby、Python、JS、Node、React Native、Go 的 SDK。"
  }
 ]
