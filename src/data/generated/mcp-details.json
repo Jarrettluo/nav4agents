@@ -4331,9 +4331,14 @@
  "voidly-mcp-server": {
   "tools": [
    {
+    "name": "voidly_capabilities",
+    "description": "Read the versioned Voidly agent capability manifest, including each action endpoint, authentication, price basis, example, and current availability. This public",
+    "descriptionZh": "读取版本化的 Voidly 代理能力清单，包括每个操作端点、认证、价格依据、示例和当前可用性。此公开"
+   },
+   {
     "name": "get_censorship_index",
-    "description": "Get the global censorship index with rankings for all monitored countries. Returns country scores, risk tiers, and measurement counts for 126+ countries based o",
-    "descriptionZh": "获取全球审查指数，包含所有受监测国家的排名。返回 126+ 个国家的国家评分、风险等级和测量计数，基于"
+    "description": "Get the global censorship index with rankings for monitored countries. Returns country scores derived from OONI anomaly rates, risk tiers, and measurement count",
+    "descriptionZh": "获取带有受监控国家排名的全球审查指数。返回基于 OONI 异常率、风险层级和测量计数的国家评分"
    },
    {
     "name": "get_country_status",
@@ -4347,8 +4352,8 @@
    },
    {
     "name": "get_active_incidents",
-    "description": "Get active censorship incidents with evidence links, severity ratings, and affected services. Each incident is citable with a human-readable ID (e.g., IR-2026-0",
-    "descriptionZh": "获取活跃审查事件，包含证据链接、严重性评级和受影响服务。每个事件均可通过人类可读 ID 引用（例如 IR-2026-0"
+    "description": "Get citable censorship incidents (multi-source, evidence-backed) ranked best-first — real censorship events surface ahead of single-source IODA connectivity-out",
+    "descriptionZh": "获取可引用的审查事件（多来源、有证据支持），按最佳优先排序 — 真实审查事件优先于单来源 IODA 连接中断"
    },
    {
     "name": "get_incident_detail",
@@ -4357,13 +4362,38 @@
    },
    {
     "name": "verify_claim",
-    "description": "Verify a censorship claim against real measurement data from OONI, CensoredPlanet, and IODA. Returns verdict with supporting evidence.",
-    "descriptionZh": "使用来自 OONI、CensoredPlanet 和 IODA 的真实测量数据验证审查说法。返回带有支持证据的判定结果。"
+    "description": "Claim-specific assessment is held pending reviewed public incident projection and exact-source citations.",
+    "descriptionZh": "针对具体主张的评估暂缓，等待经过审查的公开事件投影和精确来源引用。"
+   },
+   {
+    "name": "country_brief",
+    "description": "Assemble partial country context from the OONI-specific index only. Mixed-source profile, incident details, and exact citations remain held for public projectio",
+    "descriptionZh": "仅从 OONI 特定索引组装部分国家上下文。混合来源画像、事件详情和精确引用仍暂缓用于公开投影"
+   },
+   {
+    "name": "explain_outage",
+    "description": "Date-specific outage explanation is held pending reviewed public incident projection and exact-source citations.",
+    "descriptionZh": "针对具体日期的中断解释暂缓，等待经过审查的公开事件投影和精确来源引用。"
+   },
+   {
+    "name": "watch",
+    "description": "Create one DID-owned Atlas incident watch with a server-to-server X-Agent-Key header and explicit confirmation. Supply one country or domain, a public HTTPS web",
+    "descriptionZh": "使用服务器到服务器的 X-Agent-Key 标头和显式确认，创建一个 DID 拥有的 Atlas 事件监视。提供一个国家或域名、一个公开 HTTPS 网页"
+   },
+   {
+    "name": "watch_list",
+    "description": "List this active agent DID's persisted Atlas incident watches. Requires X-Agent-Key in the server-to-server MCP request header. The response omits webhook URLs ",
+    "descriptionZh": "列出此活动代理 DID 持久化的 Atlas 事件监视。需要在服务器到服务器的 MCP 请求标头中提供 X-Agent-Key。响应省略 webhook URL"
+   },
+   {
+    "name": "watch_delete",
+    "description": "Delete one owned Atlas incident watch by stored ID. Requires X-Agent-Key in the server-to-server MCP request header and explicit confirmation; deletion does not",
+    "descriptionZh": "按存储的 ID 删除一个拥有的 Atlas 事件监视。需要在服务器到服务器的 MCP 请求标头中提供 X-Agent-Key 和显式确认；删除不会"
    },
    {
     "name": "get_risk_forecast",
-    "description": "Get 7-day internet shutdown and censorship risk forecast for a country using XGBoost ML model trained on historical OONI data and political event calendar.",
-    "descriptionZh": "使用基于历史 OONI 数据和政治事件日历训练的 XGBoost ML 模型，获取某个国家未来 7 天的互联网停摆与审查风险预测。"
+    "description": "Get an experimental 7-day current-regime risk score from historical OONI and calendar inputs. This score has no demonstrated skill at timing new shutdown onsets",
+    "descriptionZh": "从历史 OONI 和日历输入中获取实验性的 7 天当前制度风险评分。此评分在预测新关停开始时间方面没有已证明的能力"
    },
    {
     "name": "get_platform_risk",
@@ -4374,75 +4404,11 @@
     "name": "check_service_accessibility",
     "description": "Real-time check: is a domain/service accessible in a specific country right now? Returns blocking status, block rate across ISPs, and evidence.",
     "descriptionZh": "实时检查：某个域名/服务当前在特定国家是否可访问？返回封锁状态、各 ISP 的封锁率和证据。"
-   },
-   {
-    "name": "get_most_censored",
-    "description": "Get the most censored countries ranked by censorship severity score. Returns country name, score, risk tier, and top blocked categories.",
-    "descriptionZh": "获取按审查严重程度评分排名的审查最严重国家。返回国家名称、评分、风险等级和主要被封锁类别。"
-   },
-   {
-    "name": "agent_relay_stats",
-    "description": "Get Voidly Agent Relay network statistics including total registered agents, 24-hour active agents, channel count, message volume, and capability registry.",
-    "descriptionZh": "获取 Voidly Agent Relay 网络统计信息，包括已注册智能体总数、24 小时活跃智能体数、频道数、消息量和能力注册表。"
    }
   ],
   "config": [],
   "remoteUrl": "https://mcp-server--voidly.run.tools",
   "iconUrl": "https://www.google.com/s2/favicons?domain=voidly.ai&sz=64",
-  "verified": false,
-  "homepage": null
- },
- "claudewilder-claude-wilder-mcp": {
-  "tools": [
-   {
-    "name": "read_transmissions",
-    "description": "Browse and read AI-authored book reviews. Lists all transmissions if no slug provided, or returns the full review text for a specific book.",
-    "descriptionZh": "浏览和阅读 AI 撰写的书评。若未提供 slug，则列出所有 transmissions；或返回特定书籍的完整评论内容。"
-   },
-   {
-    "name": "read_investigations",
-    "description": "Access data investigations with lens structures, datasets, correlations, and open questions. Lists all investigations or reads one in full.",
-    "descriptionZh": "访问数据调查，包含 lens 结构、数据集、相关性和开放性问题。列出所有调查或完整阅读某一项。"
-   },
-   {
-    "name": "read_signals",
-    "description": "Read community responses to any article. Shows a summary of all reviews with signals, or threaded signals for a specific review with IDs for replying.",
-    "descriptionZh": "阅读社区对任意文章的回应。显示所有评论的摘要及 signals，或显示特定评论的线程化 signals 及用于回复的 ID。"
-   },
-   {
-    "name": "send_signal",
-    "description": "Post a response to any article. Markdown supported, 2000 char max. Quality signals publish immediately; low-effort submissions are filtered.",
-    "descriptionZh": "对任意文章发布回应。支持 Markdown，最多 2000 字符。高质量 signals 立即发布；低质量提交会被过滤。"
-   },
-   {
-    "name": "read_interview",
-    "description": "Read interviews between Claude Wilder and authors. View the active interview, browse completed interviews, or read a specific conversation.",
-    "descriptionZh": "阅读 Claude Wilder 与作者之间的访谈。查看进行中的访谈、浏览已完成的访谈，或阅读特定对话。"
-   },
-   {
-    "name": "research_book",
-    "description": "One-call research bundle: returns the full review text, all existing signals, and page metadata for a book or investigation. Start here before writing a signal.",
-    "descriptionZh": "一键研究包：返回完整评论内容、所有现有 signals 以及书籍或调查的页面元数据。在撰写 signal 之前从这里开始。"
-   },
-   {
-    "name": "get_page_context",
-    "description": "Fetch the application/ai+json metadata block from any claudereviews.com page. Returns lens definitions, dataset paths, open questions, and engagement instructio",
-    "descriptionZh": "从任意 claudereviews.com 页面获取 application/ai+json 元数据块。返回 lens 定义、数据集路径、开放性问题和参与说明"
-   },
-   {
-    "name": "analyze_dataset",
-    "description": "Fetch raw CSV datasets and investigation metadata. Returns dataset URLs, lens structures, key correlations, open questions, and outliers for independent analysi",
-    "descriptionZh": "获取原始 CSV 数据集和调查元数据。返回数据集 URL、lens 结构、关键相关性、开放性问题和异常值，供独立分析"
-   },
-   {
-    "name": "fact_check_claim",
-    "description": "Check a specific claim against available evidence from the publication's data, sources, and investigations.",
-    "descriptionZh": "根据出版物数据、来源和调查中的可用证据，核查特定声明。"
-   }
-  ],
-  "config": [],
-  "remoteUrl": "https://claude-wilder-mcp--claudewilder.run.tools",
-  "iconUrl": "https://api.smithery.ai/servers/claudewilder/claude-wilder-mcp/icon",
   "verified": false,
   "homepage": null
  },
@@ -6194,6 +6160,65 @@
   "verified": false,
   "homepage": null
  },
+ "bouch-pinescript": {
+  "tools": [
+   {
+    "name": "list_docs",
+    "description": "List all available Pine Script v6 documentation files with descriptions.  Returns files organised by category with descriptions. For small files use get_doc(pat",
+    "descriptionZh": "列出所有可用的 Pine Script v6 文档文件及其描述。返回按类别组织并带描述的文件。对于小文件，使用 get_doc(path)"
+   },
+   {
+    "name": "list_sections",
+    "description": "List all section headers in a doc file. Use before get_section() to find the right header.  Especially useful for large files like ta.md, strategy.md, collectio",
+    "descriptionZh": "列出文档文件中的所有章节标题。在调用 get_section() 之前使用，以找到正确的标题。对于 ta.md、strategy.md、collections.md 等大文件尤其有用"
+   },
+   {
+    "name": "get_doc",
+    "description": "Read a specific Pine Script v6 documentation file.  For large files (ta.md, strategy.md, collections.md, drawing.md, general.md) prefer list_sections() + get_se",
+    "descriptionZh": "读取特定 Pine Script v6 文档文件。对于大文件（ta.md、strategy.md、collections.md、drawing.md、general.md），优先使用 list_sections() + get_section()"
+   },
+   {
+    "name": "get_section",
+    "description": "Get a specific section from a documentation file by its header.  Use after list_sections() shows available headers, or after resolve_topic() / search_docs() ide",
+    "descriptionZh": "根据标题从文档文件中获取特定章节。在 list_sections() 显示可用标题后使用，或在 resolve_topic() / search_docs() 标识出章节后使用"
+   },
+   {
+    "name": "search_docs",
+    "description": "Search Pine Script v6 documentation and return matching sections.  Finds sections containing the query and returns previews with get_section() call hints so you",
+    "descriptionZh": "搜索 Pine Script v6 文档并返回匹配章节。查找包含查询的章节，并返回带有 get_section() 调用提示的预览，以便你获取完整内容"
+   },
+   {
+    "name": "get_functions",
+    "description": "Get valid Pine Script v6 functions, optionally filtered by namespace.  Use before writing Pine Script to see which functions exist. For checking a single functi",
+    "descriptionZh": "获取有效的 Pine Script v6 函数，可选择按命名空间筛选。在编写 Pine Script 之前使用，以查看存在哪些函数。要检查单个函数"
+   },
+   {
+    "name": "validate_function",
+    "description": "Check if a Pine Script v6 function name is valid.",
+    "descriptionZh": "检查 Pine Script v6 函数名是否有效。"
+   },
+   {
+    "name": "resolve_topic",
+    "description": "Fast lookup for exact Pine Script API terms and known concepts.  Use for exact function names and Pine Script vocabulary (e.g., \"ta.rsi\", \"strategy.entry\", \"rep",
+    "descriptionZh": "快速查找确切的 Pine Script API 术语和已知概念。用于查找确切的函数名和 Pine Script 词汇（例如，\"ta.rsi\"、\"strategy.entry\"、\"repainting\"）"
+   },
+   {
+    "name": "list_prompts",
+    "description": "List all available prompts.  Returns JSON with prompt metadata including name, description, and optional arguments.",
+    "descriptionZh": "列出所有可用的提示词。返回包含提示词元数据的 JSON，包括名称、描述和可选参数。"
+   },
+   {
+    "name": "get_prompt",
+    "description": "Get a prompt by name with optional arguments.  Returns the rendered prompt as JSON with a messages array. Arguments should be provided as a dict mapping argumen",
+    "descriptionZh": "按名称获取提示，可带可选参数。返回渲染后的提示，格式为带 messages 数组的 JSON。参数应作为字典提供，将参数名映射到值。"
+   }
+  ],
+  "config": [],
+  "remoteUrl": "https://pinescript--bouch.run.tools",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=bouch.dev&sz=64",
+  "verified": false,
+  "homepage": null
+ },
  "govbase-govbase": {
   "tools": [
    {
@@ -6857,80 +6882,82 @@
  "autario-data": {
   "tools": [
    {
+    "name": "discover_by_topic",
+    "description": "Discover the most relevant verified datasets for a given topic, across the public autario catalog (World Bank, FRED, Eurostat, OECD, IMF, WHO, ECB, US Census, S",
+    "descriptionZh": "针对给定主题，跨公开 autario 目录（World Bank、FRED、Eurostat、OECD、IMF、WHO、ECB、US Census、S）发现最相关的已验证数据集"
+   },
+   {
     "name": "search_datasets",
-    "description": "Search the Autario public data catalog. Returns dataset IDs, titles, descriptions, categories, publishers, and row counts. Use this first to discover available ",
-    "descriptionZh": "搜索 Autario 公共数据目录。返回数据集 ID、标题、描述、分类、发布者和行数。先使用此工具来发现可用数据集"
+    "description": "Search the Autario data catalog by keyword | thousands of normalized public datasets from World Bank, FRED, Eurostat, OECD, WHO, IMF, ECB, US Census and SEC, pl",
+    "descriptionZh": "按关键词搜索 Autario 数据目录 | 来自 World Bank、FRED、Eurostat、OECD、WHO、IMF、ECB、US Census 和 SEC 的数千个规范化公开数据集，pl"
    },
    {
     "name": "get_dataset_info",
-    "description": "Get full metadata for a specific dataset including title, description, publisher, category, keywords, row count, and creation date.",
-    "descriptionZh": "获取特定数据集的完整元数据，包括标题、描述、发布者、分类、关键词、行数和创建日期。"
+    "description": "Get full metadata for a specific dataset including title, description, publisher (World Bank, FRED, Eurostat, OECD, WHO, IMF, ECB, US Census, SEC, or your own c",
+    "descriptionZh": "获取特定数据集的完整元数据，包括标题、描述、发布者（World Bank、FRED、Eurostat、OECD、WHO、IMF、ECB、US Census、SEC 或你自己的 c"
    },
    {
     "name": "get_dataset_schema",
-    "description": "Get the column names, data types, and total row count for a dataset. Always call this before query_dataset to understand the available columns for filtering and",
-    "descriptionZh": "获取数据集的列名、数据类型和总行数。在调用 query_dataset 之前务必先调用此工具，以了解可用于筛选和排序的列"
+    "description": "Get the column names, data types, total row count, AND a machine-legible `datasheet` for a dataset. Always call this before query_dataset (to know the columns) ",
+    "descriptionZh": "获取数据集的列名、数据类型、总行数以及机器可读的 `datasheet`。在调用 query_dataset 之前始终先调用此接口（以了解列）"
    },
    {
     "name": "query_dataset",
-    "description": "Query data from a dataset with optional filtering, sorting, and field selection. Returns rows as JSON plus per-category statistics (start, end, peak, avg) for a",
-    "descriptionZh": "从数据集查询数据，支持可选的筛选、排序和字段选择。以 JSON 返回行，并附带针对某个……的按分类统计（start、end、peak、avg）"
-   },
-   {
-    "name": "list_charts",
-    "description": "List published chart visualizations on Autario. Returns chart IDs, titles, insights, linked datasets, and creation dates. Use to discover existing analyses.",
-    "descriptionZh": "列出 Autario 上已发布的图表可视化。返回图表 ID、标题、洞察、关联数据集和创建日期。用于发现已有分析。"
-   },
-   {
-    "name": "get_chart",
-    "description": "Get a specific chart by ID or slug. Returns the full Plotly specification, underlying data, insight text, and datasets used. The chart URL is shareable at autar",
-    "descriptionZh": "通过 ID 或 slug 获取指定图表。返回完整的 Plotly 规范、底层数据、洞察文本以及所用数据集。图表 URL 可在 Autario 分享"
-   },
-   {
-    "name": "publish_chart",
-    "description": "Publish a new chart visualization to Autario. Requires a Plotly spec with column references (x_col, y_col, group_by, group_value). Autario pulls real data from ",
-    "descriptionZh": "将新的图表可视化发布到 Autario。需要一个包含列引用（x_col、y_col、group_by、group_value）的 Plotly 规范。Autario 会从……拉取真实数据"
-   },
-   {
-    "name": "update_chart",
-    "description": "Update an existing chart you own. Only the API key that created the chart can update it. Use this to modify the Plotly spec, title, or insight of a previously p",
-    "descriptionZh": "更新你拥有的现有图表。只有创建该图表的 API key 才能更新它。可用此操作修改此前发布的图表的 Plotly 规范、标题或洞察"
+    "description": "Query the rows of ONE dataset | a public table from World Bank, FRED, Eurostat, OECD, WHO, IMF, ECB, US Census or SEC, or one of your own uploads / connector ta",
+    "descriptionZh": "查询单个数据集的行数据 | 来自 World Bank、FRED、Eurostat、OECD、WHO、IMF、ECB、US Census 或 SEC 的公共表，或你自己上传的数据 / 连接器表"
    },
    {
     "name": "create_dataset",
-    "description": "Create a new empty dataset on Autario. Returns a dataset_id you can populate with write_rows. Only create new datasets if the data does not already exist on Aut",
-    "descriptionZh": "在 Autario 上创建一个新的空数据集。返回一个 dataset_id，你可以用 write_rows 填充它。仅当数据尚未存在于 Autario 上时才创建新数据集"
+    "description": "Create a new empty dataset on Autario, alongside the public catalog (World Bank, FRED, Eurostat, OECD, SEC) but private to you unless you set is_public. Returns",
+    "descriptionZh": "在 Autario 上创建一个新的空数据集，与公共目录（World Bank、FRED、Eurostat、OECD、SEC）并列，但除非你设置 is_public，否则仅对你私有。返回"
    },
    {
     "name": "write_rows",
-    "description": "Append rows of data to an existing dataset. The schema is automatically inferred from the first batch. All values are stored as text. Maximum 10,000 rows per ca",
-    "descriptionZh": "向现有数据集追加数据行。schema 会根据第一批数据自动推断。所有值都以文本形式存储。每次调用最多 10,000 行"
+    "description": "Append rows of data to an existing dataset you own (from create_dataset) | your own numbers, a derived table you computed, or a series you scraped together from",
+    "descriptionZh": "向你自己拥有的现有数据集（来自 create_dataset）追加数据行 | 你自己的数字、你计算出的派生表，或你从各处抓取汇总的序列"
    },
    {
     "name": "clear_rows",
-    "description": "Delete all rows from a dataset while keeping the schema and columns intact. Useful for refreshing data before re-importing. Requires AUTARIO_API_KEY.",
-    "descriptionZh": "删除数据集中的所有行，同时保留 schema 和列不变。适合在重新导入前刷新数据。需要 AUTARIO_API_KEY。"
+    "description": "Delete all rows from a dataset you own while keeping the schema and columns intact. Useful for refreshing your own uploaded table before re-importing. Only your",
+    "descriptionZh": "删除你自己拥有的数据集中的所有行，同时保留 schema 和列结构不变。适用于在重新导入前刷新你自己上传的表。仅你的"
    },
    {
     "name": "delete_dataset",
-    "description": "Permanently delete a dataset and all its data. This action cannot be undone. Only the dataset owner can delete it. Requires AUTARIO_API_KEY.",
-    "descriptionZh": "永久删除数据集及其所有数据。此操作无法撤销。只有数据集所有者可以删除它。需要 AUTARIO_API_KEY。"
-   }
-  ],
-  "config": [
-   {
-    "name": "AUTARIO_API_KEY",
-    "required": false,
-    "description": "API key for publishing charts (get yours at autario.com/account)",
-    "descriptionZh": "用于发布图表的 API key（在 autario.com/account 获取）"
+    "description": "Permanently delete a dataset you own, and all its data. This action cannot be undone. Only the dataset owner can delete it | the public catalog (World Bank, FRE",
+    "descriptionZh": "永久删除你自己拥有的数据集及其所有数据。此操作无法撤销。仅数据集所有者可以删除它 | 公共目录（World Bank、FRE"
    },
    {
-    "name": "AUTARIO_API_SECRET",
-    "required": false,
-    "description": "API secret for publishing charts (get yours at autario.com/account)",
-    "descriptionZh": "用于发布图表的 API secret（在 autario.com/account 获取）"
+    "name": "list_connectors",
+    "description": "List the platform connectors set up on this Autario account: search, web and product analytics, ads, social, commerce, payments, AI usage and developer platform",
+    "descriptionZh": "列出在此 Autario 账户上设置的平台连接器：搜索、Web 和产品分析、广告、社交、电商、支付、AI 使用情况和开发者平台"
+   },
+   {
+    "name": "refresh_connector",
+    "description": "Pull the latest numbers from one connected platform right now and refresh its hosted Postgres table on Autario. Works for whatever that connector is for, whethe",
+    "descriptionZh": "立即从某个已连接的平台拉取最新数据，并刷新其在 Autario 上托管的 Postgres 表。无论该连接器用于什么场景都适用，无论是"
+   },
+   {
+    "name": "get_connector_status",
+    "description": "Explain the state of ONE connected platform (Search Console, Shopify, an ads account, an AI usage bill): is its data fresh, which reports arrived, which came ba",
+    "descriptionZh": "说明某个已连接平台（Search Console、Shopify、广告账户、AI 使用账单）的状态：其数据是否新鲜、哪些报告已到达、哪些返回了"
+   },
+   {
+    "name": "report_data_issue",
+    "description": "Report a data-quality problem you found in an autario dataset or chart (World Bank, FRED, Eurostat, OECD, WHO, IMF, ECB, US Census, SEC or any other publisher i",
+    "descriptionZh": "报告你在 autario 数据集或图表中发现的数据质量问题（World Bank、FRED、Eurostat、OECD、WHO、IMF、ECB、US Census、SEC 或任何其他发布方"
+   },
+   {
+    "name": "get_company_snapshot",
+    "description": "Get current stock metrics for a public company, from live market data joined with its SEC filings. Use this whenever a user asks about stock price, market cap, ",
+    "descriptionZh": "获取某上市公司的当前股票指标，来自实时市场数据与其 SEC 文件的关联。当用户询问股价、市值等时使用此功能"
+   },
+   {
+    "name": "list_indicators",
+    "description": "Browse the Autario indicator registry, the semantic layer over the whole public catalog (World Bank, FRED, Eurostat, OECD, WHO, IMF, ECB, US Census, SEC). Each ",
+    "descriptionZh": "浏览 Autario 指标注册表，这是覆盖整个公共目录（World Bank、FRED、Eurostat、OECD、WHO、IMF、ECB、US Census、SEC）的语义层。每个"
    }
   ],
+  "config": [],
   "remoteUrl": "https://data--autario.run.tools",
   "iconUrl": "https://api.smithery.ai/servers/autario/data/icon",
   "verified": false,
