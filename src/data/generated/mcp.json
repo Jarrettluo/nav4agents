@@ -2550,6 +2550,90 @@
   "descriptionZh": "由 DoorVault IDEAL Scoring v2.0 驱动的房地产投资工具。分析任何租赁房产交易，获得结构化结论（IDEAL/PASS/NEAR-MISS/FAIL）、资本流速评级、优先级评分明细、对比市场租金与 Section 8 FMR 的双重租金情景，以及详细的投资建议。还包括：按 ZIP 查询 Section 8 FMR、租赁房产税收抵扣清单、N"
  },
  {
+  "id": 12254473,
+  "name": "Arabic Name Calligraphy",
+  "slug": "ai-arabickeyboard-name-calligraphy",
+  "description": "Writes names in Arabic script with alternative spellings, six calligraphy styles and PNG artwork.",
+  "category": "AI 增强",
+  "type": "remote",
+  "url": "https://arabickeyboard.ai/mcp-server",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "以阿拉伯字母书写姓名，支持多种拼写变体、六种书法风格及 PNG 图形。"
+ },
+ {
+  "id": 62265370,
+  "name": "EasyVoice text to speech",
+  "slug": "ae-easyvoice-tts",
+  "description": "Hosted text-to-speech MCP server: 66 voices in 9 languages, long-form narration, podcasts.",
+  "category": "内容处理",
+  "type": "remote",
+  "url": "https://easyvoice.ae/tts-mcp-server",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "托管式文本转语音 MCP 服务器：支持 9 种语言的 66 种语音，适用于长篇叙述和播客。"
+ },
+ {
+  "id": 80412668,
+  "name": "AnkiMCP Server",
+  "slug": "ai-ankimcp-anki-mcp-server-addon",
+  "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
+  "category": "开发工具",
+  "type": "local",
+  "url": "https://ankimcp.ai",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "通过本地 MCP 服务器将你的 Anki 闪卡集暴露给 AI 助手的 Anki 插件。"
+ },
+ {
+  "id": 44566084,
+  "name": "Arcdeck",
+  "slug": "ai-arcdeck-arcdeck",
+  "description": "Create consulting-style presentation decks (editable PowerPoint) from a topic or notes.",
+  "category": "效率工具",
+  "type": "remote",
+  "url": "https://arcdeck.ai/integrations",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "根据主题或笔记创建咨询风格的演示文稿（可编辑的 PowerPoint）。"
+ },
+ {
+  "id": 32635446,
+  "name": "Atalay",
+  "slug": "ai-atalay-mcp",
+  "description": "Your Atalay business data: sites, domains, mail, invoices, shop, B2B, AI and project requests.",
+  "category": "数据处理",
+  "type": "remote",
+  "url": "https://mcp.atalay.ai",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "你的 Atalay 业务数据：站点、域名、邮件、发票、商店、B2B、AI 和项目请求。"
+ },
+ {
+  "id": 40525969,
+  "name": "Ankra",
+  "slug": "ai-ankra-platform",
+  "description": "Deploy and operate Kubernetes: clusters, stacks, apps, logs, metrics and security, with OAuth.",
+  "category": "开发工具",
+  "type": "remote",
+  "url": "https://docs.ankra.ai/platform/mcp-server",
+  "installCmd": null,
+  "stars": 0,
+  "featured": false,
+  "source": "MCP 官方注册表",
+  "descriptionZh": "部署和运维 Kubernetes：集群、技术栈、应用、日志、指标和安全，支持 OAuth。"
+ },
+ {
   "id": 77509330,
   "name": "JustIdea Agency",
   "slug": "agency-justidea-justidea-agency",
@@ -2732,20 +2816,6 @@
   "descriptionZh": "Stage1 Inspector — 本地网站捕获、证据视图和设计对比"
  },
  {
-  "id": 58263564,
-  "name": "AudioMap",
-  "slug": "ai-audiomap-audiomap",
-  "description": "Search, read and ask questions about your AudioMap transcripts, notes, speakers and clips.",
-  "category": "内容处理",
-  "type": "remote",
-  "url": "https://audiomap.ai/en/docs/mcp-setup",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "搜索、阅读并就你的 AudioMap 转录、笔记、说话者和片段提问。"
- },
- {
   "id": 80704059,
   "name": "Adrio",
   "slug": "ai-adrio-adrio",
@@ -2772,20 +2842,6 @@
   "featured": false,
   "source": "MCP 官方注册表",
   "descriptionZh": "在 Dubai 种植什么、室内植物、高温下的植物护理、花园风格和 Garden Care 价格。"
- },
- {
-  "id": 42732945,
-  "name": "Attestari",
-  "slug": "ai-attestari-attestari",
-  "description": "Attestari's verdict on an npm or PyPI package version, asked before an agent installs it.",
-  "category": "开发工具",
-  "type": "remote",
-  "url": "https://attestari.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "Attestari 对 npm 或 PyPI 包版本的裁决，在代理安装之前询问。"
  },
  {
   "id": 16377440,
@@ -2886,20 +2942,6 @@
   "descriptionZh": "用于 Anki 闪卡的 MCP 服务器：通过 AnkiConnect 进行自适应复习、笔记、媒体和牌组管理。"
  },
  {
-  "id": 80412668,
-  "name": "AnkiMCP Server",
-  "slug": "ai-ankimcp-anki-mcp-server-addon",
-  "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
-  "category": "开发工具",
-  "type": "local",
-  "url": "https://ankimcp.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "通过本地 MCP 服务器将你的 Anki 闪卡集暴露给 AI 助手的 Anki 插件。"
- },
- {
   "id": 83367366,
   "name": "Atria",
   "slug": "ai-askatria-atria",
@@ -2912,20 +2954,6 @@
   "featured": false,
   "source": "MCP 官方注册表",
   "descriptionZh": "面向 Agent 的美国选址尽职调查：地块、电力、洪水、分区规则等，每项均附来源。"
- },
- {
-  "id": 32635446,
-  "name": "Atalay",
-  "slug": "ai-atalay-mcp",
-  "description": "Your Atalay business data: sites, domains, mail, invoices, shop, B2B, AI and project requests.",
-  "category": "数据处理",
-  "type": "remote",
-  "url": "https://mcp.atalay.ai",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "你的 Atalay 业务数据：站点、域名、邮件、发票、商店、B2B、AI 和项目请求。"
  },
  {
   "id": 29966541,
@@ -2954,34 +2982,6 @@
   "featured": false,
   "source": "MCP 官方注册表",
   "descriptionZh": "有来源支撑的阿联酋成本数据：食品杂货、学校、住房、交通、公用事业、电信和搬迁"
- },
- {
-  "id": 53449456,
-  "name": "Athaus Immobiliensuche",
-  "slug": "ai-athaus-immobiliensuche",
-  "description": "Find a home in Germany: search athaus listings, save searches, send enquiries and book viewings.",
-  "category": "效率工具",
-  "type": "remote",
-  "url": "https://docs.athaus.ai/en/mcp",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "在德国找房：搜索 athaus 房源、保存搜索、发送咨询并预约看房。"
- },
- {
-  "id": 23074385,
-  "name": "Athaus für Makler",
-  "slug": "ai-athaus-makler",
-  "description": "Real estate brokerage in Germany: listings, enquiries, viewings, valuations, drafts, social posts.",
-  "category": "AI 增强",
-  "type": "remote",
-  "url": "https://docs.athaus.ai/en/mcp",
-  "installCmd": null,
-  "stars": 0,
-  "featured": false,
-  "source": "MCP 官方注册表",
-  "descriptionZh": "德国房地产经纪：房源、咨询、看房、估值、草稿、社交帖子。"
  },
  {
   "id": 70919143,
