@@ -1934,35 +1934,6 @@
   "verified": false,
   "homepage": null
  },
- "oevortex-ddg-search": {
-  "tools": [
-   {
-    "name": "web-search",
-    "description": "Search the web using DuckDuckGo and return comprehensive results with titles, URLs, and snippets",
-    "descriptionZh": "使用 DuckDuckGo 搜索网络，返回包含标题、URL 和摘要的全面结果"
-   },
-   {
-    "name": "fetch-url",
-    "description": "Fetch and extract the main content from any URL, with customizable extraction options for text, links, and images",
-    "descriptionZh": "从任意 URL 抓取并提取主要内容，可自定义文本、链接和图片的提取选项"
-   },
-   {
-    "name": "url-metadata",
-    "description": "Extract metadata from a URL including title, description, Open Graph data, and favicon information",
-    "descriptionZh": "从 URL 提取元数据，包括标题、描述、Open Graph 数据和 favicon 信息"
-   },
-   {
-    "name": "felo-search",
-    "description": "Advanced AI-powered web search for technical intelligence. Retrieves up-to-date information including software releases, security advisories, migration guides, ",
-    "descriptionZh": "面向技术情报的高级 AI 网络搜索。获取最新信息，包括软件发布、安全公告、迁移指南，"
-   }
-  ],
-  "config": [],
-  "remoteUrl": "https://ddg_search--oevortex.run.tools",
-  "iconUrl": "https://api.smithery.ai/servers/OEvortex/ddg_search/icon",
-  "verified": false,
-  "homepage": null
- },
  "nutribalance-nutribalance-mcp": {
   "tools": [
    {
@@ -2708,88 +2679,47 @@
   "verified": false,
   "homepage": null
  },
- "isdaniel-mcp-weather-server": {
-  "tools": [
-   {
-    "name": "get_current_weather",
-    "description": "Get current weather information for a specified city.             It extracts the current hour's temperature and weather code, maps             the weather code",
-    "descriptionZh": "获取指定城市的当前天气信息。它会提取当前小时的温度和天气代码，并映射天气代码"
-   },
-   {
-    "name": "get_weather_byDateTimeRange",
-    "description": "Get weather information for a specified city between start and end dates.",
-    "descriptionZh": "获取指定城市在开始日期和结束日期之间的天气信息。"
-   },
-   {
-    "name": "get_weather_details",
-    "description": "Get detailed weather information for a specified city as structured JSON data.             This tool provides raw weather data for programmatic analysis and pro",
-    "descriptionZh": "以结构化 JSON 数据获取指定城市的详细天气信息。此工具提供原始天气数据，用于程序化分析和处理"
-   },
-   {
-    "name": "get_current_datetime",
-    "description": "Get current time in specified timezone.",
-    "descriptionZh": "获取指定时区的当前时间。"
-   },
-   {
-    "name": "get_timezone_info",
-    "description": "Get information about a specific timezone including current time and UTC offset.",
-    "descriptionZh": "获取特定时区的信息，包括当前时间和 UTC 偏移量。"
-   },
-   {
-    "name": "convert_time",
-    "description": "Convert time from one timezone to another.",
-    "descriptionZh": "将时间从一个时区转换到另一个时区。"
-   },
-   {
-    "name": "get_air_quality",
-    "description": "Get air quality information for a specified city including PM2.5, PM10,             ozone, nitrogen dioxide, carbon monoxide, and other pollutants. Provides hea",
-    "descriptionZh": "获取指定城市的空气质量信息，包括 PM2.5、PM10、臭氧、二氧化氮、一氧化碳和其他污染物。提供健康建议"
-   },
-   {
-    "name": "get_air_quality_details",
-    "description": "Get detailed air quality information for a specified city as structured JSON data.             This tool provides raw air quality data for programmatic analysis",
-    "descriptionZh": "以结构化 JSON 数据获取指定城市的详细空气质量信息。此工具提供原始空气质量数据，用于程序化分析"
-   }
-  ],
-  "config": [
-   {
-    "name": "debug",
-    "required": false,
-    "description": "Enable debug logging",
-    "descriptionZh": "启用调试日志"
-   }
-  ],
-  "remoteUrl": "https://mcp_weather_server--isdaniel.run.tools",
-  "iconUrl": "https://api.smithery.ai/servers/isdaniel/mcp_weather_server/icon",
-  "verified": false,
-  "homepage": null
- },
  "vbhjckfd-lad-lviv-ua": {
   "tools": [
    {
     "name": "get_stop_realtime",
-    "description": "Returns live arrivals and vehicle positions for a stop, producing both a map UI block and a structured arrival list. Use this as the **default tool** when the u",
-    "descriptionZh": "返回某个站点的实时到站信息和车辆位置，同时生成地图 UI 区块和结构化到站列表。将此用作 **默认工具**，当用户..."
+    "description": "Returns live arrivals at a stop: route, destination, vehicle type, minutes until arrival, and each vehicle's position. Use this as the **default tool** when the",
+    "descriptionZh": "返回某站点的实时到站信息：线路、目的地、车辆类型、距到站分钟数以及每辆车的位置。当"
+   },
+   {
+    "name": "search_stops",
+    "description": "Finds stops by name (Ukrainian or English transliteration, case-insensitive, partial match) and returns each stop's numeric ID, coordinates, and the routes serv",
+    "descriptionZh": "按名称查找站点（乌克兰语或英语转写，不区分大小写，支持部分匹配），并返回每个站点的数字 ID、坐标以及所服务的线路"
+   },
+   {
+    "name": "find_routes_between",
+    "description": "Lists the routes from one place to another: which stop to board, where to get off, the direction's destination, stops in between, and the walk at each end — bes",
+    "descriptionZh": "列出从一个地点到另一个地点的线路：在哪站上车、在哪站下车、该方向的目的地、途经站点以及两端的步行路线——最"
    },
    {
     "name": "get_route_static",
-    "description": "Returns static route metadata: short and long name, vehicle type, brand colour, ordered stop lists for both directions, and route polylines (shapes) for map ren",
-    "descriptionZh": "返回静态线路元数据：短名称和长名称、车辆类型、品牌颜色、双向的有序站点列表，以及用于地图渲染的线路折线（shapes）"
+    "description": "Returns static route data: name, long name, vehicle type, colour, the ordered stop list for both directions, and the timetable of departures from the first stop",
+    "descriptionZh": "返回静态线路数据：名称、长名称、车辆类型、颜色、双向的有序站点列表，以及从首站出发的时刻表"
    },
    {
     "name": "get_route_realtime",
-    "description": "Returns live positions for all vehicles currently running on a route, optimised for map rendering. Use when the user asks \"where is my tram/bus right now?\" or w",
-    "descriptionZh": "返回某条线路上所有正在运行车辆的实时位置，针对地图渲染进行了优化。当用户询问“我的电车/公交车现在在哪？”或……时使用"
-   },
-   {
-    "name": "get_stop_geometry",
-    "description": "Returns static map context for a stop: its marker and polylines for every route that serves it. No live data is fetched. Use this when you need to enrich an exi",
-    "descriptionZh": "返回某个站点的静态地图上下文：该站点的标记，以及所有经停该站点的线路折线。不获取实时数据。当你需要丰富现有……时使用"
+    "description": "Returns every vehicle currently running on a route: position, the destination it is heading to, and its next stop with estimated arrival. Use when the user asks",
+    "descriptionZh": "返回当前在某条线路上运行的所有车辆：位置、其前往的目的地以及下一站及预计到达时间。当用户询问时使用"
    },
    {
     "name": "get_stops_around_location",
-    "description": "Discovers transit stops near a geographic point, returning each stop's numeric code, name, coordinates, and walking distance. Also emits a map UI block with mul",
-    "descriptionZh": "发现某个地理坐标点附近的公交站点，返回每个站点的数字编码、名称、坐标和步行距离。同时输出一个包含多个……的地图 UI 区块"
+    "description": "Finds stops near a geographic point, returning each stop's numeric ID, name, coordinates, walking distance, and the routes serving it. Use this as the **first s",
+    "descriptionZh": "查找某个地理点附近的站点，返回每个站点的数字 ID、名称、坐标、步行距离以及经过该站点的线路。将此作为**第一步**使用"
+   },
+   {
+    "name": "get_nearby_vehicles",
+    "description": "Returns live vehicles near a point, nearest first, each with its route, destination, and distance. Use when the user asks \"what transport is near me right now?\"",
+    "descriptionZh": "返回某个点附近的实时车辆，按距离由近到远排序，每辆车包含其线路、目的地和距离。当用户询问“现在附近有什么交通工具？”时使用"
+   },
+   {
+    "name": "get_vehicle_info",
+    "description": "Returns details for one vehicle by ID: position, route, destination, license plate, and its upcoming stops with names and estimated arrival times. Use when the ",
+    "descriptionZh": "根据 ID 返回某辆车的详细信息：位置、线路、目的地、车牌号，以及即将到达的站点名称和预计到达时间。当用户"
    }
   ],
   "config": [],
@@ -5308,65 +5238,6 @@
   "verified": false,
   "homepage": null
  },
- "aiwyn": {
-  "tools": [
-   {
-    "name": "check_tax",
-    "description": "Check inputs to calculate a tax return for a given jurisdiction. The 'input' argument must conform to the JSON schema returned by the tax_namespace_schema tool.",
-    "descriptionZh": "检查用于计算给定辖区纳税申报表的输入。'input' 参数必须符合 tax_namespace_schema 工具返回的 JSON schema。"
-   },
-   {
-    "name": "calculate_tax",
-    "description": "Calculate a tax return for a given jurisdiction. The 'input' argument must conform to the JSON schema returned by the tax_namespace_schema tool. Returns compute",
-    "descriptionZh": "计算给定辖区的纳税申报表。'input' 参数必须符合 tax_namespace_schema 工具返回的 JSON schema。返回计算"
-   },
-   {
-    "name": "tax_years",
-    "description": "List all supported tax years.",
-    "descriptionZh": "列出所有支持的税务年度。"
-   },
-   {
-    "name": "tax_jurisdictions",
-    "description": "List all supported tax jurisdictions for a given tax year.",
-    "descriptionZh": "列出给定税务年度支持的所有税收管辖区。"
-   },
-   {
-    "name": "tax_namespace_schema",
-    "description": "Get the TCB input schema for a single namespace (e.g. \"irs1040\", \"irs1040_schedulec\", \"ca_form540\"). Returns the properties and types for that namespace. HOW TO",
-    "descriptionZh": "获取单个命名空间（例如 “irs1040”、“irs1040_schedulec”、“ca_form540”）的 TCB 输入 schema。返回该命名空间的属性和类型。操作方法"
-   },
-   {
-    "name": "tax_namespaces",
-    "description": "List all available input namespaces for a given jurisdiction. Use the returned names with the tax_namespace_schema tool to get the schema for a specific namespa",
-    "descriptionZh": "列出给定辖区所有可用的输入命名空间。将返回的名称与 tax_namespace_schema 工具配合使用，以获取特定命名空间的 schema"
-   },
-   {
-    "name": "tax_simple_return",
-    "description": "Call this FIRST when beginning any tax return. Returns the curated namespace list, top-level structure guide, example input, and step-by-step filing workflow. B",
-    "descriptionZh": "在开始任何纳税申报时，请首先调用此工具。返回精选命名空间列表、顶层结构指南、示例输入以及分步申报工作流。B"
-   },
-   {
-    "name": "generate_tax_pdf_tool",
-    "description": "Start async PDF generation for a tax return. The 'input' argument must conform to the JSON schema returned by the tax_namespace_schema tool. Returns a job ID to",
-    "descriptionZh": "开始异步生成纳税申报表的 PDF。'input' 参数必须符合 tax_namespace_schema 工具返回的 JSON schema。返回一个任务 ID 以"
-   },
-   {
-    "name": "get_tax_pdf_tool",
-    "description": "Check status of a PDF generation job. Returns the status and a download URL when completed, only     use this tool after generating the tax PDF with the generat",
-    "descriptionZh": "检查 PDF 生成任务的状态。完成后返回状态和下载 URL，仅在通过 generat 工具生成税务 PDF 后使用此工具"
-   },
-   {
-    "name": "generate_uuid_v5",
-    "description": "Generate a UUID v5 based on a source uuid and namespace.",
-    "descriptionZh": "基于源 UUID 和命名空间生成 UUID v5。"
-   }
-  ],
-  "config": [],
-  "remoteUrl": "https://aiwyn.run.tools",
-  "iconUrl": "https://api.smithery.ai/servers/aiwyn/icon",
-  "verified": true,
-  "homepage": null
- },
  "google-news": {
   "tools": [
    {
@@ -6276,6 +6147,46 @@
   "remoteUrl": "https://govbase--govbase.run.tools",
   "iconUrl": "https://www.google.com/s2/favicons?domain=govbase.com&sz=64",
   "verified": false,
+  "homepage": null
+ },
+ "ojaskord-url-safety-validator-mcp": {
+  "tools": [
+   {
+    "name": "check_url",
+    "description": "Checks a URL for phishing, malware, typosquatting, and redirect threats. Call this BEFORE your agent fetches, follows, or forwards any URL in an agentic commerc",
+    "descriptionZh": "检查 URL 是否存在钓鱼、恶意软件、域名仿冒和重定向威胁。在您的 agent 于 agentic commerc 中抓取、跟随或转发任何 URL 之前调用此工具"
+   }
+  ],
+  "config": [
+   {
+    "name": "apiKey",
+    "required": false,
+    "description": "API key from kordagencies.com. Leave blank for free tier (10 calls/month).",
+    "descriptionZh": "来自 kordagencies.com 的 API key。留空则使用免费套餐（每月 10 次调用）。"
+   }
+  ],
+  "remoteUrl": "https://url-safety-validator-mcp--ojaskord.run.tools",
+  "iconUrl": "https://api.smithery.ai/servers/OjasKord/url-safety-validator-mcp/icon",
+  "verified": true,
+  "homepage": null
+ },
+ "upstash-context7-mcp": {
+  "tools": [
+   {
+    "name": "resolve-library-id",
+    "description": "Resolves a package/product name to a Context7-compatible library ID and returns matching libraries.  You MUST call this function before 'query-docs' to obtain a",
+    "descriptionZh": "将包/产品名称解析为 Context7 兼容的 library ID，并返回匹配的库。您必须在调用 'query-docs' 之前调用此函数以获取"
+   },
+   {
+    "name": "query-docs",
+    "description": "Retrieves and queries up-to-date documentation and code examples from Context7 for any programming library or framework.  You must call 'resolve-library-id' fir",
+    "descriptionZh": "从 Context7 检索并查询任何编程库或框架的最新文档和代码示例。您必须先调用 'resolve-library-id' 以"
+   }
+  ],
+  "config": [],
+  "remoteUrl": "https://context7-mcp--upstash.run.tools",
+  "iconUrl": "https://api.smithery.ai/servers/upstash/context7-mcp/icon",
+  "verified": true,
   "homepage": null
  },
  "cyanheads-openfda-mcp-server": {
@@ -7332,80 +7243,6 @@
   "verified": false,
   "homepage": null
  },
- "kuibin-dev-hsk-mcp": {
-  "tools": [
-   {
-    "name": "hsk_lookup",
-    "description": "Look up a Chinese word by simplified characters, traditional characters, or pinyin. Returns all pronunciation forms with meanings, frequency rank, and HSK level",
-    "descriptionZh": "通过简体字、繁体字或拼音查询中文词语。返回所有发音形式及其含义、词频排名和 HSK 等级。"
-   },
-   {
-    "name": "hsk_frequency",
-    "description": "Get the frequency ranking and usage statistics for a Chinese word. Returns the word's rank among HSK vocabulary (1 = most frequent), raw frequency score, rarity",
-    "descriptionZh": "获取中文词语的词频排名和使用统计。返回该词在 HSK 词汇中的排名（1 = 最常用）、原始词频得分、稀有度。"
-   },
-   {
-    "name": "hsk_convert_script",
-    "description": "Convert a Chinese word to all 5 transcription systems: pinyin (tone marks), numeric (tone numbers), Wade-Giles, Bopomofo/Zhuyin, and Gwoyeu Romatzyh. Returns al",
-    "descriptionZh": "将中文词语转换为全部 5 种转写系统：拼音（声调符号）、数字（声调数字）、Wade-Giles、Bopomofo/Zhuyin 和 Gwoyeu Romatzyh。返回所有……"
-   },
-   {
-    "name": "hsk_classifier",
-    "description": "Find the measure word (classifier / 量词) for a Chinese noun. Returns all classifiers associated with the word. Empty list if no classifiers exist in the dataset.",
-    "descriptionZh": "查找中文名词的量词（classifier / 量词）。返回与该词关联的所有量词。如果数据集中不存在量词，则返回空列表。"
-   },
-   {
-    "name": "hsk_convert_characters",
-    "description": "Convert a Chinese word between simplified and traditional characters. Accepts either script and returns both with pinyin and meanings. Covers 11,470 HSK words. ",
-    "descriptionZh": "在简体和繁体字之间转换中文词语。接受任一种字形，并返回两者及其拼音和含义。覆盖 11,470 个 HSK 词语。"
-   },
-   {
-    "name": "hsk_search_meaning",
-    "description": "Search for HSK words by English meaning using full-text search. Each result includes simplified characters, pinyin, all transcription systems, meanings, classif",
-    "descriptionZh": "使用全文搜索按英文含义搜索 HSK 词语。每个结果包括简体字、拼音、所有转写系统、含义、classif"
-   },
-   {
-    "name": "hsk_words_by_radical",
-    "description": "Find all HSK words sharing a given radical (部首). Each word includes simplified/traditional characters, pinyin, part of speech, meanings, radical, frequency rank",
-    "descriptionZh": "查找所有共享给定 radical（部首）的 HSK 词语。每个词语包括简体/繁体字、拼音、词性、含义、部首、词频排名"
-   },
-   {
-    "name": "hsk_polyphones",
-    "description": "List Chinese characters with multiple pronunciations (多音字) in HSK vocabulary. Each result includes all pronunciation forms with pinyin, meanings, and part of sp",
-    "descriptionZh": "列出 HSK 词汇中具有多个读音的汉字（多音字）。每个结果包括所有发音形式及其拼音、含义和 part of sp"
-   },
-   {
-    "name": "hsk_homophones",
-    "description": "Find HSK words sharing the same pinyin pronunciation (homophones). Useful for drilling tone-pair distinctions. Each result includes simplified characters, pinyi",
-    "descriptionZh": "查找具有相同拼音发音的 HSK 词语（同音词）。有助于练习声调配对区分。每个结果包括简体字、pinyi"
-   },
-   {
-    "name": "hsk_build_study_set",
-    "description": "Build a study set of HSK words for a given level, ordered by frequency (most common first). Each word includes simplified/traditional characters, pinyin, part o",
-    "descriptionZh": "为指定 HSK 等级构建词汇学习集，按词频排序（最常用在前）。每个词包含简体/繁体字、拼音、词性"
-   },
-   {
-    "name": "hsk_suggest_next",
-    "description": "Suggest the next words to learn at a given HSK level, excluding words already known. Each word includes simplified/traditional characters, pinyin, part of speec",
-    "descriptionZh": "推荐指定 HSK 等级下接下来该学的词，排除已掌握的词。每个词包含简体/繁体字、拼音、词性"
-   },
-   {
-    "name": "hsk_compare",
-    "description": "Compare 2-5 Chinese words side by side. Each word shows simplified/traditional characters, pinyin, part of speech, frequency rank, HSK levels, radical, all tran",
-    "descriptionZh": "并排比较 2-5 个中文词语。每个词展示简体/繁体字、拼音、词性、词频排名、HSK 等级、部首、所有翻译"
-   },
-   {
-    "name": "hsk_diff",
-    "description": "Compare two HSK levels to see vocabulary overlap and differences. Shows words exclusive to each level and words shared by both. Useful for comparing old (HSK 2.",
-    "descriptionZh": "比较两个 HSK 等级的词汇，查看重叠与差异。展示各等级独有的词以及两者共有的词。适合比较旧版（HSK 2."
-   }
-  ],
-  "config": [],
-  "remoteUrl": "https://hsk-mcp--kuibin-dev.run.tools",
-  "iconUrl": "https://api.smithery.ai/servers/kuibin-dev/hsk-mcp/icon",
-  "verified": false,
-  "homepage": null
- },
  "letoribo-mcp-graphql-enhanced": {
   "tools": [
    {
@@ -7422,55 +7259,6 @@
   "config": [],
   "remoteUrl": "https://mcp-graphql-enhanced--letoribo.run.tools",
   "iconUrl": "https://api.smithery.ai/servers/letoribo/mcp-graphql-enhanced/icon",
-  "verified": false,
-  "homepage": null
- },
- "a7om-atom-mcp-server": {
-  "tools": [
-   {
-    "name": "search_models",
-    "description": "Search and filter AI inference models across 40+ vendors and 1,600+ SKUs.  Query by modality (Text, Image, Audio, Video, Multimodal), vendor, creator, model fam",
-    "descriptionZh": "跨 40+ 家供应商、1,600+ 个 SKU 搜索和筛选 AI 推理模型。可按模态（文本、图像、音频、视频、多模态）、供应商、创建方、模型系列查询"
-   },
-   {
-    "name": "get_model_detail",
-    "description": "Deep dive on a single AI model: technical specs + pricing across all vendors.  Returns model_registry data (context window, parameters, open-source status, trai",
-    "descriptionZh": "深入了解单个 AI 模型：技术规格 + 各供应商定价。返回 model_registry 数据（上下文窗口、参数量、开源状态、训练"
-   },
-   {
-    "name": "compare_prices",
-    "description": "Cross-vendor price comparison for a specific model or model family.  Shows the same model (or family) priced across different vendors, sorted cheapest first. Es",
-    "descriptionZh": "针对特定模型或模型系列的跨供应商价格比较。展示同一模型（或系列）在不同供应商处的定价，按最便宜优先排序。"
-   },
-   {
-    "name": "get_vendor_catalog",
-    "description": "Full catalog for a specific vendor: all models, modalities, and pricing.  Returns vendor metadata (country, region, pricing page URL) plus every model and SKU t",
-    "descriptionZh": "特定供应商的完整目录：所有模型、模态和定价。返回供应商元数据（国家、地区、定价页面 URL）以及每个模型和 SKU"
-   },
-   {
-    "name": "get_market_stats",
-    "description": "Aggregate AI inference market intelligence.  Returns total vendor/model/SKU counts, price distribution (median, mean, quartiles, min/max), and modality breakdow",
-    "descriptionZh": "汇总 AI 推理市场情报。返回供应商/模型/SKU 总数、价格分布（中位数、均值、四分位数、最小值/最大值）以及模态细分"
-   },
-   {
-    "name": "get_index_benchmarks",
-    "description": "AIPI (ATOM Inference Price Index) — chained matched-model price benchmarks for AI inference.  Returns benchmark prices across index families (Text, Image, Audio",
-    "descriptionZh": "AIPI（ATOM 推理价格指数）——面向 AI 推理的链式匹配模型价格基准。返回各指数系列（文本、图像、音频"
-   },
-   {
-    "name": "get_kpis",
-    "description": "ATOM Inference Price Index (AIPI) market-level KPIs.  Returns 6 key performance indicators derived from 1,600+ SKUs: - Output Premium: how much more output toke",
-    "descriptionZh": "ATOM 推理价格指数（AIPI）市场级 KPI。返回由 1,600+ 个 SKU 得出的 6 项关键绩效指标：- 输出溢价：输出 token 贵多少"
-   },
-   {
-    "name": "list_vendors",
-    "description": "List all 41 AI inference vendors tracked by ATOM.  Returns vendor name, country, region, and pricing page URL. Optionally filter by region or country.  Examples",
-    "descriptionZh": "列出 ATOM 跟踪的全部 41 家 AI 推理供应商。返回供应商名称、国家、地区及定价页面 URL。可按地区或国家筛选。示例"
-   }
-  ],
-  "config": [],
-  "remoteUrl": "https://atom-mcp-server--a7om.run.tools",
-  "iconUrl": "https://api.smithery.ai/servers/a7om/atom-mcp-server/icon",
   "verified": false,
   "homepage": null
  },
@@ -7639,6 +7427,108 @@
   "config": [],
   "remoteUrl": "https://nexus-intelligence--rileycraig14.run.tools",
   "iconUrl": "https://www.google.com/s2/favicons?domain=nexus-agent-xa12.onrender.com&sz=64",
+  "verified": false,
+  "homepage": null
+ },
+ "surprise-buddy-mcp-server": {
+  "tools": [
+   {
+    "name": "find_gifts",
+    "description": "Search the curated Surprise Buddy database for gift ideas matching a recipient. Returns product cards with title, image, price, why-it-fits, and a clickable pro",
+    "descriptionZh": "搜索精选的 Surprise Buddy 数据库，查找与收礼人匹配的礼物创意。返回产品卡片，包含标题、图片、价格、why-it-fits 以及可点击的 pro"
+   },
+   {
+    "name": "list_supported_countries",
+    "description": "List ISO-2 country codes that currently have at least one active gift entry in the database. Coverage grows over time.",
+    "descriptionZh": "列出当前数据库中至少有一个有效礼物条目的 ISO-2 国家/地区代码。覆盖范围会随时间增长。"
+   },
+   {
+    "name": "list_supported_occasions",
+    "description": "List occasion codes that have active gift entries, optionally narrowed to a specific country.",
+    "descriptionZh": "列出具有有效礼物条目的场合代码，可按特定国家/地区进行筛选。"
+   },
+   {
+    "name": "list_supported_interests",
+    "description": "List the canonical interest/hobby tag vocabulary used by find_gifts.interests. Matches the tags shown in the website UI.",
+    "descriptionZh": "列出 find_gifts.interests 使用的规范兴趣/爱好标签词汇表。与网站 UI 中显示的标签一致。"
+   },
+   {
+    "name": "list_supported_colors",
+    "description": "List the canonical favorite-color vocabulary used by find_gifts.favorite_color. Matches the color picker shown in the website UI.",
+    "descriptionZh": "列出 find_gifts.favorite_color 使用的规范喜爱颜色词汇表。与网站 UI 中显示的颜色选择器一致。"
+   }
+  ],
+  "config": [],
+  "remoteUrl": "https://mcp-server--surprise-buddy.run.tools",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=surprise-buddy.com&sz=64",
+  "verified": false,
+  "homepage": null
+ },
+ "cyanheads-calculator-mcp-server": {
+  "tools": [
+   {
+    "name": "calculate",
+    "description": "Evaluate math expressions, simplify algebraic expressions, or compute symbolic derivatives. One expression per call. Supports arithmetic, trigonometry, statisti",
+    "descriptionZh": "计算数学表达式、化简代数表达式或计算符号导数。每次调用一个表达式。支持算术、三角、统计"
+   }
+  ],
+  "config": [],
+  "remoteUrl": "https://calculator-mcp-server--cyanheads.run.tools",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=64",
+  "verified": false,
+  "homepage": null
+ },
+ "agonzalez-prueba-mcp-seeker": {
+  "tools": [
+   {
+    "name": "get_availability",
+    "description": "Search hotel room availability and pricing for specific dates and occupancy.",
+    "descriptionZh": "搜索指定日期和入住人数的酒店客房可用性及价格。"
+   },
+   {
+    "name": "get_calendar",
+    "description": "Search hotel calendar availability and pricing.      **When to use**: When specific dates are not available, use this to suggest closest available dates or alte",
+    "descriptionZh": "搜索酒店日历可用性及价格。      **使用时机**：当没有特定日期可用时，使用此工具建议最近的可用日期或备选"
+   },
+   {
+    "name": "get_booking_additional_services",
+    "description": "Get additional services available for a booking selection.      **When to use**: After user selects a booking option from availability search, to get additional",
+    "descriptionZh": "获取某个预订选项可用的附加服务。      **使用时机**：在用户从可用性搜索中选择某个预订选项后，获取附加"
+   },
+   {
+    "name": "get_booking_url",
+    "description": "Generate booking url with preselected room, rate, meal plan, supplements. If no room_preselection is provided, it will generate a booking url showing available ",
+    "descriptionZh": "生成带有预选客房、价格、餐食计划和附加服务的预订 URL。如果未提供 room_preselection，将生成一个显示可用"
+   },
+   {
+    "name": "search_hotels_by_area",
+    "description": "Search for hotels in a specific area",
+    "descriptionZh": "搜索特定区域内的酒店"
+   },
+   {
+    "name": "search_hotels_by_geo_location",
+    "description": "Search for hotels near GPS coordinates within a specified radius, sorted by distance.",
+    "descriptionZh": "搜索指定半径内 GPS 坐标附近的酒店，按距离排序。"
+   },
+   {
+    "name": "get_all_hotels",
+    "description": "Get paginated list of all hotels by the System",
+    "descriptionZh": "获取系统分页返回的所有酒店列表"
+   },
+   {
+    "name": "get_hotel_by_name",
+    "description": "Retrieve hotels based on distance-search algorithms",
+    "descriptionZh": "基于距离搜索算法检索酒店"
+   },
+   {
+    "name": "get_datetime",
+    "description": "Get current date and time",
+    "descriptionZh": "获取当前日期和时间"
+   }
+  ],
+  "config": [],
+  "remoteUrl": "https://prueba-mcp-seeker--agonzalez.run.tools",
+  "iconUrl": null,
   "verified": false,
   "homepage": null
  }
